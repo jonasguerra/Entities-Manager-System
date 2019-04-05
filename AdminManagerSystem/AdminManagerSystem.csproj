@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7765BE5A-DE8A-4752-B4F7-5DD62D9AD12F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdminManagerSystem</RootNamespace>
+    <AssemblyName>AdminManagerSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Template\bower_components\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="Template\bower_components\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="Template\bower_components\bootstrap-validator\dist\validator.min.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\alert.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\button.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\carousel.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\collapse.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\dropdown.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\modal.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\popover.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\tab.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\tooltip.js" />
+    <Content Include="Template\bower_components\bootstrap\js\dist\util.js" />
+    <Content Include="Template\bower_components\chart.js\dist\Chart.min.js" />
+    <Content Include="Template\bower_components\ckeditor\ckeditor.js" />
+    <Content Include="Template\bower_components\datatables.net-bs\css\dataTables.bootstrap.min.css" />
+    <Content Include="Template\bower_components\datatables.net-bs\js\dataTables.bootstrap.min.js" />
+    <Content Include="Template\bower_components\datatables.net\js\jquery.dataTables.min.js" />
+    <Content Include="Template\bower_components\dragula.js\dist\dragula.min.css" />
+    <Content Include="Template\bower_components\dragula.js\dist\dragula.min.js" />
+    <Content Include="Template\bower_components\dropzone\dist\dropzone.css" />
+    <Content Include="Template\bower_components\dropzone\dist\dropzone.js" />
+    <Content Include="Template\bower_components\editable-table\mindmup-editabletable.js" />
+    <Content Include="Template\bower_components\fullcalendar\dist\fullcalendar.min.css" />
+    <Content Include="Template\bower_components\fullcalendar\dist\fullcalendar.min.js" />
+    <Content Include="Template\bower_components\ion.rangeSlider\css\ion.rangeSlider.css" />
+    <Content Include="Template\bower_components\ion.rangeSlider\js\ion.rangeSlider.min.js" />
+    <Content Include="Template\bower_components\jquery-bar-rating\dist\jquery.barrating.min.js" />
+    <Content Include="Template\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="Template\bower_components\moment\moment.js" />
+    <Content Include="Template\bower_components\perfect-scrollbar\css\perfect-scrollbar.min.css" />
+    <Content Include="Template\bower_components\perfect-scrollbar\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Template\bower_components\popper.js\dist\umd\popper.min.js" />
+    <Content Include="Template\bower_components\select2\dist\css\select2.min.css" />
+    <Content Include="Template\bower_components\select2\dist\js\select2.full.min.js" />
+    <Content Include="Template\bower_components\slick-carousel\slick\slick.css" />
+    <Content Include="Template\bower_components\slick-carousel\slick\slick.min.js" />
+    <Content Include="Template\bower_components\tether\dist\js\tether.min.js" />
+    <Content Include="Template\css\main.css" />
+    <Content Include="Template\icon_fonts_assets\batch-icons\fonts\batch.svg@lqk6vk" />
+    <Content Include="Template\icon_fonts_assets\batch-icons\fonts\batch.ttf@lqk6vk" />
+    <Content Include="Template\icon_fonts_assets\batch-icons\fonts\batch.woff2@lqk6vk" />
+    <Content Include="Template\icon_fonts_assets\batch-icons\fonts\batch.woff@lqk6vk" />
+    <Content Include="Template\icon_fonts_assets\batch-icons\style.css" />
+    <Content Include="Template\icon_fonts_assets\dashicons\dashicons.css" />
+    <Content Include="Template\icon_fonts_assets\dashicons\dashicons.eot@" />
+    <Content Include="Template\icon_fonts_assets\dashicons\dashicons.eot@b1d2984e1a886fadb803092a84de341c" />
+    <Content Include="Template\icon_fonts_assets\dashicons\dashicons.ttf@b1d2984e1a886fadb803092a84de341c" />
+    <Content Include="Template\icon_fonts_assets\dripicons\fonts\dripicons-v2.eot" />
+    <Content Include="Template\icon_fonts_assets\dripicons\fonts\dripicons-v2.eot@" />
+    <Content Include="Template\icon_fonts_assets\dripicons\fonts\dripicons-v2.svg" />
+    <Content Include="Template\icon_fonts_assets\dripicons\fonts\dripicons-v2.ttf" />
+    <Content Include="Template\icon_fonts_assets\dripicons\fonts\dripicons-v2.woff" />
+    <Content Include="Template\icon_fonts_assets\dripicons\webfont.css" />
+    <Content Include="Template\icon_fonts_assets\eightyshades\fonts\eightyshades.eot" />
+    <Content Include="Template\icon_fonts_assets\eightyshades\fonts\eightyshades.eot@" />
+    <Content Include="Template\icon_fonts_assets\eightyshades\fonts\eightyshades.svg" />
+    <Content Include="Template\icon_fonts_assets\eightyshades\fonts\eightyshades.ttf" />
+    <Content Include="Template\icon_fonts_assets\eightyshades\fonts\eightyshades.woff" />
+    <Content Include="Template\icon_fonts_assets\eightyshades\style.css" />
+    <Content Include="Template\icon_fonts_assets\entypo\fonts\entypo.eot@xu8bm0" />
+    <Content Include="Template\icon_fonts_assets\entypo\fonts\entypo.svg@xu8bm0" />
+    <Content Include="Template\icon_fonts_assets\entypo\fonts\entypo.ttf@xu8bm0" />
+    <Content Include="Template\icon_fonts_assets\entypo\fonts\entypo.woff2@xu8bm0" />
+    <Content Include="Template\icon_fonts_assets\entypo\fonts\entypo.woff@xu8bm0" />
+    <Content Include="Template\icon_fonts_assets\entypo\style.css" />
+    <Content Include="Template\icon_fonts_assets\feather\style.css" />
+    <Content Include="Template\icon_fonts_assets\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Template\icon_fonts_assets\font-awesome\fonts\fontawesome-webfont.eot@" />
+    <Content Include="Template\icon_fonts_assets\font-awesome\fonts\fontawesome-webfont.eot@v=4.7.0" />
+    <Content Include="Template\icon_fonts_assets\font-awesome\fonts\fontawesome-webfont.svg@v=4.7.0" />
+    <Content Include="Template\icon_fonts_assets\font-awesome\fonts\fontawesome-webfont.ttf@v=4.7.0" />
+    <Content Include="Template\icon_fonts_assets\font-awesome\fonts\fontawesome-webfont.woff2@v=4.7.0" />
+    <Content Include="Template\icon_fonts_assets\font-awesome\fonts\fontawesome-webfont.woff@v=4.7.0" />
+    <Content Include="Template\icon_fonts_assets\foundation-icon-font\foundation-icons.css" />
+    <Content Include="Template\icon_fonts_assets\foundation-icon-font\foundation-icons.eot" />
+    <Content Include="Template\icon_fonts_assets\foundation-icon-font\foundation-icons.eot@" />
+    <Content Include="Template\icon_fonts_assets\foundation-icon-font\foundation-icons.svg" />
+    <Content Include="Template\icon_fonts_assets\foundation-icon-font\foundation-icons.ttf" />
+    <Content Include="Template\icon_fonts_assets\foundation-icon-font\foundation-icons.woff" />
+    <Content Include="Template\icon_fonts_assets\metrize-icons\fonts\Metrize-Icons.eot" />
+    <Content Include="Template\icon_fonts_assets\metrize-icons\fonts\Metrize-Icons.eot@" />
+    <Content Include="Template\icon_fonts_assets\metrize-icons\fonts\Metrize-Icons.svg" />
+    <Content Include="Template\icon_fonts_assets\metrize-icons\fonts\Metrize-Icons.ttf" />
+    <Content Include="Template\icon_fonts_assets\metrize-icons\fonts\Metrize-Icons.woff" />
+    <Content Include="Template\icon_fonts_assets\metrize-icons\style.css" />
+    <Content Include="Template\icon_fonts_assets\picons-social\fonts\picons-social.svg@mqbcix" />
+    <Content Include="Template\icon_fonts_assets\picons-social\fonts\picons-social.ttf@mqbcix" />
+    <Content Include="Template\icon_fonts_assets\picons-social\fonts\picons-social.woff2@mqbcix" />
+    <Content Include="Template\icon_fonts_assets\picons-social\fonts\picons-social.woff@mqbcix" />
+    <Content Include="Template\icon_fonts_assets\picons-social\style.css" />
+    <Content Include="Template\icon_fonts_assets\picons-thin\fonts\piconsthin.svg@lkhde6" />
+    <Content Include="Template\icon_fonts_assets\picons-thin\fonts\piconsthin.ttf@lkhde6" />
+    <Content Include="Template\icon_fonts_assets\picons-thin\fonts\piconsthin.woff2@lkhde6" />
+    <Content Include="Template\icon_fonts_assets\picons-thin\fonts\piconsthin.woff@lkhde6" />
+    <Content Include="Template\icon_fonts_assets\picons-thin\style.css" />
+    <Content Include="Template\icon_fonts_assets\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Template\icon_fonts_assets\simple-line-icons\fonts\Simple-Line-Icons.eot@v=2.4.0" />
+    <Content Include="Template\icon_fonts_assets\simple-line-icons\fonts\Simple-Line-Icons.svg@v=2.4.0" />
+    <Content Include="Template\icon_fonts_assets\simple-line-icons\fonts\Simple-Line-Icons.ttf@v=2.4.0" />
+    <Content Include="Template\icon_fonts_assets\simple-line-icons\fonts\Simple-Line-Icons.woff2@v=2.4.0" />
+    <Content Include="Template\icon_fonts_assets\simple-line-icons\fonts\Simple-Line-Icons.woff@v=2.4.0" />
+    <Content Include="Template\icon_fonts_assets\themefy\fonts\themify.eot@" />
+    <Content Include="Template\icon_fonts_assets\themefy\fonts\themify.eot@-fvbane" />
+    <Content Include="Template\icon_fonts_assets\themefy\fonts\themify.svg@-fvbane" />
+    <Content Include="Template\icon_fonts_assets\themefy\fonts\themify.ttf@-fvbane" />
+    <Content Include="Template\icon_fonts_assets\themefy\fonts\themify.woff@-fvbane" />
+    <Content Include="Template\icon_fonts_assets\themefy\themify-icons.css" />
+    <Content Include="Template\icon_fonts_assets\typicons\typicons.css" />
+    <Content Include="Template\icon_fonts_assets\typicons\typicons.eot" />
+    <Content Include="Template\icon_fonts_assets\typicons\typicons.eot@" />
+    <Content Include="Template\icon_fonts_assets\typicons\typicons.svg" />
+    <Content Include="Template\icon_fonts_assets\typicons\typicons.ttf" />
+    <Content Include="Template\icon_fonts_assets\typicons\typicons.woff" />
+    <Content Include="Template\icon_fonts_assets\weather-icons\css\weather-icons.min.css" />
+    <Content Include="Template\icon_fonts_assets\weather-icons\font\weathericons-regular-webfont.eot" />
+    <Content Include="Template\icon_fonts_assets\weather-icons\font\weathericons-regular-webfont.eot@" />
+    <Content Include="Template\icon_fonts_assets\weather-icons\font\weathericons-regular-webfont.svg" />
+    <Content Include="Template\icon_fonts_assets\weather-icons\font\weathericons-regular-webfont.ttf" />
+    <Content Include="Template\icon_fonts_assets\weather-icons\font\weathericons-regular-webfont.woff" />
+    <Content Include="Template\icon_fonts_assets\weather-icons\font\weathericons-regular-webfont.woff2" />
+    <Content Include="Template\img\avatar1.jpg" />
+    <Content Include="Template\img\avatar2.jpg" />
+    <Content Include="Template\img\avatar3.jpg" />
+    <Content Include="Template\img\avatar4.jpg" />
+    <Content Include="Template\img\avatar5.jpg" />
+    <Content Include="Template\img\avatar6.jpg" />
+    <Content Include="Template\img\avatar7.jpg" />
+    <Content Include="Template\img\bg-pattern.png" />
+    <Content Include="Template\img\bg-pattern2.png" />
+    <Content Include="Template\img\bigicon1.png" />
+    <Content Include="Template\img\bigicon2.png" />
+    <Content Include="Template\img\bigicon5.png" />
+    <Content Include="Template\img\bigicon6.png" />
+    <Content Include="Template\img\bigicon7.png" />
+    <Content Include="Template\img\card1.png" />
+    <Content Include="Template\img\card2.png" />
+    <Content Include="Template\img\card3.png" />
+    <Content Include="Template\img\card4.png" />
+    <Content Include="Template\img\company1.png" />
+    <Content Include="Template\img\company2.png" />
+    <Content Include="Template\img\company3.png" />
+    <Content Include="Template\img\company4.png" />
+    <Content Include="Template\img\company5.png" />
+    <Content Include="Template\img\company6.png" />
+    <Content Include="Template\img\company7.png" />
+    <Content Include="Template\img\cta-pattern-light.png" />
+    <Content Include="Template\img\email-header-img.jpg" />
+    <Content Include="Template\img\flags-icons\ca.png" />
+    <Content Include="Template\img\flags-icons\es.png" />
+    <Content Include="Template\img\flags-icons\fr.png" />
+    <Content Include="Template\img\flags-icons\uk.png" />
+    <Content Include="Template\img\flags-icons\us.png" />
+    <Content Include="Template\img\logo-big.png" />
+    <Content Include="Template\img\logo.png" />
+    <Content Include="Template\img\logo2.png" />
+    <Content Include="Template\img\market-google-play.png" />
+    <Content Include="Template\img\market-ios.png" />
+    <Content Include="Template\img\menu_bg.jpg" />
+    <Content Include="Template\img\onboarding-gradient-hor-dark.png" />
+    <Content Include="Template\img\onboarding-gradient-hor.png" />
+    <Content Include="Template\img\onboarding-gradient-ver-dark.png" />
+    <Content Include="Template\img\onboarding-gradient-ver.png" />
+    <Content Include="Template\img\phone1.png" />
+    <Content Include="Template\img\plan1.png" />
+    <Content Include="Template\img\plan2.png" />
+    <Content Include="Template\img\plan3.png" />
+    <Content Include="Template\img\plan4.png" />
+    <Content Include="Template\img\portfolio1.jpg" />
+    <Content Include="Template\img\portfolio12.jpg" />
+    <Content Include="Template\img\portfolio14.jpg" />
+    <Content Include="Template\img\portfolio16.jpg" />
+    <Content Include="Template\img\portfolio2.jpg" />
+    <Content Include="Template\img\portfolio5.jpg" />
+    <Content Include="Template\img\portfolio6.jpg" />
+    <Content Include="Template\img\portfolio8.jpg" />
+    <Content Include="Template\img\portfolio9.jpg" />
+    <Content Include="Template\img\profile_bg1.jpg" />
+    <Content Include="Template\img\property1.jpg" />
+    <Content Include="Template\img\property2.jpg" />
+    <Content Include="Template\img\property3.jpg" />
+    <Content Include="Template\img\social-icons\facebook.png" />
+    <Content Include="Template\img\social-icons\instagram.png" />
+    <Content Include="Template\img\social-icons\linkedin.png" />
+    <Content Include="Template\img\social-icons\twitter.png" />
+    <Content Include="Template\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Template\js\demo_customizer.js" />
+    <Content Include="Template\js\main.js" />
+    <Content Include="Template\js\main_rentals.js" />
+    <Content Include="Template\js\popup_chat_trigger_demo.js" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content" />
+    <Folder Include="Models\" />
+    <Folder Include="Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets')" />
+  <PropertyGroup>
+    <WebProjectOutputDir Condition="'$(WebProjectOutputDir)' == ''">$(MSBuildProjectDirectory)</WebProjectOutputDir>
+  </PropertyGroup>
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5000</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl />
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target> -->
+</Project>

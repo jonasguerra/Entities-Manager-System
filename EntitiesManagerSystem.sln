@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesManagerSystem", "EntitiesManagerSystem\EntitiesManagerSystem.csproj", "{98A512F7-1AD7-4CDD-B4D1-DE1E28FD964D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminManagerSystem", "AdminManagerSystem\AdminManagerSystem.csproj", "{7765BE5A-DE8A-4752-B4F7-5DD62D9AD12F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{98A512F7-1AD7-4CDD-B4D1-DE1E28FD964D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98A512F7-1AD7-4CDD-B4D1-DE1E28FD964D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98A512F7-1AD7-4CDD-B4D1-DE1E28FD964D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7765BE5A-DE8A-4752-B4F7-5DD62D9AD12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7765BE5A-DE8A-4752-B4F7-5DD62D9AD12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7765BE5A-DE8A-4752-B4F7-5DD62D9AD12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7765BE5A-DE8A-4752-B4F7-5DD62D9AD12F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

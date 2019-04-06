@@ -2,409 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c64d172-2726-40ce-960f-23b407ddc5d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap-daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap-daterangepicker/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap-validator/dist/validator.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/alert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/collapse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/dropdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/popover.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/tab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/bootstrap/js/dist/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/chart.js/dist/Chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/ckeditor/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/datatables.net/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/dragula.js/dist/dragula.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/dragula.js/dist/dragula.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/dropzone/dist/dropzone.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/dropzone/dist/dropzone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/editable-table/mindmup-editabletable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/fullcalendar/dist/fullcalendar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/fullcalendar/dist/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/ion.rangeSlider/css/ion.rangeSlider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/jquery-bar-rating/dist/jquery.barrating.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/jquery/dist/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/moment/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/popper.js/dist/umd/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/select2/dist/css/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/select2/dist/js/select2.full.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/slick-carousel/slick/slick.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/slick-carousel/slick/slick.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/bower_components/tether/dist/js/tether.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/batch-icons/fonts/batch.svg@lqk6vk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/batch-icons/fonts/batch.ttf@lqk6vk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/batch-icons/fonts/batch.woff2@lqk6vk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/batch-icons/fonts/batch.woff@lqk6vk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/batch-icons/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dashicons/dashicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dashicons/dashicons.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dashicons/dashicons.eot@b1d2984e1a886fadb803092a84de341c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dashicons/dashicons.ttf@b1d2984e1a886fadb803092a84de341c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/dripicons/webfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/eightyshades/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.eot@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.svg@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.ttf@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.woff2@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.woff@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/entypo/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/feather/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.eot@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.svg@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.ttf@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.woff2@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.woff@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/metrize-icons/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-social/fonts/picons-social.svg@mqbcix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-social/fonts/picons-social.ttf@mqbcix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-social/fonts/picons-social.woff2@mqbcix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-social/fonts/picons-social.woff@mqbcix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-social/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-thin/fonts/piconsthin.svg@lkhde6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-thin/fonts/piconsthin.ttf@lkhde6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-thin/fonts/piconsthin.woff2@lkhde6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-thin/fonts/piconsthin.woff@lkhde6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/picons-thin/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/simple-line-icons/css/simple-line-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.eot@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.svg@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.ttf@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.woff2@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.woff@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.eot@-fvbane" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.svg@-fvbane" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.ttf@-fvbane" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.woff@-fvbane" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/themefy/themify-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/typicons/typicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/typicons/typicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/typicons/typicons.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/typicons/typicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/typicons/typicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/typicons/typicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/weather-icons/css/weather-icons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/avatar1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/avatar2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/avatar3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/avatar4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/avatar5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/avatar6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/avatar7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/bg-pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/bg-pattern2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/bigicon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/bigicon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/bigicon5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/bigicon6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/bigicon7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/card1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/card2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/card3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/card4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/company1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/company2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/company3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/company4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/company5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/company6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/company7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/cta-pattern-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/email-header-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/flags-icons/ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/flags-icons/es.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/flags-icons/fr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/flags-icons/uk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/flags-icons/us.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/logo-big.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/market-google-play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/market-ios.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/menu_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/onboarding-gradient-hor-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/onboarding-gradient-hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/onboarding-gradient-ver-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/onboarding-gradient-ver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/phone1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/plan1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/plan2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/plan3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/plan4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/portfolio1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/portfolio12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/portfolio14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/portfolio16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/portfolio2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/portfolio5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/portfolio6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/portfolio8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/portfolio9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/profile_bg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/property1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/property2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/property3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/social-icons/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/social-icons/instagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/social-icons/linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/img/social-icons/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/js/demo_customizer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/js/main_rentals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Template/js/popup_chat_trigger_demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminManagerSystem/Views/Home/Admin.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap-daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap-daterangepicker/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap-validator/dist/validator.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/alert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/collapse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/dropdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/popover.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/tab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/bootstrap/js/dist/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/chart.js/dist/Chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/ckeditor/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/datatables.net/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/dragula.js/dist/dragula.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/dragula.js/dist/dragula.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/dropzone/dist/dropzone.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/dropzone/dist/dropzone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/editable-table/mindmup-editabletable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/fullcalendar/dist/fullcalendar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/fullcalendar/dist/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/ion.rangeSlider/css/ion.rangeSlider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/jquery-bar-rating/dist/jquery.barrating.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/jquery/dist/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/moment/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/popper.js/dist/umd/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/select2/dist/css/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/select2/dist/js/select2.full.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/slick-carousel/slick/slick.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/slick-carousel/slick/slick.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/bower_components/tether/dist/js/tether.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/batch-icons/fonts/batch.svg@lqk6vk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/batch-icons/fonts/batch.ttf@lqk6vk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/batch-icons/fonts/batch.woff2@lqk6vk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/batch-icons/fonts/batch.woff@lqk6vk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/batch-icons/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dashicons/dashicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dashicons/dashicons.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dashicons/dashicons.eot@b1d2984e1a886fadb803092a84de341c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dashicons/dashicons.ttf@b1d2984e1a886fadb803092a84de341c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dripicons/fonts/dripicons-v2.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/dripicons/webfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/eightyshades/fonts/eightyshades.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/eightyshades/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.eot@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.svg@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.ttf@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.woff2@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/entypo/fonts/entypo.woff@xu8bm0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/entypo/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/feather/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.eot@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.svg@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.ttf@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.woff2@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/font-awesome/fonts/fontawesome-webfont.woff@v=4.7.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/foundation-icon-font/foundation-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/metrize-icons/fonts/Metrize-Icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/metrize-icons/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-social/fonts/picons-social.svg@mqbcix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-social/fonts/picons-social.ttf@mqbcix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-social/fonts/picons-social.woff2@mqbcix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-social/fonts/picons-social.woff@mqbcix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-social/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-thin/fonts/piconsthin.svg@lkhde6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-thin/fonts/piconsthin.ttf@lkhde6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-thin/fonts/piconsthin.woff2@lkhde6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-thin/fonts/piconsthin.woff@lkhde6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/picons-thin/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/simple-line-icons/css/simple-line-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.eot@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.svg@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.ttf@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.woff2@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/simple-line-icons/fonts/Simple-Line-Icons.woff@v=2.4.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.eot@-fvbane" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.svg@-fvbane" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.ttf@-fvbane" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/themefy/fonts/themify.woff@-fvbane" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/themefy/themify-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/typicons/typicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/typicons/typicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/typicons/typicons.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/typicons/typicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/typicons/typicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/typicons/typicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/weather-icons/css/weather-icons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/icon_fonts_assets/weather-icons/font/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/avatar1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/avatar2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/avatar3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/avatar4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/avatar5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/avatar6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/avatar7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/bg-pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/bg-pattern2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/bigicon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/bigicon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/bigicon5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/bigicon6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/bigicon7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/card1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/card2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/card3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/card4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/company1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/company2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/company3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/company4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/company5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/company6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/company7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/cta-pattern-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/email-header-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/flags-icons/ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/flags-icons/es.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/flags-icons/fr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/flags-icons/uk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/flags-icons/us.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/logo-big.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/market-google-play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/market-ios.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/menu_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/onboarding-gradient-hor-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/onboarding-gradient-hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/onboarding-gradient-ver-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/onboarding-gradient-ver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/phone1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/plan1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/plan2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/plan3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/plan4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/portfolio1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/portfolio12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/portfolio14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/portfolio16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/portfolio2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/portfolio5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/portfolio6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/portfolio8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/portfolio9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/profile_bg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/property1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/property2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/property3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/social-icons/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/social-icons/instagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/social-icons/linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/img/social-icons/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/js/demo_customizer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/js/main_rentals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Template/js/popup_chat_trigger_demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/RegisterEvent.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem.sln" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Content/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Content/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Controllers/EntityController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/EntitiesManagerSystem.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/EntitiesManagerSystem.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/jquery-1.10.2.intellisense.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/jquery-1.10.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/jquery-1.10.2.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/jquery.validate-vsdoc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/jquery.validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/jquery.validate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/jquery.validate.unobtrusive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/jquery.validate.unobtrusive.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/modernizr-2.6.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/respond.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/respond.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout..old.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Home/About.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Home/Contact.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Home/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout..old.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -413,7 +27,97 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Controllers/EntityController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding>
+                <marker date="1554584342419" expanded="true" signature="66:499" ph="{...}" />
+                <marker date="1554584342419" expanded="true" signature="115:497" ph="{...}" />
+                <marker date="1554584342419" expanded="true" signature="157:293" ph="{...}" />
+                <marker date="1554584342419" expanded="true" signature="346:491" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+              <folding>
+                <marker date="1554584806681" expanded="true" signature="16:9177" ph="&lt;html.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="24:1198" ph="&lt;head.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1200:9168" ph="&lt;body.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1261:6247" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1304:6203" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1335:6192" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1371:5623" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1428:2483" ph="@..." />
+                <marker date="1554584806681" expanded="true" signature="1458:1936" ph="{...}" />
+                <marker date="1554584806681" expanded="true" signature="1493:1918" ph="&lt;ul.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1518:1622" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1643:1773" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1794:1896" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="1990:2483" ph="{...}" />
+                <marker date="1554584806681" expanded="true" signature="2029:2465" ph="&lt;ul.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2058:2164" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2189:2307" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2332:2439" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2500:5604" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2552:5581" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2604:5554" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2660:2795" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2824:5523" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2906:3864" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="2980:3131" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="3168:3825" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="3324:3782" ph="@..." />
+                <marker date="1554584806681" expanded="true" signature="3354:3529" ph="{...}" />
+                <marker date="1554584806681" expanded="true" signature="3607:3782" ph="{...}" />
+                <marker date="1554584806681" expanded="true" signature="3897:4039" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="4072:5488" ph="&lt;ul.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="4113:4484" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="4158:4442" ph="&lt;a.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="4236:4378" ph="&lt;i.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="4521:4767" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="4566:4725" ph="&lt;a.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="4804:4995" ph="&lt;!--...--&gt;" />
+                <marker date="1554584806681" expanded="true" signature="4809:4991" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5032:5234" ph="&lt;!--...--&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5037:5230" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5271:5450" ph="&lt;!--...--&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5276:5446" ph="&lt;li.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5636:6177" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5676:6158" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5804:6135" ph="&lt;!--...--&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5809:6131" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5866:6081" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="5921:6050" ph="&lt;div.../&gt;" />
+                <marker date="1554584806681" expanded="true" signature="8655:9160" ph="@*...*@" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/RegisterEvent.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="17" />
+              <folding>
+                <marker date="1554583155353" expanded="true" signature="16:58" ph="@..." />
+                <marker date="1554583155353" expanded="true" signature="60:207" ph="&lt;div.../&gt;" />
+                <marker date="1554583155353" expanded="true" signature="164:200" ph="&lt;div.../&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -427,21 +131,25 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/Controllers/EntityController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AdminManagerSystem/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AdminManagerSystem/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/RegisterEvent.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AdminManagerSystem/Views/Home/Admin.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AdminManagerSystem/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout..old.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_layout.html" />
-        <option value="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/AdminManagerSystem/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/AdminManagerSystem/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/AdminManagerSystem/Views/Home/Admin.cshtml" />
+        <option value="$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/RegisterEvent.cshtml" />
+        <option value="$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/Index.cshtml" />
+        <option value="$PROJECT_DIR$/EntitiesManagerSystem/Controllers/EntityController.cs" />
+        <option value="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" />
       </list>
     </option>
   </component>
@@ -450,11 +158,15 @@
     <option name="width" value="894" />
     <option name="height" value="481" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -462,12 +174,35 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
             </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Shared" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
     </panes>
   </component>
@@ -527,11 +262,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554469827862</updated>
       <workItem from="1554469835440" duration="2194000" />
+      <workItem from="1554565478998" duration="7794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2194000" />
+    <option name="totallyTimeSpent" value="9988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,41 +279,42 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1360" height="738" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="736" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24961948" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" weight="0.3295082" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="REST Client" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Build" weight="0.3295082" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35855263" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32894737" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32894737" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" weight="0.32894737" />
+      <window_info anchor="bottom" id="REST Client" order="12" weight="0.32894737" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32894737" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.32894737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Template/js/main.js">
@@ -620,47 +357,6 @@
             <marker date="1554468765845" expanded="true" signature="407:655" ph="&lt;p.../&gt;" />
             <marker date="1554468765845" expanded="true" signature="790:1126" ph="&lt;div.../&gt;" />
             <marker date="1554468765845" expanded="true" signature="1131:1440" ph="&lt;div.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="21" selection-end-line="137" selection-end-column="7" />
-          <folding>
-            <marker date="1554471550654" expanded="true" signature="16:7803" ph="&lt;html.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="24:1198" ph="&lt;head.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1200:7794" ph="&lt;body.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1265:4747" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1312:4695" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1347:4680" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1387:4079" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1448:1658" ph="&lt;ul.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1679:4056" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1735:4029" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1791:3998" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="1957:3963" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="2043:2535" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="2235:2492" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="2681:3924" ph="&lt;ul.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="2726:2978" ph="&lt;li.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="2775:2932" ph="&lt;a.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="2808:2909" ph="&lt;i.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="3019:3187" ph="&lt;li.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="3228:3419" ph="&lt;!--...--&gt;" />
-            <marker date="1554471550654" expanded="true" signature="3233:3415" ph="&lt;li.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="3460:3662" ph="&lt;!--...--&gt;" />
-            <marker date="1554471550654" expanded="true" signature="3465:3658" ph="&lt;li.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="3703:3882" ph="&lt;!--...--&gt;" />
-            <marker date="1554471550654" expanded="true" signature="3708:3878" ph="&lt;li.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="4096:4661" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="4140:4638" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="4280:4611" ph="&lt;!--...--&gt;" />
-            <marker date="1554471550654" expanded="true" signature="4285:4607" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="4342:4557" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="4397:4526" ph="&lt;div.../&gt;" />
-            <marker date="1554471550654" expanded="true" signature="7281:7786" ph="@*...*@" />
           </folding>
         </state>
       </provider>
@@ -742,6 +438,101 @@
             <marker date="1554471654470" expanded="true" signature="407:655" ph="&lt;p.../&gt;" />
             <marker date="1554471654470" expanded="true" signature="790:1126" ph="&lt;div.../&gt;" />
             <marker date="1554471654470" expanded="true" signature="1131:1440" ph="&lt;div.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <marker date="1554583162185" expanded="true" signature="16:50" ph="@..." />
+            <marker date="1554583162185" expanded="true" signature="52:189" ph="&lt;div.../&gt;" />
+            <marker date="1554583162185" expanded="true" signature="146:182" ph="&lt;div.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/RegisterEvent.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="17" />
+          <folding>
+            <marker date="1554583155353" expanded="true" signature="16:58" ph="@..." />
+            <marker date="1554583155353" expanded="true" signature="60:207" ph="&lt;div.../&gt;" />
+            <marker date="1554583155353" expanded="true" signature="164:200" ph="&lt;div.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Controllers/EntityController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <marker date="1554584342419" expanded="true" signature="66:499" ph="{...}" />
+            <marker date="1554584342419" expanded="true" signature="115:497" ph="{...}" />
+            <marker date="1554584342419" expanded="true" signature="157:293" ph="{...}" />
+            <marker date="1554584342419" expanded="true" signature="346:491" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+          <folding>
+            <marker date="1554584806681" expanded="true" signature="16:9177" ph="&lt;html.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="24:1198" ph="&lt;head.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1200:9168" ph="&lt;body.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1261:6247" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1304:6203" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1335:6192" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1371:5623" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1428:2483" ph="@..." />
+            <marker date="1554584806681" expanded="true" signature="1458:1936" ph="{...}" />
+            <marker date="1554584806681" expanded="true" signature="1493:1918" ph="&lt;ul.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1518:1622" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1643:1773" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1794:1896" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="1990:2483" ph="{...}" />
+            <marker date="1554584806681" expanded="true" signature="2029:2465" ph="&lt;ul.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2058:2164" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2189:2307" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2332:2439" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2500:5604" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2552:5581" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2604:5554" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2660:2795" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2824:5523" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2906:3864" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="2980:3131" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="3168:3825" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="3324:3782" ph="@..." />
+            <marker date="1554584806681" expanded="true" signature="3354:3529" ph="{...}" />
+            <marker date="1554584806681" expanded="true" signature="3607:3782" ph="{...}" />
+            <marker date="1554584806681" expanded="true" signature="3897:4039" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="4072:5488" ph="&lt;ul.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="4113:4484" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="4158:4442" ph="&lt;a.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="4236:4378" ph="&lt;i.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="4521:4767" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="4566:4725" ph="&lt;a.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="4804:4995" ph="&lt;!--...--&gt;" />
+            <marker date="1554584806681" expanded="true" signature="4809:4991" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5032:5234" ph="&lt;!--...--&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5037:5230" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5271:5450" ph="&lt;!--...--&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5276:5446" ph="&lt;li.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5636:6177" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5676:6158" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5804:6135" ph="&lt;!--...--&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5809:6131" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5866:6081" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="5921:6050" ph="&lt;div.../&gt;" />
+            <marker date="1554584806681" expanded="true" signature="8655:9160" ph="@*...*@" />
           </folding>
         </state>
       </provider>

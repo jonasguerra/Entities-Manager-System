@@ -24,106 +24,145 @@
 </head>
 
 <body class="menu-position-side menu-side-left full-screen">
-    <div class="all-wrapper solid-bg-all">
-        <div class="layout-w">
-            <div class="content-w">
-                <div class="top-bar color-scheme-light">
+<div class="all-wrapper solid-bg-all">
+    <div class="layout-w">
+        <div class="content-w">
+            <div class="top-bar color-scheme-light">
+                @if (ViewBag.user == "entity")
+                {
+                <ul>
+                    <li class="@ViewBag.index">
+                        <a href="/Entity">Home</a>
+                    </li>
+                    <li class="@ViewBag.register_event">
+                        <a href="/Entity/RegisterEvent">Eventos</a>
+                    </li>
+                    <li class="@ViewBag.donate">
+                        <a href="#">Doações</a>
+                    </li>
+                </ul>
+                }
+                else if (ViewBag.user == "voluntary")
+                {
                     <ul>
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Eventos</a></li>
-                        <li><a href="#">Doar</a></li>
+                        <li class="@ViewBag.index">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="@ViewBag.register_event">
+                            <a href="#">Eventos</a>
+                        </li>
+                        <li class="@ViewBag.donate">
+                            <a href="#">Doar</a>
+                        </li>
                     </ul>
-                    <div class="top-menu-controls">
-                        <div class="logged-user-w">
-                            <div class="logged-user-i">
-                                <div class="avatar-w"><img alt="" src="~/Template/img/avatar1.jpg"></div>
-                                <div class="logged-user-menu color-style-bright">
-                                    <div class="logged-user-avatar-info">
-                                        <div class="avatar-w"><img alt="" src="~/Template/img/avatar1.jpg"></div>
-                                        <div class="logged-user-info-w">
-                                            <div class="logged-user-name">Fulano</div>
-                                            <div class="logged-user-role">Voluntário</div>
-                                        </div>
+                }
+                <div class="top-menu-controls">
+                    <div class="logged-user-w">
+                        <div class="logged-user-i">
+                            <div class="avatar-w">
+                                <img alt="" src="~/Template/img/avatar1.jpg">
+                            </div>
+                            <div class="logged-user-menu color-style-bright">
+                                <div class="logged-user-avatar-info">
+                                    <div class="avatar-w">
+                                        <img alt="" src="~/Template/img/avatar1.jpg">
                                     </div>
-                                    <div class="bg-icon"><i class="os-icon os-icon-wallet-loaded"></i></div>
-                                    <ul>
-                                        <li>
-                                            <a href="users_profile_big.html"><i
-                                                    class="os-icon os-icon-user-male-circle2"></i><span>Perfil</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="os-icon os-icon-signs-11"></i><span>Sair</span></a>
-                                        </li>
-                                        <!-- <li>
+                                    <div class="logged-user-info-w">
+                                        <div class="logged-user-name">Fulano</div>
+                                        @if (ViewBag.user == "entity")
+                                        {
+                                            <div class="logged-user-role">Voluntário</div>
+                                        }
+                                        else if (ViewBag.user == "voluntary")
+                                        {
+                                            <div class="logged-user-role">Voluntário</div>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="bg-icon">
+                                    <i class="os-icon os-icon-wallet-loaded"></i>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="users_profile_big.html">
+                                            <i
+                                                class="os-icon os-icon-user-male-circle2">
+                                            </i><span>Perfil</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="os-icon os-icon-signs-11"></i><span>Sair</span>
+                                        </a>
+                                    </li>
+                                    <!-- <li>
                                         <a href="apps_email.html"><i class="os-icon os-icon-mail-01"></i><span>Incoming Mail</span></a>
                                     </li> -->
-                                        <!-- <li>
+                                    <!-- <li>
                                         <a href="users_profile_small.html"><i class="os-icon os-icon-coins-4"></i><span>Billing Details</span></a>
                                     </li> -->
-                                        <!-- <li>
+                                    <!-- <li>
                                         <a href="#"><i class="os-icon os-icon-others-43"></i><span>Notifications</span></a>
                                     </li> -->
-                                    </ul>
-                                </div>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="content-i">
-                    <div class="content-box">
+            </div>
+            <div class="content-i">
+                <div class="content-box">
 
-                        <!-- AQUI AS PÁGINAS -->
+                    <!-- AQUI AS PÁGINAS -->
 
-                        @RenderBody()
+                    @RenderBody()
 
-                        <!-- <div class="floated-colors-btn">
+                    <!-- <div class="floated-colors-btn">
                         <div class="os-toggler-w">
                             <div class="os-toggler-i">
                                 <div class="os-toggler-pill"></div>
                             </div>
                         </div><span>Contraste </span>
                     </div> -->
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="display-type"></div>
     </div>
+    <div class="display-type"></div>
+</div>
 
 
-
-
-    @Scripts.Render("~/Template/bower_components/jquery/dist/jquery.min.js")
-    @Scripts.Render("~/Template/bower_components)/popper.js/dist/umd/popper.min.js")
-    @Scripts.Render("~/Template/bower_components)/moment/moment.js")
-    @Scripts.Render("~/Template/bower_components)/chart.js/dist/Chart.min.js")
-    @Scripts.Render("~/Template/bower_components)/select2/dist/js/select2.full.min.js")
-    @Scripts.Render("~/Template/bower_components)/jquery-bar-content-borating/dist/jquery.barrating.min.js")
-    @Scripts.Render("~/Template/bower_components)/ckeditor/ckeditor.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap-validator/dist/validator.min.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap-daterangepicker/daterangepicker.js")
-    @Scripts.Render("~/Template/bower_components)/ion.rangeSlider/js/ion.rangeSlider.min.js")
-    @Scripts.Render("~/Template/bower_components)/dropzone/dist/dropzone.js")
-    @Scripts.Render("~/Template/bower_components)/editable-table/mindmup-editabletable.js")
-    @Scripts.Render("~/Template/bower_components)/datatables.net/js/jquery.dataTables.min.js")
-    @Scripts.Render("~/Template/bower_components)/datatables.net-bs/js/dataTables.bootstrap.min.js")
-    @Scripts.Render("~/Template/bower_components)/fullcalendar/dist/fullcalendar.min.js")
-    @Scripts.Render("~/Template/bower_components)/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js")
-    @Scripts.Render("~/Template/bower_components)/tether/dist/js/tether.min.js")
-    @Scripts.Render("~/Template/bower_components)/slick-carousel/slick/slick.min.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/util.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/alert.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/button.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/carousel.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/collapse.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/dropdown.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/modal.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/tab.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/tooltip.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/popover.js")
-    @Scripts.Render("~/Template/bower_components)er.js?version=4.4.1")
-    @Scripts.Render("~/Template/bower_components)on=4.4.1")
-    @*
+@Scripts.Render("~/Template/bower_components/jquery/dist/jquery.min.js")
+@Scripts.Render("~/Template/bower_components)/popper.js/dist/umd/popper.min.js")
+@Scripts.Render("~/Template/bower_components)/moment/moment.js")
+@Scripts.Render("~/Template/bower_components)/chart.js/dist/Chart.min.js")
+@Scripts.Render("~/Template/bower_components)/select2/dist/js/select2.full.min.js")
+@Scripts.Render("~/Template/bower_components)/jquery-bar-content-borating/dist/jquery.barrating.min.js")
+@Scripts.Render("~/Template/bower_components)/ckeditor/ckeditor.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap-validator/dist/validator.min.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap-daterangepicker/daterangepicker.js")
+@Scripts.Render("~/Template/bower_components)/ion.rangeSlider/js/ion.rangeSlider.min.js")
+@Scripts.Render("~/Template/bower_components)/dropzone/dist/dropzone.js")
+@Scripts.Render("~/Template/bower_components)/editable-table/mindmup-editabletable.js")
+@Scripts.Render("~/Template/bower_components)/datatables.net/js/jquery.dataTables.min.js")
+@Scripts.Render("~/Template/bower_components)/datatables.net-bs/js/dataTables.bootstrap.min.js")
+@Scripts.Render("~/Template/bower_components)/fullcalendar/dist/fullcalendar.min.js")
+@Scripts.Render("~/Template/bower_components)/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js")
+@Scripts.Render("~/Template/bower_components)/tether/dist/js/tether.min.js")
+@Scripts.Render("~/Template/bower_components)/slick-carousel/slick/slick.min.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/util.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/alert.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/button.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/carousel.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/collapse.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/dropdown.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/modal.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/tab.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/tooltip.js")
+@Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/popover.js")
+@Scripts.Render("~/Template/bower_components)er.js?version=4.4.1")
+@Scripts.Render("~/Template/bower_components)on=4.4.1")
+@*
     <script>(function (i, s, o, g, r, a, m) { *@
 @* i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { *@
 @* (i[r].q = i[r].q || []).push(arguments) *@

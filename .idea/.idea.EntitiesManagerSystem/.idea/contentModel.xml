@@ -412,7 +412,7 @@
         </e>
         <e p="Content" t="Include" />
         <e p="Controllers" t="Include">
-          <e p="HomeController.cs" t="Include" />
+          <e p="EntityController.cs" t="Include" />
         </e>
         <e p="EntitiesManagerSystem.csproj" t="IncludeRecursive" />
         <e p="Global.asax" t="Include" />
@@ -775,14 +775,12 @@
           </e>
         </e>
         <e p="Views" t="Include">
-          <e p="Home" t="Include">
-            <e p="About.cshtml" t="Include" />
-            <e p="Contact.cshtml" t="Include" />
+          <e p="Entity" t="Include">
             <e p="Index.cshtml" t="Include" />
+            <e p="RegisterEvent.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />
-            <e p="_Layout..old.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
           </e>
           <e p="Web.config" t="Include" />

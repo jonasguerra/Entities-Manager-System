@@ -37,8 +37,8 @@
                     <li class="@ViewBag.register_event">
                         <a href="/Entity/RegisterEvent">Eventos</a>
                     </li>
-                    <li class="@ViewBag.donate">
-                        <a href="#">Doações</a>
+                    <li class="@ViewBag.donations">
+                        <a href="/Entity/Donations">Doações</a>
                     </li>
                 </ul>
                 }
@@ -46,13 +46,13 @@
                 {
                     <ul>
                         <li class="@ViewBag.index">
-                            <a href="#">Home</a>
+                            <a href="/Voluntary">Home</a>
                         </li>
-                        <li class="@ViewBag.register_event">
-                            <a href="#">Eventos</a>
+                        <li class="@ViewBag.events">
+                            <a href="/Voluntary/Event">Eventos</a>
                         </li>
                         <li class="@ViewBag.donate">
-                            <a href="#">Doar</a>
+                            <a href="/Voluntary/Donate">Doar</a>
                         </li>
                     </ul>
                 }
@@ -71,7 +71,7 @@
                                         <div class="logged-user-name">Fulano</div>
                                         @if (ViewBag.user == "entity")
                                         {
-                                            <div class="logged-user-role">Voluntário</div>
+                                            <div class="logged-user-role">Entidade</div>
                                         }
                                         else if (ViewBag.user == "voluntary")
                                         {

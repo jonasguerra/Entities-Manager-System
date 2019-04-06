@@ -413,6 +413,7 @@
         <e p="Content" t="Include" />
         <e p="Controllers" t="Include">
           <e p="EntityController.cs" t="Include" />
+          <e p="VoluntaryController.cs" t="Include" />
         </e>
         <e p="EntitiesManagerSystem.csproj" t="IncludeRecursive" />
         <e p="Global.asax" t="Include" />
@@ -776,12 +777,18 @@
         </e>
         <e p="Views" t="Include">
           <e p="Entity" t="Include">
+            <e p="Donations.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="RegisterEvent.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
+          </e>
+          <e p="Voluntary" t="Include">
+            <e p="Donate.cshtml" t="Include" />
+            <e p="Event.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Web.config" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />

@@ -21,5 +21,13 @@ namespace EntitiesManagerSystem.Controllers
             
             return View();
         }
+        public ActionResult Donations()
+        {
+
+            ViewBag.user = "entity";
+            ViewBag.donations = "active";
+            
+            return View();
+        }
     }
 }

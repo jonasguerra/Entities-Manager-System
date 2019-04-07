@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c64d172-2726-40ce-960f-23b407ddc5d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4c64d172-2726-40ce-960f-23b407ddc5d8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +111,12 @@
               <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
             </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -200,12 +204,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554469827862</updated>
       <workItem from="1554469835440" duration="2194000" />
-      <workItem from="1554565478998" duration="25190000" />
+      <workItem from="1554565478998" duration="25254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27384000" />
+    <option name="totallyTimeSpent" value="27448000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

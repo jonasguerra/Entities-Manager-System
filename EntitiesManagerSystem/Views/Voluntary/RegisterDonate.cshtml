@@ -6,18 +6,17 @@
 <div class="element-wrapper col-8 mx-auto">
     <h6 class="element-header">Realizar Doação</h6>
     <div class="element-box">
-        
+
         <form id="formValidate">
-            <h5 class="form-header">Cadastro de Eventos</h5>
+            <h5 class="form-header">Cadastro de Doações</h5>
             <div class="form-desc">
-                Cadastre aqui uma nova campanha e envie o convite para os voluntários com interesse no evento.
+                Cadastre aqui o que você deseja doar, para que a entidade com interesse possa requisitar.
             </div>
             <div class="form-group">
                 <label for=""> Título</label>
                 <input type="text" class="form-control" name="title" data-error="Titulo do evento inválido" required="required">
                 <div class="help-block form-text with-errors form-control-feedback"></div>
             </div>
-
 
             <div class="form-group">
                 <label for=""> Afinidade da doação</label>
@@ -34,11 +33,17 @@
                 <label> Descrição da doação</label>
                 <textarea class="form-control" rows="3"></textarea>
             </div>
-            
+
             <div class="form-group">
                 <label for=""> Quantidade de itens</label>
                 <input class="form-control" name="quantity" data-error="Quantidade inválida" required="required" type="number">
                 <div class="help-block form-text with-errors form-control-feedback"></div>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox">Preciso que a doação seja retirada no local.
+                </label>
             </div>
 
             <div class="form-buttons-w">
@@ -47,7 +52,5 @@
                 </button>
             </div>
         </form>
-                       
     </div>
 </div>
-

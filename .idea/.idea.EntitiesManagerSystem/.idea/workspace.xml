@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c64d172-2726-40ce-960f-23b407ddc5d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Controllers/VoluntaryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Controllers/VoluntaryController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/RegisterEvent.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/RegisterEvent.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Voluntary/RegisterDonate.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Voluntary/RegisterDonate.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,23 +33,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Voluntary/RegisterDonate.cshtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+            <state relative-caret-position="220">
+              <caret line="44" column="109" lean-forward="true" selection-start-line="44" selection-start-column="109" selection-end-line="44" selection-end-column="109" />
               <folding>
-                <marker date="1554648282426" expanded="true" signature="16:59" ph="@..." />
-                <marker date="1554648282426" expanded="true" signature="60:2040" ph="&lt;div.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="160:2033" ph="&lt;div.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="203:1998" ph="&lt;form.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="301:454" ph="&lt;div.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="467:776" ph="&lt;div.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="791:1281" ph="&lt;div.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="891:1171" ph="&lt;select.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="1001:1145" ph="@..." />
-                <marker date="1554648282426" expanded="true" signature="1046:1145" ph="{...}" />
-                <marker date="1554648282426" expanded="true" signature="1295:1458" ph="&lt;div.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="1484:1805" ph="&lt;div.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="1819:1982" ph="&lt;div.../&gt;" />
-                <marker date="1554648282426" expanded="true" signature="1864:1963" ph="&lt;button.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="16:59" ph="@..." />
+                <marker date="1554648862530" expanded="true" signature="60:2234" ph="&lt;div.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="160:2227" ph="&lt;div.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="195:2216" ph="&lt;form.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="293:441" ph="&lt;div.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="454:763" ph="&lt;div.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="777:1267" ph="&lt;div.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="877:1157" ph="&lt;select.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="987:1131" ph="@..." />
+                <marker date="1554648862530" expanded="true" signature="1032:1131" ph="{...}" />
+                <marker date="1554648862530" expanded="true" signature="1281:1444" ph="&lt;div.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="1458:1779" ph="&lt;div.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="1793:2023" ph="&lt;div.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="1834:2004" ph="&lt;label.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="2037:2200" ph="&lt;div.../&gt;" />
+                <marker date="1554648862530" expanded="true" signature="2082:2181" ph="&lt;button.../&gt;" />
               </folding>
             </state>
           </provider>
@@ -310,12 +304,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554469827862</updated>
       <workItem from="1554469835440" duration="2194000" />
-      <workItem from="1554565478998" duration="19752000" />
+      <workItem from="1554565478998" duration="20331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21946000" />
+    <option name="totallyTimeSpent" value="22525000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -709,23 +703,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Voluntary/RegisterDonate.cshtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+        <state relative-caret-position="220">
+          <caret line="44" column="109" lean-forward="true" selection-start-line="44" selection-start-column="109" selection-end-line="44" selection-end-column="109" />
           <folding>
-            <marker date="1554648282426" expanded="true" signature="16:59" ph="@..." />
-            <marker date="1554648282426" expanded="true" signature="60:2040" ph="&lt;div.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="160:2033" ph="&lt;div.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="203:1998" ph="&lt;form.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="301:454" ph="&lt;div.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="467:776" ph="&lt;div.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="791:1281" ph="&lt;div.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="891:1171" ph="&lt;select.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="1001:1145" ph="@..." />
-            <marker date="1554648282426" expanded="true" signature="1046:1145" ph="{...}" />
-            <marker date="1554648282426" expanded="true" signature="1295:1458" ph="&lt;div.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="1484:1805" ph="&lt;div.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="1819:1982" ph="&lt;div.../&gt;" />
-            <marker date="1554648282426" expanded="true" signature="1864:1963" ph="&lt;button.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="16:59" ph="@..." />
+            <marker date="1554648862530" expanded="true" signature="60:2234" ph="&lt;div.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="160:2227" ph="&lt;div.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="195:2216" ph="&lt;form.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="293:441" ph="&lt;div.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="454:763" ph="&lt;div.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="777:1267" ph="&lt;div.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="877:1157" ph="&lt;select.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="987:1131" ph="@..." />
+            <marker date="1554648862530" expanded="true" signature="1032:1131" ph="{...}" />
+            <marker date="1554648862530" expanded="true" signature="1281:1444" ph="&lt;div.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="1458:1779" ph="&lt;div.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="1793:2023" ph="&lt;div.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="1834:2004" ph="&lt;label.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="2037:2200" ph="&lt;div.../&gt;" />
+            <marker date="1554648862530" expanded="true" signature="2082:2181" ph="&lt;button.../&gt;" />
           </folding>
         </state>
       </provider>

@@ -29,9 +29,20 @@
             <div class="content-w">
                 <div class="top-bar color-scheme-light">
                     <ul>
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Solicitações</a></li>
-                        <li><a href="#">Cadastros</a></li>
+                        @if (ViewBag.user == "admin")
+                        {
+                            <ul>
+                                <li class="@ViewBag.index">
+                                    <a href="/Admin">Home</a>
+                                </li>
+                                <li class="@ViewBag.request">
+                                    <a href="/Admin/Request">Solicitações</a>
+                                </li>
+                                <li class="@ViewBag.register_moderator">
+                                    <a href="/Admin/RegisterModerator">Cadastros</a>
+                                </li>
+                            </ul>
+                        }
                     </ul>
                     <div class="top-menu-controls">
                         <div class="logged-user-w">

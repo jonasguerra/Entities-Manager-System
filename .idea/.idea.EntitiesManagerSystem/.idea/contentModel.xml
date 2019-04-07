@@ -422,7 +422,11 @@
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
-        <e p="Scripts" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="jquery.autocomplete-address.min.js" t="Include" />
+          <e p="jquery.mask.min.js" t="Include" />
+          <e p="main.js" t="Include" />
+        </e>
         <e p="Template" t="Include">
           <e p="bower_components" t="Include">
             <e p="bootstrap" t="Include">
@@ -786,9 +790,9 @@
             <e p="_Layout.cshtml" t="Include" />
           </e>
           <e p="Voluntary" t="Include">
-            <e p="Donate.cshtml" t="Include" />
             <e p="Event.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="RegisterDonate.cshtml" t="Include" />
           </e>
           <e p="Web.config" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />

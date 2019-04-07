@@ -19,10 +19,10 @@ namespace EntitiesManagerSystem.Controllers
             
             return View();
         }
-        public ActionResult Donate()
+        public ActionResult RegisterDonate()
         {
             ViewBag.user = "voluntary";
-            ViewBag.donate = "active";
+            ViewBag.register_donate = "active";
             
             return View();
         }

@@ -1,4 +1,4 @@
-$(function(){
-  $('.floated-chat-w').toggleClass('active');
-});
+// $(function(){
+//   $('.floated-chat-w').toggleClass('active');
+// });
 

@@ -1,0 +1,37 @@
+/*CSS TEMPLATE MODIFICATE*/
+
+.auth-box-w .logo-w{
+    padding: 5%;
+}
+
+.logo-w img{
+    width: 100%;
+}
+
+.auth-box-w .auth-header{
+    margin-bottom: 0rem;
+}
+
+body .daterangepicker .daterangepicker_input i{
+    top: 25%;
+}
+
+body .daterangepicker th.prev,
+body .daterangepicker th.next{
+    text-align: center;
+}
+
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #dde2ec;
+    border-radius: 4px;
+}
+
+/*END CSS TEMPLATE MODIFICATE*/
+
+/*CSS LOGIN*/
+.message-error{
+    color: #e65252;
+}
+/*END CSS LOGIN*/

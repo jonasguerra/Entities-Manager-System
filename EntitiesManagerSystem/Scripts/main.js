@@ -1,33 +1,48 @@
 $(document).ready(function () {
-    
+
     $('input#date_range').daterangepicker({
         timePicker: true,
         timePickerIncrement: 30,
-        locale: {
-            format: 'MM/DD/YYYY h:mm A',
-            closeText: 'Fechar',
-            prevText: '&#x3c;Anterior',
-            nextText: 'Pr&oacute;ximo&#x3e;',
-            currentText: 'Hoje',
-            monthNames: ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho',
-                'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-            monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
-                'Jul','Ago','Set','Out','Nov','Dez'],
-            dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
-            dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
-            dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
-            weekHeader: 'Sm',
-            firstDay: 0,
-            isRTL: false,
-            showMonthAfterYear: false,
-            yearSuffix: ''
+        "locale": {
+            "format": "DD/MM/YYYY",
+            "separator": " - ",
+            "applyLabel": "Aplicar",
+            "cancelLabel": "Cancelar",
+            "fromLabel": "De",
+            "toLabel": "Até",
+            "customRangeLabel": "Custom",
+            "daysOfWeek": [
+                "Dom",
+                "Seg",
+                "Ter",
+                "Qua",
+                "Qui",
+                "Sex",
+                "Sáb"
+            ],
+            "monthNames": [
+                "Janeiro",
+                "Fevereiro",
+                "Março",
+                "Abril",
+                "Maio",
+                "Junho",
+                "Julho",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Dezembro"
+            ],
+            "firstDay": 0
         },
     });
+
 
     $("select.select2").select2({
         "language": "pt-BR"
     });
-    
+
     $("#cep").autocompleteAddress();
 
     if ($('#ckeditor1').length) {
@@ -36,8 +51,8 @@ $(document).ready(function () {
 
     if ($('#formValidate').length) {
         $('#formValidate').validator();
-      }
-    
+    }
+
     addMask();
 })
 
@@ -60,10 +75,10 @@ function addMask() {
     $(".mask_cep").mask("99999-999");
 }
 
-$('input[name="collect_donation"]').on('change', function(){
-    if($(this).is(':checked')){
+$('input[name="collect_donation"]').on('change', function () {
+    if ($(this).is(':checked')) {
         $('#collect_donation_address').show('slow')
-    }else{
+    } else {
         $('#collect_donation_address').hide('slow')
     }
 })

@@ -409,7 +409,9 @@
           <e p="FilterConfig.cs" t="Include" />
           <e p="RouteConfig.cs" t="Include" />
         </e>
-        <e p="Content" t="Include" />
+        <e p="Content" t="Include">
+          <e p="main.css" t="Include" />
+        </e>
         <e p="Controllers" t="Include">
           <e p="EntityController.cs" t="Include" />
           <e p="LoginController.cs" t="Include" />
@@ -746,6 +748,7 @@
             <e p="onboarding-gradient-hor.png" t="Include" />
             <e p="onboarding-gradient-ver-dark.png" t="Include" />
             <e p="onboarding-gradient-ver.png" t="Include" />
+            <e p="ong.png" t="Include" />
             <e p="phone1.png" t="Include" />
             <e p="plan1.png" t="Include" />
             <e p="plan2.png" t="Include" />

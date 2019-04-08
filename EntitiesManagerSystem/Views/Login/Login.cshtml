@@ -1,0 +1,52 @@
+@{
+    ViewBag.Title = "login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard HTML Template</title>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="template language" name="keywords">
+    <meta content="Tamerlan Soziev" name="author">
+    <meta content="Admin dashboard html template" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="favicon.png" rel="shortcut icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    @Styles.Render("~/Template/bower_components/select2/dist/css/select2.min.css")
+    @Styles.Render("~/Template/bower_components/bootstrap-daterangepicker/daterangepicker.css")
+    @Styles.Render("~/Template/bower_components/dropzone/dist/dropzone.css")
+    @Styles.Render("~/Template/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css")
+    @Styles.Render("~/Template/bower_components/fullcalendar/dist/fullcalendar.min.css")
+    @Styles.Render("~/Template/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css")
+    @Styles.Render("~/Template/bower_components/slick-carousel/slick/slick.css")
+    @Styles.Render("~/Template/css/main.css?version=4.4.1")
+</head>
+
+<body class="auth-wrapper">
+    <div class="all-wrapper menu-side with-pattern">
+        <div class="auth-box-w">
+            <div class="logo-w"><a href="#"><img alt="" src="~/Template/img/logo-big.png"></a></div>
+            <h4 class="auth-header">Login</h4>
+            <form method="POST" action="/Login/LoginMethod">
+                <div class="form-group">
+                    <label for="">E-mail</label>
+                    <input name="username" class="form-control" placeholder="Digite seu e-mail" type="text" required="required">
+                    <div class="pre-icon os-icon os-icon-user-male-circle"></div>
+                </div>
+                <div class="form-group">
+                    <label for="">Senha</label>
+                    <input name="password" class="form-control"placeholder="Digite a sua senha" type="password" required="required">
+                    <div class="pre-icon os-icon os-icon-fingerprint"></div>
+                </div>
+                <div class="buttons-w"><button class="btn btn-primary">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

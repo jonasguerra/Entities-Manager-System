@@ -115,6 +115,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EntityController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\VoluntaryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -321,6 +322,7 @@
     <Content Include="Views\Entity\Donations.cshtml" />
     <Content Include="Views\Entity\Index.cshtml" />
     <Content Include="Views\Entity\RegisterEvent.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Voluntary\RegisterDonate.cshtml" />
     <Content Include="Views\Voluntary\Event.cshtml" />

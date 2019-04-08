@@ -412,6 +412,7 @@
         <e p="Content" t="Include" />
         <e p="Controllers" t="Include">
           <e p="EntityController.cs" t="Include" />
+          <e p="LoginController.cs" t="Include" />
           <e p="VoluntaryController.cs" t="Include" />
         </e>
         <e p="EntitiesManagerSystem.csproj" t="IncludeRecursive" />
@@ -783,6 +784,9 @@
             <e p="Donations.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="RegisterEvent.cshtml" t="Include" />
+          </e>
+          <e p="Login" t="Include">
+            <e p="Login.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />

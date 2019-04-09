@@ -28,8 +28,8 @@ body .daterangepicker th.next{
     border-radius: 4px;
 }
 
-.auth-box-w.wider,
-.auth-box-w{
+.register-mod.auth-box-w.wider,
+.register-mod.auth-box-w{
     max-width: unset!important;
 }
 

@@ -39,5 +39,11 @@ namespace EntitiesManagerSystem.Controllers
             
             return View();
         }
+        
+        public ActionResult RegisterEntity()
+        {
+           
+            return View();
+        }
     }
 }

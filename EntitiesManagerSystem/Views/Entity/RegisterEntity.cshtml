@@ -1,0 +1,79 @@
+@{
+    ViewBag.Title = "login";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+
+    <meta charset="UTF-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="template language" name="keywords">
+    <meta content="Tamerlan Soziev" name="author">
+    <meta content="Admin dashboard html template" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="~/Template/img/ong.png" rel="shortcut icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    @Styles.Render("~/Template/bower_components/select2/dist/css/select2.min.css")
+    @Styles.Render("~/Template/bower_components/bootstrap-daterangepicker/daterangepicker.css")
+    @Styles.Render("~/Template/bower_components/dropzone/dist/dropzone.css")
+    @Styles.Render("~/Template/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css")
+    @Styles.Render("~/Template/bower_components/fullcalendar/dist/fullcalendar.min.css")
+    @Styles.Render("~/Template/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css")
+    @Styles.Render("~/Template/bower_components/slick-carousel/slick/slick.css")
+    @Styles.Render("~/Template/css/main.css?version=4.4.1")
+    @Styles.Render("~/Content/input_file.css")
+    @Styles.Render("~/Content/main.css")
+    
+    
+    @Scripts.Render("~/Template/bower_components/jquery/dist/jquery.min.js")
+    @Scripts.Render("~/Scripts/input_file.js")
+
+</head>
+<body>
+<div class="all-wrapper menu-side with-pattern">
+    <div class="auth-box-w wider">
+        <div class="logo-w"><a href="/"><img alt="" src="~/Template/img/ong.png"></a></div>
+        <h4 class="auth-header">Criar uma nova conta</h4>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label>Nome</label>
+                <input class="form-control" placeholder="Nome" required="required"/>
+                <div class="pre-icon os-icon os-icon-user-male-circle"></div>
+            </div>
+            <div class="form-group">
+                <label>Endereço de e-mail</label>
+                <input path="email" class="form-control" placeholder="emailexemplo@exemplo.com" required="required"/>
+                <div class="pre-icon os-icon os-icon-email-2-at2"></div>
+            </div>
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" class="form-control" placeholder="Senha" required="required"/>
+                <div class="pre-icon os-icon os-icon-fingerprint"></div>
+            </div>
+
+            <div class="form-group">
+                <label path="photo">Foto</label>
+                <div class="pre-icon os-icon os-icon-documents-07"></div>
+                <div class="attachment attachment--image">
+                    <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif" required="required"/>
+                    <div class="attachment--label">
+                        <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
+                        <span class="file-name"></span>
+                        <span class="attachment--remove">Remover</span>
+                    </div>
+                    <div class="attachment--error"></div>
+                </div>
+            </div>
+
+            <div class="buttons-w">
+                <button class="btn btn-primary">Cadastrar</button>
+            </div>
+            <a class="link" href="/login">Login</a>
+        </form>
+    </div>
+</div>
+</body>

@@ -123,10 +123,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\input_file.css" />
     <Content Include="Content\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\input_file.js" />
     <Content Include="Scripts\jquery.autocomplete-address.min.js" />
     <Content Include="Scripts\jquery.mask.min.js" />
     <Content Include="Scripts\main.js" />
@@ -323,6 +325,7 @@
     <Content Include="Template\js\popup_chat_trigger_demo.js" />
     <Content Include="Views\Entity\Donations.cshtml" />
     <Content Include="Views\Entity\Index.cshtml" />
+    <Content Include="Views\Entity\RegisterEntity.cshtml" />
     <Content Include="Views\Entity\RegisterEvent.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

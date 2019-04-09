@@ -410,6 +410,7 @@
           <e p="RouteConfig.cs" t="Include" />
         </e>
         <e p="Content" t="Include">
+          <e p="input_file.css" t="Include" />
           <e p="main.css" t="Include" />
         </e>
         <e p="Controllers" t="Include">
@@ -425,6 +426,7 @@
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="input_file.js" t="Include" />
           <e p="jquery.autocomplete-address.min.js" t="Include" />
           <e p="jquery.mask.min.js" t="Include" />
           <e p="main.js" t="Include" />
@@ -786,6 +788,7 @@
           <e p="Entity" t="Include">
             <e p="Donations.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="RegisterEntity.cshtml" t="Include" />
             <e p="RegisterEvent.cshtml" t="Include" />
           </e>
           <e p="Login" t="Include">

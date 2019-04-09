@@ -28,6 +28,12 @@ body .daterangepicker th.next{
     border-radius: 4px;
 }
 
+.auth-box-w.wider,
+.auth-box-w{
+    max-width: unset!important;
+}
+
+
 /*END CSS TEMPLATE MODIFICATE*/
 
 /*CSS LOGIN*/
@@ -35,3 +41,16 @@ body .daterangepicker th.next{
     color: #e65252;
 }
 /*END CSS LOGIN*/
+
+/*CSS REGISTER*/
+.register-mod img{
+    max-height: 50px;
+    width: unset!important;
+}
+
+.register-mod .logo-w{
+    text-align: left;
+    padding: 25px;
+}
+
+/*END CSS REGISTER*/

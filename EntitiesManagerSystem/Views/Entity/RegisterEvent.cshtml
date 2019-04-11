@@ -39,16 +39,17 @@
             </div>
 
             <div class="form-group">
-                <label for="">Date Range Picker</label>
+                <label for="">Data do Evento</label>
                 <input name="date" id="date_range" class="form-control" type="text" required="required">
                 <div class="help-block form-text with-errors form-control-feedback"></div>
             </div>
 
-            <div class="form-group">
-                <label for=""> CEP</label>
-                <input id="cep" class="mask_cep form-control" name="cep" data-error="" placeholder="" type="text">
-            </div>
+            
             <div class="row">
+                <div class="form-group col-sm-2">
+                    <label for=""> CEP</label>
+                    <input id="cep" class="mask_cep form-control" name="cep" data-error="" placeholder="" type="text">
+                </div>
                 <div class="form-group col-sm-8">
                     <div class="form-group">
                         <label for=""> Endereço</label>
@@ -56,7 +57,7 @@
                         <div class="help-block form-text with-errors form-control-feedback"></div>
                     </div>
                 </div>
-                <div class="form-group col-sm-4">
+                <div class="form-group col-sm-2">
                     <div class="form-group">
                         <label for="">Número</label>
                         <input class="form-control" name="street_number" data-error="Numero invalido" placeholder="" type="text" required="required">
@@ -64,10 +65,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label for=""> Ponto de Referência</label>
-                <input class="form-control" name="reference" data-error="" placeholder="" type="text">
-            </div>
+            
             <div class="form-group">
                 <label for=""> Bairro</label>
                 <input class="autocomplete-neighborhood form-control" name="neighborhood" data-error="" placeholder="" type="text">
@@ -114,8 +112,12 @@
                         </select>
                     </div>
                 </div>
+           
             </div>
-            
+            <div class="form-group">
+                <label for=""> Ponto de Referência</label>
+                <input class="form-control" name="reference" data-error="" placeholder="" type="text">
+            </div>
             <div class="form-group">
                 <label> Descrição do Evento</label>
                 <textarea class="form-control" rows="3"></textarea>

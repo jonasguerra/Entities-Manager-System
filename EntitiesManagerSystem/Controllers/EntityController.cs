@@ -42,7 +42,16 @@ namespace EntitiesManagerSystem.Controllers
         
         public ActionResult RegisterEntity()
         {
-           
+            ViewBag.user = "entity";
+            ViewBag.category_event = new List<String>
+            {
+                "Pets", 
+                "Infantil", 
+                "Idosos",
+                "Necessitados",
+                "Meio Ambiente",
+            };
+            
             return View();
         }
     }

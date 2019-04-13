@@ -423,6 +423,7 @@
         <e p="Global.asax.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Entity" t="Include">
+            <e p="Entity.cs" t="Include" />
             <e p="Event.cs" t="Include" />
           </e>
           <e p="Login" t="Include">

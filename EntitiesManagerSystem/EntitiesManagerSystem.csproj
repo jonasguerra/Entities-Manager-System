@@ -346,6 +346,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\Entity" />
+    <Folder Include="Models\Login" />
+    <Folder Include="Models\Voluntary" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

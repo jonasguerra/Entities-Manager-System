@@ -121,7 +121,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\Event.cs" />
-    <Compile Include="Models\LoginForm.cs" />
+    <Compile Include="Models\Login\LoginForm.cs" />
+    <Compile Include="Models\Voluntary\Donations.cs" />
+    <Compile Include="Models\Voluntary\Voluntary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -347,8 +349,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Login" />
-    <Folder Include="Models\Voluntary" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

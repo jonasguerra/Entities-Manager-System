@@ -425,9 +425,13 @@
           <e p="Entity" t="Include">
             <e p="Event.cs" t="Include" />
           </e>
-          <e p="Login" t="Include" />
-          <e p="LoginForm.cs" t="Include" />
-          <e p="Voluntary" t="Include" />
+          <e p="Login" t="Include">
+            <e p="LoginForm.cs" t="Include" />
+          </e>
+          <e p="Voluntary" t="Include">
+            <e p="Donations.cs" t="Include" />
+            <e p="Voluntary.cs" t="Include" />
+          </e>
         </e>
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />

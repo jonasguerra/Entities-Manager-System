@@ -54,5 +54,29 @@ namespace EntitiesManagerSystem.Controllers
             
             return View();
         }
+        
+        
+        //###################
+        //### POST METHOD ###
+        //###################
+        
+//        [HttpPost]
+//        public ActionResult SaveEntity(Entit entity)
+//        {
+//            if (ModelState.IsValid)
+//            {
+//                var livros = GetListaLivros();
+//
+//                livros.Add(livro);
+//
+//                Session["livros"] = livros;
+//
+//                return RedirectToAction("Index");
+//            }
+//            else
+//            {
+//                return View("Novo",livro);
+//            }
+//        }
     }
 }

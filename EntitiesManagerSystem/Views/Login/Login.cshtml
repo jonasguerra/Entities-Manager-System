@@ -3,6 +3,8 @@
     Layout = null;
 }
 
+@model EntitiesManagerSystem.Models.LoginForm
+
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +15,7 @@
     <meta content="template gilanguage" name="keywords">
     <meta content="Tamerlan Soziev" name="author">
     <meta content="Admin dashboard html template" name="description">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta contenhtmlt="width=device-width, initial-scale=1" name="viewport">
     <link href="favicon.png" rel="shortcut icon">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
     @Styles.Render("~/Template/bower_components/select2/dist/css/select2.min.css")
@@ -32,21 +34,24 @@
         <div class="auth-box-w">
             <div class="logo-w"><a href="#"><img alt="" src="~/Template/img/ong.png"></a></div>
             <h4 class="auth-header">Login</h4>
-            <form method="POST" action="/Login/LoginMethod">
-                <p class="message-error">@ViewBag.Message</p>
-                <div class="form-group">
-                    <label for="">E-mail</label>
-                    <input name="username" class="form-control" placeholder="Digite seu e-mail" type="text" required="required">
-                    <div class="pre-icon os-icon os-icon-user-male-circle"></div>
-                </div>
-                <div class="form-group">
-                    <label for="">Senha</label>
-                    <input name="password" class="form-control"placeholder="Digite a sua senha" type="password" required="required">
-                    <div class="pre-icon os-icon os-icon-fingerprint"></div>
-                </div>
-                <div class="buttons-w"><button class="btn btn-primary">Entrar</button>
-                </div>
-            </form>
+            @using (Html.BeginForm("LoginMethod", "login", FormMethod.Post))
+            {
+            <p class="message-error">@ViewBag.Message</p>
+            <div class="form-group">
+                <label>@Html.LabelFor(m => m.Username)</label>
+                @Html.TextBoxFor(m => m.Username, new  {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Username, "", new { @class = "help-block form-text with-errors form-control-feedback"})
+                <div class="pre-icon os-icon os-icon-user-male-circle"></div>
+            </div>
+            <div class="form-group">
+                <label>@Html.LabelFor(m => m.Password)</label>
+                @Html.TextBoxFor(m => m.Password, new  {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "help-block form-text with-errors form-control-feedback"})
+                <div class="pre-icon os-icon os-icon-fingerprint"></div>
+            </div>
+            <div class="buttons-w"><button class="btn btn-primary">Entrar</button>
+            </div>
+            }
         </div>
     </div>
 </body>

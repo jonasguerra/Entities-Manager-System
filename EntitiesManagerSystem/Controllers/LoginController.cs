@@ -1,5 +1,6 @@
 using System;
 using System.Web.Mvc;
+using EntitiesManagerSystem.Models;
 
 namespace EntitiesManagerSystem.Controllers
 {
@@ -18,21 +19,23 @@ namespace EntitiesManagerSystem.Controllers
         
         
         [HttpPost]
-        public ActionResult LoginMethod(String username, String password)
+        public ActionResult LoginMethod(LoginForm login)
         {
-
-            if (username.Equals("entity") && password.Equals("123456"))
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index", "Entity");
+                if (login.Username.Equals("entity") && login.Password.Equals("123456"))
+                {
+                    return RedirectToAction("Index", "Entity");
+                }
+                if (login.Username.Equals("voluntary") && login.Password.Equals("123456"))
+                {
+                    return RedirectToAction("Index", "Voluntary");
+                }
+                TempData["message"] = "Usuário ou senha não correspondem!";
+                return RedirectToAction("Login");
             }
             
-            if (username.Equals("voluntary") && password.Equals("123456"))
-            {
-                return RedirectToAction("Index", "Voluntary");
-            }
-            
-            TempData["message"] = "Usuário ou senha não correspondem!";
-            return RedirectToAction("Login");
+            return View("Login",login);
         }
     }
 }

@@ -7,12 +7,13 @@ namespace EntitiesManagerSystem.Models
     {
         public Guid Id { get; set; }
 
-        [Required(ErrorMessage = "O usuário deve ser informado")]
         [Display(Name = "Username")]
+        [Required(ErrorMessage = "O {0} deve ser informado")]
         public string Username { get; set; }
         
-        [Required(ErrorMessage = "A senha deve ser informada")]
         [Display(Name = "Senha")]
+        [Required(ErrorMessage = "A {0} deve ser informada")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         public LoginForm()

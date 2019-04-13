@@ -31,7 +31,26 @@ namespace EntitiesManagerSystem.Models.Entity
         [Required(ErrorMessage = "{0} deve ser informado")]
         [StringLength(50, MinimumLength = 4, ErrorMessage = "{0} deve ter entre {2} e {1} caractéres")]
         public string Address { get; set; }
+        
+        [Display(Name = "Número")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string Number { get; set; }
 
+        [Display(Name = "Bairro")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string Neighborhood{ get; set; }
+        
+        [Display(Name = "Cidade")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string City{ get; set; }
+        
+//        public string State { get; set; }
+
+        [Display(Name = "Ponto de referência")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string ReferencePoint{ get; set; }
+        
+        
         public Event()
         {
             

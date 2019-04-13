@@ -29,29 +29,6 @@
                 @Html.ValidationMessageFor(m => m.Description, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
             
-            
-            <div class="row">
-                 <div class="form-group col-sm-2">
-                     <label>@Html.LabelFor(m => m.Cep)</label>
-                     @Html.TextBoxFor(m => m.Cep, new {@id="cep", @class = "mask_cep form-control"})
-                     @Html.ValidationMessageFor(m => m.Cep, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                 </div>
-                 @* <div class="form-group col-sm-8"> *@
-                 @*     <div class="form-group"> *@
-                 @*         <label for=""> Endereço</label> *@
-                 @*         <input class="autocomplete-address form-control" name="address" data-error="Endereço invalido" placeholder="" type="text" required="required"> *@
-                 @*         <div class="help-block form-text with-errors form-control-feedback"></div> *@
-                 @*     </div> *@
-                 @* </div> *@
-                 @* <div class="form-group col-sm-2"> *@
-                 @*     <div class="form-group"> *@
-                 @*         <label for="">Número</label> *@
-                 @*         <input class="form-control" name="street_number" data-error="Numero invalido" placeholder="" type="text" required="required"> *@
-                 @*         <div class="help-block form-text with-errors form-control-feedback"></div> *@
-                 @*     </div> *@
-                 @* </div> *@
-             </div>
-
 @*             <div class="form-group"> *@
 @*                 <label for=""> Afinidade do evento</label> *@
 @*                 <select name="category" class="form-control select2" multiple="true" required="required"> *@
@@ -68,64 +45,83 @@
 @*                 <input name="date" id="date_range" class="form-control" type="text" required="required"> *@
 @*                 <div class="help-block form-text with-errors form-control-feedback"></div> *@
 @*             </div> *@
-@* *@
-@* *@
-@*             <div class="form-group"> *@
-@*                 <label for=""> Bairro</label> *@
-@*                 <input class="autocomplete-neighborhood form-control" name="neighborhood" data-error="" placeholder="" type="text"> *@
-@*             </div> *@
-@*             <div class="row"> *@
-@*                 <div class="col-sm-8"> *@
-@*                     <div class="form-group"> *@
-@*                         <label for=""> Cidade</label> *@
-@*                         <input class="autocomplete-city form-control" name="city" data-error="" placeholder="" type="text" value="Caxias do Sul" required="required"> *@
-@*                         <div class="help-block form-text with-errors form-control-feedback"></div> *@
-@*                     </div> *@
-@*                 </div> *@
-@*                 <div class="col-sm-4"> *@
-@*                     <div class="form-group"> *@
-@*                         <label for=""> UF</label> *@
-@*                         <select class="autocomplete-state form-control" name="state"> *@
-@*                             <option>AC</option> *@
-@*                             <option>AL</option> *@
-@*                             <option>AM</option> *@
-@*                             <option>AP</option> *@
-@*                             <option>BA</option> *@
-@*                             <option>CE</option> *@
-@*                             <option>DF</option> *@
-@*                             <option>ES</option> *@
-@*                             <option>GO</option> *@
-@*                             <option>MA</option> *@
-@*                             <option>MG</option> *@
-@*                             <option>MS</option> *@
-@*                             <option>MT</option> *@
-@*                             <option>PA</option> *@
-@*                             <option>PB</option> *@
-@*                             <option>PE</option> *@
-@*                             <option>PI</option> *@
-@*                             <option>PR</option> *@
-@*                             <option>RJ</option> *@
-@*                             <option>RN</option> *@
-@*                             <option>RO</option> *@
-@*                             <option>RR</option> *@
-@*                             <option selected>RS</option> *@
-@*                             <option>SC</option> *@
-@*                             <option>SE</option> *@
-@*                             <option>SP</option> *@
-@*                             <option>TO</option> *@
-@*                         </select> *@
-@*                     </div> *@
-@*                 </div> *@
-@* *@
-@*             </div> *@
-@*             <div class="form-group"> *@
-@*                 <label for=""> Ponto de Referência</label> *@
-@*                 <input class="form-control" name="reference" data-error="" placeholder="" type="text"> *@
-@*             </div> *@
-@*             <div class="form-group"> *@
-@*                 <label> Descrição do Evento</label> *@
-@*                 <textarea class="form-control" rows="3"></textarea> *@
-@*             </div> *@
+            
+            
+            <div class="row">
+                 <div class="form-group col-sm-2">
+                     <label>@Html.LabelFor(m => m.Cep)</label>
+                     @Html.TextBoxFor(m => m.Cep, new {@id="cep", @class = "mask_cep form-control"})
+                     @Html.ValidationMessageFor(m => m.Cep, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                 </div>
+                 <div class="form-group col-sm-8">
+                     <div class="form-group">
+                         <label>@Html.LabelFor(m => m.Address)</label>
+                         @Html.TextBoxFor(m => m.Address, new {@class = "autocomplete-address form-control"})
+                         @Html.ValidationMessageFor(m => m.Address, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                     </div>
+                 </div>
+                 <div class="form-group col-sm-2">
+                     <div class="form-group">
+                         <label>@Html.LabelFor(m => m.Number)</label>
+                         @Html.TextBoxFor(m => m.Number, new {@class = "form-control"})
+                         @Html.ValidationMessageFor(m => m.Number, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                     </div>
+                 </div>
+             </div>
+
+             <div class="form-group">
+                 <label>@Html.LabelFor(m => m.Neighborhood)</label>
+                 @Html.TextBoxFor(m => m.Neighborhood, new {@class = "autocomplete-neighborhood form-control"})
+                 @Html.ValidationMessageFor(m => m.Neighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+             </div>
+             <div class="row">
+                 <div class="col-sm-8">
+                     <div class="form-group">
+                         <label>@Html.LabelFor(m => m.City)</label>
+                         @Html.TextBoxFor(m => m.City, new {@class = "autocomplete-city form-control"})
+                         @Html.ValidationMessageFor(m => m.City, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                     </div>
+                 </div>
+                 @* <div class="col-sm-4"> *@
+                 @*     <div class="form-group"> *@
+                 @*         <label for=""> UF</label> *@
+                 @*         <select class="autocomplete-state form-control" name="state"> *@
+                 @*             <option>AC</option> *@
+                 @*             <option>AL</option> *@
+                 @*             <option>AM</option> *@
+                 @*             <option>AP</option> *@
+                 @*             <option>BA</option> *@
+                 @*             <option>CE</option> *@
+                 @*             <option>DF</option> *@
+                 @*             <option>ES</option> *@
+                 @*             <option>GO</option> *@
+                 @*             <option>MA</option> *@
+                 @*             <option>MG</option> *@
+                 @*             <option>MS</option> *@
+                 @*             <option>MT</option> *@
+                 @*             <option>PA</option> *@
+                 @*             <option>PB</option> *@
+                 @*             <option>PE</option> *@
+                 @*             <option>PI</option> *@
+                 @*             <option>PR</option> *@
+                 @*             <option>RJ</option> *@
+                 @*             <option>RN</option> *@
+                 @*             <option>RO</option> *@
+                 @*             <option>RR</option> *@
+                 @*             <option selected>RS</option> *@
+                 @*             <option>SC</option> *@
+                 @*             <option>SE</option> *@
+                 @*             <option>SP</option> *@
+                 @*             <option>TO</option> *@
+                 @*         </select> *@
+                 @*     </div> *@
+                 @* </div> *@
+             </div>
+             <div class="form-group">
+                 <label>@Html.LabelFor(m => m.ReferencePoint)</label>
+                 @Html.TextBoxFor(m => m.ReferencePoint, new {@class = "form-control"})
+                 @Html.ValidationMessageFor(m => m.ReferencePoint, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+             </div>
 
             <div class="form-buttons-w">
                 <button class="btn btn-primary" type="submit">

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using EntitiesManagerSystem.Models.Entity;
 
 namespace EntitiesManagerSystem.Controllers
 {
@@ -60,23 +61,15 @@ namespace EntitiesManagerSystem.Controllers
         //### POST METHOD ###
         //###################
         
-//        [HttpPost]
-//        public ActionResult SaveEntity(Entit entity)
-//        {
-//            if (ModelState.IsValid)
-//            {
-//                var livros = GetListaLivros();
-//
-//                livros.Add(livro);
-//
-//                Session["livros"] = livros;
-//
-//                return RedirectToAction("Index");
-//            }
-//            else
-//            {
-//                return View("Novo",livro);
-//            }
-//        }
+        [HttpPost]
+        public ActionResult SaveEntity(Event event_from)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            
+            return View("RegisterEvent",event_from);
+        }
     }
 }

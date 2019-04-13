@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+if ($('input#date_range').length){
     $('input#date_range').daterangepicker({
         timePicker: true,
         timePickerIncrement: 30,
@@ -37,6 +37,8 @@ $(document).ready(function () {
             "firstDay": 0
         },
     });
+}
+    
 
 
     $("select.select2").select2({

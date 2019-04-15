@@ -18,7 +18,6 @@ namespace EntitiesManagerSystem.Models
 
         public LoginForm()
         {
-            
         }
     }
 }

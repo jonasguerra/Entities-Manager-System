@@ -3,13 +3,13 @@
 }
 
 @using System.Web.Mvc.Html
-@model EntitiesManagerSystem.Models.Entity.Event
+@model EntitiesManagerSystem.Models.Event
 
 <div class="element-wrapper col-8 mx-auto">
     <h6 class="element-header">Cadastro de Eventos</h6>
     <div class="element-box">
 
-        @using (Html.BeginForm("SaveEntity", "Entity", FormMethod.Post))
+        @using (Html.BeginForm("SaveEvent", "Entity", FormMethod.Post))
         {
             <h5 class="form-header">Cadastro de Eventos</h5>
             <div class="form-desc">

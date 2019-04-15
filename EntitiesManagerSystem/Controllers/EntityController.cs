@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using EntitiesManagerSystem.Models.Entity;
+using EntitiesManagerSystem.Models;
 
 namespace EntitiesManagerSystem.Controllers
 {
@@ -62,7 +62,7 @@ namespace EntitiesManagerSystem.Controllers
         //###################
         
         [HttpPost]
-        public ActionResult SaveEntity(Event event_from)
+        public ActionResult SaveEvent(Event event_from)
         {
             if (ModelState.IsValid)
             {

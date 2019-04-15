@@ -3,6 +3,8 @@
     Layout = null;
 }
 
+@using System.Web.Mvc.Html
+@model EntitiesManagerSystem.Models.Entity
 
 <!DOCTYPE html>
 <html>
@@ -40,243 +42,239 @@
     </a>
 </div>
 <h4 class="auth-header">Nova Entidade</h4>
-<form action="/register" method="post">
-<legend>
-    <span>Dados Cadastrais</span>
-</legend>
-<div class="row">
-    <div class="col-sm-6">
-        <div class="form-group">
-            <label for="">
-                Nome da
-                Entidade
-            </label>
-            <input class="form-control" data-error="Nome da Entidade Inválido"
-                   placeholder="Informe o nome da sua Entidade" required="required" type="text">
-            <div class="help-block form-text with-errors form-control-feedback">
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="form-group">
-            <label for=""> Responsável</label>
-            <input class="form-control"
-                   data-error="Nome do responsável Inválido" placeholder="Nome do responsável pela entidade"
-                   required="required" type="text">
-            <div class="help-block form-text with-errors form-control-feedback">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="form-group col-sm-6">
-        <label for=""> E-mail da Entidade</label>
-        <input class="form-control"
-               data-error="E-mail inválido" placeholder="Insira o e-mail" required="required" type="email">
-        <div class="help-block form-text with-errors form-control-feedback">
-        </div>
-    </div>
-    <div class="form-group col-sm-6">
-        <div class="form-group">
-            <label for=""> Telefone da Entidade</label>
-            <input class="form-control" data-minlength="8"
-                   placeholder="Telefone" required="required" type="number">
-            <div class="help-block form-text text-muted form-control-feedback">
-                Mínimo 8 caracteres
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-6">
-        <div class="form-group">
-            <label for=""> Senha</label>
-            <input class="form-control" data-minlength="8"
-                   placeholder="" required="required" type="password">
-            <div class="help-block form-text text-muted form-control-feedback">
-                Mínimo 8 caracteres
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="form-group">
-            <label for="">Confirme a Senha</label>
-            <input class="form-control"
-                   data-match-error="Passwords don&#39;t match" placeholder="" required="required" type="password">
-            <div class="help-block form-text with-errors form-control-feedback">
-            </div>
-        </div>
-    </div>
-</div>
-<legend>
-    <span>Endereço</span>
-</legend>
-<div class="row">
-    <div class="form-group col-sm-2">
-        <label for=""> CEP</label>
-        <input id="cep" class="mask_cep form-control" name="cep" data-error="" placeholder="" type="text">
-    </div>
-    <div class="form-group col-sm-8">
-        <div class="form-group">
-            <label for=""> Endereço</label>
-            <input class="autocomplete-address form-control" name="address" data-error="Endereço invalido" placeholder="" type="text" required="required">
-            <div class="help-block form-text with-errors form-control-feedback"></div>
-        </div>
-    </div>
-    <div class="form-group col-sm-2">
-        <div class="form-group">
-            <label for="">Número</label>
-            <input class="form-control" name="street_number" data-error="Numero invalido" placeholder="" type="text" required="required">
-            <div class="help-block form-text with-errors form-control-feedback"></div>
-        </div>
-    </div>
-</div>
-<div class="form-group">
-    <label for=""> Bairro</label>
-    <input class="autocomplete-neighborhood form-control" name="neighborhood" data-error="" placeholder="" type="text">
-</div>
-<div class="row">
-    <div class="col-sm-8">
-        <div class="form-group">
-            <label for=""> Cidade</label>
-            <input class="autocomplete-city form-control" name="city" data-error="" placeholder="" type="text" value="Caxias do Sul" required="required">
-            <div class="help-block form-text with-errors form-control-feedback"></div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="form-group">
-            <label for=""> UF</label>
-            <select class="autocomplete-state form-control" name="state">
-                <option>AC</option>
-                <option>AL</option>
-                <option>AM</option>
-                <option>AP</option>
-                <option>BA</option>
-                <option>CE</option>
-                <option>DF</option>
-                <option>ES</option>
-                <option>GO</option>
-                <option>MA</option>
-                <option>MG</option>
-                <option>MS</option>
-                <option>MT</option>
-                <option>PA</option>
-                <option>PB</option>
-                <option>PE</option>
-                <option>PI</option>
-                <option>PR</option>
-                <option>RJ</option>
-                <option>RN</option>
-                <option>RO</option>
-                <option>RR</option>
-                <option selected>RS</option>
-                <option>SC</option>
-                <option>SE</option>
-                <option>SP</option>
-                <option>TO</option>
-            </select>
-        </div>
-    </div>
-
-</div>
-<div class="form-group">
-    <label for=""> Ponto de Referência</label>
-    <input class="form-control" name="reference" data-error="" placeholder="" type="text">
-</div>
-<legend>
-    <span>Atuação</span>
-</legend>
-<div class="form-group">
-    <label for=""> Afinidade</label>
-    <select name="category" class="form-control select2" multiple="true" required="required">
-        @foreach (String c in ViewBag.category_event)
-        {
-            <option value="@c">@c</option>
-        }
-    </select>
-</div>
-<div class="form-group">
-    <label for=""> Area de Atuação</label>
-    <select class="form-control select2" multiple="true">
-        <option selected="true">Rio Grande do Sul</option>
-        <option>Caxias</option>
-        <option>Farroupilha</option>
-        <option>Bento Gonçalves</option>
-    </select>
-</div>
-<fieldset class="form-group">
+@using (Html.BeginForm("RegisterEntity", "Entity", FormMethod.Post))
+{
+    <legend>
+        <span>Dados Cadastrais</span>
+    </legend>
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
-                <label for="">
-                    Sigla da
-                    Entidade
-                </label>
-                <input class="form-control" data-error="Sigla da Entidade inválida"
-                       placeholder="Informe a Sigla da Entidade" required="required" type="text">
+                <label>@Html.LabelFor(m => m.EntityName)</label>
+                @Html.TextBoxFor(m => m.EntityName, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.EntityName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for=""> Responsável</label>
+                <input class="form-control"
+                       data-error="Nome do responsável Inválido" placeholder="Nome do responsável pela entidade"
+                       required="required" type="text">
                 <div class="help-block form-text with-errors form-control-feedback">
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="">
-                    Data de
-                    Criação
-                </label>
-                <input class="single-daterange form-control" placeholder="Data de Criação"
-                       type="text" value="04/12/1978">
+    </div>
+    <div class="row">
+        <div class="form-group col-sm-6">
+            <label for=""> E-mail da Entidade</label>
+            <input class="form-control"
+                   data-error="E-mail inválido" placeholder="Insira o e-mail" required="required" type="email">
+            <div class="help-block form-text with-errors form-control-feedback">
             </div>
         </div>
-
-
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label for=""> Telefone da Entidade</label>
+                <input class="form-control" data-minlength="8"
+                       placeholder="Telefone" required="required" type="number">
+                <div class="help-block form-text text-muted form-control-feedback">
+                    Mínimo 8 caracteres
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
-                <label for="">Redes Sociais</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"></div>
-                    </div><input class="form-control" placeholder="Informe o link da sua página" type="text">
+                <label for=""> Senha</label>
+                <input class="form-control" data-minlength="8"
+                       placeholder="" required="required" type="password">
+                <div class="help-block form-text text-muted form-control-feedback">
+                    Mínimo 8 caracteres
                 </div>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group">
-                <label for="">Web-site</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"></div>
-                    </div><input class="form-control" placeholder="Informe o site da sua entidade" type="text">
+                <label for="">Confirme a Senha</label>
+                <input class="form-control"
+                       data-match-error="Passwords don&#39;t match" placeholder="" required="required" type="password">
+                <div class="help-block form-text with-errors form-control-feedback">
                 </div>
             </div>
         </div>
     </div>
-    <div class="form-group">
-        <label> Descrição da Entidade</label><textarea class="form-control" rows="3"></textarea>
-    </div>
-
-</fieldset>
-
-<div class="form-group">
-    <label path="photo">Foto</label>
-    <div class="pre-icon os-icon os-icon-documents-07"></div>
-    <div class="attachment attachment--image">
-        <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif" required="required"/>
-        <div class="attachment--label">
-            <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
-            <span class="file-name"></span>
-            <span class="attachment--remove">Remover</span>
+    <legend>
+        <span>Endereço</span>
+    </legend>
+    <div class="row">
+        <div class="form-group col-sm-2">
+            <label for=""> CEP</label>
+            <input id="cep" class="mask_cep form-control" name="cep" data-error="" placeholder="" type="text">
         </div>
-        <div class="attachment--error"></div>
+        <div class="form-group col-sm-8">
+            <div class="form-group">
+                <label for=""> Endereço</label>
+                <input class="autocomplete-address form-control" name="address" data-error="Endereço invalido" placeholder="" type="text" required="required">
+                <div class="help-block form-text with-errors form-control-feedback"></div>
+            </div>
+        </div>
+        <div class="form-group col-sm-2">
+            <div class="form-group">
+                <label for="">Número</label>
+                <input class="form-control" name="street_number" data-error="Numero invalido" placeholder="" type="text" required="required">
+                <div class="help-block form-text with-errors form-control-feedback"></div>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="form-group">
+        <label for=""> Bairro</label>
+        <input class="autocomplete-neighborhood form-control" name="neighborhood" data-error="" placeholder="" type="text">
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label for=""> Cidade</label>
+                <input class="autocomplete-city form-control" name="city" data-error="" placeholder="" type="text" value="Caxias do Sul" required="required">
+                <div class="help-block form-text with-errors form-control-feedback"></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for=""> UF</label>
+                <select class="autocomplete-state form-control" name="state">
+                    <option>AC</option>
+                    <option>AL</option>
+                    <option>AM</option>
+                    <option>AP</option>
+                    <option>BA</option>
+                    <option>CE</option>
+                    <option>DF</option>
+                    <option>ES</option>
+                    <option>GO</option>
+                    <option>MA</option>
+                    <option>MG</option>
+                    <option>MS</option>
+                    <option>MT</option>
+                    <option>PA</option>
+                    <option>PB</option>
+                    <option>PE</option>
+                    <option>PI</option>
+                    <option>PR</option>
+                    <option>RJ</option>
+                    <option>RN</option>
+                    <option>RO</option>
+                    <option>RR</option>
+                    <option selected>RS</option>
+                    <option>SC</option>
+                    <option>SE</option>
+                    <option>SP</option>
+                    <option>TO</option>
+                </select>
+            </div>
+        </div>
 
-<div class="buttons-w">
-    <button class="btn btn-primary">Cadastrar</button>
-</div>
-</form>
+    </div>
+    <div class="form-group">
+        <label for=""> Ponto de Referência</label>
+        <input class="form-control" name="reference" data-error="" placeholder="" type="text">
+    </div>
+    <legend>
+        <span>Atuação</span>
+    </legend>
+    <div class="form-group">
+        <label for=""> Afinidade</label>
+        <select name="category" class="form-control select2" multiple="true" required="required">
+            @foreach (String c in ViewBag.category_event)
+            {
+                <option value="@c">@c</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for=""> Area de Atuação</label>
+        <select class="form-control select2" multiple="true">
+            <option selected="true">Rio Grande do Sul</option>
+            <option>Caxias</option>
+            <option>Farroupilha</option>
+            <option>Bento Gonçalves</option>
+        </select>
+    </div>
+    <fieldset class="form-group">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="">
+                        Sigla da
+                        Entidade
+                    </label>
+                    <input class="form-control" data-error="Sigla da Entidade inválida"
+                           placeholder="Informe a Sigla da Entidade" required="required" type="text">
+                    <div class="help-block form-text with-errors form-control-feedback">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="">
+                        Data de
+                        Criação
+                    </label>
+                    <input class="single-daterange form-control" placeholder="Data de Criação"
+                           type="text" value="04/12/1978">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="">Redes Sociais</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"></div>
+                        </div><input class="form-control" placeholder="Informe o link da sua página" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="">Web-site</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"></div>
+                        </div><input class="form-control" placeholder="Informe o site da sua entidade" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label> Descrição da Entidade</label><textarea class="form-control" rows="3"></textarea>
+        </div>
+
+    </fieldset>
+
+    <div class="form-group">
+        <label path="photo">Foto</label>
+        <div class="pre-icon os-icon os-icon-documents-07"></div>
+        <div class="attachment attachment--image">
+            <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif" required="required"/>
+            <div class="attachment--label">
+                <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
+                <span class="file-name"></span>
+                <span class="attachment--remove">Remover</span>
+            </div>
+            <div class="attachment--error"></div>
+        </div>
+    </div>
+
+    <div class="buttons-w">
+        <button class="btn btn-primary">Cadastrar</button>
+    </div>
+}
 </div>
 </div>
 </div>

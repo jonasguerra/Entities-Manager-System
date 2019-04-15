@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace EntitiesManagerSystem.Models.Entity
+namespace EntitiesManagerSystem.Models
 {
     public class Event
     {

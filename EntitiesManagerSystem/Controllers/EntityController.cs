@@ -21,14 +21,6 @@ namespace EntitiesManagerSystem.Controllers
 
             ViewBag.user = "entity";
             ViewBag.register_event = "active";
-            ViewBag.category_event = new List<String>
-            {
-                "Pets", 
-                "Infantil", 
-                "Idosos",
-                "Necessitados",
-                "Meio Ambiente",
-            };
             
             return View();
         }
@@ -69,6 +61,8 @@ namespace EntitiesManagerSystem.Controllers
                 return RedirectToAction("Index");
             }
             
+            ViewBag.user = "entity";
+            ViewBag.register_event = "active";
             return View("RegisterEvent",event_from);
         }
     }

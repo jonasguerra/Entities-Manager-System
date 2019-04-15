@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project" singleton="false">
+  <configuration default="false" name="Entity" type="DotNetProject" factoryName=".NET Project" singleton="false">
     <option name="EXE_PATH" value="/usr/lib/mono/4.5/xsp4.exe" />
     <option name="PROGRAM_PARAMETERS" value="--address=127.0.0.1 --port=5000" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EntitiesManagerSystem" />

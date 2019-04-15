@@ -26,14 +26,6 @@ namespace EntitiesManagerSystem.Controllers
         {
             ViewBag.user = "voluntary";
             ViewBag.register_donate = "active";
-            ViewBag.category_event = new  List<String>
-            {
-                "Pets", 
-                "Infantil", 
-                "Idosos",
-                "Necessitados",
-                "Meio Ambiente",
-            };
             
             return View();
         }
@@ -51,6 +43,8 @@ namespace EntitiesManagerSystem.Controllers
                 return RedirectToAction("Index");
             }
             
+            ViewBag.user = "voluntary";
+            ViewBag.register_donate = "active";
             return View("RegisterDonate",donation);
         }
     }

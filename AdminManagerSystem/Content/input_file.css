@@ -1,0 +1,64 @@
+.attachment {
+    background-color: #c8dadf;
+    position: relative;
+    padding: 12px;
+    width: 100%;
+    background-color: white;
+    border: 1px dashed #c8c9c7;
+}
+.attachment:hover, .attachment:focus, .attachment.is-dragover {
+    border-color: #4a4a4a;
+}
+.attachment + .attachment {
+    margin-top: 20px;
+}
+.attachment.has-error {
+    border-color: #f00;
+}
+.attachment.has-error .attachment--error {
+    display: block;
+}
+.attachment.is-attached {
+    border-radius: 100px;
+    background-color: #e2e2e2;
+}
+.attachment.is-attached .file {
+    display: none;
+}
+.attachment.is-attached .placeholder {
+    display: none;
+}
+.attachment.is-attached .file-name {
+    display: inline-block;
+}
+.attachment.is-attached .attachment--remove {
+    display: inline-block;
+}
+.attachment, .file {
+    overflow: hidden;
+}
+.file {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.file-name {
+    display: none;
+}
+.attachment--remove {
+    display: none;
+    cursor: pointer;
+    float: right;
+}
+.attachment--remove:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.attachment--error {
+    display: none;
+}

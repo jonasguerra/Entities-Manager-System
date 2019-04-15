@@ -392,7 +392,6 @@
             <e p="Index.cshtml" t="Include" />
             <e p="RegisterModerator.cshtml" t="Include" />
             <e p="Request.cshtml" t="Include" />
-            <e p="back.html" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />

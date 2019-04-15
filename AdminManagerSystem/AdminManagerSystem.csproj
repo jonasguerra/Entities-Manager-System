@@ -323,7 +323,6 @@
     <Content Include="Template\js\main.js" />
     <Content Include="Template\js\main_rentals.js" />
     <Content Include="Template\js\popup_chat_trigger_demo.js" />
-    <Content Include="Views\Admin\back.html" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\RegisterModerator.cshtml" />
     <Content Include="Views\Admin\Request.cshtml" />

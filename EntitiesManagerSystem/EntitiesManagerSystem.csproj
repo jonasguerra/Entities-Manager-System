@@ -117,6 +117,7 @@
     <Compile Include="Controllers\EntityController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\VoluntaryController.cs" />
+    <Compile Include="Custom_Atribute\RequiredIf.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

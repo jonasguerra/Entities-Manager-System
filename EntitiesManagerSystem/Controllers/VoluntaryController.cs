@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using EntitiesManagerSystem.Models.Voluntary;
 
 namespace EntitiesManagerSystem.Controllers
 {
@@ -35,6 +36,22 @@ namespace EntitiesManagerSystem.Controllers
             };
             
             return View();
+        }
+        
+        
+        //###################
+        //### POST METHOD ###
+        //###################
+        
+        [HttpPost]
+        public ActionResult SaveDonation(Donations donation)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            
+            return View("RegisterDonate",donation);
         }
     }
 }

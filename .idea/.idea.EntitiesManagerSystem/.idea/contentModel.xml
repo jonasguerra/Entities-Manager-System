@@ -418,6 +418,9 @@
           <e p="LoginController.cs" t="Include" />
           <e p="VoluntaryController.cs" t="Include" />
         </e>
+        <e p="Custom_Atribute" t="Include">
+          <e p="RequiredIf.cs" t="Include" />
+        </e>
         <e p="EntitiesManagerSystem.csproj" t="IncludeRecursive" />
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using EntitiesManagerSystem.Models.Voluntary;
 
 namespace EntitiesManagerSystem.Controllers
 {
@@ -25,16 +26,26 @@ namespace EntitiesManagerSystem.Controllers
         {
             ViewBag.user = "voluntary";
             ViewBag.register_donate = "active";
-            ViewBag.category_event = new  List<String>
-            {
-                "Pets", 
-                "Infantil", 
-                "Idosos",
-                "Necessitados",
-                "Meio Ambiente",
-            };
             
             return View();
+        }
+        
+        
+        //###################
+        //### POST METHOD ###
+        //###################
+        
+        [HttpPost]
+        public ActionResult SaveDonation(Donations donation)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            
+            ViewBag.user = "voluntary";
+            ViewBag.register_donate = "active";
+            return View("RegisterDonate",donation);
         }
     }
 }

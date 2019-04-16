@@ -76,11 +76,3 @@ function addMask() {
 
     $(".mask_cep").mask("99999-999");
 }
-
-$('input[name="collect_donation"]').on('change', function () {
-    if ($(this).is(':checked')) {
-        $('#collect_donation_address').show('slow')
-    } else {
-        $('#collect_donation_address').hide('slow')
-    }
-})

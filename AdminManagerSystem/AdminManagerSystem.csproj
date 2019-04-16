@@ -118,12 +118,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Affinity.cs" />
+    <Compile Include="Models\Moderator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\input_file.css" />
+    <Content Include="Content\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\input_file.js" />
+    <Content Include="Scripts\jquery.autocomplete-address.min.js" />
+    <Content Include="Scripts\jquery.mask.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Template\bower_components\bootstrap-daterangepicker\daterangepicker.css" />
     <Content Include="Template\bower_components\bootstrap-daterangepicker\daterangepicker.js" />
     <Content Include="Template\bower_components\bootstrap-validator\dist\validator.min.js" />
@@ -287,6 +295,7 @@
     <Content Include="Template\img\onboarding-gradient-hor.png" />
     <Content Include="Template\img\onboarding-gradient-ver-dark.png" />
     <Content Include="Template\img\onboarding-gradient-ver.png" />
+    <Content Include="Template\img\ong.png" />
     <Content Include="Template\img\phone1.png" />
     <Content Include="Template\img\plan1.png" />
     <Content Include="Template\img\plan2.png" />
@@ -331,9 +340,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

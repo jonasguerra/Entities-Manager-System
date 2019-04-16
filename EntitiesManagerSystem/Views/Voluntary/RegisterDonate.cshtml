@@ -1,48 +1,66 @@
-@model dynamic
-
 @{
     ViewBag.Title = "register-donate";
 }
+
+@using System.Web.Mvc.Html
+@model EntitiesManagerSystem.Models.Voluntary.Donations
+
 <div class="element-wrapper col-8 mx-auto">
     <h6 class="element-header">Realizar Doação</h6>
     <div class="element-box">
 
-        <form id="formValidate">
+        @using (Html.BeginForm("SaveDonation", "Voluntary", FormMethod.Post))
+        {
             <h5 class="form-header">Cadastro de Doações</h5>
             <div class="form-desc">
                 Cadastre aqui o que você deseja doar, para que a entidade com interesse possa requisitar.
             </div>
+            
+            
             <div class="form-group">
-                <label for=""> Título</label>
-                <input type="text" class="form-control" name="title" data-error="Titulo da doação inválido" required="required">
-                <div class="help-block form-text with-errors form-control-feedback"></div>
+                <label>@Html.LabelFor(m => m.Title)</label>
+                @Html.TextBoxFor(m => m.Title, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Title, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
 
+            
             <div class="form-group">
-                <label for=""> Afinidade da doação</label>
-                <select name="category" class="form-control select2" multiple="true" required="required">
-                    @foreach (String c in ViewBag.category_event)
-                    {
-                        <option value="@c">@c</option>
-                    }
-                </select>
-                <div class="help-block form-text with-errors form-control-feedback"></div>
+                <label>@Html.LabelFor(m => m.Description)</label>
+                @Html.TextAreaFor(m => m.Description, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Description, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
-
+            
             <div class="form-group">
-                <label> Descrição da doação</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>@Html.LabelFor(m => m.Affinity)</label>
+                @Html.DropDownListFor(model => model.Affinity, new SelectList(
+                    new List<Object>{ 
+                        new { value = "Infantil" , text = "Infantil"},
+                        new { value = "Pets" , text = "Pets"},
+                        new { value = "Idosos" , text = "Idosos"},
+                        new { value = "Necessitados" , text = "Necessitados"},
+                        new { value = "Meio Ambiente" , text = "Meio Ambiente"}
+                    },
+                    "value",
+                    "text"), new {@class = "autocomplete-state form-control select2", multiple="true"})
+                @Html.ValidationMessageFor(m => m.Affinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
-
+            
+            
             <div class="form-group">
-                <label for=""> Quantidade de itens</label>
-                <input class="form-control" name="quantity" data-error="Quantidade inválida" required="required" type="number">
-                <div class="help-block form-text with-errors form-control-feedback"></div>
+                <label>@Html.LabelFor(m => m.Quantity)</label>
+                @Html.TextBoxFor(m => m.Quantity, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Quantity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
+@*             <div class="form-group"> *@
+@*                 <label for=""> Quantidade de itens</label> *@
+@*                 <input class="form-control" name="quantity" data-error="Quantidade inválida" required="required" type="number"> *@
+@*                 <div class="help-block form-text with-errors form-control-feedback"></div> *@
+@*             </div> *@
 
             <div class="form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" name="collect_donation" type="checkbox">Preciso que a doação seja retirada no local.
+                    @Html.CheckBoxFor(m => m.takeDonation, new {@class = "form-check-input take_donation"})
+                    Preciso que a doação seja retirada no local.
                 </label>
             </div>
 
@@ -51,85 +69,116 @@
                     <span>Endereço de retirada da doação</span>
                 </legend>
 
-                <div class="form-group">
-                    <label for=""> CEP</label>
-                    <input id="cep" class="mask_cep form-control" name="cep" data-error="" placeholder="" type="text">
-                </div>
                 <div class="row">
+                    <div class="form-group col-sm-2">
+                        <label>@Html.LabelFor(m => m.Cep)</label>
+                        @Html.TextBoxFor(m => m.Cep, new {@id = "cep", @class = "mask_cep form-control"})
+                        @Html.ValidationMessageFor(m => m.Cep, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
                     <div class="form-group col-sm-8">
                         <div class="form-group">
-                            <label for=""> Endereço</label>
-                            <input class="autocomplete-address form-control" name="address" data-error="Endereço invalido" placeholder="" type="text">
-                            <div class="help-block form-text with-errors form-control-feedback"></div>
+                            <label>@Html.LabelFor(m => m.Address)</label>
+                            @Html.TextBoxFor(m => m.Address, new {@class = "autocomplete-address form-control"})
+                            @Html.ValidationMessageFor(m => m.Address, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
-                    <div class="form-group col-sm-4">
+                    <div class="form-group col-sm-2">
                         <div class="form-group">
-                            <label for="">Número</label>
-                            <input class="form-control" name="street_number" data-error="Numero invalido" placeholder="" type="text">
-                            <div class="help-block form-text with-errors form-control-feedback"></div>
+                            <label>@Html.LabelFor(m => m.Number)</label>
+                            @Html.TextBoxFor(m => m.Number, new {@class = "form-control"})
+                            @Html.ValidationMessageFor(m => m.Number, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for=""> Ponto de Referência</label>
-                    <input class="form-control" name="reference" data-error="" placeholder="" type="text">
-                </div>
-                <div class="form-group">
-                    <label for=""> Bairro</label>
-                    <input class="autocomplete-neighborhood form-control" name="neighborhood" data-error="" placeholder="" type="text">
+                    <label>@Html.LabelFor(m => m.Neighborhood)</label>
+                    @Html.TextBoxFor(m => m.Neighborhood, new {@class = "autocomplete-neighborhood form-control"})
+                    @Html.ValidationMessageFor(m => m.Neighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                 </div>
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="form-group">
-                            <label for=""> Cidade</label>
-                            <input class="autocomplete-city form-control" name="city" data-error="" placeholder="" type="text" value="Caxias do Sul">
-                            <div class="help-block form-text with-errors form-control-feedback"></div>
+                            <label>@Html.LabelFor(m => m.City)</label>
+                            @Html.TextBoxFor(m => m.City, new {@class = "autocomplete-city form-control"})
+                            @Html.ValidationMessageFor(m => m.City, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for=""> UF</label>
-                            <select class="autocomplete-state form-control" name="state">
-                                <option>AC</option>
-                                <option>AL</option>
-                                <option>AM</option>
-                                <option>AP</option>
-                                <option>BA</option>
-                                <option>CE</option>
-                                <option>DF</option>
-                                <option>ES</option>
-                                <option>GO</option>
-                                <option>MA</option>
-                                <option>MG</option>
-                                <option>MS</option>
-                                <option>MT</option>
-                                <option>PA</option>
-                                <option>PB</option>
-                                <option>PE</option>
-                                <option>PI</option>
-                                <option>PR</option>
-                                <option>RJ</option>
-                                <option>RN</option>
-                                <option>RO</option>
-                                <option>RR</option>
-                                <option selected>RS</option>
-                                <option>SC</option>
-                                <option>SE</option>
-                                <option>SP</option>
-                                <option>TO</option>
-                            </select>
+                            <label>@Html.LabelFor(m => m.State)</label>
+                            @Html.DropDownListFor(model => model.State, new SelectList(
+                                new List<Object>
+                                {
+                                    new {value = "AC", text = "AC"},
+                                    new {value = "AL", text = "AL"},
+                                    new {value = "AM", text = "AM"},
+                                    new {value = "AP", text = "AP"},
+                                    new {value = "BA", text = "BA"},
+                                    new {value = "CE", text = "CE"},
+                                    new {value = "DF", text = "DF"},
+                                    new {value = "ES", text = "ES"},
+                                    new {value = "GO", text = "GO"},
+                                    new {value = "MA", text = "MA"},
+                                    new {value = "MG", text = "MG"},
+                                    new {value = "MS", text = "MS"},
+                                    new {value = "MT", text = "MT"},
+                                    new {value = "PA", text = "PA"},
+                                    new {value = "PB", text = "PB"},
+                                    new {value = "PE", text = "PE"},
+                                    new {value = "PI", text = "PI"},
+                                    new {value = "PR", text = "PR"},
+                                    new {value = "RJ", text = "RJ"},
+                                    new {value = "RN", text = "RN"},
+                                    new {value = "RO", text = "RO"},
+                                    new {value = "RR", text = "RR"},
+                                    new {value = "RS", text = "RS"},
+                                    new {value = "SC", text = "SC"},
+                                    new {value = "SE", text = "SE"},
+                                    new {value = "SP", text = "SP"},
+                                    new {value = "TO", text = "TO"}
+                                },
+                                "value",
+                                "text",
+                                "RS"), new {@class = "autocomplete-state form-control"})
+                            @Html.ValidationMessageFor(m => m.State, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label>@Html.LabelFor(m => m.ReferencePoint)</label>
+                    @Html.TextBoxFor(m => m.ReferencePoint, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.ReferencePoint, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                </div>
+
             </fieldset>
-            
+
             <div class="form-buttons-w">
                 <button class="btn btn-primary" type="submit">
                     Enviar
                 </button>
             </div>
-
-        </form>
+        }
     </div>
 </div>
+
+@section scripts {
+    <script>
+
+        $(document).ready(function() {
+            if ($('.take_donation').is(':checked')) {
+                $('#collect_donation_address').show()
+            }
+        })
+
+        $('.take_donation').on('change',
+            function() {
+                if ($(this).is(':checked')) {
+                    $('#collect_donation_address').show('slow')
+                } else {
+                    $('#collect_donation_address').hide('slow')
+                }
+            })
+
+    </script>
+}

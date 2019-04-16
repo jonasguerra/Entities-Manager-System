@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace EntitiesManagerSystem.Models.Entity
+namespace EntitiesManagerSystem.Models
 {
     public class Event
     {
@@ -18,7 +18,10 @@ namespace EntitiesManagerSystem.Models.Entity
         [StringLength(100000, MinimumLength = 4, ErrorMessage = "{0} deve ter entre {2} e {1} caractéres")]
         public string Description { get; set; }
         
-//        public string Affinity { get; set; }
+        
+        [Display(Name = "Afinidade")]
+        [Required(ErrorMessage = "{0} deve ser informada")]
+        public string Affinity { get; set; }
        
         
 //        public string Date { get; set; }
@@ -44,7 +47,9 @@ namespace EntitiesManagerSystem.Models.Entity
         [Required(ErrorMessage = "{0} deve ser informado")]
         public string City{ get; set; }
         
-//        public string State { get; set; }
+        [Display(Name = "UF")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string State { get; set; }
 
         [Display(Name = "Ponto de referência")]
         [Required(ErrorMessage = "{0} deve ser informado")]

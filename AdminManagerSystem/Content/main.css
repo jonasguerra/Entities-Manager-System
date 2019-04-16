@@ -1,0 +1,56 @@
+/*CSS TEMPLATE MODIFICATE*/
+
+.auth-box-w .logo-w{
+    padding: 5%;
+}
+
+.logo-w img{
+    width: 100%;
+}
+
+.auth-box-w .auth-header{
+    margin-bottom: 0rem;
+}
+
+body .daterangepicker .daterangepicker_input i{
+    top: 25%;
+}
+
+body .daterangepicker th.prev,
+body .daterangepicker th.next{
+    text-align: center;
+}
+
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #dde2ec;
+    border-radius: 4px;
+}
+
+.register-mod.auth-box-w.wider,
+.register-mod.auth-box-w{
+    max-width: unset!important;
+}
+
+
+/*END CSS TEMPLATE MODIFICATE*/
+
+/*CSS LOGIN*/
+.message-error{
+    color: #e65252;
+}
+/*END CSS LOGIN*/
+
+/*CSS REGISTER*/
+.register-mod img{
+    max-height: 50px;
+    width: unset!important;
+}
+
+.register-mod .logo-w{
+    text-align: left;
+    padding: 25px 80px;
+}
+
+/*END CSS REGISTER*/

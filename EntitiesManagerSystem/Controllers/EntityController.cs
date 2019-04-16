@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using EntitiesManagerSystem.Models.Entity;
+using EntitiesManagerSystem.Models;
 
 namespace EntitiesManagerSystem.Controllers
 {
@@ -21,14 +21,6 @@ namespace EntitiesManagerSystem.Controllers
 
             ViewBag.user = "entity";
             ViewBag.register_event = "active";
-            ViewBag.category_event = new List<String>
-            {
-                "Pets", 
-                "Infantil", 
-                "Idosos",
-                "Necessitados",
-                "Meio Ambiente",
-            };
             
             return View();
         }
@@ -62,13 +54,15 @@ namespace EntitiesManagerSystem.Controllers
         //###################
         
         [HttpPost]
-        public ActionResult SaveEntity(Event event_from)
+        public ActionResult SaveEvent(Event event_from)
         {
             if (ModelState.IsValid)
             {
                 return RedirectToAction("Index");
             }
             
+            ViewBag.user = "entity";
+            ViewBag.register_event = "active";
             return View("RegisterEvent",event_from);
         }
     }

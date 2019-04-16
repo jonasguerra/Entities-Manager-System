@@ -3,13 +3,13 @@
 }
 
 @using System.Web.Mvc.Html
-@model EntitiesManagerSystem.Models.Entity.Event
+@model EntitiesManagerSystem.Models.Event
 
 <div class="element-wrapper col-8 mx-auto">
     <h6 class="element-header">Cadastro de Eventos</h6>
     <div class="element-box">
 
-        @using (Html.BeginForm("SaveEntity", "Entity", FormMethod.Post))
+        @using (Html.BeginForm("SaveEvent", "Entity", FormMethod.Post))
         {
             <h5 class="form-header">Cadastro de Eventos</h5>
             <div class="form-desc">
@@ -29,17 +29,21 @@
                 @Html.ValidationMessageFor(m => m.Description, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
             
-@*             <div class="form-group"> *@
-@*                 <label for=""> Afinidade do evento</label> *@
-@*                 <select name="category" class="form-control select2" multiple="true" required="required"> *@
-@*                     @foreach (String c in ViewBag.category_event) *@
-@*                     { *@
-@*                         <option value="@c">@c</option> *@
-@*                     } *@
-@*                 </select> *@
-@*                 <div class="help-block form-text with-errors form-control-feedback"></div> *@
-@*             </div> *@
-@* *@
+             <div class="form-group">
+                 <label>@Html.LabelFor(m => m.Affinity)</label>
+                 @Html.DropDownListFor(model => model.Affinity, new SelectList(
+                     new List<Object>{ 
+                         new { value = "Infantil" , text = "Infantil"},
+                         new { value = "Pets" , text = "Pets"},
+                         new { value = "Idosos" , text = "Idosos"},
+                         new { value = "Necessitados" , text = "Necessitados"},
+                         new { value = "Meio Ambiente" , text = "Meio Ambiente"}
+                     },
+                     "value",
+                     "text"), new {@class = "autocomplete-state form-control select2", multiple="true"})
+                 @Html.ValidationMessageFor(m => m.Affinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+             </div>
+
 @*             <div class="form-group"> *@
 @*                 <label for="">Data do Evento</label> *@
 @*                 <input name="date" id="date_range" class="form-control" type="text" required="required"> *@
@@ -82,40 +86,45 @@
                          @Html.ValidationMessageFor(m => m.City, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                      </div>
                  </div>
-                 @* <div class="col-sm-4"> *@
-                 @*     <div class="form-group"> *@
-                 @*         <label for=""> UF</label> *@
-                 @*         <select class="autocomplete-state form-control" name="state"> *@
-                 @*             <option>AC</option> *@
-                 @*             <option>AL</option> *@
-                 @*             <option>AM</option> *@
-                 @*             <option>AP</option> *@
-                 @*             <option>BA</option> *@
-                 @*             <option>CE</option> *@
-                 @*             <option>DF</option> *@
-                 @*             <option>ES</option> *@
-                 @*             <option>GO</option> *@
-                 @*             <option>MA</option> *@
-                 @*             <option>MG</option> *@
-                 @*             <option>MS</option> *@
-                 @*             <option>MT</option> *@
-                 @*             <option>PA</option> *@
-                 @*             <option>PB</option> *@
-                 @*             <option>PE</option> *@
-                 @*             <option>PI</option> *@
-                 @*             <option>PR</option> *@
-                 @*             <option>RJ</option> *@
-                 @*             <option>RN</option> *@
-                 @*             <option>RO</option> *@
-                 @*             <option>RR</option> *@
-                 @*             <option selected>RS</option> *@
-                 @*             <option>SC</option> *@
-                 @*             <option>SE</option> *@
-                 @*             <option>SP</option> *@
-                 @*             <option>TO</option> *@
-                 @*         </select> *@
-                 @*     </div> *@
-                 @* </div> *@
+                 <div class="col-sm-4">
+                     <div class="form-group">
+                         <label>@Html.LabelFor(m => m.State)</label>
+                         @Html.DropDownListFor(model => model.State, new SelectList(
+                             new List<Object>{ 
+                                 new { value = "AC" , text = "AC"},
+                                 new { value = "AL" , text = "AL"},
+                                 new { value = "AM" , text = "AM"},
+                                 new { value = "AP" , text = "AP"},
+                                 new { value = "BA" , text = "BA"},
+                                 new { value = "CE" , text = "CE"},
+                                 new { value = "DF" , text = "DF"},
+                                 new { value = "ES" , text = "ES"},
+                                 new { value = "GO" , text = "GO"},
+                                 new { value = "MA" , text = "MA"},
+                                 new { value = "MG" , text = "MG"},
+                                 new { value = "MS" , text = "MS"},
+                                 new { value = "MT" , text = "MT"},
+                                 new { value = "PA" , text = "PA"},
+                                 new { value = "PB" , text = "PB"},
+                                 new { value = "PE" , text = "PE"},
+                                 new { value = "PI" , text = "PI"},
+                                 new { value = "PR" , text = "PR"},
+                                 new { value = "RJ" , text = "RJ"},
+                                 new { value = "RN" , text = "RN"},
+                                 new { value = "RO" , text = "RO"},
+                                 new { value = "RR" , text = "RR"},
+                                 new { value = "RS" , text = "RS"},
+                                 new { value = "SC" , text = "SC"},
+                                 new { value = "SE" , text = "SE"},
+                                 new { value = "SP" , text = "SP"},
+                                 new { value = "TO" , text = "TO"}
+                             },
+                             "value",
+                             "text",
+                             "RS"), new {@class = "autocomplete-state form-control"})
+                         @Html.ValidationMessageFor(m => m.State, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                     </div>
+                 </div>
              </div>
              <div class="form-group">
                  <label>@Html.LabelFor(m => m.ReferencePoint)</label>

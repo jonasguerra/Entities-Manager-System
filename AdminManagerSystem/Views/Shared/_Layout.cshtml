@@ -9,7 +9,7 @@
     <meta content="Tamerlan Soziev" name="author">
     <meta content="Admin dashboard html template" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="favicon.png" rel="shortcut icon">
+    <link href="~/Template/img/ong.png" rel="shortcut icon">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
 
     @Styles.Render("~/Template/bower_components/select2/dist/css/select2.min.css")
@@ -20,6 +20,8 @@
     @Styles.Render("~/Template/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css")
     @Styles.Render("~/Template/bower_components/slick-carousel/slick/slick.css")
     @Styles.Render("~/Template/css/main.css?version=4.4.1")
+    @Styles.Render("~/Content/input_file.css")
+    @Styles.Render("~/Content/main.css")
 
 </head>
 
@@ -87,13 +89,13 @@
 
                         @RenderBody()
 
-                        <!-- <div class="floated-colors-btn">
-                        <div class="os-toggler-w">
-                            <div class="os-toggler-i">
-                                <div class="os-toggler-pill"></div>
-                            </div>
-                        </div><span>Contraste </span>
-                    </div> -->
+                    @* <div class="floated-colors-btn"> *@
+                    @*     <div class="os-toggler-w"> *@
+                    @*         <div class="os-toggler-i"> *@
+                    @*             <div class="os-toggler-pill"></div> *@
+                    @*         </div> *@
+                    @*     </div><span>Contraste </span> *@
+                    @* </div> *@
                     </div>
                 </div>
             </div>
@@ -105,35 +107,42 @@
 
 
     @Scripts.Render("~/Template/bower_components/jquery/dist/jquery.min.js")
-    @Scripts.Render("~/Template/bower_components)/popper.js/dist/umd/popper.min.js")
-    @Scripts.Render("~/Template/bower_components)/moment/moment.js")
-    @Scripts.Render("~/Template/bower_components)/chart.js/dist/Chart.min.js")
-    @Scripts.Render("~/Template/bower_components)/select2/dist/js/select2.full.min.js")
-    @Scripts.Render("~/Template/bower_components)/jquery-bar-content-borating/dist/jquery.barrating.min.js")
-    @Scripts.Render("~/Template/bower_components)/ckeditor/ckeditor.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap-validator/dist/validator.min.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap-daterangepicker/daterangepicker.js")
-    @Scripts.Render("~/Template/bower_components)/ion.rangeSlider/js/ion.rangeSlider.min.js")
-    @Scripts.Render("~/Template/bower_components)/dropzone/dist/dropzone.js")
-    @Scripts.Render("~/Template/bower_components)/editable-table/mindmup-editabletable.js")
-    @Scripts.Render("~/Template/bower_components)/datatables.net/js/jquery.dataTables.min.js")
-    @Scripts.Render("~/Template/bower_components)/datatables.net-bs/js/dataTables.bootstrap.min.js")
-    @Scripts.Render("~/Template/bower_components)/fullcalendar/dist/fullcalendar.min.js")
-    @Scripts.Render("~/Template/bower_components)/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js")
-    @Scripts.Render("~/Template/bower_components)/tether/dist/js/tether.min.js")
-    @Scripts.Render("~/Template/bower_components)/slick-carousel/slick/slick.min.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/util.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/alert.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/button.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/carousel.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/collapse.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/dropdown.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/modal.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/tab.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/tooltip.js")
-    @Scripts.Render("~/Template/bower_components)/bootstrap/js/dist/popover.js")
-    @Scripts.Render("~/Template/bower_components)er.js?version=4.4.1")
-    @Scripts.Render("~/Template/bower_components)on=4.4.1")
+    @Scripts.Render("~/Template/bower_components/popper.js/dist/umd/popper.min.js")
+    @Scripts.Render("~/Template/bower_components/moment/moment.js")
+    @Scripts.Render("~/Template/bower_components/chart.js/dist/Chart.min.js")
+    @Scripts.Render("~/Template/bower_components/select2/dist/js/select2.full.min.js")
+    @Scripts.Render("~/Template/bower_components/jquery-bar-rating/dist/jquery.barrating.min.js")
+    @Scripts.Render("~/Template/bower_components/ckeditor/ckeditor.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap-validator/dist/validator.min.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap-daterangepicker/daterangepicker.js")
+    @Scripts.Render("~/Template/bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js")
+    @Scripts.Render("~/Template/bower_components/dropzone/dist/dropzone.js")
+    @Scripts.Render("~/Template/bower_components/editable-table/mindmup-editabletable.js")
+    @Scripts.Render("~/Template/bower_components/datatables.net/js/jquery.dataTables.min.js")
+    @Scripts.Render("~/Template/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js")
+    @Scripts.Render("~/Template/bower_components/fullcalendar/dist/fullcalendar.min.js")
+    @Scripts.Render("~/Template/bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js")
+    @Scripts.Render("~/Template/bower_components/tether/dist/js/tether.min.js")
+    @Scripts.Render("~/Template/bower_components/slick-carousel/slick/slick.min.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/util.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/alert.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/button.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/carousel.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/collapse.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/dropdown.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/modal.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/tab.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/tooltip.js")
+    @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/popover.js")
+    @Scripts.Render("~/Template/js/demo_customizer.js?version=4.4.1")
+    @Scripts.Render("~/Template/js/main.js?version=4.4.1")
+
+    @Scripts.Render("~/Scripts/jquery.autocomplete-address.min.js")
+    @Scripts.Render("~/Scripts/jquery.mask.min.js")
+    @Scripts.Render("~/Scripts/input_file.js")
+    @Scripts.Render("~/Scripts/main.js")
+    
+    @RenderSection("scripts", false)
     @*
     <script>(function (i, s, o, g, r, a, m) { *@
 @* i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { *@

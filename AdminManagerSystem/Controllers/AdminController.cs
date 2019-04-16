@@ -1,4 +1,5 @@
 using System.Web.Mvc;
+using AdminManagerSystem.Models;
 
 namespace AdminManagerSystem.Controllers
 {
@@ -11,17 +12,31 @@ namespace AdminManagerSystem.Controllers
             ViewBag.index = "active";
             return View();
         }
-        public ActionResult Request()
+        public ActionResult Register()
         {
             ViewBag.user = "admin";
-            ViewBag.request = "active";
+            ViewBag.register = "active";
             return View();
         }
-        public ActionResult RegisterModerator()
+        
+        
+        
+        //###################
+        //### POST METHOD ###
+        //###################
+        
+        [HttpPost]
+        public ActionResult SaveModerator(Moderator moderator)
         {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            
             ViewBag.user = "admin";
-            ViewBag.register_moderator = "active";
-            return View();
+            ViewBag.register = "active";
+            ViewBag.save_moderator_error = "true";
+            return View("Register",moderator);
         }
     }
 }

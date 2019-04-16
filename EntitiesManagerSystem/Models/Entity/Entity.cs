@@ -8,67 +8,77 @@ namespace EntitiesManagerSystem.Models
         public Guid Id { get; set; }
 
         [Display(Name = "Nome da Entidade")]
-        [Required(ErrorMessage = "O nome deve ser informado.")]
-        [StringLength(60, MinimumLength = 5, ErrorMessage = "Minimo 5 caracteres")]
+        [Required(ErrorMessage = "O {0} deve ser informado.")]
+        [StringLength(60, MinimumLength = 5, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityName { get; set; }
 
         [Display(Name = "Responsavel pela Entidade")]
-        [Required(ErrorMessage = "Responsavel deve ser informado")]
-        [StringLength(60, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        [StringLength(60, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityResponsableName { get; set; }
 
         [Display(Name = "E-mail")]
-        [Required(ErrorMessage = "E-mail deve ser informado")]
-        [StringLength(30, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        [StringLength(30, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityEmail { get; set; }
 
         [Display(Name = "Telefone")]
-        [Required(ErrorMessage = "Telefone deve ser informado")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
         [DataType(DataType.PhoneNumber, ErrorMessage = "Apenas numeros devem ser informados")]
-        [StringLength(11, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
+        [StringLength(11, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityPhone { get; set; }
 
         [Display(Name = "Senha")]
-        [Required(ErrorMessage = "A senha deve ser informada")]
+        [Required(ErrorMessage = "A {0} deve ser informada")]
         [DataType(DataType.Password)]
-        [StringLength(20, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
+        [StringLength(20, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityPassword { get; set; }
 
         [Display(Name = "CEP")]
-        [Required(ErrorMessage = "CEP deve ser informado")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
         [StringLength(8, MinimumLength = 8, ErrorMessage = "CEP deve possuir 8 caracteres")]
         public string EntityCEP { get; set; }
         
         [Display(Name = "Rua")]
-        [Required(ErrorMessage = "Rua deve ser informada")]
+        [Required(ErrorMessage = "{0} deve ser informada")]
         [StringLength(40, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
         public string EntityAvenue { get; set; }
         
+        [Display(Name = "Numero")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        [StringLength(40, MinimumLength = 1, ErrorMessage = "Minimo {2} caracteres")]
+        public string EntityNumber { get; set; }
+
         [Display(Name = "Bairro")]
-        [Required(ErrorMessage = "Bairro deve ser informado")]
-        [StringLength(40, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        [StringLength(40, MinimumLength = 6, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityNeighborhood { get; set; }
+        
+        [Display(Name = "Cidade")]
+        [Required(ErrorMessage = "{0} deve ser informada")]
+        [StringLength(40, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
+        public string EntityCity { get; set; }
 
         [Display(Name = "Estado")]
-        [Required(ErrorMessage = "Estado deve ser informado")]
-        [StringLength(30, MinimumLength = 4, ErrorMessage = "Minimo 4 caracteres")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        [StringLength(30, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityState { get; set; }
         
         [Display(Name = "Ponto de Referencia")]
-        [Required(ErrorMessage = "Ponto de Referencia deve ser informado")]
-        [StringLength(40, MinimumLength = 4, ErrorMessage = "Minimo 6 caracteres")]
-        public string ReferencePoint { get; set; }
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        [StringLength(40, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
+        public string EntityReferencePoint { get; set; }
         
         [Display(Name = "Afinidade")]
-        [Required(ErrorMessage = "Afinidade deve ser informada")]
-        public string EntityAfinity { get; set; }
+        [Required(ErrorMessage = "{0} deve ser informada")]
+        public string EntityAffinity { get; set; }
         
-        [Display(Name = "Afinidade")]
-        [Required(ErrorMessage = "Sigla deve ser informada")]
+        [Display(Name = "Sigla")]
+        [Required(ErrorMessage = "{0} deve ser informada")]
         public string EntityInitials { get; set; }
         
         [Display(Name = "Data de Criação")]
-        [Required(ErrorMessage = "Data de Criação deve ser informada")]
+        [Required(ErrorMessage = "{0} deve ser informada")]
         public DateTime EntityCreationDate { get; set; }
         
         [Display(Name = "Redes Sociais")]
@@ -78,6 +88,7 @@ namespace EntitiesManagerSystem.Models
         public string EntityWebSite { get; set; }
         
         [Display(Name = "Descrição")]
+        [Required(ErrorMessage = "{0} deve ser informada")]
         public string EntityDescription { get; set; }
         
         [Display(Name = "Imagem da Entidade")]

@@ -125,6 +125,7 @@
   <ItemGroup>
     <Content Include="Content\input_file.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\table.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

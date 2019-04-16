@@ -1,0 +1,40 @@
+
+/*ACTIONS*/
+.table-actions.table>tbody>tr>td{
+    vertical-align: inherit;
+}
+
+.table-actions .head-actions{
+    text-align: center;
+}
+
+.table-actions .actions{
+    padding: 0px;
+    word-spacing: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.table-actions .actions a{
+    text-decoration: unset;
+    color: #57677a;
+}
+
+.table-actions .actions .trash{
+    font-size: 23px;
+}
+.table-actions .actions .trash:hover,
+.table-actions .actions .trash:focus{
+    color: #ff0000;
+}
+
+.table-actions .actions .edit:hover,
+.table-actions .actions .edit:focus{
+    color: #0000ff;
+}
+
+.table-actions .actions .check:hover,
+.table-actions .actions .check:focus{
+    color: #00ff00;
+}
+/*END ACTIONS*/

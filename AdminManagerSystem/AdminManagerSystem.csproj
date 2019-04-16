@@ -324,8 +324,7 @@
     <Content Include="Template\js\main_rentals.js" />
     <Content Include="Template\js\popup_chat_trigger_demo.js" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\RegisterModerator.cshtml" />
-    <Content Include="Views\Admin\Request.cshtml" />
+    <Content Include="Views\Admin\Register.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

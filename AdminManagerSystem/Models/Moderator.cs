@@ -52,6 +52,8 @@ namespace AdminManagerSystem.Models
         public string Phone { get; set; }
 
 
+        
+        
         [Display(Name = "CEP")]
         [RegularExpression("^\\d{5}[-]\\d{3}$", ErrorMessage = "Insira um {0} válido")]
         public string Cep { get; set; }

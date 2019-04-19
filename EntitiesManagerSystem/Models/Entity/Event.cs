@@ -24,7 +24,9 @@ namespace EntitiesManagerSystem.Models
         public string Affinity { get; set; }
        
         
-//        public string Date { get; set; }
+        [Display(Name = "Data do Evento")]
+        [Required(ErrorMessage = "{0} deve ser informada")]
+        public string Date { get; set; }
             
         [Display(Name = "CEP")]
         [RegularExpression("^\\d{5}[-]\\d{3}$", ErrorMessage = "Insira um {0} válido")]

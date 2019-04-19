@@ -87,9 +87,9 @@
         </div>
         <div class="col-sm-6">
             <div class="form-group">
-                <label> @Html.LabelFor(m => m.EntityPassword)</label>
-                @Html.TextBoxFor(m => m.EntityPassword, new {@class = "form-control"})
-                @Html.ValidationMessageFor(m => m.EntityPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                <label> @Html.LabelFor(m => m.EntityConfirmPassword)</label>
+                @Html.TextBoxFor(m => m.EntityConfirmPassword, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.EntityConfirmPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
         </div>
     </div>
@@ -231,29 +231,27 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="">Redes Sociais</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text"></div>
-                        </div><input class="form-control" placeholder="Informe o link da sua página" type="text">
-                    </div>
+                    <label>@Html.LabelFor(m => m.EntitySocialNetwork)</label>
+                    @Html.TextBoxFor(m => m.EntitySocialNetwork, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.EntitySocialNetwork, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="">Web-site</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text"></div>
-                        </div><input class="form-control" placeholder="Informe o site da sua entidade" type="text">
-                    </div>
+                    <label>@Html.LabelFor(m => m.EntityWebSite)</label>
+                    @Html.TextBoxFor(m => m.EntityWebSite, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.EntityWebSite, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                 </div>
             </div>
         </div>
-        <div class="form-group">
-            <label> Descrição da Entidade</label><textarea class="form-control" rows="3"></textarea>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>@Html.LabelFor(m => m.EntityDescription)</label>
+                    @Html.TextAreaFor(m => m.EntityDescription, new {@class="form-control", rows="3"})
+                </div>
+            </div>
         </div>
-
     </fieldset>
 
     <div class="form-group">
@@ -268,7 +266,6 @@
             <div class="attachment--error"></div>
         </div>
     </div>
-
     <div class="buttons-w">
         <button class="btn btn-primary">Cadastrar</button>
     </div>

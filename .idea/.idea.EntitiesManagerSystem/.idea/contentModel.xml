@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\temp\Entities-Manager-System" t="IncludeFlat">
+    <e p="C:\RiderProjects\Entities-Manager-System" t="IncludeFlat">
       <e p="AdminManagerSystem" t="IncludeRecursive">
         <e p="AdminManagerSystem.csproj" t="IncludeRecursive" />
         <e p="App_Data" t="Include" />
@@ -847,7 +847,7 @@
       <e p="EntitiesManagerSystem.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\guilh\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\guilh\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_EntitiesManagerSystem.1127320715.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Masterhorus\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Masterhorus\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_EntitiesManagerSystem.-415285049.00" t="ExcludeRecursive" />
   </component>
 </project>

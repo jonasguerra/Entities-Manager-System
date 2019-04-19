@@ -22,115 +22,116 @@
                 @Html.ValidationMessageFor(m => m.Title, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
 
-            
+
             <div class="form-group">
                 <label>@Html.LabelFor(m => m.Description)</label>
                 @Html.TextAreaFor(m => m.Description, new {@class = "form-control"})
                 @Html.ValidationMessageFor(m => m.Description, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
-            
-             <div class="form-group">
-                 <label>@Html.LabelFor(m => m.Affinity)</label>
-                 @Html.DropDownListFor(model => model.Affinity, new SelectList(
-                     new List<Object>{ 
-                         new { value = "Infantil" , text = "Infantil"},
-                         new { value = "Pets" , text = "Pets"},
-                         new { value = "Idosos" , text = "Idosos"},
-                         new { value = "Necessitados" , text = "Necessitados"},
-                         new { value = "Meio Ambiente" , text = "Meio Ambiente"}
-                     },
-                     "value",
-                     "text"), new {@class = "autocomplete-state form-control select2", multiple="true"})
-                 @Html.ValidationMessageFor(m => m.Affinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-             </div>
 
-@*             <div class="form-group"> *@
-@*                 <label for="">Data do Evento</label> *@
-@*                 <input name="date" id="date_range" class="form-control" type="text" required="required"> *@
-@*                 <div class="help-block form-text with-errors form-control-feedback"></div> *@
-@*             </div> *@
-            
+            <div class="form-group">
+                <label>@Html.LabelFor(m => m.Affinity)</label>
+                @Html.DropDownListFor(model => model.Affinity, new SelectList(
+                    new List<Object>
+                    {
+                        new {value = "Infantil", text = "Infantil"},
+                        new {value = "Pets", text = "Pets"},
+                        new {value = "Idosos", text = "Idosos"},
+                        new {value = "Necessitados", text = "Necessitados"},
+                        new {value = "Meio Ambiente", text = "Meio Ambiente"}
+                    },
+                    "value",
+                    "text"), new {@class = "autocomplete-state form-control select2", multiple = "true"})
+                @Html.ValidationMessageFor(m => m.Affinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+            </div>
+
+            <div class="form-group">
+                <label>@Html.LabelFor(m => m.Date)</label>
+                @Html.TextBoxFor(m => m.Date, "", new {@name = "date", @id = "date_range", @class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Date, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+            </div>
             
             <div class="row">
-                 <div class="form-group col-sm-2">
-                     <label>@Html.LabelFor(m => m.Cep)</label>
-                     @Html.TextBoxFor(m => m.Cep, new {@id="cep", @class = "mask_cep form-control"})
-                     @Html.ValidationMessageFor(m => m.Cep, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                 </div>
-                 <div class="form-group col-sm-8">
-                     <div class="form-group">
-                         <label>@Html.LabelFor(m => m.Address)</label>
-                         @Html.TextBoxFor(m => m.Address, new {@class = "autocomplete-address form-control"})
-                         @Html.ValidationMessageFor(m => m.Address, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                     </div>
-                 </div>
-                 <div class="form-group col-sm-2">
-                     <div class="form-group">
-                         <label>@Html.LabelFor(m => m.Number)</label>
-                         @Html.TextBoxFor(m => m.Number, new {@class = "form-control"})
-                         @Html.ValidationMessageFor(m => m.Number, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                     </div>
-                 </div>
-             </div>
+                <div class="form-group col-sm-2">
+                    <label>@Html.LabelFor(m => m.Cep)</label>
+                    @Html.TextBoxFor(m => m.Cep, new {@id = "cep", @class = "mask_cep form-control"})
+                    @Html.ValidationMessageFor(m => m.Cep, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                </div>
+                <div class="form-group col-sm-8">
+                    <div class="form-group">
+                        <label>@Html.LabelFor(m => m.Address)</label>
+                        @Html.TextBoxFor(m => m.Address, new {@class = "autocomplete-address form-control"})
+                        @Html.ValidationMessageFor(m => m.Address, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                </div>
+                <div class="form-group col-sm-2">
+                    <div class="form-group">
+                        <label>@Html.LabelFor(m => m.Number)</label>
+                        @Html.TextBoxFor(m => m.Number, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.Number, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                </div>
+            </div>
 
-             <div class="form-group">
-                 <label>@Html.LabelFor(m => m.Neighborhood)</label>
-                 @Html.TextBoxFor(m => m.Neighborhood, new {@class = "autocomplete-neighborhood form-control"})
-                 @Html.ValidationMessageFor(m => m.Neighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-             </div>
-             <div class="row">
-                 <div class="col-sm-8">
-                     <div class="form-group">
-                         <label>@Html.LabelFor(m => m.City)</label>
-                         @Html.TextBoxFor(m => m.City, new {@class = "autocomplete-city form-control"})
-                         @Html.ValidationMessageFor(m => m.City, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                     </div>
-                 </div>
-                 <div class="col-sm-4">
-                     <div class="form-group">
-                         <label>@Html.LabelFor(m => m.State)</label>
-                         @Html.DropDownListFor(model => model.State, new SelectList(
-                             new List<Object>{ 
-                                 new { value = "AC" , text = "AC"},
-                                 new { value = "AL" , text = "AL"},
-                                 new { value = "AM" , text = "AM"},
-                                 new { value = "AP" , text = "AP"},
-                                 new { value = "BA" , text = "BA"},
-                                 new { value = "CE" , text = "CE"},
-                                 new { value = "DF" , text = "DF"},
-                                 new { value = "ES" , text = "ES"},
-                                 new { value = "GO" , text = "GO"},
-                                 new { value = "MA" , text = "MA"},
-                                 new { value = "MG" , text = "MG"},
-                                 new { value = "MS" , text = "MS"},
-                                 new { value = "MT" , text = "MT"},
-                                 new { value = "PA" , text = "PA"},
-                                 new { value = "PB" , text = "PB"},
-                                 new { value = "PE" , text = "PE"},
-                                 new { value = "PI" , text = "PI"},
-                                 new { value = "PR" , text = "PR"},
-                                 new { value = "RJ" , text = "RJ"},
-                                 new { value = "RN" , text = "RN"},
-                                 new { value = "RO" , text = "RO"},
-                                 new { value = "RR" , text = "RR"},
-                                 new { value = "RS" , text = "RS"},
-                                 new { value = "SC" , text = "SC"},
-                                 new { value = "SE" , text = "SE"},
-                                 new { value = "SP" , text = "SP"},
-                                 new { value = "TO" , text = "TO"}
-                             },
-                             "value",
-                             "text",
-                             "RS"), new {@class = "autocomplete-state form-control"})
-                         @Html.ValidationMessageFor(m => m.State, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                     </div>
-                 </div>
-             </div>
-             <div class="form-group">
-                 <label>@Html.LabelFor(m => m.ReferencePoint)</label>
-                 @Html.TextBoxFor(m => m.ReferencePoint, new {@class = "form-control"})
-                 @Html.ValidationMessageFor(m => m.ReferencePoint, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-             </div>
+            <div class="form-group">
+                <label>@Html.LabelFor(m => m.Neighborhood)</label>
+                @Html.TextBoxFor(m => m.Neighborhood, new {@class = "autocomplete-neighborhood form-control"})
+                @Html.ValidationMessageFor(m => m.Neighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label>@Html.LabelFor(m => m.City)</label>
+                        @Html.TextBoxFor(m => m.City, new {@class = "autocomplete-city form-control"})
+                        @Html.ValidationMessageFor(m => m.City, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>@Html.LabelFor(m => m.State)</label>
+                        @Html.DropDownListFor(model => model.State, new SelectList(
+                            new List<Object>
+                            {
+                                new {value = "AC", text = "AC"},
+                                new {value = "AL", text = "AL"},
+                                new {value = "AM", text = "AM"},
+                                new {value = "AP", text = "AP"},
+                                new {value = "BA", text = "BA"},
+                                new {value = "CE", text = "CE"},
+                                new {value = "DF", text = "DF"},
+                                new {value = "ES", text = "ES"},
+                                new {value = "GO", text = "GO"},
+                                new {value = "MA", text = "MA"},
+                                new {value = "MG", text = "MG"},
+                                new {value = "MS", text = "MS"},
+                                new {value = "MT", text = "MT"},
+                                new {value = "PA", text = "PA"},
+                                new {value = "PB", text = "PB"},
+                                new {value = "PE", text = "PE"},
+                                new {value = "PI", text = "PI"},
+                                new {value = "PR", text = "PR"},
+                                new {value = "RJ", text = "RJ"},
+                                new {value = "RN", text = "RN"},
+                                new {value = "RO", text = "RO"},
+                                new {value = "RR", text = "RR"},
+                                new {value = "RS", text = "RS"},
+                                new {value = "SC", text = "SC"},
+                                new {value = "SE", text = "SE"},
+                                new {value = "SP", text = "SP"},
+                                new {value = "TO", text = "TO"}
+                            },
+                            "value",
+                            "text",
+                            "RS"), new {@class = "autocomplete-state form-control"})
+                        @Html.ValidationMessageFor(m => m.State, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>@Html.LabelFor(m => m.ReferencePoint)</label>
+                @Html.TextBoxFor(m => m.ReferencePoint, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.ReferencePoint, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+            </div>
 
             <div class="form-buttons-w">
                 <button class="btn btn-primary" type="submit">

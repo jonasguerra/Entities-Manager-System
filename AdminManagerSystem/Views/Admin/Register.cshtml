@@ -64,141 +64,161 @@
                 </div>
                 @using (Html.BeginForm("SaveModerator", "Admin", FormMethod.Post))
                 {
-                    <div class="modal-body">
-                        <legend>
-                            <span></span>
-                        </legend>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>@Html.LabelFor(m => m.FirstName)</label>
-                                    @Html.TextBoxFor(m => m.FirstName, new {@class = "form-control"})
-                                    @Html.ValidationMessageFor(m => m.FirstName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                                </div>
+                <div class="modal-body">
+                    <legend>
+                        <span></span>
+                    </legend>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.FirstName)</label>
+                                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "help-block form-text with-errors form-control-feedback" })
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>@Html.LabelFor(m => m.LastName)</label>
-                                    @Html.TextBoxFor(m => m.LastName, new {@class = "form-control"})
-                                    @Html.ValidationMessageFor(m => m.LastName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                                </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.LastName)</label>
+                                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "help-block form-text with-errors form-control-feedback" })
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for=""> E-mail</label>
+                        <input class="form-control" data-error="E-mail inválido"
+                               placeholder="Insira o e-mail" required="required" type="email">
+                        <div class="help-block form-text with-errors form-control-feedback">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-2">
+                           <label>@Html.LabelFor(m => m.Cep)</label>
+                            @Html.TextBoxFor(m => m.Cep, new { @id = "cep", @class = "mask_cep form-control" })
+                            @Html.ValidationMessageFor(m => m.Cep, "", new { @class = "help-block form-text with-errors form-control-feedback" })
                         </div>
 
-                        <div class="form-group">
-                            <label for=""> E-mail</label>
-                            <input class="form-control" data-error="E-mail inválido"
-                                   placeholder="Insira o e-mail" required="required" type="email">
-                            <div class="help-block form-text with-errors form-control-feedback">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!--cpf-->
-                            <div class="col-sm-5">
-                                <div class="form-group">
-                                    <label for="">Cpf</label>
-                                    <input class="form-control" placeholder="Cpf" required="required"
-                                           type="text">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>@Html.LabelFor(m => m.Username)</label>
-                            @Html.TextBoxFor(m => m.Username, new  {@class = "form-control"})
-                            @Html.ValidationMessageFor(m => m.Username, "", new { @class = "help-block form-text with-errors form-control-feedback"})
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>@Html.LabelFor(m => m.Password)</label>
-                                    @Html.TextBoxFor(m => m.Password, new  {@class = "form-control"})
-                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "help-block form-text with-errors form-control-feedback"})
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>@Html.LabelFor(m => m.ConfirmPassword)</label>
-                                    @Html.TextBoxFor(m => m.ConfirmPassword, new {@class = "form-control"})
-                                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for=""> Estado</label>
-                            <select class="form-control">
-                                <option value="New York">RS - Rio Grande do Sul</option>
-                                <option value="California">SP - Sao Paulo</option>
-                                <option value="Boston">SC - Santa Catarina</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for=""> Cidade</label>
-                            <select class="form-control">
-                                <option value="New York">Caxias do Sul</option>
-                                <option value="New York">Farroupilha</option>
-                                <option value="New York">Porto Alegre</option>
-                            </select>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for=""> Rua</label>
-                                    <input class="form-control" data-error="Informe a Rua" placeholder="Rua"
-                                           required="required" type="text">
-                                    <div class="help-block form-text with-errors form-control-feedback">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <div class="form-group">
-                                    <label for="">Numero</label>
-                                    <input class="form-control" data-error="Informe o numero do endere�o"
-                                           placeholder="Numero do endereço" required="required" type="number">
-                                    <div class="help-block form-text with-errors form-control-feedback">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-5">
-                                <div class="form-group">
-                                    <label for="">Bairro</label>
-                                    <input class="form-control" data-error="Informe o Bairro"
-                                           placeholder="Bairro" required="required" type="text">
-                                    <div class="help-block form-text with-errors form-control-feedback">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <fieldset class="form-group">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for=""> Telefone</label>
-                                        <input class="form-control" data-minlength="8"
-                                               placeholder="Telefone" required="required" type="number">
-                                        <div class="help-block form-text text-muted form-control-feedback">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                            </div>
-                            <div class="form-group">
-                                <label path="photo">Foto</label>
-                                <div class="attachment attachment--image">
-                                    <input onchange="changePhoto(this)" class="file" type="file" id="photo"
-                                           name="photo" accept=".jpg,.jpeg,.png,.gif" required="required"/>
-                                    <div class="attachment--label">
-                                        <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
-                                        <span class="file-name"></span>
-                                        <span class="attachment--remove">Remover</span>
-                                    </div>
-                                    <div class="attachment--error"></div>
-                                </div>
-                            </div>
-                        </fieldset>
                     </div>
+                    <div class="form-group">
+                        <label>@Html.LabelFor(m => m.Username)</label>
+                        @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Username, "", new { @class = "help-block form-text with-errors form-control-feedback" })
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.Password)</label>
+                                @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "help-block form-text with-errors form-control-feedback" })
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.ConfirmPassword)</label>
+                                @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "help-block form-text with-errors form-control-feedback" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-2">
+                        <label>@Html.LabelFor(m => m.Cep)</label>
+                        @Html.TextBoxFor(m => m.Cep, new { @id = "cep", @class = "mask_cep form-control" })
+                        @Html.ValidationMessageFor(m => m.Cep, "", new { @class = "help-block form-text with-errors form-control-feedback" })
+                    </div>
+
+
+
+
+                    <!---Dados do endereço antigo-->
+                    <div class="form-group">
+                        <label for=""> Estado</label>
+                        <select class="form-control">
+                            <option value="New York">RS - Rio Grande do Sul</option>
+                            <option value="California">SP - Sao Paulo</option>
+                            <option value="Boston">SC - Santa Catarina</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for=""> Cidade</label>
+                        <select class="form-control">
+                            <option value="New York">Caxias do Sul</option>
+                            <option value="New York">Farroupilha</option>
+                            <option value="New York">Porto Alegre</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for=""> Rua</label>
+                                <input class="form-control" data-error="Informe a Rua" placeholder="Rua"
+                                       required="required" type="text">
+                                <div class="help-block form-text with-errors form-control-feedback">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="">Numero</label>
+                                <input class="form-control" data-error="Informe o numero do endere�o"
+                                       placeholder="Numero do endereço" required="required" type="number">
+                                <div class="help-block form-text with-errors form-control-feedback">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="form-group">
+                                <label for="">Bairro</label>
+                                <input class="form-control" data-error="Informe o Bairro"
+                                       placeholder="Bairro" required="required" type="text">
+                                <div class="help-block form-text with-errors form-control-feedback">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for=""> Telefone</label>
+                                    <input class="form-control" data-minlength="8"
+                                           placeholder="Telefone" required="required" type="number">
+                                    <div class="help-block form-text text-muted form-control-feedback">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                        </div>
+                        <div class="form-group">
+                            <label path="photo">Foto</label>
+                            <div class="attachment attachment--image">
+                                <input onchange="changePhoto(this)" class="file" type="file" id="photo"
+                                       name="photo" accept=".jpg,.jpeg,.png,.gif" required="required" />
+                                <div class="attachment--label">
+                                    <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
+                                    <span class="file-name"></span>
+                                    <span class="attachment--remove">Remover</span>
+                                </div>
+                                <div class="attachment--error"></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" data-dismiss="modal" type="button">
                             Sair
@@ -208,6 +228,10 @@
                         </button>
                     </div>
                 }
+
+
+
+
             </div>
         </div>
     </div>

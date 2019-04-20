@@ -8,7 +8,7 @@ namespace AdminManagerSystem.Models
     {
         
 
-//        https://liftcodeplay.com/2017/07/15/asp-net-core-password-complexity-validation-using-a-regular-expression-in-a-view-model/        
+   //https://liftcodeplay.com/2017/07/15/asp-net-core-password-complexity-validation-using-a-regular-expression-in-a-view-model/        
 
 
 
@@ -50,6 +50,36 @@ namespace AdminManagerSystem.Models
         [Display(Name = "Telefone")]
         [RegularExpression("^(\b|\\({0})(?:(?:\\+|00)?(55)\\s?)?(?:\\(?([1-9][0-9])\\)?\\s?)?(?:((?:9\\d|[2-9])\\d{3})(\\-?|\\s)(\\d{4}))\b", ErrorMessage = "Insira um {0} válido")]
         public string Phone { get; set; }
+
+
+        [Display(Name = "CEP")]
+        [RegularExpression("^\\d{5}[-]\\d{3}$", ErrorMessage = "Insira um {0} válido")]
+        public string Cep { get; set; }
+
+        [Display(Name = "Endereço")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        [StringLength(50, MinimumLength = 4, ErrorMessage = "{0} deve ter entre {2} e {1} caractéres")]
+        public string Address { get; set; }
+
+        [Display(Name = "Número")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string Number { get; set; }
+
+        [Display(Name = "Bairro")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string Neighborhood { get; set; }
+
+        [Display(Name = "Cidade")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string City { get; set; }
+
+        [Display(Name = "UF")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string State { get; set; }
+
+        [Display(Name = "Ponto de referência")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        public string ReferencePoint { get; set; }
 
         public Moderator()
         {

@@ -125,6 +125,7 @@
   <ItemGroup>
     <Content Include="Content\input_file.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\pnotify.custom.min.css" />
     <Content Include="Content\table.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -133,6 +134,7 @@
     <Content Include="Scripts\jquery.autocomplete-address.min.js" />
     <Content Include="Scripts\jquery.mask.min.js" />
     <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\pnotify.custom.min.js" />
     <Content Include="Template\bower_components\bootstrap-daterangepicker\daterangepicker.css" />
     <Content Include="Template\bower_components\bootstrap-daterangepicker\daterangepicker.js" />
     <Content Include="Template\bower_components\bootstrap-validator\dist\validator.min.js" />

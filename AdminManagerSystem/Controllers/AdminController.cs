@@ -38,5 +38,30 @@ namespace AdminManagerSystem.Controllers
             ViewBag.save_moderator_error = "true";
             return View("Register",moderator);
         }
+        
+        
+        [HttpPost]
+        public ActionResult TrashAffinity()
+        {
+            ViewBag.user = "admin";
+            ViewBag.register = "active";
+            return Json(new {status="success", message_title="Afinidade excluida com sucesso"});
+        }
+        
+        [HttpPost]
+        public ActionResult EditAffinity()
+        {
+            ViewBag.user = "admin";
+            ViewBag.register = "active";
+            return Json(new {status="success", message_title="Afinidade editada com sucesso"});
+        }
+        
+        [HttpPost]
+        public ActionResult ApproveAffinity()
+        {
+            ViewBag.user = "admin";
+            ViewBag.register = "active";
+            return Json(new {status="success", message_title="Afinidade aprovada com sucesso"});
+        }
     }
 }

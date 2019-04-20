@@ -31,6 +31,7 @@
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="affinity.js" t="Include" />
           <e p="input_file.js" t="Include" />
           <e p="jquery.autocomplete-address.min.js" t="Include" />
           <e p="jquery.mask.min.js" t="Include" />
@@ -426,6 +427,7 @@
         <e p="Content" t="Include">
           <e p="input_file.css" t="Include" />
           <e p="main.css" t="Include" />
+          <e p="pnotify.custom.min.css" t="Include" />
         </e>
         <e p="Controllers" t="Include">
           <e p="EntityController.cs" t="Include" />
@@ -459,6 +461,7 @@
           <e p="jquery.autocomplete-address.min.js" t="Include" />
           <e p="jquery.mask.min.js" t="Include" />
           <e p="main.js" t="Include" />
+          <e p="pnotify.custom.min.js" t="Include" />
         </e>
         <e p="Template" t="Include">
           <e p="bower_components" t="Include">

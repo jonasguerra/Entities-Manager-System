@@ -130,6 +130,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\affinity.js" />
     <Content Include="Scripts\input_file.js" />
     <Content Include="Scripts\jquery.autocomplete-address.min.js" />
     <Content Include="Scripts\jquery.mask.min.js" />

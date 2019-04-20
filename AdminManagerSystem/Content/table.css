@@ -29,12 +29,14 @@
 }
 
 .table-actions .actions .edit:hover,
-.table-actions .actions .edit:focus{
+.table-actions .actions .edit:focus,
+.table-actions .actions .show_more:hover,
+.table-actions .actions .show_more:focus{
     color: #0000ff;
 }
 
-.table-actions .actions .check:hover,
-.table-actions .actions .check:focus{
+.table-actions .actions .approve:hover,
+.table-actions .actions .approve:focus{
     color: #00ff00;
 }
 /*END ACTIONS*/

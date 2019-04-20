@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Entity" type="DotNetProject" factoryName=".NET Project" singleton="false">
+  <configuration default="false" name="Admin" type="DotNetProject" factoryName=".NET Project" singleton="false">
     <option name="EXE_PATH" value="C:/Program Files (x86)/IIS Express/iisexpress.exe" />
-    <option name="PROGRAM_PARAMETERS" value="/config:$PROJECT_DIR$/.idea/config/applicationhost.config /site:EntitiesManagerSystem /apppool:Clr4IntegratedAppPool" />
+    <option name="PROGRAM_PARAMETERS" value="/config:$PROJECT_DIR$/.idea/config/applicationhost.config /site:AdminManagerSystem /apppool:Clr4IntegratedAppPool" />
     <option name="WORKING_DIRECTORY" value="C:/Program Files (x86)/IIS Express" />
     <option name="PASS_PARENT_ENVS" value="1" />
     <envs>
@@ -10,13 +10,13 @@
     <option name="USE_EXTERNAL_CONSOLE" value="0" />
     <option name="USE_MONO" value="0" />
     <option name="RUNTIME_ARGUMENTS" value="" />
-    <option name="PROJECT_PATH" value="$PROJECT_DIR$/EntitiesManagerSystem/EntitiesManagerSystem.csproj" />
+    <option name="PROJECT_PATH" value="$PROJECT_DIR$/AdminManagerSystem/AdminManagerSystem.csproj" />
     <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
     <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
     <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
     <option name="PROJECT_KIND" value="Web" />
     <option name="PROJECT_TFM" value=".NETFramework,Version=v4.5" />
-    <browser url="http://localhost:5000/Entity/Index" start="true" />
+    <browser url="http://localhost:5001/Admin/Index" start="true" />
     <method v="2">
       <option name="Build" enabled="true" />
     </method>

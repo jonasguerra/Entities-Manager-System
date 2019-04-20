@@ -28,11 +28,17 @@ namespace EntitiesManagerSystem.Models
         [StringLength(11, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityPhone { get; set; }
 
+        [Required]
         [Display(Name = "Senha")]
-        [Required(ErrorMessage = "A {0} deve ser informada")]
+        [StringLength(100, ErrorMessage = "A {0} deve ter pelo menos {2} caracteres.", MinimumLength = 8)]
+        [RegularExpression("^((?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])|(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[^a-zA-Z0-9])|(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[^a-zA-Z0-9])|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^a-zA-Z0-9])).{8,}$", ErrorMessage = "As senhas devem ter pelo menos oito caracteres e conter pelo menos três das seguintes opções: maiúscula (A a Z), minúscula (a-z), número (0 a 9) e caractere especial (por exemplo, @ # $% ^ & *)")]
         [DataType(DataType.Password)]
-        [StringLength(20, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityPassword { get; set; }
+        
+        [Display(Name = "Confirme a Senha")]
+        [Compare("EntityPassword", ErrorMessage = "As senhas não coincidem.")]
+        [DataType(DataType.Password)]
+        public string EntityConfirmPassword { get; set; }
 
         [Display(Name = "CEP")]
         [Required(ErrorMessage = "{0} deve ser informado")]

@@ -1,112 +1,3 @@
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/EntitiesManagerSystem.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/EntitiesManagerSystem.pdb
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csc.exe
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csc.exe.config
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csc.rsp
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csi.exe
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csi.rsp
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CSharp.Core.targets
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.VisualBasic.Core.targets
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.AppContext.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.Collections.Immutable.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.Diagnostics.StackTrace.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.IO.FileSystem.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.IO.FileSystem.Primitives.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.Reflection.Metadata.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/vbc.exe
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/vbc.exe.config
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/vbc.rsp
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/VBCSCompiler.exe
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/VBCSCompiler.exe.config
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/Antlr3.Runtime.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Web.Infrastructure.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/Newtonsoft.Json.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Helpers.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Mvc.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Optimization.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Razor.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.Deployment.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.Razor.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/WebGrease.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Helpers.xml
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Mvc.xml
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Razor.xml
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.xml
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.Deployment.xml
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.Razor.xml
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/Antlr3.Runtime.pdb
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/bin/Newtonsoft.Json.xml
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csprojAssemblyReference.cache
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csproj.CoreCompileInputs.cache
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csproj.CopyComplete
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.dll
-/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.pdb
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/EntitiesManagerSystem.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/EntitiesManagerSystem.pdb
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csc.exe
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csc.exe.config
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csc.rsp
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csi.exe
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/csi.rsp
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.CSharp.Core.targets
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/Microsoft.VisualBasic.Core.targets
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.AppContext.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.Collections.Immutable.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.Diagnostics.StackTrace.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.IO.FileSystem.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.IO.FileSystem.Primitives.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/System.Reflection.Metadata.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/vbc.exe
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/vbc.exe.config
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/vbc.rsp
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/VBCSCompiler.exe
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/roslyn/VBCSCompiler.exe.config
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Antlr3.Runtime.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Web.Infrastructure.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Newtonsoft.Json.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Helpers.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Mvc.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Optimization.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Razor.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.Deployment.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.Razor.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/WebGrease.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Helpers.xml
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Mvc.xml
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Razor.xml
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.xml
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.Deployment.xml
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.WebPages.Razor.xml
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Antlr3.Runtime.pdb
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Newtonsoft.Json.xml
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csprojAssemblyReference.cache
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csproj.CoreCompileInputs.cache
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csproj.CopyComplete
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.dll
-/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.pdb
-<<<<<<< HEAD
 C:\temp\Entities-Manager-System\EntitiesManagerSystem\bin\EntitiesManagerSystem.dll.config
 C:\temp\Entities-Manager-System\EntitiesManagerSystem\bin\EntitiesManagerSystem.dll
 C:\temp\Entities-Manager-System\EntitiesManagerSystem\bin\EntitiesManagerSystem.pdb
@@ -163,7 +54,6 @@ C:\temp\Entities-Manager-System\EntitiesManagerSystem\obj\Debug\EntitiesManagerS
 C:\temp\Entities-Manager-System\EntitiesManagerSystem\obj\Debug\EntitiesManagerSystem.csproj.CopyComplete
 C:\temp\Entities-Manager-System\EntitiesManagerSystem\obj\Debug\EntitiesManagerSystem.dll
 C:\temp\Entities-Manager-System\EntitiesManagerSystem\obj\Debug\EntitiesManagerSystem.pdb
-=======
 C:\RiderProjects\Entities-Manager-System\EntitiesManagerSystem\bin\EntitiesManagerSystem.dll.config
 C:\RiderProjects\Entities-Manager-System\EntitiesManagerSystem\bin\EntitiesManagerSystem.dll
 C:\RiderProjects\Entities-Manager-System\EntitiesManagerSystem\bin\EntitiesManagerSystem.pdb
@@ -220,4 +110,3 @@ C:\RiderProjects\Entities-Manager-System\EntitiesManagerSystem\obj\Debug\Entitie
 C:\RiderProjects\Entities-Manager-System\EntitiesManagerSystem\obj\Debug\EntitiesManagerSystem.csproj.CopyComplete
 C:\RiderProjects\Entities-Manager-System\EntitiesManagerSystem\obj\Debug\EntitiesManagerSystem.dll
 C:\RiderProjects\Entities-Manager-System\EntitiesManagerSystem\obj\Debug\EntitiesManagerSystem.pdb
->>>>>>> 5e7d898b662378bd4efc4e0ce0ad0a85c31c9854

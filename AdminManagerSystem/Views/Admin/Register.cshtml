@@ -5,9 +5,22 @@
 @using System.Web.Mvc.Html
 @model AdminManagerSystem.Models.Moderator
 
+
+@* AFFINITY URLS *@
 <input id="trash_affinity_url" type="hidden" value="@Url.Action("TrashAffinity", "Admin")"/>
 <input id="edit_affinity_url" type="hidden" value="@Url.Action("EditAffinity", "Admin")"/>
 <input id="approve_affinity_url" type="hidden" value="@Url.Action("ApproveAffinity", "Admin")"/>
+
+@* VOLUNTARY URLS *@
+<input id="trash_voluntary_url" type="hidden" value="@Url.Action("TrashVoluntary", "Admin")"/>
+<input id="show_more_voluntary_url" type="hidden" value="@Url.Action("ShowMoreVoluntary", "Admin")"/>
+<input id="approve_voluntary_url" type="hidden" value="@Url.Action("ApproveVoluntary", "Admin")"/>
+
+@* ENTITY URLS *@
+<input id="trash_entity_url" type="hidden" value="@Url.Action("TrashEntity", "Admin")"/>
+<input id="show_more_entity_url" type="hidden" value="@Url.Action("ShowMoreEntity", "Admin")"/>
+<input id="approve_entity_url" type="hidden" value="@Url.Action("ApproveEntity", "Admin")"/>
+
 
 <input id="save_moderator_error" type="hidden" value="@ViewBag.save_moderator_error"/>
 
@@ -283,13 +296,13 @@
         <td>Jonas</td>
         <td>joans@hotmail.com</td>
         <td class="actions">
-                        <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                            <i class="os-icon os-icon-pencil-1"></i>
-                        </a>
-                        <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                            <i class="os-icon os-icon-ui-15"></i>
-                        </a>
-                    </td>
+            <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
+                <i class="os-icon os-icon-pencil-1"></i>
+            </a>
+            <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                <i class="os-icon os-icon-ui-15"></i>
+            </a>
+        </td>
     </tr>
     </tbody>
 </table>
@@ -346,10 +359,10 @@
             <th scope="col" class="head-actions">Ações</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody_affinity_not_approved">
         <tr data-affinity-id="1">
             <th scope="row">1</th>
-            <td>Dependentes alcoólicos</td>
+            <td class="name">Dependentes alcoólicos</td>
             <td class="actions">
                 <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
                     <i class="os-icon os-icon-tasks-checked"></i>
@@ -364,7 +377,7 @@
         </tr>
         <tr data-affinity-id="2">
             <th scope="row">2</th>
-            <td>Alimentação</td>
+            <td class="name">Alimentação</td>
             <td class="actions">
                 <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
                     <i class="os-icon os-icon-tasks-checked"></i>
@@ -392,10 +405,10 @@
             <th scope="col" class="head-actions">Ações</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
+        <tbody id="tbody_affinity_approved">
+        <tr data-affinity-id="3">
             <th scope="row">1</th>
-            <td>Infantil</td>
+            <td class="name">Infantil</td>
             <td class="actions">
                 <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
                     <i class="os-icon os-icon-pencil-1"></i>
@@ -405,9 +418,9 @@
                 </a>
             </td>
         </tr>
-        <tr>
+        <tr data-affinity-id="4">
             <th scope="row">2</th>
-            <td>Pets</td>
+            <td class="name">Pets</td>
             <td class="actions">
                 <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
                     <i class="os-icon os-icon-pencil-1"></i>
@@ -417,9 +430,9 @@
                 </a>
             </td>
         </tr>
-        <tr>
+        <tr data-affinity-id="5">
             <th scope="row">3</th>
-            <td>Idosos</td>
+            <td class="name">Idosos</td>
             <td class="actions">
                 <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
                     <i class="os-icon os-icon-pencil-1"></i>
@@ -429,9 +442,9 @@
                 </a>
             </td>
         </tr>
-        <tr>
+        <tr data-affinity-id="6">
             <th scope="row">4</th>
-            <td>Necessitados</td>
+            <td class="name">Necessitados</td>
             <td class="actions">
                 <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
                     <i class="os-icon os-icon-pencil-1"></i>
@@ -441,9 +454,9 @@
                 </a>
             </td>
         </tr>
-        <tr>
+        <tr data-affinity-id="7">
             <th scope="row">5</th>
-            <td>Meio Ambiente</td>
+            <td class="name">Meio Ambiente</td>
             <td class="actions">
                 <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
                     <i class="os-icon os-icon-pencil-1"></i>
@@ -469,10 +482,10 @@
             <th scope="col" class="head-actions">Ações</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody_voluntary_not_approved">
         <tr data-voluntary-id="1">
             <th scope="row">1</th>
-            <td>Germano Camelo</td>
+            <td class="name">Germano Camelo</td>
             <td class="actions">
                 <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
                     <i class="os-icon os-icon-search"></i>
@@ -487,7 +500,7 @@
         </tr>
         <tr data-voluntary-id="2">
             <th scope="row">2</th>
-            <td>Hermígio Neto</td>
+            <td class="name">Hermígio Neto</td>
             <td class="actions">
                 <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
                     <i class="os-icon os-icon-search"></i>
@@ -515,61 +528,61 @@
             <th scope="col" class="head-actions">Ações</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
+        <tbody id="tbody_voluntary_approved">
+        <tr data-voluntary-id="3">
             <th scope="row">1</th>
-            <td>Mafalda Cambaúva</td>
+            <td class="name">Mafalda Cambaúva</td>
             <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
+                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                    <i class="os-icon os-icon-search"></i>
                 </a>
                 <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
                     <i class="os-icon os-icon-ui-15"></i>
                 </a>
             </td>
         </tr>
-        <tr>
+        <tr data-voluntary-id="4">
             <th scope="row">2</th>
-            <td>Noémia Antunes</td>
+            <td class="name">Noémia Antunes</td>
             <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
+                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                    <i class="os-icon os-icon-search"></i>
                 </a>
                 <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
                     <i class="os-icon os-icon-ui-15"></i>
                 </a>
             </td>
         </tr>
-        <tr>
+        <tr data-voluntary-id="5">
             <th scope="row">3</th>
-            <td>Sonás Galindo</td>
+            <td class="name">Sonás Galindo</td>
             <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
+                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                    <i class="os-icon os-icon-search"></i>
                 </a>
                 <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
                     <i class="os-icon os-icon-ui-15"></i>
                 </a>
             </td>
         </tr>
-        <tr>
+        <tr data-voluntary-id="6">
             <th scope="row">4</th>
-            <td>Teresina Cortês</td>
+            <td class="name">Teresina Cortês</td>
             <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
+                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                    <i class="os-icon os-icon-search"></i>
                 </a>
                 <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
                     <i class="os-icon os-icon-ui-15"></i>
                 </a>
             </td>
         </tr>
-        <tr>
+        <tr data-voluntary-id="7">
             <th scope="row">5</th>
-            <td>Ágata Peixoto</td>
+            <td class="name">Ágata Peixoto</td>
             <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
+                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                    <i class="os-icon os-icon-search"></i>
                 </a>
                 <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
                     <i class="os-icon os-icon-ui-15"></i>
@@ -584,123 +597,141 @@
     <legend>
         <span></span>
     </legend>
-    <table class="table table-striped table-actions">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome</th>
-            <th scope="col" class="head-actions">Ações</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr data-entity-id="1">
-            <th scope="row">1</th>
-            <td>Associação Estação da Luz</td>
-            <td class="actions">
-                <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                    <i class="os-icon os-icon-search"></i>
-                </a>
-                <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
-                    <i class="os-icon os-icon-tasks-checked"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr data-entity-id="2">
-            <th scope="row">2</th>
-            <td>Brazil Foundation</td>
-            <td class="actions">
-                <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                    <i class="os-icon os-icon-search"></i>
-                </a>
-                <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
-                    <i class="os-icon os-icon-tasks-checked"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table width="100%" class="table table-striped table-actions">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col" class="head-actions">Ações</th>
+            </tr>
+            </thead>
+            <tbody id="tbody_entity_not_approved">
+            <tr data-entity-id="1">
+                <th scope="row">1</th>
+                <td class="name">Associação Estação da Luz</td>
+                <td class="actions">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
+                        <i class="os-icon os-icon-tasks-checked"></i>
+                    </a>
+                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                        <i class="os-icon os-icon-ui-15"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr data-entity-id="2">
+                <th scope="row">2</th>
+                <td class="name">Brazil Foundation</td>
+                <td class="actions">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
+                        <i class="os-icon os-icon-tasks-checked"></i>
+                    </a>
+                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                        <i class="os-icon os-icon-ui-15"></i>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
     <h5 class="form-header">Entidades</h5>
     <legend>
         <span></span>
     </legend>
-    <table class="table table-striped table-actions">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome</th>
-            <th scope="col" class="head-actions">Ações</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Fundação Estudar</td>
-            <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Fundação Gol de Letra</td>
-            <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Idesam</td>
-            <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td>Instituição Beneficente Lar de Maria</td>
-            <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">5</th>
-            <td>Habitat Brasil</td>
-            <td class="actions">
-                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                    <i class="os-icon os-icon-pencil-1"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table style="width: 100%;" class="table table-striped table-actions">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col" class="head-actions">Ações</th>
+            </tr>
+            </thead>
+            <tbody id="tbody_entity_approved">
+            <tr data-entity-id="3">
+                <th scope="row">1</th>
+                <td class="name">Fundação Estudar</td>
+                <td class="actions">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                        <i class="os-icon os-icon-ui-15"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr data-entity-id="4">
+                <th scope="row">2</th>
+                <td class="name">Fundação Gol de Letra</td>
+                <td class="actions">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                        <i class="os-icon os-icon-ui-15"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr data-entity-id="5">
+                <th scope="row">3</th>
+                <td class="name">Idesam</td>
+                <td class="actions">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                        <i class="os-icon os-icon-ui-15"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr data-entity-id="6">
+                <th scope="row">4</th>
+                <td class="name">Instituição Beneficente Lar de Maria</td>
+                <td class="actions">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                        <i class="os-icon os-icon-ui-15"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr data-entity-id="7">
+                <th scope="row">5</th>
+                <td class="name">Habitat Brasil</td>
+                <td class="actions">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                        <i class="os-icon os-icon-ui-15"></i>
+                    </a>
+                </td>
+            </tr>
+            
+            @* <tr data-entity-id="8"> *@
+            @*     <th scope="row">6</th> *@
+            @*     <td class="name">TESTE</td> *@
+            @*     <td class="actions"> *@
+            @*         <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais"> *@
+            @*             <i class="os-icon os-icon-search"></i> *@
+            @*         </a> *@
+            @*         <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir"> *@
+            @*             <i class="os-icon os-icon-ui-15"></i> *@
+            @*         </a> *@
+            @*     </td> *@
+            @* </tr> *@
+            
+            </tbody>
+        </table>
+    </div>
 </div>
 </div>
 
@@ -709,6 +740,8 @@
 
 @section scripts {
     @Scripts.Render("~/Scripts/affinity.js")
+    @Scripts.Render("~/Scripts/voluntary.js")
+    @Scripts.Render("~/Scripts/entity.js")
     <script>
 
         $(document).ready(function() {

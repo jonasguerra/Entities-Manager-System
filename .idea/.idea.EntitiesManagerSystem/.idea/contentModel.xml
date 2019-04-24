@@ -32,11 +32,13 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="affinity.js" t="Include" />
+          <e p="entity.js" t="Include" />
           <e p="input_file.js" t="Include" />
           <e p="jquery.autocomplete-address.min.js" t="Include" />
           <e p="jquery.mask.min.js" t="Include" />
           <e p="main.js" t="Include" />
           <e p="pnotify.custom.min.js" t="Include" />
+          <e p="voluntary.js" t="Include" />
         </e>
         <e p="Template" t="Include">
           <e p="bower_components" t="Include">

@@ -39,29 +39,64 @@ namespace AdminManagerSystem.Controllers
             return View("Register",moderator);
         }
         
+        //######### AJAX AFFINITY ##########
         
         [HttpPost]
         public ActionResult TrashAffinity()
         {
-            ViewBag.user = "admin";
-            ViewBag.register = "active";
             return Json(new {status="success", message_title="Afinidade excluida com sucesso"});
         }
         
         [HttpPost]
         public ActionResult EditAffinity()
         {
-            ViewBag.user = "admin";
-            ViewBag.register = "active";
             return Json(new {status="success", message_title="Afinidade editada com sucesso"});
         }
         
         [HttpPost]
         public ActionResult ApproveAffinity()
         {
-            ViewBag.user = "admin";
-            ViewBag.register = "active";
             return Json(new {status="success", message_title="Afinidade aprovada com sucesso"});
+        }
+        
+        //######### AJAX VOLUNTARY ##########
+        
+        [HttpPost]
+        public ActionResult TrashVoluntary()
+        {
+            return Json(new {status="success", message_title="Voluntário excluido com sucesso"});
+        }
+        
+        [HttpPost]
+        public ActionResult ShowMoreVoluntary()
+        {
+            return Json(new {status="success"});
+        }
+        
+        [HttpPost]
+        public ActionResult ApproveVoluntary()
+        {
+            return Json(new {status="success", message_title="Voluntário aprovado com sucesso"});
+        }
+        
+        //######### AJAX ENTITY ##########
+        
+        [HttpPost]
+        public ActionResult TrashEntity()
+        {
+            return Json(new {status="success", message_title="Entidade excluida com sucesso"});
+        }
+        
+        [HttpPost]
+        public ActionResult ShowMoreEntity()
+        {
+            return Json(new {status="success"});
+        }
+        
+        [HttpPost]
+        public ActionResult ApproveEntity()
+        {
+            return Json(new {status="success", message_title="Entidade aprovada com sucesso"});
         }
     }
 }

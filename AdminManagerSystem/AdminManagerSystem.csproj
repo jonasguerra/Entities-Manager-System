@@ -131,11 +131,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\affinity.js" />
+    <Content Include="Scripts\entity.js" />
     <Content Include="Scripts\input_file.js" />
     <Content Include="Scripts\jquery.autocomplete-address.min.js" />
     <Content Include="Scripts\jquery.mask.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\pnotify.custom.min.js" />
+    <Content Include="Scripts\voluntary.js" />
     <Content Include="Template\bower_components\bootstrap-daterangepicker\daterangepicker.css" />
     <Content Include="Template\bower_components\bootstrap-daterangepicker\daterangepicker.js" />
     <Content Include="Template\bower_components\bootstrap-validator\dist\validator.min.js" />

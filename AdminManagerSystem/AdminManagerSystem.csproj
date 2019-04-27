@@ -136,6 +136,7 @@
     <Content Include="Scripts\jquery.autocomplete-address.min.js" />
     <Content Include="Scripts\jquery.mask.min.js" />
     <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\moderator.js" />
     <Content Include="Scripts\pnotify.custom.min.js" />
     <Content Include="Scripts\voluntary.js" />
     <Content Include="Template\bower_components\bootstrap-daterangepicker\daterangepicker.css" />

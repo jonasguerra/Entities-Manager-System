@@ -1,3 +1,60 @@
+$(document).ready( function () {
+    update_table_affinity()
+} );
+
+
+function update_table_affinity(){
+
+    if ($.fn.dataTable.isDataTable("#affinity table")){
+        $('#affinity table').DataTable().destroy()
+    }
+
+    $('#affinity table').DataTable({
+        "lengthChange": false,
+        "info": false,
+        responsive: true,
+        aaSorting: [[1, 'asc']],
+        "pageLength": 5,
+        "columnDefs": [
+            { "targets": [0,2], "orderable": false }
+        ],
+        language: {
+            emptyTable: "Registro vazio",
+            infoEmpty: "Exibindo 0 a 0 de 0 registros",
+            infoFiltered: "(filtrado de _MAX_ registros)",
+            lengthMenu: "Exibir _MENU_ registros",
+            loadingRecords: "Carregando...",
+            processing: "Processando...",
+            search: "_INPUT_",
+            searchPlaceholder: "Pesquisar...",
+            zeroRecords: "Nenhum registro encontrado",
+            paginate: {
+                first: "Primeira",
+                last: "Última",
+                next: "Próxima",
+                previous: "Anterior"
+            }
+        },
+        "fnDrawCallback": function(oSettings) {
+            if (oSettings._iDisplayLength >= oSettings.fnRecordsDisplay()) {
+                $(oSettings.nTableWrapper).find('.dataTables_paginate').hide();
+            }
+        }
+    });
+
+    $('#affinity table:first').DataTable().on( 'order.dt search.dt', function () {
+        $('#affinity table:first').DataTable().column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+            cell.innerHTML = i+1;
+        } );
+    } ).draw();
+
+    $('#affinity table:last').DataTable().on( 'order.dt search.dt', function () {
+        $('#affinity table:last').DataTable().column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+            cell.innerHTML = i+1;
+        } );
+    } ).draw();
+}
+
 
 $('#affinity').on('click', '.approve', function () {
     let id = $(this).closest('tr').attr('data-affinity-id')
@@ -15,10 +72,16 @@ $('#affinity').on('click', '.approve', function () {
                     delay: 1000,
                     type: 'success',
                 });
-                
+
+                if ($.fn.dataTable.isDataTable("#affinity table")){
+                    $('#affinity table').DataTable().destroy()
+                }
+
                 let name = $('tr[data-affinity-id="' + id + '"] .name').text();
                 $('tr[data-affinity-id="' + id + '"]').remove();
                 append_affinity_approved(id, name);
+
+                update_table_affinity()
                 
                 
             } else if (data.status == 'error') {
@@ -36,8 +99,13 @@ $('#affinity').on('click', '.approve', function () {
     })
 })
 
+
+// Esta função deve ser chamada no evento de submit do formulário da affinidade
 $('#affinity').on('click', '.edit', function () {
+    
     let id = $(this).closest('tr').attr('data-affinity-id')
+    // let name = "AQUI RECEBE O NOVO NOME DA AFINIDADE"
+    
     $.ajax({
         url: $('#edit_affinity_url').val(),
         method: 'POST',
@@ -52,8 +120,11 @@ $('#affinity').on('click', '.edit', function () {
                     delay: 1000,
                     type: 'success',
                 });
-                
 
+                //Altera os dados na tablela
+                // $('tr[data-affinity-id="' + id + '"] .name').text(name)
+                update_table_affinity()
+                
             } else if (data.status == 'error') {
                 new PNotify({
                     title: data.message_title,
@@ -86,8 +157,13 @@ $('#affinity').on('click', '.trash', function () {
                     type: 'success',
                 });
 
+                if ($.fn.dataTable.isDataTable("#affinity table")){
+                    $('#affinity table').DataTable().destroy()
+                }
                 $('tr[data-affinity-id="' + id + '"]').remove();
-    
+
+                update_table_affinity()
+                
             } else if (data.status == 'error') {
                 new PNotify({
                     title: data.message_title,
@@ -105,9 +181,10 @@ $('#affinity').on('click', '.trash', function () {
 
 
 function append_affinity_approved(id, name) {
+    
     $('#tbody_affinity_approved').prepend('\
                                        <tr data-affinity-id="'+ id +'">\n' +
-                                '            <th scope="row">5</th>\n' +
+                                '            <td></td>\n' +
                                 '            <td class="name">'+ name +'</td>\n' +
                                 '            <td class="actions">\n' +
                                 '                <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">\n' +
@@ -118,6 +195,4 @@ function append_affinity_approved(id, name) {
                                 '                </a>\n' +
                                 '            </td>\n' +
                                 '        </tr>');
-
-    $('[data-toggle="tooltip"]').tooltip('update')
 }

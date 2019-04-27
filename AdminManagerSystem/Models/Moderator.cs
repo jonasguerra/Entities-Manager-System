@@ -11,7 +11,6 @@ namespace AdminManagerSystem.Models
    //https://liftcodeplay.com/2017/07/15/asp-net-core-password-complexity-validation-using-a-regular-expression-in-a-view-model/        
 
 
-
         public Guid Id { get; set; }
         
         
@@ -33,7 +32,7 @@ namespace AdminManagerSystem.Models
         public string LastName { get; set; }
         
         
-        [Required]
+        [Required(ErrorMessage = "{0} deve ser informada")]
         [Display(Name = "Senha")]
         [StringLength(100, ErrorMessage = "A {0} deve ter pelo menos {2} caracteres.", MinimumLength = 8)]
         [RegularExpression("^((?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])|(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[^a-zA-Z0-9])|(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[^a-zA-Z0-9])|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^a-zA-Z0-9])).{8,}$", ErrorMessage = "As senhas devem ter pelo menos oito caracteres e conter pelo menos três das seguintes opções: maiúscula (A a Z), minúscula (a-z), número (0 a 9) e caractere especial (por exemplo, @ # $% ^ & *)")]
@@ -51,8 +50,12 @@ namespace AdminManagerSystem.Models
         [RegularExpression("^(\b|\\({0})(?:(?:\\+|00)?(55)\\s?)?(?:\\(?([1-9][0-9])\\)?\\s?)?(?:((?:9\\d|[2-9])\\d{3})(\\-?|\\s)(\\d{4}))\b", ErrorMessage = "Insira um {0} válido")]
         public string Phone { get; set; }
 
-
         
+        [Display(Name = "E-mail")]
+        [Required(ErrorMessage = "{0} deve ser informado")]
+        [StringLength(20, MinimumLength = 4, ErrorMessage = "{0} deve ter entre {1} e {2} caractéres")]
+        public string Email { get; set; }
+
         
         [Display(Name = "CEP")]
         [RegularExpression("^\\d{5}[-]\\d{3}$", ErrorMessage = "Insira um {0} válido")]

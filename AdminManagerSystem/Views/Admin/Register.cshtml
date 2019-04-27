@@ -102,13 +102,22 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for=""> E-mail</label>
-                        <input class="form-control" data-error="E-mail inválid" required="required" type="email">
-                        <div class="help-block form-text with-errors form-control-feedback">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.Email)</label>
+                                @Html.TextBoxFor(m => m.Email, new {@class = "mask_phone form-control"})
+                                @Html.ValidationMessageFor(m => m.Email, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.Phone)</label>
+                                @Html.TextBoxFor(m => m.Phone, new {@class = "mask_phone form-control"})
+                                @Html.ValidationMessageFor(m => m.Phone, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            </div>
                         </div>
                     </div>
-
 
                     <div class="row">
                         <div class="form-group col-sm-2">
@@ -186,7 +195,6 @@
                         </div>
                     </div>
 
-
                     <div class="form-group">
                         <label>@Html.LabelFor(m => m.Username)</label>
                         @Html.TextBoxFor(m => m.Username, new {@class = "form-control"})
@@ -209,17 +217,6 @@
                         </div>
                     </div>
                     <fieldset class="form-group">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-
-                                    <label>@Html.LabelFor(m => m.Phone)</label>
-                                    @Html.TextBoxFor(m => m.Phone, new {@class = "form-control"})
-                                    @Html.ValidationMessageFor(m => m.Phone, "")
-                                </div>
-
-                            </div>
-                        </div>
                         <div class="row">
                         </div>
                         <div class="form-group">
@@ -742,6 +739,7 @@
     @Scripts.Render("~/Scripts/affinity.js")
     @Scripts.Render("~/Scripts/voluntary.js")
     @Scripts.Render("~/Scripts/entity.js")
+    @Scripts.Render("~/Scripts/moderator.js")
     <script>
 
         $(document).ready(function() {

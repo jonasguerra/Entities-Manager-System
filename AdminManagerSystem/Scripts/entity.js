@@ -1,8 +1,10 @@
 $(document).ready( function () {
-    update_table()
+    update_table_entity()
 } );
 
-function update_table(){
+function update_table_entity(){
+
+    $('[data-toggle="tooltip"]').tooltip('update')
     
     if ($.fn.dataTable.isDataTable("#entity table")){
         $('#entity table').DataTable().destroy()
@@ -72,7 +74,6 @@ $('#entity').on('click', '.approve', function () {
                     type: 'success',
                 });
 
-
                 if ($.fn.dataTable.isDataTable("#entity table")){
                     $('#entity table').DataTable().destroy()
                 }
@@ -81,8 +82,8 @@ $('#entity').on('click', '.approve', function () {
                 $('tr[data-entity-id="' + id + '"]').remove();
                 append_entity_approved(id, name);
 
-                update_table()    
-                
+                update_table_entity()
+
                 
             } else if (data.status == 'error') {
                 new PNotify({
@@ -110,7 +111,6 @@ $('#entity').on('click', '.show_more', function () {
         success: function (data) {
             if (data.status == 'success') {
 
-                update_table();
                 
             } else if (data.status == 'error') {
                 new PNotify({
@@ -149,8 +149,10 @@ $('#entity').on('click', '.trash', function () {
                 }
                 
                 $('tr[data-entity-id="' + id + '"]').remove();
+
                 
-                update_table();
+                update_table_entity();
+                
             } else if (data.status == 'error') {
                 new PNotify({
                     title: data.message_title,
@@ -181,7 +183,5 @@ function append_entity_approved(id, name) {
                             '                </a>\n' +
                             '             </td>\n' +
                             '           </tr>')
-
-
-    $('[data-toggle="tooltip"]').tooltip('update')
+    
 }

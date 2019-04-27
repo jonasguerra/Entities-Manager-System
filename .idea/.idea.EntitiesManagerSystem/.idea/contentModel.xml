@@ -37,6 +37,7 @@
           <e p="jquery.autocomplete-address.min.js" t="Include" />
           <e p="jquery.mask.min.js" t="Include" />
           <e p="main.js" t="Include" />
+          <e p="moderator.js" t="Include" />
           <e p="pnotify.custom.min.js" t="Include" />
           <e p="voluntary.js" t="Include" />
         </e>

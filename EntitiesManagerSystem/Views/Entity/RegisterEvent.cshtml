@@ -13,7 +13,7 @@
         {
             <h5 class="form-header">Cadastro de Eventos</h5>
             <div class="form-desc">
-                Cadastre aqui uma nova campanha e envie o convite para os voluntários com interesse no evento.
+                Cadastre aqui uma nova campanha convide os voluntários que possuem as mesmas afinidades :)
             </div>
 
             <div class="form-group">
@@ -72,21 +72,18 @@
                     </div>
                 </div>
             </div>
-
-            <div class="form-group">
-                <label>@Html.LabelFor(m => m.Neighborhood)</label>
-                @Html.TextBoxFor(m => m.Neighborhood, new {@class = "autocomplete-neighborhood form-control"})
-                @Html.ValidationMessageFor(m => m.Neighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-            </div>
             <div class="row">
-                <div class="col-sm-8">
-                    <div class="form-group">
+                <div class="form-group col-sm-5">
+                            <label>@Html.LabelFor(m => m.Neighborhood)</label>
+                            @Html.TextBoxFor(m => m.Neighborhood, new {@class = "autocomplete-neighborhood form-control"})
+                            @Html.ValidationMessageFor(m => m.Neighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                <div class="form-group col-sm-5">
                         <label>@Html.LabelFor(m => m.City)</label>
                         @Html.TextBoxFor(m => m.City, new {@class = "autocomplete-city form-control"})
                         @Html.ValidationMessageFor(m => m.City, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                    </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <div class="form-group">
                         <label>@Html.LabelFor(m => m.State)</label>
                         @Html.DropDownListFor(model => model.State, new SelectList(

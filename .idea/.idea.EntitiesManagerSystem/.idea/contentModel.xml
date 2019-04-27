@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_EntitiesManagerSystem.1773474481.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_EntitiesManagerSystem.-1922241673.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="AdminManagerSystem" t="IncludeRecursive">
         <e p="AdminManagerSystem.csproj" t="IncludeRecursive" />
@@ -836,6 +836,7 @@
             <e p="Event.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="RegisterDonate.cshtml" t="Include" />
+            <e p="RegisterVoluntary.cshtml" t="Include" />
           </e>
           <e p="Web.config" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />

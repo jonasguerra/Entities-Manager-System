@@ -47,5 +47,15 @@ namespace EntitiesManagerSystem.Controllers
             ViewBag.register_donate = "active";
             return View("RegisterDonate",donation);
         }
+
+        public ActionResult RegisterVoluntary()
+        {
+
+            ViewBag.user = "voluntary";
+            ViewBag.index = "active";
+            
+            return View("RegisterVoluntary");
+                
+        }
     }
 }

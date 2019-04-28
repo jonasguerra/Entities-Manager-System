@@ -7,7 +7,7 @@ namespace EntitiesManagerSystem.Models
     {
         public Guid Id { get; set; }
 
-        [Display(Name = "Username")]
+        [Display(Name = "Usuário")]
         [Required(ErrorMessage = "O {0} deve ser informado")]
         public string Username { get; set; }
         

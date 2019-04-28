@@ -340,6 +340,7 @@
     <Content Include="Views\Voluntary\RegisterDonate.cshtml" />
     <Content Include="Views\Voluntary\Event.cshtml" />
     <Content Include="Views\Voluntary\Index.cshtml" />
+    <Content Include="Views\Voluntary\RegisterVoluntary.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -837,6 +837,7 @@
             <e p="Event.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="RegisterDonate.cshtml" t="Include" />
+            <e p="RegisterVoluntary.cshtml" t="Include" />
           </e>
           <e p="Web.config" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />

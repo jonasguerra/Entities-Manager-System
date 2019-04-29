@@ -3,28 +3,35 @@
 @{
     ViewBag.Title = "donations";
 }
+
+@Styles.Render("~/Content/pagination.css")
+
 <div class="element-wrapper col-8 mx-auto">
     <h6 class="element-header">Doações</h6>
     <div class="element-box">
         <h5 class="form-header">Doações relevantes para você</h5>
-        <legend><span></span></legend>
-        
+        <legend>
+            <span></span>
+        </legend>
+
         <div class="element-box-tp">
             <div class="post-box">
                 @* Esta div deve aparecer só se o voluntário inserir uma imagem *@
                 @* <div class="post-media" style="background-image: url(/Template/img/portfolio1.jpg)"> *@
                 @* </div> *@
                 <div class="post-content">
-                    <h6 class="post-title">Móvel para guardar mantimentos</h6>
+                    <h6 class="post-title">Móvel para mantimentos</h6>
                     <div class="post-text">O móvel esta em bom estado, pretendo doar pois estou de mudança</div>
                     <div class="post-foot">
                         <div class="post-tags">
                             <div class="badge badge-primary">
-                                Pets</div>
+                                Pets
+                            </div>
                             <div class="badge badge-primary">
-                                Necessitados</div>
+                                Necessitados
+                            </div>
                         </div>
-                        <a class="post-link" href="#">
+                        <a class="post-link" href="#" data-target=".show-donation-modal" data-toggle="modal">
                             <span>Ver mais</span>
                             <i class="os-icon os-icon-arrow-right7">
                             </i>
@@ -41,11 +48,13 @@
                     <div class="post-foot">
                         <div class="post-tags">
                             <div class="badge badge-primary">
-                                Pets</div>
+                                Pets
+                            </div>
                             <div class="badge badge-primary">
-                                Idosos</div>
+                                Idosos
+                            </div>
                         </div>
-                        <a class="post-link" href="#">
+                        <a class="post-link" href="#" data-target=".show-donation-modal" data-toggle="modal">
                             <span>Ver mais</span>
                             <i class="os-icon os-icon-arrow-right7">
                             </i>
@@ -53,10 +62,83 @@
                     </div>
                 </div>
             </div>
-            <a class="centered-load-more-link" href="#">
-                <span>Ver mais doações</span>
-            </a>
+            <div class="post-box">
+                <div class="post-media" style="background-color: antiquewhite; background-image: url(~/Template/img/portfolio2.jpg)">
+                </div>
+                <div class="post-content">
+                    <h6 class="post-title">Nullam semper</h6>
+                    <div class="post-text"> Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce consequat nec quam non vehicula. Ut in fermentum augue. Cras ac metus at est sagittis gravida. Ut rhoncus consectetur urna vitae lacinia. Nam mattis volutpat ornare. Suspendisse cursus nunc vel euismod vehicula. Ut sed sagittis tellus. Mauris sed rutrum ipsum. Ut vestibulum orci diam, ut tempus massa malesuada nec. Morbi finibus, dui quis vehicula eleifend, nunc lacus posuere leo, eget feugiat massa turpis non mi. Etiam sit amet dui diam. Donec vitae tortor varius nibh fringilla pellentesque.</div>
+                    <div class="post-foot">
+                        <div class="post-tags">
+                            <div class="badge badge-primary">
+                                pellentesque
+                            </div>
+                        </div>
+                        <a class="post-link" href="#" data-target=".show-donation-modal" data-toggle="modal">
+                            <span>Ver mais</span>
+                            <i class="os-icon os-icon-arrow-right7">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="pagination-container"></div>
+            @* <a class="centered-load-more-link" href="#"> *@
+            @*     <span>Ver mais doações</span> *@
+            @* </a> *@
         </div>
-        
     </div>
 </div>
+
+@* Modal Register Moderator *@
+
+@* <button class="mr-2 mb-2 btn btn-primary" data-target=".show-donation-modal" data-toggle="modal"> *@
+    @* Novo Moderador *@
+@* </button> *@
+<div aria-hidden="true" aria-labelledby="myLargeModalLabel" class="modal fade show-donation-modal"
+     role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Doação</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                <legend>
+                    <span></span>
+                </legend>
+                <h6 class="element-header">Vestibulum ante ipsum</h6>
+                
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce consequat nec quam non vehicula. Ut in fermentum augue. Cras ac metus at est sagittis gravida. Ut rhoncus consectetur urna vitae lacinia. Nam mattis volutpat ornare. Suspendisse cursus nunc vel euismod vehicula. Ut sed sagittis tellus. Mauris sed rutrum ipsum. Ut vestibulum orci diam, ut tempus massa malesuada nec. Morbi finibus, dui quis vehicula eleifend, nunc lacus posuere leo, eget feugiat massa turpis non mi. Etiam sit amet dui diam. Donec vitae tortor varius nibh fringilla pellentesque. Phasellus sed arcu ut nisl ultrices egestas elementum sit amet arcu. Integer et semper sem, vitae cursus erat.</p>
+                
+                <ul>
+                    <li>Fusce fringilla euismod purus in venenatis.</li>
+                    <li>Nulla lacinia rutrum placerat.</li>
+                    <li>Phasellus vehicula finibus tincidunt.</li>
+                    <li>uspendisse pharetra.</li>
+                </ul>
+                
+                
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" type="submit">
+                    Solicitar doação
+                </button>
+                @* <button class="btn btn-secondary" data-dismiss="modal" type="button"> *@
+                @*     Sair *@
+                @* </button> *@
+            </div>
+        </div>
+    </div>
+</div>
+@* End Modal Register Moderator *@
+
+@section scripts {
+    @Scripts.Render("~/Scripts/pagination.js")
+    @Scripts.Render("~/Scripts/donations_entity.js")
+}

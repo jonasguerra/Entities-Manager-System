@@ -51,6 +51,19 @@
                 @Html.ValidationMessageFor(m => m.Date, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
             
+            <div class="form-group">
+                <label path="photo">Foto</label>
+                <div class="attachment attachment--image">
+                    <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif" required="required"/>
+                    <div class="attachment--label">
+                        <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
+                        <span class="file-name"></span>
+                        <span class="attachment--remove">Remover</span>
+                    </div>
+                    <div class="attachment--error"></div>
+                </div>
+            </div>
+            
             <div class="row">
                 <div class="form-group col-sm-2">
                     <label>@Html.LabelFor(m => m.Cep)</label>

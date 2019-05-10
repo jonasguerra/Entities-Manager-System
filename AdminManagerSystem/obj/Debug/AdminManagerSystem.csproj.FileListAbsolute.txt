@@ -162,3 +162,8 @@ C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManag
 /home/masterhorus/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.dll
 /home/masterhorus/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.pdb
 /home/masterhorus/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.csprojAssemblyReference.cache
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Net.Http.Formatting.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/WebApiRestService.WebApiClient.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Net.Http.Formatting.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/WebApiRestService.WebApiClient.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/pt-br/System.Web.Optimization.resources.dll

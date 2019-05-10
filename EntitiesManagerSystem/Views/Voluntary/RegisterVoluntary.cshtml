@@ -40,7 +40,7 @@
                 <img alt="" src="~/Template/img/ong.png">
             </div>
             <h4 class="auth-header">Novo Voluntário</h4>
-            @using (Html.BeginForm("RegisterVoluntary", "Voluntary", FormMethod.Post))
+            @using (Html.BeginForm("SaveVoluntary", "Voluntary", FormMethod.Post))
             {
                 <legend>
                     <span>Dados Cadastrais</span>
@@ -77,7 +77,7 @@
                     <div class="form-group col-sm-6">
                         <div class="form-group">
                             <label> @Html.LabelFor(m => m.VoluntaryPhone)</label>
-                            @Html.TextBoxFor(m => m.VoluntaryPhone, new {@class = "form-control"})
+                            @Html.TextBoxFor(m => m.VoluntaryPhone, new {@class = "form-control mask_phone"})
                             @Html.ValidationMessageFor(m => m.VoluntaryPhone, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                 <div class="form-group">
                     <label path="photo">Foto</label>
                     <div class="attachment attachment--image">
-                        <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif" required="required"/>
+                        <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif"/>
                         <div class="attachment--label">
                             <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
                             <span class="file-name"></span>

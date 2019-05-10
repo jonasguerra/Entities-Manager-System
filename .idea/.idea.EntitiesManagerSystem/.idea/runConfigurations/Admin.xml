@@ -16,7 +16,7 @@
     <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
     <option name="PROJECT_KIND" value="Web" />
     <option name="PROJECT_TFM" value=".NETFramework,Version=v4.5" />
-    <browser url="http://localhost:5001/Admin" start="true" />
+    <browser url="http://localhost:5001/Admin" />
     <method v="2">
       <option name="Build" enabled="true" />
     </method>

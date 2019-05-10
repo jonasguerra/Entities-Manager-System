@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesManagerSystem", "En
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminManagerSystem", "AdminManagerSystem\AdminManagerSystem.csproj", "{7765BE5A-DE8A-4752-B4F7-5DD62D9AD12F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manager_API", "Manager_API\Manager_API.csproj", "{131C1EA4-3372-46B8-A87F-92F49EA11FE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manager_WebAPI", "Manager_WebAPI\Manager_WebAPI.csproj", "{131C1EA4-3372-46B8-A87F-92F49EA11FE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

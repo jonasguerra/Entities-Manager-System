@@ -20,7 +20,7 @@ namespace EntitiesManagerSystem.Models.Voluntary
         [Display(Name = "Telefone")]
         [Required(ErrorMessage = "{0} deve ser informado")]
         [DataType(DataType.PhoneNumber, ErrorMessage = "Apenas numeros devem ser informados")]
-        [StringLength(11, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
+        [StringLength(20, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string VoluntaryPhone { get; set; }
 
         [Required]
@@ -40,7 +40,7 @@ namespace EntitiesManagerSystem.Models.Voluntary
 
         [Display(Name = "CEP")]
         [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(8, MinimumLength = 8, ErrorMessage = "CEP deve possuir 8 caracteres")]
+        [StringLength(9, MinimumLength = 9, ErrorMessage = "CEP deve possuir 8 caracteres")]
         public string VoluntaryCEP { get; set; }
 
         [Display(Name = "Rua")]
@@ -65,7 +65,7 @@ namespace EntitiesManagerSystem.Models.Voluntary
 
         [Display(Name = "Estado")]
         [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(30, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
+        [StringLength(2, MinimumLength = 2, ErrorMessage = "Minimo {2} caracteres")]
         public string VoluntaryState { get; set; }
 
         [Display(Name = "Ponto de Referencia")]
@@ -76,9 +76,11 @@ namespace EntitiesManagerSystem.Models.Voluntary
         [Required(ErrorMessage = "{0} deve ser informada")]
         public string VoluntaryAffinity { get; set; }
 
-        [Display(Name = "Redes Sociais")] public string VoluntarySocialNetwork { get; set; }
+        [Display(Name = "Redes Sociais")] 
+        public string VoluntarySocialNetwork { get; set; }
 
-        [Display(Name = "Imagem da Entidade")] public string VoluntaryPhotoImageName { get; set; }
+        [Display(Name = "Imagem da Entidade")] 
+        public string VoluntaryPhotoImageName { get; set; }
 
         public Voluntary()
         {

@@ -1,12 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using EntitiesManagerSystem.Consumers_API;
 using EntitiesManagerSystem.Models.Voluntary;
 
 namespace EntitiesManagerSystem.Controllers
 {
     public class VoluntaryController : Controller
     {
+        private APIHttpVoluntary voluntaryHttp;   
+        public VoluntaryController()
+        {
+            voluntaryHttp = new APIHttpVoluntary("http://localhost:5002/api/");
+        }
+
+        
         // GET
         public ActionResult Index()
         {
@@ -30,6 +38,15 @@ namespace EntitiesManagerSystem.Controllers
             return View();
         }
         
+        public ActionResult RegisterVoluntary()
+        {
+
+            ViewBag.user = "voluntary";
+            ViewBag.index = "active";
+            
+            return View("RegisterVoluntary");
+                
+        }
         
         //###################
         //### POST METHOD ###
@@ -47,15 +64,20 @@ namespace EntitiesManagerSystem.Controllers
             ViewBag.register_donate = "active";
             return View("RegisterDonate",donation);
         }
-
-        public ActionResult RegisterVoluntary()
+        
+        [HttpPost]
+        public ActionResult SaveVoluntary(Voluntary voluntary)
         {
-
+            if (ModelState.IsValid)
+            {
+                var id = voluntaryHttp.Post<Voluntary>(@"Voluntary/", voluntary);
+                
+                return RedirectToAction("Index");
+            }
+            
             ViewBag.user = "voluntary";
             ViewBag.index = "active";
-            
-            return View("RegisterVoluntary");
-                
+            return View("RegisterVoluntary", voluntary);
         }
     }
 }

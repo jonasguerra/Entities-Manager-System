@@ -877,6 +877,11 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
       </e>
+      <e p="Manager_Domain" t="IncludeRecursive">
+        <e p="Manager_Domain.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+      </e>
       <e p="Manager_Repository" t="IncludeRecursive">
         <e p="Manager_Repository.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />

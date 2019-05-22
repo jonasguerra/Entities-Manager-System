@@ -4,12 +4,29 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Ftec.WebAPI.Infra.Repository;
 using Manager_API.Models.Voluntary;
+using Manager_Application;
+using Manager_Application.DTO;
+using Manager_Domain.Interfaces;
 
 namespace Manager_API.Controllers
 {
     public class VoluntaryController : ApiController
     {
+        
+        private IVoluntaryRepository voluntaryRepository;
+        private VoluntaryApplication voluntaryApplication;
+
+        public VoluntaryController()
+        {
+            string connectionString = string.Empty;
+            //injetando a dependencia do repositorio na aplicação
+            voluntaryRepository = new VoluntaryRepository(connectionString);
+            voluntaryApplication = new VoluntaryApplication(voluntaryRepository);
+        }
+        
+        
         // GET api/values
         public HttpResponseMessage Get()
         {
@@ -68,7 +85,7 @@ namespace Manager_API.Controllers
         // POST api/values
         public HttpResponseMessage Post([FromBody]Voluntary voluntary)
         {
-            Console.WriteLine("POST METHOD");
+            Console.WriteLine("POST METHOD 1");
             try
             {
                 //Neste local faria a inclusao do voluntario no repositorio
@@ -148,7 +165,30 @@ namespace Manager_API.Controllers
 
         private Guid Insert(Voluntary voluntary)
         {
-            return Guid.NewGuid();
+//            return Guid.NewGuid();
+            //executa o mapeamento
+            VoluntaryDTO voluntaryDTO = new VoluntaryDTO ()
+            {
+                Id = voluntary.Id,
+                VoluntaryName = voluntary.VoluntaryName,
+                VoluntaryEmail = voluntary.VoluntaryEmail,
+                VoluntaryPhone = voluntary.VoluntaryPhone,
+                VoluntaryPassword = voluntary.VoluntaryPassword,
+                VoluntaryConfirmPassword = voluntary.VoluntaryConfirmPassword,
+                VoluntaryCEP = voluntary.VoluntaryCEP,
+                VoluntaryAvenue = voluntary.VoluntaryAvenue,
+                VoluntaryNumber = voluntary.VoluntaryNumber,
+                VoluntaryNeighborhood = voluntary.VoluntaryNeighborhood,
+                VoluntaryCity = voluntary.VoluntaryCity,
+                VoluntaryState = voluntary.VoluntaryState,
+                VoluntaryReferencePoint = voluntary.VoluntaryReferencePoint,
+                VoluntaryAffinity = voluntary.VoluntaryAffinity,
+                VoluntarySocialNetwork = voluntary.VoluntarySocialNetwork, 
+                VoluntaryPhotoImageName = voluntary.VoluntaryPhotoImageName
+            };
+            
+            Console.WriteLine("POST METHOD 2");
+            return voluntaryApplication.Insert(voluntaryDTO);
         }
 
         private void Alter(Voluntary voluntary)

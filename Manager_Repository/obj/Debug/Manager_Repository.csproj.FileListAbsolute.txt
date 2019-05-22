@@ -1,0 +1,9 @@
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/Manager_Repository.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/Manager_Repository.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/Manager_Domain.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/Manager_Domain.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.csprojAssemblyReference.cache
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.csproj.CoreCompileInputs.cache
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.csproj.CopyComplete
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.pdb

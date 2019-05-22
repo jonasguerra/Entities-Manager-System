@@ -68,16 +68,16 @@ namespace EntitiesManagerSystem.Controllers
         [HttpPost]
         public ActionResult SaveVoluntary(Voluntary voluntary)
         {
-            if (ModelState.IsValid)
-            {
+//            if (ModelState.IsValid)
+//            {
                 var id = voluntaryHttp.Post<Voluntary>(@"Voluntary/", voluntary);
                 
                 return RedirectToAction("Index");
-            }
-            
-            ViewBag.user = "voluntary";
-            ViewBag.index = "active";
-            return View("RegisterVoluntary", voluntary);
+//            }
+//            
+//            ViewBag.user = "voluntary";
+//            ViewBag.index = "active";
+//            return View("RegisterVoluntary", voluntary);
         }
     }
 }

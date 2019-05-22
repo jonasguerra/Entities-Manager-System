@@ -44,3 +44,9 @@
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/obj/Debug/Manager_WebAPI.csproj.CopyComplete
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/obj/Debug/Manager_WebAPI.dll
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/obj/Debug/Manager_WebAPI.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/bin/Manager_Application.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/bin/Manager_Domain.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/bin/Manager_Repository.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/bin/Manager_Application.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/bin/Manager_Domain.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/bin/Manager_Repository.pdb

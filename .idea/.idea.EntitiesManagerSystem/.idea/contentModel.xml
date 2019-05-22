@@ -873,17 +873,40 @@
       </e>
       <e p="EntitiesManagerSystem.sln" t="IncludeFlat" />
       <e p="Manager_Application" t="IncludeRecursive">
+        <e p="Adapter" t="Include">
+          <e p="VoluntaryAdapter.cs" t="Include" />
+        </e>
+        <e p="DTO" t="Include">
+          <e p="VoluntaryDTO.cs" t="Include" />
+        </e>
         <e p="Manager_Application.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="VoluntaryApplication.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
       </e>
       <e p="Manager_Domain" t="IncludeRecursive">
+        <e p="Entities" t="Include">
+          <e p="Voluntary.cs" t="Include" />
+        </e>
+        <e p="Interfaces" t="Include">
+          <e p="IVoluntaryRepository.cs" t="Include" />
+        </e>
         <e p="Manager_Domain.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
       </e>
       <e p="Manager_Repository" t="IncludeRecursive">
         <e p="Manager_Repository.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="VoluntaryRepository.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
       </e>

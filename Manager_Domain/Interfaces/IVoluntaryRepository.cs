@@ -6,10 +6,10 @@ namespace Manager_Domain.Interfaces
 {
     public interface IVoluntaryRepository
     {
-        Guid Insert(Voluntary cliente);
+        Guid Insert(Voluntary voluntary);
         Voluntary Find(Guid id);
         List<Voluntary> FindAll();
-        Guid Update(Voluntary cliente);
+        Guid Update(Voluntary voluntary);
         bool Delete(Guid id);
     }
 }

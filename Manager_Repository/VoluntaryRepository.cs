@@ -29,14 +29,14 @@ namespace Ftec.WebAPI.Infra.Repository
             throw new NotImplementedException();
         }
 
-        public Guid Insert(Voluntary cliente)
+        public Guid Insert(Voluntary voluntary)
         {
             Console.WriteLine("POST METHOD 5");
             
             throw new NotImplementedException();
         }
 
-        public Guid Update(Voluntary cliente)
+        public Guid Update(Voluntary voluntary)
         {
             throw new NotImplementedException();
         }

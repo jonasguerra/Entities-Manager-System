@@ -32,7 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\Voluntary.cs" />
+    <Compile Include="Interfaces\IEntityRepository.cs" />
     <Compile Include="Interfaces\IVoluntaryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -2,17 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
+using Ftec.WebAPI.Infra.Repository;
+using Manager_Application;
+using Manager_Domain.Interfaces;
 
 namespace Manager_API.Controllers
 {
-    public class EntityController : Controller
+    public class EntityController : ApiController
     {
-        public ActionResult Index()
-        {
-            ViewBag.Title = "Home Page";
+        private IEntityRepository entityRepository;
+        private EntityApplication entityApplication;
 
-            // return View();
+
+
+        public EntityController()
+        {
+            string connectionString = string.Empty;
+            //injetando a dependencia do repositorio na aplicação
+            entityRepository = new EntityRepository(connectionString);
+            entityApplication = new EntityApplication(entityRepository);
         }
+
+        
     }
 }

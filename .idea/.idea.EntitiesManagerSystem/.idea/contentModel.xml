@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\RiderProjects\Entities-Manager-System" t="IncludeFlat">
+    <e p="C:\Users\guilh\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\guilh\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_EntitiesManagerSystem.1851350098.00" t="ExcludeRecursive" />
+    <e p="C:\Users\guilh\Documents\Entities-Manager-System" t="IncludeFlat">
       <e p="0-FrontEnd" t="Include" />
       <e p="1-WebServices" t="Include" />
       <e p="2-Application" t="Include" />
@@ -1005,6 +1007,7 @@
           <e p="Site.css" t="Include" />
         </e>
         <e p="Controllers" t="Include">
+          <e p="EntityController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
           <e p="VoluntaryController.cs" t="Include" />
@@ -1058,7 +1061,5 @@
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Masterhorus\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Masterhorus\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_EntitiesManagerSystem.-415285049.00" t="ExcludeRecursive" />
   </component>
 </project>

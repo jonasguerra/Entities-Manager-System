@@ -29,11 +29,13 @@
         </e>
         <e p="Controllers" t="Include">
           <e p="AdminController.cs" t="Include" />
+          <e p="LoginController.cs" t="Include" />
         </e>
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Affinity.cs" t="Include" />
+          <e p="LoginForm.cs" t="Include" />
           <e p="Moderator.cs" t="Include" />
         </e>
         <e p="Properties" t="Include">
@@ -407,6 +409,9 @@
           <e p="Admin" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
+          </e>
+          <e p="Login" t="Include">
+            <e p="Login.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />

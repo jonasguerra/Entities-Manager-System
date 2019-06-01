@@ -30,22 +30,14 @@ namespace Manager_API.Controllers
         // GET api/values
         public HttpResponseMessage Get()
         {
-            Console.WriteLine("GET METHOD");
-            List<Voluntary> voluntaries = new List<Voluntary>();
+            Console.WriteLine("GET ALL CONTROLLER");
+            List<VoluntaryDTO> voluntariesDTO = new List<VoluntaryDTO>();
             try
             {
-                Voluntary voluntary = new Voluntary()
-                {
-                    VoluntaryName = "Nome",
-                    VoluntaryEmail = "email@email.com",
-                    Id = Guid.NewGuid()
-                };
-
-                voluntaries.Add(voluntary);
-                voluntaries.Add(voluntary);
-                voluntaries.Add(voluntary);
+                voluntariesDTO = voluntaryApplication.GetAll();
+       
                 //Este metodo retorna uma listagem de voluntarios
-                return Request.CreateResponse(HttpStatusCode.OK, voluntaries);
+                return Request.CreateResponse(HttpStatusCode.OK, voluntariesDTO);
             }
             catch (Exception ex)
             {
@@ -56,24 +48,19 @@ namespace Manager_API.Controllers
         // GET api/values/5
         public HttpResponseMessage Get(Guid id)
         {
-            Console.WriteLine("GET ONE METHOD");
+            Console.WriteLine("GET ONE CONTROLLER");
             try
-            { 
-                Voluntary voluntary = new Voluntary()
-                {
-                    VoluntaryName = "Nome",
-                    VoluntaryEmail = "email@email.com",
-                    Id = Guid.NewGuid()
-                };
+            {
+                VoluntaryDTO voluntariesDTO = Find(id);
                 //Neste local faria uma busca na base de dados 
                 // Se encontrar o voluntario retorno o voluntario, caso contrário retorna código de nao encontrado
-                if (voluntary == null)
+                if (voluntariesDTO == null)
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Voluntário não encontrado");
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, voluntary);
+                    return Request.CreateResponse(HttpStatusCode.OK, voluntariesDTO);
                 }
             }
             catch (Exception ex)
@@ -85,7 +72,7 @@ namespace Manager_API.Controllers
         // POST api/values
         public HttpResponseMessage Post([FromBody]Voluntary voluntary)
         {
-            Console.WriteLine("POST METHOD 1");
+            Console.WriteLine("POST CONTROLLER");
             try
             {
                 //Neste local faria a inclusao do voluntario no repositorio
@@ -108,14 +95,14 @@ namespace Manager_API.Controllers
         // PUT api/values/5
         public HttpResponseMessage Put(Guid id, [FromBody]Voluntary voluntary)
         {
-            Console.WriteLine("PUT METHOD");
+            Console.WriteLine("PUT CONTROLLER");
             try
             {
                 //Neste local faria a alteracao do voluntario no repositorio
                 //Antes de fazer a alteracao, o sistema deve verificar se existe o voluntario
                 //Se existir aplica as mudanças
-                Voluntary cli = Find(id);
-                if (cli == null)
+                VoluntaryDTO voluntaryDto = Find(id);
+                if (voluntaryDto == null)
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Voluntario não encontrado");
                 }
@@ -138,12 +125,12 @@ namespace Manager_API.Controllers
         // DELETE api/values/5
         public HttpResponseMessage Delete(Guid id)
         {
-            Console.WriteLine("DELETE METHOD");
+            Console.WriteLine("DELETE CONTROLLER");
             try
             {
                 //Neste local faria a exclusão do voluntario no repositorio
-                Voluntary cli = Find(id);
-                if (cli == null)
+                VoluntaryDTO voluntaryDto = Find(id);
+                if (voluntaryDto == null)
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Voluntario não encontrado");
                 }
@@ -165,7 +152,8 @@ namespace Manager_API.Controllers
 
         private Guid Insert(Voluntary voluntary)
         {
-//            return Guid.NewGuid();
+            Console.WriteLine("POST METHOD CONTROLLER");
+            //return Guid.NewGuid();
             //executa o mapeamento
             VoluntaryDTO voluntaryDTO = new VoluntaryDTO ()
             {
@@ -186,29 +174,46 @@ namespace Manager_API.Controllers
                 VoluntarySocialNetwork = voluntary.VoluntarySocialNetwork, 
                 VoluntaryPhotoImageName = voluntary.VoluntaryPhotoImageName
             };
-            
-            Console.WriteLine("POST METHOD 2");
+           
             return voluntaryApplication.Insert(voluntaryDTO);
         }
 
         private void Alter(Voluntary voluntary)
         {
+            VoluntaryDTO voluntaryDTO = new VoluntaryDTO ()
+            {
+                Id = voluntary.Id,
+                VoluntaryName = voluntary.VoluntaryName,
+                VoluntaryEmail = voluntary.VoluntaryEmail,
+                VoluntaryPhone = voluntary.VoluntaryPhone,
+                VoluntaryPassword = voluntary.VoluntaryPassword,
+                VoluntaryConfirmPassword = voluntary.VoluntaryConfirmPassword,
+                VoluntaryCEP = voluntary.VoluntaryCEP,
+                VoluntaryAvenue = voluntary.VoluntaryAvenue,
+                VoluntaryNumber = voluntary.VoluntaryNumber,
+                VoluntaryNeighborhood = voluntary.VoluntaryNeighborhood,
+                VoluntaryCity = voluntary.VoluntaryCity,
+                VoluntaryState = voluntary.VoluntaryState,
+                VoluntaryReferencePoint = voluntary.VoluntaryReferencePoint,
+                VoluntaryAffinity = voluntary.VoluntaryAffinity,
+                VoluntarySocialNetwork = voluntary.VoluntarySocialNetwork, 
+                VoluntaryPhotoImageName = voluntary.VoluntaryPhotoImageName
+            };
             
+            voluntaryApplication.Update(voluntaryDTO);
+            Console.WriteLine("PUT METHOD CONTROLLER");
         }
 
         private void Remove(Guid id)
         {
-
+            Console.WriteLine("DELETE METHOD CONTROLLER");
+            voluntaryApplication.Delete(id);
         }
 
-        private Voluntary Find(Guid id)
+        private VoluntaryDTO Find(Guid id)
         {
-            return  new Voluntary()
-            {
-                VoluntaryName = "Nome",
-                VoluntaryEmail = "email@email.com",
-                Id = Guid.NewGuid()
-            };
+            Console.WriteLine("GET ONE METHOD CONTROLLER");
+            return voluntaryApplication.Get(id);
         }
     }
 }

@@ -18,8 +18,7 @@ namespace Manager_Application
 
         public Guid Insert(VoluntaryDTO voluntaryDto)
         {
-            
-            Console.WriteLine("POST METHOD 3");
+            Console.WriteLine("POST APPLICATION");
             
             var voluntary = VoluntaryAdapter.ToDomain(voluntaryDto);
 
@@ -28,6 +27,8 @@ namespace Manager_Application
 
         public Guid Update(VoluntaryDTO voluntaryDto)
         {
+            Console.WriteLine("PUT APPLICATION");
+            
             var voluntary = VoluntaryAdapter.ToDomain(voluntaryDto);
 
             return voluntaryRepository.Update(voluntary);
@@ -35,11 +36,14 @@ namespace Manager_Application
 
         public bool Delete(Guid id)
         {
+            Console.WriteLine("DELETE APPLICATION");
             return voluntaryRepository.Delete(id);
         }
 
         public VoluntaryDTO Get(Guid id)
         {
+            Console.WriteLine("GET ONE APPLICATION");
+            
             var voluntary = voluntaryRepository.Find(id);
 
             return VoluntaryAdapter.ToDTO(voluntary);
@@ -47,6 +51,8 @@ namespace Manager_Application
 
         public List<VoluntaryDTO> GetAll()
         {
+            Console.WriteLine("GET ALL APPLICATION");
+            
             List<VoluntaryDTO> voluntarysDto = new List<VoluntaryDTO>();
             var voluntarys = voluntaryRepository.FindAll();
 

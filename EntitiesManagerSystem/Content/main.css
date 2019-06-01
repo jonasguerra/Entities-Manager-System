@@ -40,6 +40,11 @@ body .daterangepicker th.next{
 .message-error{
     color: #e65252;
 }
+
+.register-link{
+    float: right;
+}
+
 /*END CSS LOGIN*/
 
 /*CSS REGISTER*/
@@ -52,5 +57,4 @@ body .daterangepicker th.next{
     text-align: left;
     padding: 25px 80px;
 }
-
 /*END CSS REGISTER*/

@@ -7,3 +7,12 @@
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.csproj.CopyComplete
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.dll
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.pdb
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Application.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Application.pdb
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Domain.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Domain.pdb
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.csprojAssemblyReference.cache
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.csproj.CoreCompileInputs.cache
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.csproj.CopyComplete
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.pdb

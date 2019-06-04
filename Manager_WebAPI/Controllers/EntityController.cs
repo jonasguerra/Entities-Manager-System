@@ -51,6 +51,12 @@ namespace Manager_API.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
+
+        public HttpResponseMessage Get(Guid id)
+        {
+            
+        }
+        
         
         
         

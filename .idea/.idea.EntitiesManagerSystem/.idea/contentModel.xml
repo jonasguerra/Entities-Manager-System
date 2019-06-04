@@ -29,6 +29,7 @@
         </e>
         <e p="Controllers" t="Include">
           <e p="AdminController.cs" t="Include" />
+          <e p="LoginController.cs" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
         <e p="fonts" t="Include">
@@ -41,6 +42,7 @@
         <e p="Global.asax.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Affinity.cs" t="Include" />
+          <e p="LoginForm.cs" t="Include" />
           <e p="Moderator.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
@@ -417,6 +419,9 @@
           <e p="Admin" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
+          </e>
+          <e p="Login" t="Include">
+            <e p="Login.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />

@@ -1,6 +1,6 @@
 @{
-    ViewBag.Title = "register-entity";
-    Layout = null;
+ViewBag.Title = "register-entity";
+Layout = null;
 }
 
 @using System.Web.Mvc.Html
@@ -8,6 +8,7 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Registro</title>
 
@@ -32,242 +33,248 @@
 
 
 </head>
+
 <body>
-<div class="all-wrapper menu-side with-pattern">
-<div class="row">
-<div class="auth-box-w wider col-10 register-mod">
-<div class="logo-w">
-    <img alt="" src="~/Template/img/ong.png">
-</div>
-<h4 class="auth-header">Nova Entidade</h4>
-@using (Html.BeginForm("RegisterEntity", "Entity", FormMethod.Post))
-{
-    <legend>
-        <span>Dados Cadastrais</span>
-    </legend>
-    <div class="row">
-        <div class="form-group col-sm-6">
-            <label>@Html.LabelFor(m => m.EntityName)</label>
-            @Html.TextBoxFor(m => m.EntityName, new {@class = "form-control"})
-            @Html.ValidationMessageFor(m => m.EntityName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-        </div>
-        <div class="form-group col-sm-6">
-            <label> @Html.LabelFor(m => m.EntityEmail)</label>
-            @Html.TextBoxFor(m => m.EntityEmail, new {@class = "form-control"})
-            @Html.ValidationMessageFor(m => m.EntityEmail, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-        </div>
+    <div class="all-wrapper menu-side with-pattern">
+        <div class="row">
+            <div class="auth-box-w wider col-10 register-mod">
+                <div class="logo-w">
+                    <img alt="" src="~/Template/img/ong.png">
+                </div>
+                <h4 class="auth-header">Nova Entidade</h4>
+                @using (Html.BeginForm("RegisterEntity", "Entity", FormMethod.Post))
+                {
+                <legend>
+                    <span>Dados Cadastrais</span>
+                </legend>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label>@Html.LabelFor(m => m.EntityName)</label>
+                        @Html.TextBoxFor(m => m.EntityName, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.EntityName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label> @Html.LabelFor(m => m.EntityEmail)</label>
+                        @Html.TextBoxFor(m => m.EntityEmail, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.EntityEmail, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
 
-    </div>
-    <div class="row">
-        <div class="form-group col-sm-6">
-            <label> @Html.LabelFor(m => m.EntityResponsableName)</label>
-            @Html.TextBoxFor(m => m.EntityResponsableName, new {@class = "form-control"})
-            @Html.ValidationMessageFor(m => m.EntityResponsableName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-        </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label> @Html.LabelFor(m => m.EntityResponsableName)</label>
+                        @Html.TextBoxFor(m => m.EntityResponsableName, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.EntityResponsableName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
 
-        <div class="form-group col-sm-6">
-            <div class="form-group">
-                <label> @Html.LabelFor(m => m.EntityPhone)</label>
-                @Html.TextBoxFor(m => m.EntityPhone, new {@class = "form-control"})
-                @Html.ValidationMessageFor(m => m.EntityPhone, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label> @Html.LabelFor(m => m.EntityPassword)</label>
-                @Html.TextBoxFor(m => m.EntityPassword, new {@class = "form-control", @type="password"})
-                @Html.ValidationMessageFor(m => m.EntityPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label> @Html.LabelFor(m => m.EntityConfirmPassword)</label>
-                @Html.TextBoxFor(m => m.EntityConfirmPassword, new {@class = "form-control", @type="password"})
-                @Html.ValidationMessageFor(m => m.EntityConfirmPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-            </div>
-        </div>
-    </div>
-    <legend>
-        <span>Endereço</span>
-    </legend>
-    <div class="row">
-        <div class="form-group col-sm-2">
-            <label>@Html.LabelFor(m => m.EntityCEP)</label>
-            @Html.TextBoxFor(m => m.EntityCEP, new {@id = "cep", @class = "mask_cep form-control"})
-            @Html.ValidationMessageFor(m => m.EntityCEP, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-        </div>
-        <div class="form-group col-sm-8">
-            <label>@Html.LabelFor(m => m.EntityAvenue)</label>
-            @Html.TextBoxFor(m => m.EntityAvenue, new {name = "address", @class = "autocomplete-address form-control"})
-            @Html.ValidationMessageFor(m => m.EntityAvenue, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-        </div>
-        <div class="form-group col-sm-2">
-            <label>@Html.LabelFor(m => m.EntityNumber)</label>
-            @Html.TextBoxFor(m => m.EntityNumber, new {name = "street_number", @class = "autocomplete-address form-control"})
-            @Html.ValidationMessageFor(m => m.EntityNumber, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-        </div>
-    </div>
-    <div class="row">
-        <div class="form-group col-sm-5">
-            <label>@Html.LabelFor(m => m.EntityNeighborhood)</label>
-            @Html.TextBoxFor(m => m.EntityNeighborhood, new {name = "neighborhood", @class = "autocomplete-neighborhood form-control"})
-            @Html.ValidationMessageFor(m => m.EntityNeighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-        </div>
-        <div class="col-sm-5">
-            <div class="form-group">
-                <label>@Html.LabelFor(m => m.EntityCity)</label>
-                @Html.TextBoxFor(m => m.EntityCity, new {name = "city", @class = "autocomplete-city form-control"})
-                @Html.ValidationMessageFor(m => m.EntityCity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-group">
-                <label>@Html.LabelFor(m => m.EntityState)</label>
-                @Html.DropDownListFor(model => model.EntityState, new SelectList(
+                    <div class="form-group col-sm-6">
+                        <div class="form-group">
+                            <label> @Html.LabelFor(m => m.EntityPhone)</label>
+                            @Html.TextBoxFor(m => m.EntityPhone, new {@class = "form-control"})
+                            @Html.ValidationMessageFor(m => m.EntityPhone, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label> @Html.LabelFor(m => m.EntityPassword)</label>
+                            @Html.TextBoxFor(m => m.EntityPassword, new {@class = "form-control", @type="password"})
+                            @Html.ValidationMessageFor(m => m.EntityPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label> @Html.LabelFor(m => m.EntityConfirmPassword)</label>
+                            @Html.TextBoxFor(m => m.EntityConfirmPassword, new {@class = "form-control",
+                            @type="password"})
+                            @Html.ValidationMessageFor(m => m.EntityConfirmPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        </div>
+                    </div>
+                </div>
+                <legend>
+                    <span>Endereço</span>
+                </legend>
+                <div class="row">
+                    <div class="form-group col-sm-2">
+                        <label>@Html.LabelFor(m => m.EntityCEP)</label>
+                        @Html.TextBoxFor(m => m.EntityCEP, new {@id = "cep", @class = "mask_cep form-control"})
+                        @Html.ValidationMessageFor(m => m.EntityCEP, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                    <div class="form-group col-sm-8">
+                        <label>@Html.LabelFor(m => m.EntityAvenue)</label>
+                        @Html.TextBoxFor(m => m.EntityAvenue, new {name = "address", @class = "autocomplete-address form-control"})
+                        @Html.ValidationMessageFor(m => m.EntityAvenue, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label>@Html.LabelFor(m => m.EntityNumber)</label>
+                        @Html.TextBoxFor(m => m.EntityNumber, new {name = "street_number", @class = "autocomplete-address form-control"})
+                        @Html.ValidationMessageFor(m => m.EntityNumber, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-5">
+                        <label>@Html.LabelFor(m => m.EntityNeighborhood)</label>
+                        @Html.TextBoxFor(m => m.EntityNeighborhood, new {name = "neighborhood", @class =
+                        "autocomplete-neighborhood form-control"})
+                        @Html.ValidationMessageFor(m => m.EntityNeighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <label>@Html.LabelFor(m => m.EntityCity)</label>
+                            @Html.TextBoxFor(m => m.EntityCity, new {name = "city", @class = "autocomplete-city form-control"})
+                            @Html.ValidationMessageFor(m => m.EntityCity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label>@Html.LabelFor(m => m.EntityState)</label>
+                            @Html.DropDownListFor(model => model.EntityState, new SelectList(
+                            new List<Object>
+                                {
+                                new {value = "AC", text = "AC"},
+                                new {value = "AL", text = "AL"},
+                                new {value = "AM", text = "AM"},
+                                new {value = "AP", text = "AP"},
+                                new {value = "BA", text = "BA"},
+                                new {value = "CE", text = "CE"},
+                                new {value = "DF", text = "DF"},
+                                new {value = "ES", text = "ES"},
+                                new {value = "GO", text = "GO"},
+                                new {value = "MA", text = "MA"},
+                                new {value = "MG", text = "MG"},
+                                new {value = "MS", text = "MS"},
+                                new {value = "MT", text = "MT"},
+                                new {value = "PA", text = "PA"},
+                                new {value = "PB", text = "PB"},
+                                new {value = "PE", text = "PE"},
+                                new {value = "PI", text = "PI"},
+                                new {value = "PR", text = "PR"},
+                                new {value = "RJ", text = "RJ"},
+                                new {value = "RN", text = "RN"},
+                                new {value = "RO", text = "RO"},
+                                new {value = "RR", text = "RR"},
+                                new {value = "RS", text = "RS"},
+                                new {value = "SC", text = "SC"},
+                                new {value = "SE", text = "SE"},
+                                new {value = "SP", text = "SP"},
+                                new {value = "TO", text = "TO"}
+                                },
+                                "value",
+                                "text",
+                                "RS"), new {@class = "autocomplete-state form-control"})
+                                @Html.ValidationMessageFor(m => m.EntityState, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label>@Html.LabelFor(m => m.EntityReferencePoint)</label>
+                    @Html.TextBoxFor(m => m.EntityReferencePoint, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.EntityReferencePoint, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                </div>
+                <legend>
+                    <span>Atuação</span>
+                </legend>
+                <div class="form-group">
+                    <label>@Html.LabelFor(m => m.EntityAffinity)</label>
+                    @Html.DropDownListFor(model => model.EntityAffinity, new SelectList(
                     new List<Object>
-                    {
-                        new {value = "AC", text = "AC"},
-                        new {value = "AL", text = "AL"},
-                        new {value = "AM", text = "AM"},
-                        new {value = "AP", text = "AP"},
-                        new {value = "BA", text = "BA"},
-                        new {value = "CE", text = "CE"},
-                        new {value = "DF", text = "DF"},
-                        new {value = "ES", text = "ES"},
-                        new {value = "GO", text = "GO"},
-                        new {value = "MA", text = "MA"},
-                        new {value = "MG", text = "MG"},
-                        new {value = "MS", text = "MS"},
-                        new {value = "MT", text = "MT"},
-                        new {value = "PA", text = "PA"},
-                        new {value = "PB", text = "PB"},
-                        new {value = "PE", text = "PE"},
-                        new {value = "PI", text = "PI"},
-                        new {value = "PR", text = "PR"},
-                        new {value = "RJ", text = "RJ"},
-                        new {value = "RN", text = "RN"},
-                        new {value = "RO", text = "RO"},
-                        new {value = "RR", text = "RR"},
-                        new {value = "RS", text = "RS"},
-                        new {value = "SC", text = "SC"},
-                        new {value = "SE", text = "SE"},
-                        new {value = "SP", text = "SP"},
-                        new {value = "TO", text = "TO"}
-                    },
-                    "value",
-                    "text",
-                    "RS"), new {@class = "autocomplete-state form-control"})
-                @Html.ValidationMessageFor(m => m.EntityState, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-            </div>
-        </div>
-
-    </div>
-    <div class="form-group">
-        <label>@Html.LabelFor(m => m.EntityReferencePoint)</label>
-        @Html.TextBoxFor(m => m.EntityReferencePoint, new {@class = "form-control"})
-        @Html.ValidationMessageFor(m => m.EntityReferencePoint, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-    </div>
-    <legend>
-        <span>Atuação</span>
-    </legend>
-    <div class="form-group">
-        <label>@Html.LabelFor(m => m.EntityAffinity)</label>
-        @Html.DropDownListFor(model => model.EntityAffinity, new SelectList(
-            new List<Object>
-            {
-                new {value = "Infantil", text = "Infantil"},
-                new {value = "Pets", text = "Pets"},
-                new {value = "Idosos", text = "Idosos"},
-                new {value = "Necessitados", text = "Necessitados"},
-                new {value = "Meio Ambiente", text = "Meio Ambiente"}
-            },
-            "value",
-            "text"), new {@class = "autocomplete-state form-control select2", multiple = "true"})
-        @Html.ValidationMessageFor(m => m.EntityAffinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-    </div>
-    <div class="form-group">
-        <label for=""> Area de Atuação</label>
-        <select class="form-control select2" multiple="true">
-            <option selected="true">Rio Grande do Sul</option>
-            <option>Caxias</option>
-            <option>Farroupilha</option>
-            <option>Bento Gonçalves</option>
-        </select>
-    </div>
-    <fieldset class="form-group">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label>@Html.LabelFor(m => m.EntityInitials)</label>
-                    @Html.TextBoxFor(m => m.EntityInitials, new {@class = "form-control"})
-                    @Html.ValidationMessageFor(m => m.EntityInitials, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        {
+                        new {value = "Infantil", text = "Infantil"},
+                        new {value = "Pets", text = "Pets"},
+                        new {value = "Idosos", text = "Idosos"},
+                        new {value = "Necessitados", text = "Necessitados"},
+                        new {value = "Meio Ambiente", text = "Meio Ambiente"}
+                        },
+                        "value",
+                        "text"), new {@class = "autocomplete-state form-control select2", multiple = "true"})
+                        @Html.ValidationMessageFor(m => m.EntityAffinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                 </div>
-            </div>
-            <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="">
-                        Data de
-                        Criação
-                    </label>
-                    <input class="single-daterange form-control" placeholder="Data de Criação"
-                           type="text" value="04/12/1978">
+                    <label for=""> Area de Atuação</label>
+                    <select class="form-control select2" multiple="true">
+                        <option selected="true">Rio Grande do Sul</option>
+                        <option>Caxias</option>
+                        <option>Farroupilha</option>
+                        <option>Bento Gonçalves</option>
+                    </select>
                 </div>
-            </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.EntityInitials)</label>
+                                @Html.TextBoxFor(m => m.EntityInitials, new {@class = "form-control"})
+                                @Html.ValidationMessageFor(m => m.EntityInitials, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="">
+                                    Data de
+                                    Criação
+                                </label>
+                                <input class="single-daterange form-control" placeholder="Data de Criação" type="text" value="04/12/1978">
+                            </div>
+                        </div>
 
 
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label>@Html.LabelFor(m => m.EntitySocialNetwork)</label>
-                    @Html.TextBoxFor(m => m.EntitySocialNetwork, new {@class = "form-control"})
-                    @Html.ValidationMessageFor(m => m.EntitySocialNetwork, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label>@Html.LabelFor(m => m.EntityWebSite)</label>
-                    @Html.TextBoxFor(m => m.EntityWebSite, new {@class = "form-control"})
-                    @Html.ValidationMessageFor(m => m.EntityWebSite, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="form-group">
-                    <label>@Html.LabelFor(m => m.EntityDescription)</label>
-                    @Html.TextAreaFor(m => m.EntityDescription, new {@class = "form-control", rows = "3"})
-                </div>
-            </div>
-        </div>
-    </fieldset>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.EntitySocialNetwork)</label>
+                                @Html.TextBoxFor(m => m.EntitySocialNetwork, new {@class = "form-control"})
+                                @Html.ValidationMessageFor(m => m.EntitySocialNetwork, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.EntityWebSite)</label>
+                                @Html.TextBoxFor(m => m.EntityWebSite, new {@class = "form-control"})
+                                @Html.ValidationMessageFor(m => m.EntityWebSite, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>@Html.LabelFor(m => m.EntityDescription)</label>
+                                @Html.TextAreaFor(m => m.EntityDescription, new {@class = "form-control", rows = "3"})
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
 
-    <div class="form-group">
-        <label path="photo">Foto</label>
-        <div class="attachment attachment--image">
-            <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif" required="required"/>
-            <div class="attachment--label">
-                <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
-                <span class="file-name"></span>
-                <span class="attachment--remove">Remover</span>
+                <div class="form-group">
+                    <label path="photo">Foto</label>
+                    <div class="attachment attachment--image">
+                        <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo"
+                            accept=".jpg,.jpeg,.png,.gif" required="required" />
+                        <div class="attachment--label">
+                            <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
+                            <span class="file-name"></span>
+                            <span class="attachment--remove">Remover</span>
+                        </div>
+                        <div class="attachment--error"></div>
+                    </div>
+                </div>
+                <div class="buttons-w">
+                    <button class="btn btn-primary">Cadastrar</button>
+                </div>
+                <a class="register-link" href="@Url.Action("Login", "Login" )">Já sou cadastrado</a>
+                }
             </div>
-            <div class="attachment--error"></div>
         </div>
     </div>
-    <div class="buttons-w">
-        <button class="btn btn-primary">Cadastrar</button>
-    </div>
-}
-</div>
-</div>
-</div>
-@Scripts.Render("~/Template/bower_components/jquery/dist/jquery.min.js")
-@Scripts.Render("~/Template/bower_components/select2/dist/js/select2.full.min.js")
+    @Scripts.Render("~/Template/bower_components/jquery/dist/jquery.min.js")
+    @Scripts.Render("~/Template/bower_components/select2/dist/js/select2.full.min.js")
 
-@Scripts.Render("~/Scripts/jquery.autocomplete-address.min.js")
-@Scripts.Render("~/Scripts/jquery.mask.min.js")
-@Scripts.Render("~/Scripts/input_file.js")
-@Scripts.Render("~/Scripts/main.js")
+    @Scripts.Render("~/Scripts/jquery.autocomplete-address.min.js")
+    @Scripts.Render("~/Scripts/jquery.mask.min.js")
+    @Scripts.Render("~/Scripts/input_file.js")
+    @Scripts.Render("~/Scripts/main.js")
 </body>
+
+</html>

@@ -16,28 +16,31 @@ namespace Ftec.WebAPI.Infra.Repository
 
         public bool Delete(Guid id)
         {
+            Console.WriteLine("DELETE REPOSITORY");
             throw new NotImplementedException();
         }
 
         public Voluntary Find(Guid id)
         {
+            Console.WriteLine("GET ONE REPOSITORY");
             throw new NotImplementedException();
         }
 
         public List<Voluntary> FindAll()
         {
+            Console.WriteLine("GET ALL REPOSITORY");
             throw new NotImplementedException();
         }
 
         public Guid Insert(Voluntary voluntary)
         {
-            Console.WriteLine("POST METHOD 5");
-            
+            Console.WriteLine("POST REPOSITORY");
             throw new NotImplementedException();
         }
 
         public Guid Update(Voluntary voluntary)
         {
+            Console.WriteLine("PUT REPOSITORY");
             throw new NotImplementedException();
         }
     }

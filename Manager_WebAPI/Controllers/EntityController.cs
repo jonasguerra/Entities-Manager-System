@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using EntitiesManagerSystem.Models;
 using Ftec.WebAPI.Infra.Repository;
 using Manager_Application;
+using Manager_Application.DTO;
 using Manager_Domain.Interfaces;
 
 namespace Manager_API.Controllers
@@ -54,7 +55,24 @@ namespace Manager_API.Controllers
 
         public HttpResponseMessage Get(Guid id)
         {
-            
+
+            try
+            {
+                EntityDTO entityDto = Find(id);
+                if (entityDto == null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Voluntário não encontrado");
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, entityDto);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
         }
         
         
@@ -72,6 +90,10 @@ namespace Manager_API.Controllers
         
         
         
+        private EntityDTO Find(Guid id)
+        {
+            return entityApplication.Get(id);
+        }
         
         
         

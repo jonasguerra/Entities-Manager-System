@@ -1,0 +1,18 @@
+CREATE TABLE public.voluntary
+(
+    Id character varying(36) NOT NULL PRIMARY KEY,
+    VoluntaryName character varying(300) NOT NULL,
+    VoluntaryEmail character varying(300) NOT NULL,
+    VoluntaryPhone character varying(300) NOT NULL,
+    VoluntaryPassword character varying(300) NOT NULL,
+    VoluntaryCEP character varying(300),
+    VoluntaryAvenue character varying(300),
+    VoluntaryNumber character varying(300),
+    VoluntaryNeighborhood character varying(300),
+    VoluntaryCity character varying(300),
+    VoluntaryState character varying(300),
+    VoluntaryReferencePoint character varying(300),
+    VoluntaryAffinity character varying(300),
+    VoluntarySocialNetwork character varying(300),
+    VoluntaryPhotoImageName character varying(300)
+)

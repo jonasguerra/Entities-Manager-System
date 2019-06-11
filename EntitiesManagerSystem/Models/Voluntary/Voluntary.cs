@@ -67,11 +67,7 @@ namespace EntitiesManagerSystem.Models.Voluntary
         [Required(ErrorMessage = "{0} deve ser informado")]
         [StringLength(2, MinimumLength = 2, ErrorMessage = "Minimo {2} caracteres")]
         public string VoluntaryState { get; set; }
-
-        [Display(Name = "Ponto de Referencia")]
-        [StringLength(40, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
-        public string VoluntaryReferencePoint { get; set; }
-
+        
         [Display(Name = "Afinidade")]
         [Required(ErrorMessage = "{0} deve ser informada")]
         public string VoluntaryAffinity { get; set; }

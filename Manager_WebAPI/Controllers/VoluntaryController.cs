@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -20,7 +21,7 @@ namespace Manager_API.Controllers
 
         public VoluntaryController()
         {
-            string connectionString = string.Empty;
+            string connectionString = ConfigurationManager.ConnectionStrings["conexao"].ToString();
             //injetando a dependencia do repositorio na aplicação
             voluntaryRepository = new VoluntaryRepository(connectionString);
             voluntaryApplication = new VoluntaryApplication(voluntaryRepository);
@@ -162,14 +163,12 @@ namespace Manager_API.Controllers
                 VoluntaryEmail = voluntary.VoluntaryEmail,
                 VoluntaryPhone = voluntary.VoluntaryPhone,
                 VoluntaryPassword = voluntary.VoluntaryPassword,
-                VoluntaryConfirmPassword = voluntary.VoluntaryConfirmPassword,
                 VoluntaryCEP = voluntary.VoluntaryCEP,
                 VoluntaryAvenue = voluntary.VoluntaryAvenue,
                 VoluntaryNumber = voluntary.VoluntaryNumber,
                 VoluntaryNeighborhood = voluntary.VoluntaryNeighborhood,
                 VoluntaryCity = voluntary.VoluntaryCity,
                 VoluntaryState = voluntary.VoluntaryState,
-                VoluntaryReferencePoint = voluntary.VoluntaryReferencePoint,
                 VoluntaryAffinity = voluntary.VoluntaryAffinity,
                 VoluntarySocialNetwork = voluntary.VoluntarySocialNetwork, 
                 VoluntaryPhotoImageName = voluntary.VoluntaryPhotoImageName
@@ -187,14 +186,12 @@ namespace Manager_API.Controllers
                 VoluntaryEmail = voluntary.VoluntaryEmail,
                 VoluntaryPhone = voluntary.VoluntaryPhone,
                 VoluntaryPassword = voluntary.VoluntaryPassword,
-                VoluntaryConfirmPassword = voluntary.VoluntaryConfirmPassword,
                 VoluntaryCEP = voluntary.VoluntaryCEP,
                 VoluntaryAvenue = voluntary.VoluntaryAvenue,
                 VoluntaryNumber = voluntary.VoluntaryNumber,
                 VoluntaryNeighborhood = voluntary.VoluntaryNeighborhood,
                 VoluntaryCity = voluntary.VoluntaryCity,
                 VoluntaryState = voluntary.VoluntaryState,
-                VoluntaryReferencePoint = voluntary.VoluntaryReferencePoint,
                 VoluntaryAffinity = voluntary.VoluntaryAffinity,
                 VoluntarySocialNetwork = voluntary.VoluntarySocialNetwork, 
                 VoluntaryPhotoImageName = voluntary.VoluntaryPhotoImageName

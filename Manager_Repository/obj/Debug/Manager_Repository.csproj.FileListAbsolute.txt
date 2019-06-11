@@ -7,12 +7,27 @@
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.csproj.CopyComplete
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.dll
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.pdb
-C:\RiderProjects\Entities-Manager-System\Manager_Repository\bin\Debug\Manager_Repository.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Repository\bin\Debug\Manager_Repository.pdb
-C:\RiderProjects\Entities-Manager-System\Manager_Repository\bin\Debug\Manager_Domain.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Repository\bin\Debug\Manager_Domain.pdb
-C:\RiderProjects\Entities-Manager-System\Manager_Repository\obj\Debug\Manager_Repository.csprojAssemblyReference.cache
-C:\RiderProjects\Entities-Manager-System\Manager_Repository\obj\Debug\Manager_Repository.csproj.CoreCompileInputs.cache
-C:\RiderProjects\Entities-Manager-System\Manager_Repository\obj\Debug\Manager_Repository.csproj.CopyComplete
-C:\RiderProjects\Entities-Manager-System\Manager_Repository\obj\Debug\Manager_Repository.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Repository\obj\Debug\Manager_Repository.pdb
+C:/RiderProjects/Entities-Manager-System/Manager_Repository/bin/Debug/Manager_Repository.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Repository/bin/Debug/Manager_Repository.pdb
+C:/RiderProjects/Entities-Manager-System/Manager_Repository/bin/Debug/Manager_Domain.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Repository/bin/Debug/Manager_Domain.pdb
+C:/RiderProjects/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.csprojAssemblyReference.cache
+C:/RiderProjects/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.csproj.CoreCompileInputs.cache
+C:/RiderProjects/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.csproj.CopyComplete
+C:/RiderProjects/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Repository/obj/Debug/Manager_Repository.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/Npgsql.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Buffers.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Memory.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Numerics.Vectors.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Threading.Tasks.Extensions.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.ValueTuple.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/Npgsql.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/Npgsql.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Buffers.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Memory.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Numerics.Vectors.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.Threading.Tasks.Extensions.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Repository/bin/Debug/System.ValueTuple.xml

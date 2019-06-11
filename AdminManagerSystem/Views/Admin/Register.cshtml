@@ -5,7 +5,6 @@
 @using System.Web.Mvc.Html
 @model AdminManagerSystem.Models.Moderator
 
-
 @* AFFINITY URLS *@
 <input id="trash_affinity_url" type="hidden" value="@Url.Action("TrashAffinity", "Admin")"/>
 <input id="edit_affinity_url" type="hidden" value="@Url.Action("EditAffinity", "Admin")"/>
@@ -480,40 +479,30 @@
         </tr>
         </thead>
         <tbody id="tbody_voluntary_not_approved">
-        <tr data-voluntary-id="1">
-            <td></td>
-            <td class="name">Germano Camelo</td>
-            <td class="actions">
-                <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                    <i class="os-icon os-icon-search"></i>
-                </a>
-                <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
-                    <i class="os-icon os-icon-tasks-checked"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr data-voluntary-id="2">
-            <td></td>
-            <td class="name">Hermígio Neto</td>
-            <td class="actions">
-                <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                    <i class="os-icon os-icon-search"></i>
-                </a>
-                <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
-                    <i class="os-icon os-icon-tasks-checked"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
+        
+        @foreach (var voluntary in ViewBag.volunteers)
+        {
+
+            <tr data-voluntary-id="@voluntary.Id">
+                <td></td>
+                <td class="name">@voluntary.VoluntaryName</td>
+                <td class="actions">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
+                        <i class="os-icon os-icon-tasks-checked"></i>
+                    </a>
+                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                        <i class="os-icon os-icon-ui-15"></i>
+                    </a>
+                </td>
+            </tr>
+        }
         </tbody>
     </table>
 
-    <h5 class="form-header">Entidades</h5>
+    <h5 class="form-header">Voluntários</h5>
     <legend>
         <span></span>
     </legend>

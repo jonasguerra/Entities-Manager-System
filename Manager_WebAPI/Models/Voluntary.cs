@@ -48,7 +48,7 @@ namespace Manager_API.Models.Voluntary
         [StringLength(40, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
         public string VoluntaryAvenue { get; set; }
 
-        [Display(Name = "Numero")]
+        [Display(Name = "Número")]
         [Required(ErrorMessage = "{0} deve ser informado")]
         [StringLength(40, MinimumLength = 1, ErrorMessage = "Minimo {2} caracteres")]
         public string VoluntaryNumber { get; set; }
@@ -67,11 +67,7 @@ namespace Manager_API.Models.Voluntary
         [Required(ErrorMessage = "{0} deve ser informado")]
         [StringLength(2, MinimumLength = 2, ErrorMessage = "Minimo {2} caracteres")]
         public string VoluntaryState { get; set; }
-
-        [Display(Name = "Ponto de Referencia")]
-        [StringLength(40, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
-        public string VoluntaryReferencePoint { get; set; }
-
+        
         [Display(Name = "Afinidade")]
         [Required(ErrorMessage = "{0} deve ser informada")]
         public string VoluntaryAffinity { get; set; }

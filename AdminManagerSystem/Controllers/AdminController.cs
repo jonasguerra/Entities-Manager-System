@@ -1,10 +1,23 @@
+using System.Collections.Generic;
 using System.Web.Mvc;
+using AdminManagerSystem.Consumers_API;
 using AdminManagerSystem.Models;
+using AdminManagerSystem.Consumers_API;
+using AdminManagerSystem.Models.Voluntary;
 
 namespace AdminManagerSystem.Controllers
 {
     public class AdminController : Controller
     {
+    
+    
+        private APIHttpVoluntary voluntaryHttp;   
+        public AdminController()
+        {
+            voluntaryHttp = new APIHttpVoluntary("http://localhost:5002/api/");
+        }
+    
+    
         // GET
         public ActionResult Index()
         {
@@ -16,6 +29,11 @@ namespace AdminManagerSystem.Controllers
         {
             ViewBag.user = "admin";
             ViewBag.register = "active";
+            
+            var volunteers = voluntaryHttp.Get<List<Voluntary>>(@"Voluntary");
+
+            ViewBag.volunteers = volunteers;
+            
             return View();
         }
         

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 using AdminManagerSystem.Consumers_API;
@@ -80,9 +81,17 @@ namespace AdminManagerSystem.Controllers
         //######### AJAX VOLUNTARY ##########
         
         [HttpPost]
-        public ActionResult TrashVoluntary()
+        public ActionResult TrashVoluntary(Guid id)
         {
-            return Json(new {status="success", message_title="Voluntário excluido com sucesso"});
+         
+            var response = voluntaryHttp.Delete<List<Voluntary>>(@"Voluntary/", id);
+
+            if ("200" == response.ToString())
+            {
+                return Json(new {status="success", message_title="Voluntário excluido com sucesso"});
+            }
+
+            return Json(new {status = "error", message_title = "Erro ao excluir voluntário"});
         }
         
         [HttpPost]

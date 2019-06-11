@@ -11,8 +11,8 @@ CREATE TABLE public.voluntary
     VoluntaryNeighborhood character varying(300),
     VoluntaryCity character varying(300),
     VoluntaryState character varying(300),
-    VoluntaryReferencePoint character varying(300),
     VoluntaryAffinity character varying(300),
     VoluntarySocialNetwork character varying(300),
-    VoluntaryPhotoImageName character varying(300)
+    VoluntaryPhotoImageName character varying(300),
+    IsApproved BOOLEAN NOT NULL DEFAULT FALSE
 )

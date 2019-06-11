@@ -7,6 +7,8 @@ namespace Manager_API.Models.Voluntary
     {
         public Guid Id { get; set; }
 
+        public bool IsApproved { get; set; }
+
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "O {0} deve ser informado.")]
         [StringLength(60, MinimumLength = 5, ErrorMessage = "Minimo {2} caracteres")]

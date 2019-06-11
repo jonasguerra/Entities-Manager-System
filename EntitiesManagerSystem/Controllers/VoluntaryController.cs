@@ -72,7 +72,7 @@ namespace EntitiesManagerSystem.Controllers
             {
                 var id = voluntaryHttp.Post<Voluntary>(@"Voluntary/", voluntary);
                 
-                return RedirectToAction("Index");
+                return RedirectToAction("Login", "Login");
             }
             
             ViewBag.user = "voluntary";

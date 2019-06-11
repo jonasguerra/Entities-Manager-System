@@ -131,7 +131,7 @@ $('#voluntary').on('click', '.show_more', function () {
 })
 
 $('#voluntary').on('click', '.trash', function () {
-    let id = $(this).closest('tr').attr('data-voluntary-id')
+    let id = $(this).closest('tr').attr('data-voluntary-id');
     $.ajax({
         url: $('#trash_voluntary_url').val(),
         method: 'POST',

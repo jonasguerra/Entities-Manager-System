@@ -13,6 +13,7 @@ namespace Manager_Application.Adapter
             return new VoluntaryDTO()
             {
                 Id = voluntary.Id,
+                IsApproved = voluntary.IsApproved,
                 VoluntaryName = voluntary.VoluntaryName,
                 VoluntaryEmail = voluntary.VoluntaryEmail,
                 VoluntaryPhone = voluntary.VoluntaryPhone,
@@ -37,6 +38,7 @@ namespace Manager_Application.Adapter
             return new Voluntary()
             {
                 Id = voluntary.Id,
+                IsApproved = voluntary.IsApproved,
                 VoluntaryName = voluntary.VoluntaryName,
                 VoluntaryEmail = voluntary.VoluntaryEmail,
                 VoluntaryPhone = voluntary.VoluntaryPhone,

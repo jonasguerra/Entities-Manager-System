@@ -5,6 +5,7 @@ namespace Manager_Domain.Entities
     public class Voluntary
     {
         public Guid Id { get; set; }
+        public bool IsApproved { get; set; }
         public string VoluntaryName { get; set; }
         public string VoluntaryEmail { get; set; }
         public string VoluntaryPhone { get; set; }

@@ -475,29 +475,31 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nome</th>
-            <th scope="col" class="head-actions">Ações</th>
+            <th scope="col" class="head-actions text-right">Ações</th>
         </tr>
         </thead>
         <tbody id="tbody_voluntary_not_approved">
         
         @foreach (var voluntary in ViewBag.volunteers)
         {
-
-            <tr data-voluntary-id="@voluntary.Id">
-                <td></td>
-                <td class="name">@voluntary.VoluntaryName</td>
-                <td class="actions">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
-                        <i class="os-icon os-icon-tasks-checked"></i>
-                    </a>
-                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                        <i class="os-icon os-icon-ui-15"></i>
-                    </a>
-                </td>
-            </tr>
+            if (!voluntary.IsApproved)
+            {
+                 <tr data-voluntary-id="@voluntary.Id">
+                    <td></td>
+                    <td class="name">@voluntary.VoluntaryName</td>
+                    <td class="actions text-right">
+                        <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                            <i class="os-icon os-icon-search"></i>
+                        </a>
+                        <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
+                            <i class="os-icon os-icon-tasks-checked"></i>
+                        </a>
+                        <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                            <i class="os-icon os-icon-ui-15"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
         }
         </tbody>
     </table>
@@ -511,70 +513,28 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nome</th>
-            <th scope="col" class="head-actions">Ações</th>
+            <th scope="col" class="head-actions text-right">Ações</th>
         </tr>
         </thead>
         <tbody id="tbody_voluntary_approved">
-        <tr data-voluntary-id="3">
-            <td></td>
-            <td class="name">Mafalda Cambaúva</td>
-            <td class="actions">
-                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                    <i class="os-icon os-icon-search"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr data-voluntary-id="4">
-            <td></td>
-            <td class="name">Noémia Antunes</td>
-            <td class="actions">
-                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                    <i class="os-icon os-icon-search"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr data-voluntary-id="5">
-            <td></td>
-            <td class="name">Sonás Galindo</td>
-            <td class="actions">
-                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                    <i class="os-icon os-icon-search"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr data-voluntary-id="6">
-            <td></td>
-            <td class="name">Teresina Cortês</td>
-            <td class="actions">
-                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                    <i class="os-icon os-icon-search"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
-        <tr data-voluntary-id="7">
-            <td></td>
-            <td class="name">Ágata Peixoto</td>
-            <td class="actions">
-                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                    <i class="os-icon os-icon-search"></i>
-                </a>
-                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                    <i class="os-icon os-icon-ui-15"></i>
-                </a>
-            </td>
-        </tr>
+        @foreach (var voluntary in ViewBag.volunteers)
+        {
+            if (voluntary.IsApproved)
+            {
+                <tr data-voluntary-id="@voluntary.Id">
+                    <td></td>
+                    <td class="name">@voluntary.VoluntaryName</td>
+                    <td class="actions text-right">
+                        <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                            <i class="os-icon os-icon-search"></i>
+                        </a>
+                        <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                            <i class="os-icon os-icon-ui-15"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
         </tbody>
     </table>
 </div>

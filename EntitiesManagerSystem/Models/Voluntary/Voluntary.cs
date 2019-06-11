@@ -6,7 +6,9 @@ namespace EntitiesManagerSystem.Models.Voluntary
     public class Voluntary
     {
         public Guid Id { get; set; }
-
+        
+        public bool IsApproved { get; set; }
+        
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "O {0} deve ser informado.")]
         [StringLength(60, MinimumLength = 5, ErrorMessage = "Minimo {2} caracteres")]
@@ -48,7 +50,7 @@ namespace EntitiesManagerSystem.Models.Voluntary
         [StringLength(40, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
         public string VoluntaryAvenue { get; set; }
 
-        [Display(Name = "Numero")]
+        [Display(Name = "Número")]
         [Required(ErrorMessage = "{0} deve ser informado")]
         [StringLength(40, MinimumLength = 1, ErrorMessage = "Minimo {2} caracteres")]
         public string VoluntaryNumber { get; set; }

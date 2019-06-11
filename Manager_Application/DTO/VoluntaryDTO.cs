@@ -5,6 +5,7 @@ namespace Manager_Application.DTO
     public class VoluntaryDTO
     {
         public Guid Id { get; set; }
+        public bool IsApproved { get; set; }
         public string VoluntaryName { get; set; }
         public string VoluntaryEmail { get; set; }
         public string VoluntaryPhone { get; set; }

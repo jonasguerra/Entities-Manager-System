@@ -27,7 +27,7 @@ namespace EntitiesManagerSystem.Models
         public string Password { get; set; }
 
         [Display(Name = "Confirme a Senha")]
-        [Compare("VoluntaryPassword", ErrorMessage = "As senhas não coincidem.")]
+        [Compare("Password", ErrorMessage = "As senhas não coincidem.")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
     }

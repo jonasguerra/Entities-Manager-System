@@ -26,11 +26,18 @@ namespace Ftec.WebAPI.Infra.Repository
                     try
                     {
                         Voluntary voluntary = this.Find(id);
-
-
+                        
+                        Console.WriteLine(voluntary.VoluntaryId);
+                        
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
+                        cmd.CommandText = @"DELETE FROM voluntary WHERE voluntary_id=@voluntary_id";
+                        cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId.ToString());
+                        cmd.ExecuteNonQuery();
+                        
+                        cmd.Parameters.Clear();
+                        
                         cmd.CommandText = @"DELETE FROM public.user WHERE user_id=@user_id";
                         cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
                         cmd.ExecuteNonQuery();
@@ -41,12 +48,6 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Parameters.AddWithValue("address_id", voluntary.Address.ToString());
                         cmd.ExecuteNonQuery();
                         
-                        cmd.Parameters.Clear();
-                        
-                        cmd.CommandText = @"DELETE FROM voluntary WHERE voluntary_id=@voluntary_id";
-                        cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId.ToString());
-                        cmd.ExecuteNonQuery();
-                        
                         trans.Commit();
                         return true;
 
@@ -54,6 +55,7 @@ namespace Ftec.WebAPI.Infra.Repository
                     catch (Exception ex)
                     {
                         trans.Rollback();
+                        Console.WriteLine(ex);
                         throw ex;
                     }
                 }
@@ -93,12 +95,12 @@ namespace Ftec.WebAPI.Infra.Repository
                 reader.Close();
                 cmd.Parameters.Clear();
                 
-                cmd.CommandText = @"SELECT * FROM public.user WHERE user_user_id=@Id";
-                cmd.Parameters.AddWithValue("Id", voluntary.UserId.ToString());
+                cmd.CommandText = @"SELECT * FROM public.user WHERE user_id=@user_id";
+                cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    voluntary.IsApproved = (bool)reader["is_pproved"];
+                    voluntary.IsApproved = (bool)reader["is_approved"];
                     voluntary.IsEntity = (bool)reader["is_entity"];
                     voluntary.Email = reader["email"].ToString();
                     voluntary.Password = reader["password"].ToString();
@@ -106,7 +108,7 @@ namespace Ftec.WebAPI.Infra.Repository
                 reader.Close();
                 cmd.Parameters.Clear();
                 
-                cmd.CommandText = @"SELECT * FROM address WHERE user_address_id=@Id";
+                cmd.CommandText = @"SELECT * FROM address WHERE address_id=@Id";
                 cmd.Parameters.AddWithValue("Id", voluntary.Address.AddressId.ToString());
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -163,12 +165,12 @@ namespace Ftec.WebAPI.Infra.Repository
                     reader.Close();
                     cmd.Parameters.Clear();
                     
-                    cmd.CommandText = @"SELECT * FROM public.user WHERE user_user_id=@Id";
-                    cmd.Parameters.AddWithValue("Id", voluntary.UserId.ToString());
+                    cmd.CommandText = @"SELECT * FROM public.user WHERE user_id=@user_id";
+                    cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
                     reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        voluntary.IsApproved = (bool)reader["is_pproved"];
+                        voluntary.IsApproved = (bool)reader["is_approved"];
                         voluntary.IsEntity = (bool)reader["is_entity"];
                         voluntary.Email = reader["email"].ToString();
                         voluntary.Password = reader["password"].ToString();
@@ -176,8 +178,8 @@ namespace Ftec.WebAPI.Infra.Repository
                     reader.Close();
                     cmd.Parameters.Clear();
                 
-                    cmd.CommandText = @"SELECT * FROM address WHERE user_address_id=@Id";
-                    cmd.Parameters.AddWithValue("Id", voluntary.Address.AddressId.ToString());
+                    cmd.CommandText = @"SELECT * FROM address WHERE address_id=@address_id";
+                    cmd.Parameters.AddWithValue("address_id", voluntary.Address.AddressId.ToString());
                     reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
@@ -278,11 +280,13 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Connection = con;
                         cmd.Transaction = trans;
                         
-                        cmd.CommandText = @"UPDATE public.user SET email=@email,password=@password,is_approved=@is_approved WHERE user_id=@user_id";
-                        cmd.Parameters.AddWithValue("email", voluntary.Email);
-                        cmd.Parameters.AddWithValue("password", voluntary.Password); 
-                        cmd.Parameters.AddWithValue("is_approved", voluntary.IsApproved);
-                        cmd.Parameters.AddWithValue("is_entity", voluntary.IsEntity);
+                        
+                        cmd.CommandText = @"UPDATE voluntary SET name=@name,phone=@phone,affinity=@affinity,socialnetwork=@socialnetwork,photoimagename=@photoimagename WHERE voluntary_id=@voluntary_id";
+                        cmd.Parameters.AddWithValue("name", voluntary.Name);
+                        cmd.Parameters.AddWithValue("phone", voluntary.Phone); 
+                        cmd.Parameters.AddWithValue("affinity", voluntary.Affinity); 
+                        cmd.Parameters.AddWithValue("socialnetwork", voluntary.SocialNetwork);
+                        cmd.Parameters.AddWithValue("photoimagename", voluntary.PhotoImageName);
                         cmd.ExecuteNonQuery();
 
                         cmd.Parameters.Clear();
@@ -296,14 +300,13 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.ExecuteNonQuery();
                         
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"UPDATE voluntary SET name=@name,phone=@phone,affinity=@affinity,socialnetwork=@socialnetwork,photoimagename=@photoimagename WHERE voluntary_id=@voluntary_id";
-                        cmd.Parameters.AddWithValue("name", voluntary.Name);
-                        cmd.Parameters.AddWithValue("phone", voluntary.Phone); 
-                        cmd.Parameters.AddWithValue("affinity", voluntary.Affinity); 
-                        cmd.Parameters.AddWithValue("socialnetwork", voluntary.SocialNetwork);
-                        cmd.Parameters.AddWithValue("photoimagename", voluntary.PhotoImageName);
+                        cmd.CommandText = @"UPDATE public.user SET email=@email,password=@password,is_approved=@is_approved WHERE user_id=@user_id";
+                        cmd.Parameters.AddWithValue("email", voluntary.Email);
+                        cmd.Parameters.AddWithValue("password", voluntary.Password); 
+                        cmd.Parameters.AddWithValue("is_approved", voluntary.IsApproved);
+                        cmd.Parameters.AddWithValue("is_entity", voluntary.IsEntity);
                         cmd.ExecuteNonQuery();
-
+                        
                         trans.Commit();
                         return voluntary.VoluntaryId;
 

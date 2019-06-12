@@ -25,23 +25,26 @@ namespace Ftec.WebAPI.Infra.Repository
                 {
                     try
                     {
+                        Voluntary voluntary = this.Find(id);
+
+
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
-                        cmd.CommandText = @"DELETE FROM user WHERE Id=@Id";
-                        cmd.Parameters.AddWithValue("Id", id.ToString());
+                        cmd.CommandText = @"DELETE FROM public.user WHERE Id=@Id";
+                        cmd.Parameters.AddWithValue("Id", voluntary.UserId.ToString());
+                        cmd.ExecuteNonQuery();
+                        
+                        cmd.Parameters.Clear();
+                        
+                        cmd.CommandText = @"DELETE FROM address WHERE Id=@Id";
+                        cmd.Parameters.AddWithValue("Id", voluntary.Address.ToString());
                         cmd.ExecuteNonQuery();
                         
                         cmd.Parameters.Clear();
                         
                         cmd.CommandText = @"DELETE FROM voluntary WHERE Id=@Id";
-                        cmd.Parameters.AddWithValue("Id", id.ToString());
-                        cmd.ExecuteNonQuery();
-                        
-                        cmd.Parameters.Clear();
-                        
-                        cmd.CommandText = @"DELETE FROM voluntary WHERE Id=@Id";
-                        cmd.Parameters.AddWithValue("Id", id.ToString());
+                        cmd.Parameters.AddWithValue("Id", voluntary.VoluntaryId.ToString());
                         cmd.ExecuteNonQuery();
                         
                         trans.Commit();
@@ -61,38 +64,61 @@ namespace Ftec.WebAPI.Infra.Repository
         {
             Console.WriteLine("GET ONE REPOSITORY");
             Voluntary voluntary = null;
-
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
                 con.Open();
 
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = @"SELECT * FROM voluntary WHERE Id=@Id";
+                cmd.CommandText = @"SELECT * FROM voluntary WHERE voluntary_id=@Id";
                 cmd.Parameters.AddWithValue("Id", id.ToString());
                 var reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
                     voluntary = new Voluntary();
-                    voluntary.Id = Guid.Parse(reader["Id"].ToString());
-                    voluntary.IsApproved = (bool)reader["IsApproved"];
+                    voluntary.VoluntaryId = Guid.Parse(reader["voluntary_id"].ToString());
+                    voluntary.UserId =  Guid.Parse(reader["user_id"].ToString());
                     voluntary.Name = reader["Name"].ToString();
-                    voluntary.Email = reader["Email"].ToString();
                     voluntary.Phone = reader["Phone"].ToString();
-                    voluntary.Password = reader["Password"].ToString();
-                    voluntary.CEP = reader["CEP"].ToString();
-                    voluntary.Avenue = reader["Avenue"].ToString();
-                    voluntary.Number = reader["Number"].ToString();
-                    voluntary.Neighborhood = reader["Neighborhood"].ToString();
-                    voluntary.City = reader["City"].ToString();
-                    voluntary.State = reader["State"].ToString();
                     voluntary.Affinity = reader["Affinity"].ToString();
                     voluntary.SocialNetwork = reader["SocialNetwork"].ToString();
                     voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
+                    voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
+                    voluntary.Address = new Address()
+                    {
+                        AddressId = Guid.Parse(reader["address_id"].ToString())
+                    };
                 }
-
                 reader.Close();
+                cmd.Parameters.Clear();
+                
+                cmd.CommandText = @"SELECT * FROM public.user WHERE user_user_id=@Id";
+                cmd.Parameters.AddWithValue("Id", voluntary.UserId.ToString());
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    voluntary.IsApproved = (bool)reader["is_pproved"];
+                    voluntary.IsEntity = (bool)reader["is_entity"];
+                    voluntary.Email = reader["email"].ToString();
+                    voluntary.Password = reader["password"].ToString();
+                }
+                reader.Close();
+                cmd.Parameters.Clear();
+                
+                cmd.CommandText = @"SELECT * FROM address WHERE user_address_id=@Id";
+                cmd.Parameters.AddWithValue("Id", voluntary.Address.AddressId.ToString());
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    voluntary.Address.CEP = reader["cep"].ToString();
+                    voluntary.Address.Avenue = reader["avenue"].ToString();
+                    voluntary.Address.Number = reader["number"].ToString();
+                    voluntary.Address.Neighborhood = reader["neighborhood"].ToString();
+                    voluntary.Address.City = reader["city"].ToString();
+                    voluntary.Address.State = reader["state"].ToString();
+                }
+                
                 return voluntary;
             }
         }
@@ -115,26 +141,54 @@ namespace Ftec.WebAPI.Infra.Repository
                 while (reader.Read())
                 {
                     Voluntary voluntary = new Voluntary();
-                    voluntary.Id = Guid.Parse(reader["Id"].ToString());
-                    voluntary.IsApproved = (bool)reader["IsApproved"];
+                    voluntary = new Voluntary();
+                    voluntary.VoluntaryId = Guid.Parse(reader["voluntary_id"].ToString());
+                    voluntary.UserId =  Guid.Parse(reader["user_id"].ToString());
                     voluntary.Name = reader["Name"].ToString();
-                    voluntary.Email = reader["Email"].ToString();
                     voluntary.Phone = reader["Phone"].ToString();
-                    voluntary.Password = reader["Password"].ToString();
-                    voluntary.CEP = reader["CEP"].ToString();
-                    voluntary.Avenue = reader["Avenue"].ToString();
-                    voluntary.Number = reader["Number"].ToString();
-                    voluntary.Neighborhood = reader["Neighborhood"].ToString();
-                    voluntary.City = reader["City"].ToString();
-                    voluntary.State = reader["State"].ToString();
                     voluntary.Affinity = reader["Affinity"].ToString();
                     voluntary.SocialNetwork = reader["SocialNetwork"].ToString();
                     voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
+                    voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
+                    voluntary.Address = new Address()
+                    {
+                        AddressId = Guid.Parse(reader["address_id"].ToString())
+                    };
 
                     volunteers.Add(voluntary);
                 }
-
-                reader.Close();
+                
+                foreach (Voluntary voluntary in volunteers)
+                {   
+                    reader.Close();
+                    cmd.Parameters.Clear();
+                    
+                    cmd.CommandText = @"SELECT * FROM public.user WHERE user_user_id=@Id";
+                    cmd.Parameters.AddWithValue("Id", voluntary.UserId.ToString());
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        voluntary.IsApproved = (bool)reader["is_pproved"];
+                        voluntary.IsEntity = (bool)reader["is_entity"];
+                        voluntary.Email = reader["email"].ToString();
+                        voluntary.Password = reader["password"].ToString();
+                    }
+                    reader.Close();
+                    cmd.Parameters.Clear();
+                
+                    cmd.CommandText = @"SELECT * FROM address WHERE user_address_id=@Id";
+                    cmd.Parameters.AddWithValue("Id", voluntary.Address.AddressId.ToString());
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        voluntary.Address.CEP = reader["cep"].ToString();
+                        voluntary.Address.Avenue = reader["avenue"].ToString();
+                        voluntary.Address.Number = reader["number"].ToString();
+                        voluntary.Address.Neighborhood = reader["neighborhood"].ToString();
+                        voluntary.Address.City = reader["city"].ToString();
+                        voluntary.Address.State = reader["state"].ToString();
+                    }
+                }
                 return volunteers;
             }
         }
@@ -152,32 +206,49 @@ namespace Ftec.WebAPI.Infra.Repository
                     try
                     {
                         voluntary.PhotoImageName = "/photo";
-                        voluntary.Id = Guid.NewGuid();
+                        voluntary.VoluntaryId = Guid.NewGuid();
+                        voluntary.UserId = Guid.NewGuid();
+                        voluntary.Address.AddressId = Guid.NewGuid();
                         
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
-                        cmd.CommandText = @"INSERT Into voluntary (Id, IsApproved, Name, Email, Phone, Password, CEP, Avenue, Number, Neighborhood, City, State, Affinity, SocialNetwork, PhotoImageName ) values(@Id, @IsApproved, @Name, @Email, @Phone, @Password, @CEP, @Avenue, @Number, @Neighborhood, @City, @State, @Affinity, @SocialNetwork, @PhotoImageName)";
-                        cmd.Parameters.AddWithValue("Id", voluntary.Id);
-                        cmd.Parameters.AddWithValue("Name", voluntary.Name);
-                        cmd.Parameters.AddWithValue("IsApproved", voluntary.IsApproved);
-                        cmd.Parameters.AddWithValue("Email", voluntary.Email); 
-                        cmd.Parameters.AddWithValue("Phone", voluntary.Phone); 
-                        cmd.Parameters.AddWithValue("Password", voluntary.Password); 
-                        cmd.Parameters.AddWithValue("CEP", voluntary.CEP); 
-                        cmd.Parameters.AddWithValue("Avenue", voluntary.Avenue); 
-                        cmd.Parameters.AddWithValue("Number", voluntary.Number); 
-                        cmd.Parameters.AddWithValue("Neighborhood", voluntary.Neighborhood); 
-                        cmd.Parameters.AddWithValue("City", voluntary.City); 
-                        cmd.Parameters.AddWithValue("State", voluntary.State); 
-                        cmd.Parameters.AddWithValue("Affinity", voluntary.Affinity); 
-                        cmd.Parameters.AddWithValue("SocialNetwork", voluntary.SocialNetwork);
-                        cmd.Parameters.AddWithValue("PhotoImageName", voluntary.PhotoImageName);
+                        
+                        
+                        cmd.CommandText = @"INSERT Into public.user (user_id,email,password,is_approved,is_entity)values(@user_id,@email,@password,@is_approved,@is_entity)";
+                        cmd.Parameters.AddWithValue("user_id", voluntary.UserId);
+                        cmd.Parameters.AddWithValue("email", voluntary.Email);
+                        cmd.Parameters.AddWithValue("password", voluntary.Password); 
+                        cmd.Parameters.AddWithValue("is_approved", voluntary.IsApproved);
+                        cmd.Parameters.AddWithValue("is_entity", voluntary.IsEntity);
                         cmd.ExecuteNonQuery();
 
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = @"INSERT Into address (address_id,cep,avenue,number,neighborhood,city,state)values(@address_id,@cep,@avenue,@number,@neighborhood,@city,@state)";
+                        cmd.Parameters.AddWithValue("address_id", voluntary.Address.AddressId); 
+                        cmd.Parameters.AddWithValue("cep", voluntary.Address.CEP); 
+                        cmd.Parameters.AddWithValue("avenue", voluntary.Address.Avenue); 
+                        cmd.Parameters.AddWithValue("number", voluntary.Address.Number); 
+                        cmd.Parameters.AddWithValue("neighborhood", voluntary.Address.Neighborhood); 
+                        cmd.Parameters.AddWithValue("city", voluntary.Address.City); 
+                        cmd.Parameters.AddWithValue("state", voluntary.Address.State); 
+                        cmd.ExecuteNonQuery();
+                        
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = @"INSERT Into voluntary (voluntary_id,name,phone,affinity,socialnetwork,photoimagename,user_id,address_id) values (@voluntary_id,@name,@phone,@affinity,@socialnetwork,@photoimagename,@user_id,@address_id)";
+                        cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId);
+                        cmd.Parameters.AddWithValue("name", voluntary.Name);
+                        cmd.Parameters.AddWithValue("phone", voluntary.Phone); 
+                        cmd.Parameters.AddWithValue("affinity", voluntary.Affinity); 
+                        cmd.Parameters.AddWithValue("socialnetwork", voluntary.SocialNetwork);
+                        cmd.Parameters.AddWithValue("photoimagename", voluntary.PhotoImageName);
+                        cmd.Parameters.AddWithValue("user_id", voluntary.UserId);
+                        cmd.Parameters.AddWithValue("address_id", voluntary.Address.AddressId);
+                        cmd.ExecuteNonQuery();
+                        
                         //commit na transação
                         trans.Commit();
-                        return voluntary.Id;
+                        return voluntary.VoluntaryId;
 
                     }
                     catch (Exception ex)
@@ -206,27 +277,35 @@ namespace Ftec.WebAPI.Infra.Repository
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
-                        cmd.CommandText = @"UPDATE voluntary SET Id=@Id,IsApproved=@IsApproved,Name=@Name,Email=@Email,Phone=@Phone,Password=@Password,CEP=@CEP,Avenue=@Avenue,Number=@Number,Neighborhood=@Neighborhood,City=@City,State=@State,Affinity=@Affinity,SocialNetwork=@SocialNetwork,PhotoImageName=@PhotoImageName WHERE Id=@id";
-                        cmd.Parameters.AddWithValue("Id", voluntary.Id);
-                        cmd.Parameters.AddWithValue("Name", voluntary.Name);
-                        cmd.Parameters.AddWithValue("IsApproved", voluntary.IsApproved);
-                        cmd.Parameters.AddWithValue("Email", voluntary.Email); 
-                        cmd.Parameters.AddWithValue("Phone", voluntary.Phone); 
-                        cmd.Parameters.AddWithValue("Password", voluntary.Password); 
-                        cmd.Parameters.AddWithValue("CEP", voluntary.CEP); 
-                        cmd.Parameters.AddWithValue("Avenue", voluntary.Avenue); 
-                        cmd.Parameters.AddWithValue("Number", voluntary.Number); 
-                        cmd.Parameters.AddWithValue("Neighborhood", voluntary.Neighborhood); 
-                        cmd.Parameters.AddWithValue("City", voluntary.City); 
-                        cmd.Parameters.AddWithValue("State", voluntary.State); 
-                        cmd.Parameters.AddWithValue("Affinity", voluntary.Affinity); 
-                        cmd.Parameters.AddWithValue("SocialNetwork", voluntary.SocialNetwork);
-                        cmd.Parameters.AddWithValue("PhotoImageName", voluntary.PhotoImageName);
+                        
+                        cmd.CommandText = @"UPDATE public.user SET email=@email,password=@password,is_approved=@is_approved WHERE user_id=@user_id";
+                        cmd.Parameters.AddWithValue("email", voluntary.Email);
+                        cmd.Parameters.AddWithValue("password", voluntary.Password); 
+                        cmd.Parameters.AddWithValue("is_approved", voluntary.IsApproved);
+                        cmd.Parameters.AddWithValue("is_entity", voluntary.IsEntity);
                         cmd.ExecuteNonQuery();
 
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = @"UPDATE address SET cep=@cep,avenue=@avenue,number=@number,neighborhood=@neighborhood,city=@city,state=@state WHERE address_id=@address_id";
+                        cmd.Parameters.AddWithValue("cep", voluntary.Address.CEP); 
+                        cmd.Parameters.AddWithValue("avenue", voluntary.Address.Avenue); 
+                        cmd.Parameters.AddWithValue("number", voluntary.Address.Number); 
+                        cmd.Parameters.AddWithValue("neighborhood", voluntary.Address.Neighborhood); 
+                        cmd.Parameters.AddWithValue("city", voluntary.Address.City); 
+                        cmd.Parameters.AddWithValue("state", voluntary.Address.State); 
+                        cmd.ExecuteNonQuery();
                         
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = @"UPDATE voluntary SET name=@name,phone=@phone,affinity=@affinity,socialnetwork=@socialnetwork,photoimagename=@photoimagename WHERE voluntary_id=@voluntary_id";
+                        cmd.Parameters.AddWithValue("name", voluntary.Name);
+                        cmd.Parameters.AddWithValue("phone", voluntary.Phone); 
+                        cmd.Parameters.AddWithValue("affinity", voluntary.Affinity); 
+                        cmd.Parameters.AddWithValue("socialnetwork", voluntary.SocialNetwork);
+                        cmd.Parameters.AddWithValue("photoimagename", voluntary.PhotoImageName);
+                        cmd.ExecuteNonQuery();
+
                         trans.Commit();
-                        return voluntary.Id;
+                        return voluntary.VoluntaryId;
 
                     }
                     catch (Exception ex)

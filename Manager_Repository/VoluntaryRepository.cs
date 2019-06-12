@@ -31,20 +31,20 @@ namespace Ftec.WebAPI.Infra.Repository
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
-                        cmd.CommandText = @"DELETE FROM public.user WHERE Id=@Id";
-                        cmd.Parameters.AddWithValue("Id", voluntary.UserId.ToString());
+                        cmd.CommandText = @"DELETE FROM public.user WHERE user_id=@user_id";
+                        cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
                         cmd.ExecuteNonQuery();
                         
                         cmd.Parameters.Clear();
                         
-                        cmd.CommandText = @"DELETE FROM address WHERE Id=@Id";
-                        cmd.Parameters.AddWithValue("Id", voluntary.Address.ToString());
+                        cmd.CommandText = @"DELETE FROM address WHERE address_id=@address_id";
+                        cmd.Parameters.AddWithValue("address_id", voluntary.Address.ToString());
                         cmd.ExecuteNonQuery();
                         
                         cmd.Parameters.Clear();
                         
-                        cmd.CommandText = @"DELETE FROM voluntary WHERE Id=@Id";
-                        cmd.Parameters.AddWithValue("Id", voluntary.VoluntaryId.ToString());
+                        cmd.CommandText = @"DELETE FROM voluntary WHERE voluntary_id=@voluntary_id";
+                        cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId.ToString());
                         cmd.ExecuteNonQuery();
                         
                         trans.Commit();
@@ -70,8 +70,8 @@ namespace Ftec.WebAPI.Infra.Repository
 
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = @"SELECT * FROM voluntary WHERE voluntary_id=@Id";
-                cmd.Parameters.AddWithValue("Id", id.ToString());
+                cmd.CommandText = @"SELECT * FROM voluntary WHERE voluntary_id=@voluntary_id";
+                cmd.Parameters.AddWithValue("voluntary_id", id.ToString());
                 var reader = cmd.ExecuteReader();
 
                 while (reader.Read())

@@ -37,9 +37,11 @@
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
         <e p="Models" t="Include">
+          <e p="Address.cs" t="Include" />
           <e p="Affinity.cs" t="Include" />
           <e p="LoginForm.cs" t="Include" />
           <e p="Moderator.cs" t="Include" />
+          <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />
         </e>
         <e p="Properties" t="Include">
@@ -466,6 +468,7 @@
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
         <e p="Models" t="Include">
+          <e p="Address.cs" t="Include" />
           <e p="Entity" t="Include">
             <e p="Entity.cs" t="Include" />
             <e p="Event.cs" t="Include" />
@@ -473,6 +476,7 @@
           <e p="Login" t="Include">
             <e p="LoginForm.cs" t="Include" />
           </e>
+          <e p="User.cs" t="Include" />
           <e p="Voluntary" t="Include">
             <e p="Donations.cs" t="Include" />
             <e p="Voluntary.cs" t="Include" />
@@ -887,7 +891,9 @@
           <e p="VoluntaryAdapter.cs" t="Include" />
         </e>
         <e p="DTO" t="Include">
+          <e p="AddressDTO.cs" t="Include" />
           <e p="EntityDTO.cs" t="Include" />
+          <e p="UserDTO.cs" t="Include" />
           <e p="VoluntaryDTO.cs" t="Include" />
         </e>
         <e p="EntityApplication.cs" t="Include" />
@@ -901,7 +907,9 @@
       </e>
       <e p="Manager_Domain" t="IncludeRecursive">
         <e p="Entities" t="Include">
+          <e p="Address.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
+          <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
@@ -921,11 +929,11 @@
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
-        <e p="Voluntary Script.txt" t="Include" />
         <e p="VoluntaryRepository.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
+        <e p="script.sql" t="Include" />
       </e>
       <e p="Manager_WebAPI" t="IncludeRecursive">
         <e p="App_Data" t="Include" />
@@ -1027,7 +1035,9 @@
         <e p="Global.asax.cs" t="Include" />
         <e p="Manager_WebAPI.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
+          <e p="Address.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
+          <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />
         </e>
         <e p="Properties" t="Include">

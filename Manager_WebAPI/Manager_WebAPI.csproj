@@ -166,7 +166,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Voluntary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -254,6 +256,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AdminManagerSystem\AdminManagerSystem.csproj">
+      <Project>{7765be5a-de8a-4752-b4f7-5dd62d9ad12f}</Project>
+      <Name>AdminManagerSystem</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Manager_Application\Manager_Application.csproj">
       <Project>{0bc9fa36-f56e-4c20-8536-24166fda20c3}</Project>
       <Name>Manager_Application</Name>

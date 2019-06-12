@@ -9,25 +9,27 @@ namespace Manager_Application.Adapter
         public static VoluntaryDTO ToDTO(Voluntary voluntary)
         {
             Console.WriteLine("ADAPTER TO DTO");
-            
+
             return new VoluntaryDTO()
             {
-                Id = voluntary.Id,
+                VoluntaryId = voluntary.VoluntaryId,
                 IsApproved = voluntary.IsApproved,
-                VoluntaryName = voluntary.VoluntaryName,
-                VoluntaryEmail = voluntary.VoluntaryEmail,
-                VoluntaryPhone = voluntary.VoluntaryPhone,
-                VoluntaryPassword = voluntary.VoluntaryPassword,
-                VoluntaryCEP = voluntary.VoluntaryCEP,
-                VoluntaryAvenue = voluntary.VoluntaryAvenue,
-                VoluntaryNumber = voluntary.VoluntaryNumber,
-                VoluntaryNeighborhood = voluntary.VoluntaryNeighborhood,
-                VoluntaryCity = voluntary.VoluntaryCity,
-                VoluntaryState = voluntary.VoluntaryState,
-                VoluntaryAffinity = voluntary.VoluntaryAffinity,
-                VoluntarySocialNetwork = voluntary.VoluntarySocialNetwork, 
-                VoluntaryPhotoImageName = voluntary.VoluntaryPhotoImageName
-             
+                Name = voluntary.Name,
+                Email = voluntary.Email,
+                Password = voluntary.Password,
+                Phone = voluntary.Phone,
+                Affinity = voluntary.Affinity,
+                SocialNetwork = voluntary.SocialNetwork,
+                PhotoImageName = voluntary.PhotoImageName,
+                Address = new AddressDTO()
+                {
+                    CEP = voluntary.Address.CEP,
+                    Avenue = voluntary.Address.Avenue,
+                    Number = voluntary.Address.Number,
+                    Neighborhood = voluntary.Address.Neighborhood,
+                    City = voluntary.Address.City,
+                    State = voluntary.Address.State
+                }
             };
         }
 
@@ -37,21 +39,24 @@ namespace Manager_Application.Adapter
             
             return new Voluntary()
             {
-                Id = voluntary.Id,
+                VoluntaryId = voluntary.VoluntaryId,
                 IsApproved = voluntary.IsApproved,
-                VoluntaryName = voluntary.VoluntaryName,
-                VoluntaryEmail = voluntary.VoluntaryEmail,
-                VoluntaryPhone = voluntary.VoluntaryPhone,
-                VoluntaryPassword = voluntary.VoluntaryPassword,
-                VoluntaryCEP = voluntary.VoluntaryCEP,
-                VoluntaryAvenue = voluntary.VoluntaryAvenue,
-                VoluntaryNumber = voluntary.VoluntaryNumber,
-                VoluntaryNeighborhood = voluntary.VoluntaryNeighborhood,
-                VoluntaryCity = voluntary.VoluntaryCity,
-                VoluntaryState = voluntary.VoluntaryState,
-                VoluntaryAffinity = voluntary.VoluntaryAffinity,
-                VoluntarySocialNetwork = voluntary.VoluntarySocialNetwork, 
-                VoluntaryPhotoImageName = voluntary.VoluntaryPhotoImageName
+                Name = voluntary.Name,
+                Email = voluntary.Email,
+                Phone = voluntary.Phone,
+                Password = voluntary.Password,
+                Affinity = voluntary.Affinity,
+                SocialNetwork = voluntary.SocialNetwork, 
+                PhotoImageName = voluntary.PhotoImageName,
+                Address = new Address()
+                {
+                    CEP = voluntary.Address.CEP,
+                    Avenue = voluntary.Address.Avenue,
+                    Number = voluntary.Address.Number,
+                    Neighborhood = voluntary.Address.Neighborhood,
+                    City = voluntary.Address.City,
+                    State = voluntary.Address.State
+                }
             };
         }
     }

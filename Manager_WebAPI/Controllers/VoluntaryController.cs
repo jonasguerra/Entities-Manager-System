@@ -158,20 +158,23 @@ namespace Manager_API.Controllers
             //executa o mapeamento
             VoluntaryDTO voluntaryDTO = new VoluntaryDTO ()
             {
-                Id = voluntary.Id,
-                VoluntaryName = voluntary.VoluntaryName,
-                VoluntaryEmail = voluntary.VoluntaryEmail,
-                VoluntaryPhone = voluntary.VoluntaryPhone,
-                VoluntaryPassword = voluntary.VoluntaryPassword,
-                VoluntaryCEP = voluntary.VoluntaryCEP,
-                VoluntaryAvenue = voluntary.VoluntaryAvenue,
-                VoluntaryNumber = voluntary.VoluntaryNumber,
-                VoluntaryNeighborhood = voluntary.VoluntaryNeighborhood,
-                VoluntaryCity = voluntary.VoluntaryCity,
-                VoluntaryState = voluntary.VoluntaryState,
-                VoluntaryAffinity = voluntary.VoluntaryAffinity,
-                VoluntarySocialNetwork = voluntary.VoluntarySocialNetwork, 
-                VoluntaryPhotoImageName = voluntary.VoluntaryPhotoImageName
+                VoluntaryId = voluntary.VoluntaryId,
+                Name = voluntary.Name,
+                Email = voluntary.Email,
+                Phone = voluntary.Phone,
+                Password = voluntary.Password,
+                Affinity = voluntary.Affinity,
+                SocialNetwork = voluntary.SocialNetwork, 
+                PhotoImageName = voluntary.PhotoImageName,
+                Address = new AddressDTO()
+                {
+                    CEP = voluntary.Address.CEP,
+                    Avenue = voluntary.Address.Avenue,
+                    Number = voluntary.Address.Number,
+                    Neighborhood = voluntary.Address.Neighborhood,
+                    City = voluntary.Address.City,
+                    State = voluntary.Address.State
+                }
             };
            
             return voluntaryApplication.Insert(voluntaryDTO);
@@ -181,20 +184,23 @@ namespace Manager_API.Controllers
         {
             VoluntaryDTO voluntaryDTO = new VoluntaryDTO ()
             {
-                Id = voluntary.Id,
-                VoluntaryName = voluntary.VoluntaryName,
-                VoluntaryEmail = voluntary.VoluntaryEmail,
-                VoluntaryPhone = voluntary.VoluntaryPhone,
-                VoluntaryPassword = voluntary.VoluntaryPassword,
-                VoluntaryCEP = voluntary.VoluntaryCEP,
-                VoluntaryAvenue = voluntary.VoluntaryAvenue,
-                VoluntaryNumber = voluntary.VoluntaryNumber,
-                VoluntaryNeighborhood = voluntary.VoluntaryNeighborhood,
-                VoluntaryCity = voluntary.VoluntaryCity,
-                VoluntaryState = voluntary.VoluntaryState,
-                VoluntaryAffinity = voluntary.VoluntaryAffinity,
-                VoluntarySocialNetwork = voluntary.VoluntarySocialNetwork, 
-                VoluntaryPhotoImageName = voluntary.VoluntaryPhotoImageName
+                VoluntaryId = voluntary.VoluntaryId,
+                Name = voluntary.Name,
+                Email = voluntary.Email,
+                Phone = voluntary.Phone,
+                Password = voluntary.Password,
+                Affinity = voluntary.Affinity,
+                SocialNetwork = voluntary.SocialNetwork, 
+                PhotoImageName = voluntary.PhotoImageName,
+                Address = new AddressDTO()
+                {
+                    CEP = voluntary.Address.CEP,
+                    Avenue = voluntary.Address.Avenue,
+                    Number = voluntary.Address.Number,
+                    Neighborhood = voluntary.Address.Neighborhood,
+                    City = voluntary.Address.City,
+                    State = voluntary.Address.State
+                }
             };
             
             voluntaryApplication.Update(voluntaryDTO);

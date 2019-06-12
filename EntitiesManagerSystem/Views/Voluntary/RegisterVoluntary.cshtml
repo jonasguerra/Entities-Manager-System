@@ -47,45 +47,45 @@
                 </legend>
                 <div class="row">
                     <div class="form-group col-sm-6">
-                        <label>@Html.LabelFor(m => m.VoluntaryName)</label>
-                        @Html.TextBoxFor(m => m.VoluntaryName, new {@class = "form-control"})
-                        @Html.ValidationMessageFor(m => m.VoluntaryName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        <label>@Html.LabelFor(m => m.Name)</label>
+                        @Html.TextBoxFor(m => m.Name, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.Name, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
                     <div class="form-group col-sm-6">
-                        <label> @Html.LabelFor(m => m.VoluntaryEmail)</label>
-                        @Html.TextBoxFor(m => m.VoluntaryEmail, new {@class = "form-control"})
-                        @Html.ValidationMessageFor(m => m.VoluntaryEmail, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        <label> @Html.LabelFor(m => m.Email)</label>
+                        @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.Email, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label> @Html.LabelFor(m => m.VoluntaryPassword)</label>
-                            @Html.TextBoxFor(m => m.VoluntaryPassword, new {@class = "form-control"})
-                            @Html.ValidationMessageFor(m => m.VoluntaryPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label> @Html.LabelFor(m => m.Password)</label>
+                            @Html.TextBoxFor(m => m.Password, new {@class = "form-control"})
+                            @Html.ValidationMessageFor(m => m.Password, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label> @Html.LabelFor(m => m.VoluntaryConfirmPassword)</label>
-                            @Html.TextBoxFor(m => m.VoluntaryConfirmPassword, new {@class = "form-control"})
-                            @Html.ValidationMessageFor(m => m.VoluntaryConfirmPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label> @Html.LabelFor(m => m.ConfirmPassword)</label>
+                            @Html.TextBoxFor(m => m.ConfirmPassword, new {@class = "form-control"})
+                            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-sm-6">
                         <div class="form-group">
-                            <label> @Html.LabelFor(m => m.VoluntaryPhone)</label>
-                            @Html.TextBoxFor(m => m.VoluntaryPhone, new {@class = "form-control mask_phone"})
-                            @Html.ValidationMessageFor(m => m.VoluntaryPhone, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label> @Html.LabelFor(m => m.Phone)</label>
+                            @Html.TextBoxFor(m => m.Phone, new {@class = "form-control mask_phone"})
+                            @Html.ValidationMessageFor(m => m.Phone, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>@Html.LabelFor(m => m.VoluntarySocialNetwork)</label>
-                            @Html.TextBoxFor(m => m.VoluntarySocialNetwork, new {@class = "form-control"})
-                            @Html.ValidationMessageFor(m => m.VoluntarySocialNetwork, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label>@Html.LabelFor(m => m.SocialNetwork)</label>
+                            @Html.TextBoxFor(m => m.SocialNetwork, new {@class = "form-control"})
+                            @Html.ValidationMessageFor(m => m.SocialNetwork, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                 </div>
@@ -95,43 +95,43 @@
                 <div class="row">
                     <div class="form-group col-sm-2">
                         <div class="form-group">
-                            <label>@Html.LabelFor(m => m.VoluntaryCEP)</label>
-                            @Html.TextBoxFor(m => m.VoluntaryCEP, new {@id = "cep", @class = "mask_cep form-control"})
-                            @Html.ValidationMessageFor(m => m.VoluntaryCEP, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label>@Html.LabelFor(m => m.Address.CEP)</label>
+                            @Html.TextBoxFor(m => m.Address.CEP, new {@id = "cep", @class = "mask_cep form-control"})
+                            @Html.ValidationMessageFor(m => m.Address.CEP, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                     <div class="form-group col-sm-8">
                         <div class="form-group">
-                            <label>@Html.LabelFor(m => m.VoluntaryAvenue)</label>
-                            @Html.TextBoxFor(m => m.VoluntaryAvenue, new {name = "address", @class = "autocomplete-address form-control"})
-                            @Html.ValidationMessageFor(m => m.VoluntaryAvenue, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label>@Html.LabelFor(m => m.Address.Avenue)</label>
+                            @Html.TextBoxFor(m => m.Address.Avenue, new {name = "address", @class = "autocomplete-address form-control"})
+                            @Html.ValidationMessageFor(m => m.Address.Avenue, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                     <div class="form-group col-sm-2">
                         <div class="form-group">
-                            <label>@Html.LabelFor(m => m.VoluntaryNumber)</label>
-                            @Html.TextBoxFor(m => m.VoluntaryNumber, new {name = "street_number", @class = "autocomplete-address form-control"})
-                            @Html.ValidationMessageFor(m => m.VoluntaryNumber, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label>@Html.LabelFor(m => m.Address.Number)</label>
+                            @Html.TextBoxFor(m => m.Address.Number, new {name = "street_number", @class = "autocomplete-address form-control"})
+                            @Html.ValidationMessageFor(m => m.Address.Number, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>@Html.LabelFor(m => m.VoluntaryNeighborhood)</label>
-                    @Html.TextBoxFor(m => m.VoluntaryNeighborhood, new {name = "neighborhood", @class = "autocomplete-neighborhood form-control"})
-                    @Html.ValidationMessageFor(m => m.VoluntaryNeighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    <label>@Html.LabelFor(m => m.Address.Neighborhood)</label>
+                    @Html.TextBoxFor(m => m.Address.Neighborhood, new {name = "neighborhood", @class = "autocomplete-neighborhood form-control"})
+                    @Html.ValidationMessageFor(m => m.Address.Neighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                 </div>
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="form-group">
-                            <label>@Html.LabelFor(m => m.VoluntaryCity)</label>
-                            @Html.TextBoxFor(m => m.VoluntaryCity, new {name = "city", @class = "autocomplete-city form-control"})
-                            @Html.ValidationMessageFor(m => m.VoluntaryCity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label>@Html.LabelFor(m => m.Address.City)</label>
+                            @Html.TextBoxFor(m => m.Address.City, new {name = "city", @class = "autocomplete-city form-control"})
+                            @Html.ValidationMessageFor(m => m.Address.City, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label>@Html.LabelFor(m => m.VoluntaryState)</label>
-                            @Html.DropDownListFor(model => model.VoluntaryState, new SelectList(
+                            <label>@Html.LabelFor(m => m.Address.State)</label>
+                            @Html.DropDownListFor(model => model.Address.State, new SelectList(
                                 new List<Object>
                                 {
                                     new {value = "AC", text = "AC"},
@@ -165,7 +165,7 @@
                                 "value",
                                 "text",
                                 "RS"), new {@class = "autocomplete-state form-control"})
-                            @Html.ValidationMessageFor(m => m.VoluntaryState, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            @Html.ValidationMessageFor(m => m.Address.State, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
 
@@ -174,8 +174,8 @@
                     <span>Atuação</span>
                 </legend>
                 <div class="form-group">
-                    <label>@Html.LabelFor(m => m.VoluntaryAffinity)</label>
-                    @Html.DropDownListFor(model => model.VoluntaryAffinity, new SelectList(
+                    <label>@Html.LabelFor(m => m.Affinity)</label>
+                    @Html.DropDownListFor(model => model.Affinity, new SelectList(
                         new List<Object>
                         {
                             new {value = "Infantil", text = "Infantil"},
@@ -186,7 +186,7 @@
                         },
                         "value",
                         "text"), new {@class = "autocomplete-state form-control select2", multiple = "true"})
-                    @Html.ValidationMessageFor(m => m.VoluntaryAffinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                    @Html.ValidationMessageFor(m => m.Affinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                 </div>
                 <div class="form-group">
                     <label for=""> Area de Atuação</label>

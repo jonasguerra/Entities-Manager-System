@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EntitiesManagerSystem.Models.Voluntary
@@ -30,6 +31,8 @@ namespace EntitiesManagerSystem.Models.Voluntary
         [Display(Name = "Imagem da Entidade")] 
         public string PhotoImageName { get; set; }
 
+        public List<int> AffinitiesId { get; set; }
+        
         public Voluntary()
         {
         }

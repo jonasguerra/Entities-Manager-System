@@ -35,3 +35,22 @@ CREATE TABLE public.voluntary
     FOREIGN KEY ("user_id") REFERENCES "user"("user_id"),
     FOREIGN KEY ("address_id") REFERENCES "address"("address_id")
 )
+
+
+CREATE TABLE public.affinity
+(
+    affinity_id character varying(36) NOT NULL PRIMARY KEY,
+    name character varying(300) NOT NULL  
+)
+
+
+CREATE TABLE public.voluntary_affinity
+(
+    voluntary_affinity_id character varying(36) NOT NULL PRIMARY KEY,
+    
+    affinity_id character varying(36) NOT NULL UNIQUE,
+	voluntary_id character varying(36) NOT NULL UNIQUE,
+	
+    FOREIGN KEY ("affinity_id") REFERENCES "affinity"("affinity_id"),
+    FOREIGN KEY ("voluntary_id") REFERENCES "voluntary"("voluntary_id")
+)

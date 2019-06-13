@@ -131,6 +131,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Affinity.cs" />
     <Compile Include="Models\Entity\Entity.cs" />
     <Compile Include="Models\Entity\Event.cs" />
     <Compile Include="Models\Login\LoginForm.cs" />

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Manager_Domain.Entities
 {
@@ -11,5 +12,6 @@ namespace Manager_Domain.Entities
         public string Affinity { get; set; }
         public string SocialNetwork { get; set; }
         public string PhotoImageName { get; set; }
+        public List<int> AffinitiesId { get; set; }
     }
 }

@@ -469,6 +469,7 @@
         <e p="Global.asax.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Address.cs" t="Include" />
+          <e p="Affinity.cs" t="Include" />
           <e p="Entity" t="Include">
             <e p="Entity.cs" t="Include" />
             <e p="Event.cs" t="Include" />
@@ -892,6 +893,7 @@
         </e>
         <e p="DTO" t="Include">
           <e p="AddressDTO.cs" t="Include" />
+          <e p="Affinity.cs" t="Include" />
           <e p="EntityDTO.cs" t="Include" />
           <e p="UserDTO.cs" t="Include" />
           <e p="VoluntaryDTO.cs" t="Include" />
@@ -908,11 +910,13 @@
       <e p="Manager_Domain" t="IncludeRecursive">
         <e p="Entities" t="Include">
           <e p="Address.cs" t="Include" />
+          <e p="Affinity.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
+          <e p="IAffinityRepository.cs" t="Include" />
           <e p="IEntityRepository.cs" t="Include" />
           <e p="IVoluntaryRepository.cs" t="Include" />
         </e>
@@ -924,6 +928,7 @@
         <e p="obj" t="ExcludeRecursive" />
       </e>
       <e p="Manager_Repository" t="IncludeRecursive">
+        <e p="AffinityRepository.cs" t="Include" />
         <e p="EntityRepository.cs" t="Include" />
         <e p="Manager_Repository.csproj" t="IncludeRecursive" />
         <e p="Properties" t="Include">
@@ -1036,6 +1041,7 @@
         <e p="Manager_WebAPI.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="Address.cs" t="Include" />
+          <e p="Affinity.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />

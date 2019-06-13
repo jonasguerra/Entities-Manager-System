@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Manager_Application.DTO
 {
@@ -11,5 +12,6 @@ namespace Manager_Application.DTO
         public string Affinity { get; set; }
         public string SocialNetwork { get; set; }
         public string PhotoImageName { get; set; }
+        public List<int> AffinitiesId { get; set; }
     }
 }

@@ -33,9 +33,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Affinity.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\Voluntary.cs" />
+    <Compile Include="Interfaces\IAffinityRepository.cs" />
     <Compile Include="Interfaces\IEntityRepository.cs" />
     <Compile Include="Interfaces\IVoluntaryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

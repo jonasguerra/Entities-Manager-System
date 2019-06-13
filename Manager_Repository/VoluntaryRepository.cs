@@ -143,15 +143,13 @@ namespace Ftec.WebAPI.Infra.Repository
                 while (reader.Read())
                 {
                     Voluntary voluntary = new Voluntary();
-                    voluntary = new Voluntary();
                     voluntary.VoluntaryId = Guid.Parse(reader["voluntary_id"].ToString());
                     voluntary.UserId =  Guid.Parse(reader["user_id"].ToString());
-                    voluntary.Name = reader["Name"].ToString();
-                    voluntary.Phone = reader["Phone"].ToString();
-                    voluntary.Affinity = reader["Affinity"].ToString();
-                    voluntary.SocialNetwork = reader["SocialNetwork"].ToString();
-                    voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
-                    voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
+                    voluntary.Name = reader["name"].ToString();
+                    voluntary.Phone = reader["phone"].ToString();
+                    voluntary.Affinity = reader["affinity"].ToString();
+                    voluntary.SocialNetwork = reader["socialnetwork"].ToString();
+                    voluntary.PhotoImageName = reader["photoImageName"].ToString();
                     voluntary.Address = new Address()
                     {
                         AddressId = Guid.Parse(reader["address_id"].ToString())

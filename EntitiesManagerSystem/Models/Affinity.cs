@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace AdminManagerSystem.Models
+namespace EntitiesManagerSystem.Models
 {
     public class Affinity
     {

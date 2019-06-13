@@ -13,7 +13,9 @@ namespace Manager_Application.Adapter
             return new VoluntaryDTO()
             {
                 VoluntaryId = voluntary.VoluntaryId,
+                UserId = voluntary.UserId,
                 IsApproved = voluntary.IsApproved,
+                IsEntity = voluntary.IsEntity,
                 Name = voluntary.Name,
                 Email = voluntary.Email,
                 Password = voluntary.Password,
@@ -23,6 +25,7 @@ namespace Manager_Application.Adapter
                 PhotoImageName = voluntary.PhotoImageName,
                 Address = new AddressDTO()
                 {
+                    AddressId = voluntary.Address.AddressId,
                     CEP = voluntary.Address.CEP,
                     Avenue = voluntary.Address.Avenue,
                     Number = voluntary.Address.Number,
@@ -40,7 +43,9 @@ namespace Manager_Application.Adapter
             return new Voluntary()
             {
                 VoluntaryId = voluntary.VoluntaryId,
+                UserId = voluntary.UserId,
                 IsApproved = voluntary.IsApproved,
+                IsEntity = voluntary.IsEntity,
                 Name = voluntary.Name,
                 Email = voluntary.Email,
                 Phone = voluntary.Phone,
@@ -50,6 +55,7 @@ namespace Manager_Application.Adapter
                 PhotoImageName = voluntary.PhotoImageName,
                 Address = new Address()
                 {
+                    AddressId = voluntary.Address.AddressId,
                     CEP = voluntary.Address.CEP,
                     Avenue = voluntary.Address.Avenue,
                     Number = voluntary.Address.Number,

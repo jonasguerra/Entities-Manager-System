@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Manager_API.Models.Voluntary
@@ -30,6 +31,8 @@ namespace Manager_API.Models.Voluntary
         [Display(Name = "Imagem do Voluntário")] 
         public string PhotoImageName { get; set; }
 
+        public List<int> AffinitiesId { get; set; }
+        
         public Voluntary()
         {
         }

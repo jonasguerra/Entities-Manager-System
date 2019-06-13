@@ -32,6 +32,13 @@ namespace Ftec.WebAPI.Infra.Repository
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
+                        
+                        cmd.CommandText = @"DELETE FROM voluntary_affinity WHERE voluntary_id=@voluntary_id";
+                        cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId.ToString());
+                        cmd.ExecuteNonQuery();
+                        
+                        cmd.Parameters.Clear();
+                        
                         cmd.CommandText = @"DELETE FROM voluntary WHERE voluntary_id=@voluntary_id";
                         cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId.ToString());
                         cmd.ExecuteNonQuery();
@@ -83,7 +90,6 @@ namespace Ftec.WebAPI.Infra.Repository
                     voluntary.UserId =  Guid.Parse(reader["user_id"].ToString());
                     voluntary.Name = reader["Name"].ToString();
                     voluntary.Phone = reader["Phone"].ToString();
-                    voluntary.Affinity = reader["Affinity"].ToString();
                     voluntary.SocialNetwork = reader["SocialNetwork"].ToString();
                     voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
                     voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
@@ -125,6 +131,11 @@ namespace Ftec.WebAPI.Infra.Repository
             }
         }
 
+        public Voluntary FindByAffinityId(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Voluntary> FindAll()
         {
             Console.WriteLine("GET ALL REPOSITORY");
@@ -147,7 +158,6 @@ namespace Ftec.WebAPI.Infra.Repository
                     voluntary.UserId =  Guid.Parse(reader["user_id"].ToString());
                     voluntary.Name = reader["name"].ToString();
                     voluntary.Phone = reader["phone"].ToString();
-                    voluntary.Affinity = reader["affinity"].ToString();
                     voluntary.SocialNetwork = reader["socialnetwork"].ToString();
                     voluntary.PhotoImageName = reader["photoImageName"].ToString();
                     voluntary.Address = new Address()
@@ -239,12 +249,22 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId);
                         cmd.Parameters.AddWithValue("name", voluntary.Name);
                         cmd.Parameters.AddWithValue("phone", voluntary.Phone); 
-                        cmd.Parameters.AddWithValue("affinity", voluntary.Affinity); 
                         cmd.Parameters.AddWithValue("socialnetwork", voluntary.SocialNetwork);
                         cmd.Parameters.AddWithValue("photoimagename", voluntary.PhotoImageName);
                         cmd.Parameters.AddWithValue("user_id", voluntary.UserId);
                         cmd.Parameters.AddWithValue("address_id", voluntary.Address.AddressId);
                         cmd.ExecuteNonQuery();
+
+
+                        foreach (var affinity in voluntary.Affinities)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.CommandText = @"INSERT Into voluntary_affinity (voluntary_id, affinity_id) VALUES (@voluntary_id, @affinity_id)";
+                            cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId);
+                            cmd.Parameters.AddWithValue("affinity_id", affinity.AffinityId);
+                            cmd.ExecuteNonQuery(); 
+                        }
+                        
                         
                         //commit na transação
                         trans.Commit();
@@ -282,7 +302,6 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.CommandText = @"UPDATE voluntary SET name=@name,phone=@phone,affinity=@affinity,socialnetwork=@socialnetwork,photoimagename=@photoimagename WHERE voluntary_id=@voluntary_id";
                         cmd.Parameters.AddWithValue("name", voluntary.Name);
                         cmd.Parameters.AddWithValue("phone", voluntary.Phone); 
-                        cmd.Parameters.AddWithValue("affinity", voluntary.Affinity); 
                         cmd.Parameters.AddWithValue("socialnetwork", voluntary.SocialNetwork);
                         cmd.Parameters.AddWithValue("photoimagename", voluntary.PhotoImageName);
                         cmd.ExecuteNonQuery();

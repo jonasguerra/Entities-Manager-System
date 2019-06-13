@@ -25,7 +25,6 @@ CREATE TABLE public.voluntary
     voluntary_id character varying(36) NOT NULL PRIMARY KEY,
     name character varying(300) NOT NULL,
     phone character varying(300) NOT NULL,
-    affinity character varying(300),
     socialnetwork character varying(300),
     photoimagename character varying(300),
     
@@ -46,11 +45,9 @@ CREATE TABLE public.affinity
 
 CREATE TABLE public.voluntary_affinity
 (
-    voluntary_affinity_id character varying(36) NOT NULL PRIMARY KEY,
-    
-    affinity_id character varying(36) NOT NULL UNIQUE,
-	voluntary_id character varying(36) NOT NULL UNIQUE,
-	
+    affinity_id character varying(36) NOT NULL,
+	voluntary_id character varying(36) NOT NULL,
+	PRIMARY KEY(affinity_id, voluntary_id),
     FOREIGN KEY ("affinity_id") REFERENCES "affinity"("affinity_id"),
     FOREIGN KEY ("voluntary_id") REFERENCES "voluntary"("voluntary_id")
 )

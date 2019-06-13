@@ -178,14 +178,14 @@
                     @Html.DropDownListFor(model => model.Affinity, new SelectList(
                         new List<Object>
                         {
-                            new {value = "Infantil", text = "Infantil"},
-                            new {value = "Pets", text = "Pets"},
-                            new {value = "Idosos", text = "Idosos"},
-                            new {value = "Necessitados", text = "Necessitados"},
-                            new {value = "Meio Ambiente", text = "Meio Ambiente"}
+                            new {value = "10", text = "Infantil"},
+                            new {value = "20", text = "Pets"},
+                            new {value = "30", text = "Idosos"},
+                            new {value = "40", text = "Necessitados"},
+                            new {value = "50", text = "Meio Ambiente"}
                         },
                         "value",
-                        "text"), new {@class = "autocomplete-state form-control select2", multiple = "true"})
+                        "text"), new {@id="multiple_select_affinity" ,@class = "autocomplete-state form-control select2", multiple = "true"})
                     @Html.ValidationMessageFor(m => m.Affinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                 </div>
                 <div class="form-group">
@@ -209,6 +209,7 @@
                         <div class="attachment--error"></div>
                     </div>
                 </div>
+                <input id="affinities_array" type="hidden" value="" name="affinities_array"/>
                 <div class="buttons-w">
                     <button class="btn btn-primary">Cadastrar</button>
                 </div>
@@ -219,10 +220,27 @@
 </div>
 @Scripts.Render("~/Template/bower_components/jquery/dist/jquery.min.js")
 @Scripts.Render("~/Template/bower_components/select2/dist/js/select2.full.min.js")
-
 @Scripts.Render("~/Scripts/jquery.autocomplete-address.min.js")
 @Scripts.Render("~/Scripts/jquery.mask.min.js")
 @Scripts.Render("~/Scripts/input_file.js")
 @Scripts.Render("~/Scripts/main.js")
+
+<script>
+
+$("#multiple_select_affinity").on("select2:select select2:unselect", function (e) {
+
+    let values_selected = $(this).select2('data')
+    let values_input = []
+    values_selected.forEach(function(value) {
+        values_input.push({
+            'value':value.id,
+            'text':value.text
+        })
+    });
+    $('#affinities_array').val(JSON.stringify(values_input))
+})
+
+</script>
+
 </body>
 </html>

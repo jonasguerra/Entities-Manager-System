@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 using EntitiesManagerSystem.Consumers_API;
+using EntitiesManagerSystem.Models;
 using EntitiesManagerSystem.Models.Voluntary;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace EntitiesManagerSystem.Controllers
 {
@@ -66,10 +69,20 @@ namespace EntitiesManagerSystem.Controllers
         }
         
         [HttpPost]
-        public ActionResult SaveVoluntary(Voluntary voluntary)
+        public ActionResult SaveVoluntary(Voluntary voluntary, string affinities_array)
         {
             if (ModelState.IsValid)
             {
+                dynamic json_affinity = JsonConvert.DeserializeObject(affinities_array);
+                foreach (var affinity in json_affinity)
+                {
+                    voluntary.Affinities.Add(new Affinity()
+                    {
+                        Name = affinity.text,
+                        AffinityId = affinity.value
+                    });
+                }
+                
                 var id = voluntaryHttp.Post<Voluntary>(@"Voluntary/", voluntary);
                 
                 return RedirectToAction("Login", "Login");

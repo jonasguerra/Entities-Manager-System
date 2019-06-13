@@ -12,6 +12,6 @@ namespace Manager_Application.DTO
         public string Affinity { get; set; }
         public string SocialNetwork { get; set; }
         public string PhotoImageName { get; set; }
-        public List<int> AffinitiesId { get; set; }
+        public List<AffinityDTO> Affinities { get; set; }
     }
 }

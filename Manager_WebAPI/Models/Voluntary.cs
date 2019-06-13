@@ -31,7 +31,7 @@ namespace Manager_API.Models.Voluntary
         [Display(Name = "Imagem do Voluntário")] 
         public string PhotoImageName { get; set; }
 
-        public List<int> AffinitiesId { get; set; }
+        public List<Affinity> Affinities { get; set; }
         
         public Voluntary()
         {

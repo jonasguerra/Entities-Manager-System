@@ -888,12 +888,13 @@
       <e p="EntitiesManagerSystem.sln" t="IncludeFlat" />
       <e p="Manager_Application" t="IncludeRecursive">
         <e p="Adapter" t="Include">
+          <e p="AffinityAdapter.cs" t="Include" />
           <e p="EntityAdapter.cs" t="Include" />
           <e p="VoluntaryAdapter.cs" t="Include" />
         </e>
         <e p="DTO" t="Include">
           <e p="AddressDTO.cs" t="Include" />
-          <e p="Affinity.cs" t="Include" />
+          <e p="AffinityDTO.cs" t="Include" />
           <e p="EntityDTO.cs" t="Include" />
           <e p="UserDTO.cs" t="Include" />
           <e p="VoluntaryDTO.cs" t="Include" />

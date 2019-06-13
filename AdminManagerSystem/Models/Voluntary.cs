@@ -33,7 +33,7 @@ namespace AdminManagerSystem.Models.Voluntary
         [Display(Name = "Imagem da Entidade")] 
         public string PhotoImageName { get; set; }
 
-        public List<int> AffinitiesId { get; set; }
+        public List<Affinity> Affinities { get; set; }
         
         public Voluntary()
         {

@@ -62,7 +62,6 @@ namespace EntitiesManagerSystem.Controllers
             }
             
             
-            
             ViewBag.user = "entity";
             ViewBag.register_event = "active";
             return View("RegisterEvent",event_from);

@@ -51,3 +51,10 @@ CREATE TABLE public.voluntary_affinity
     FOREIGN KEY ("affinity_id") REFERENCES "affinity"("affinity_id"),
     FOREIGN KEY ("voluntary_id") REFERENCES "voluntary"("voluntary_id")
 )
+INSERT INTO affinity (affinity_id, name) values ('1ae4f4ed-5eee-4b7e-9242-3712433afc4e', 'Infantil');
+INSERT INTO affinity (affinity_id, name) values ('44fce376-d295-4374-9872-3343ba3b4a85', 'Pets');
+INSERT INTO affinity (affinity_id, name) values ('67a8874e-f74a-443e-893c-d790e5264ce6', 'Idosos');
+INSERT INTO affinity (affinity_id, name) values ('b51e61ca-6f88-4308-b556-b925d5e5e181', 'Necessitados');
+INSERT INTO affinity (affinity_id, name) values ('23296243-ec9d-4d7b-98f7-6cbf7cea169b', 'Meio Ambiente');
+
+

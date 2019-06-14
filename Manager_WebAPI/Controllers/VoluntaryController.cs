@@ -156,6 +156,18 @@ namespace Manager_API.Controllers
             Console.WriteLine("POST METHOD CONTROLLER");
             //return Guid.NewGuid();
             //executa o mapeamento
+            
+            List<AffinityDTO> affinities = new List<AffinityDTO>();
+            foreach(var affinity in voluntary.Affinities)
+            {
+                AffinityDTO affinityDTO = new AffinityDTO()
+                {
+                    AffinityId = affinity.AffinityId,
+                    Name = affinity.Name
+                };
+                affinities.Add(affinityDTO);
+            }
+            
             VoluntaryDTO voluntaryDTO = new VoluntaryDTO ()
             {
                 VoluntaryId = voluntary.VoluntaryId,
@@ -163,9 +175,9 @@ namespace Manager_API.Controllers
                 Email = voluntary.Email,
                 Phone = voluntary.Phone,
                 Password = voluntary.Password,
-                Affinity = voluntary.Affinity,
                 SocialNetwork = voluntary.SocialNetwork, 
                 PhotoImageName = voluntary.PhotoImageName,
+                Affinities = affinities,
                 Address = new AddressDTO()
                 {
                     CEP = voluntary.Address.CEP,
@@ -182,6 +194,18 @@ namespace Manager_API.Controllers
 
         private void Alter(Voluntary voluntary)
         {
+            
+            List<AffinityDTO> affinities = new List<AffinityDTO>();
+            foreach(var affinity in voluntary.Affinities)
+            {
+                AffinityDTO affinityDTO = new AffinityDTO()
+                {
+                    AffinityId = affinity.AffinityId,
+                    Name = affinity.Name
+                };
+                affinities.Add(affinityDTO);
+            }
+            
             VoluntaryDTO voluntaryDTO = new VoluntaryDTO ()
             {
                 VoluntaryId = voluntary.VoluntaryId,
@@ -189,9 +213,9 @@ namespace Manager_API.Controllers
                 Email = voluntary.Email,
                 Phone = voluntary.Phone,
                 Password = voluntary.Password,
-                Affinity = voluntary.Affinity,
                 SocialNetwork = voluntary.SocialNetwork, 
                 PhotoImageName = voluntary.PhotoImageName,
+                Affinities = affinities,
                 Address = new AddressDTO()
                 {
                     CEP = voluntary.Address.CEP,

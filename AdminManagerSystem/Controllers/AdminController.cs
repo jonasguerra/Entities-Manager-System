@@ -12,10 +12,10 @@ namespace AdminManagerSystem.Controllers
     {
     
     
-        private APIHttpVoluntary voluntaryHttp;   
+        private APIHttpClient clientHttp;   
         public AdminController()
         {
-            voluntaryHttp = new APIHttpVoluntary("http://localhost:5002/api/");
+            clientHttp = new APIHttpClient("http://localhost:5002/api/");
         }
     
     
@@ -31,13 +31,12 @@ namespace AdminManagerSystem.Controllers
             ViewBag.user = "admin";
             ViewBag.register = "active";
             
-            var volunteers = voluntaryHttp.Get<List<Voluntary>>(@"Voluntary");
+            var volunteers = clientHttp.Get<List<Voluntary>>(@"Voluntary");
 
             ViewBag.volunteers = volunteers;
             
             return View();
         }
-        
         
         
         //###################
@@ -84,7 +83,7 @@ namespace AdminManagerSystem.Controllers
         public ActionResult TrashVoluntary(Guid id)
         {
          
-            var response = voluntaryHttp.Delete<List<Voluntary>>(@"Voluntary/", id);
+            var response = clientHttp.Delete<List<Voluntary>>(@"Voluntary/", id);
 
             if ("200" == response.ToString())
             {

@@ -126,7 +126,30 @@ namespace Ftec.WebAPI.Infra.Repository
                     voluntary.Address.City = reader["city"].ToString();
                     voluntary.Address.State = reader["state"].ToString();
                 }
+                reader.Close();
+                cmd.Parameters.Clear();
                 
+                cmd.CommandText = @"SELECT * FROM voluntary_affinity WHERE voluntary_id=@Id";
+                cmd.Parameters.AddWithValue("Id", voluntary.VoluntaryId.ToString());
+                reader = cmd.ExecuteReader();
+                voluntary.Affinities = new List<Affinity>();
+                while (reader.Read())
+                {
+                    NpgsqlCommand cmdAffinity = new NpgsqlCommand();
+                    cmdAffinity.Connection = con;
+                    cmdAffinity.CommandText = @"SELECT * FROM Endereco WHERE affinity_id=@Id";
+                    cmdAffinity.Parameters.AddWithValue("Id", reader["affinity_id"].ToString());
+                    var readerAffinity = cmdAffinity.ExecuteReader();
+                    while (readerAffinity.Read())
+                    {
+                        voluntary.Affinities.Add(new Affinity()
+                        {
+                            AffinityId = Guid.Parse(reader["voluntary_id"].ToString()),
+                            Name = reader["name"].ToString()
+                        });
+                    }
+                }
+
                 return voluntary;
             }
         }
@@ -198,6 +221,36 @@ namespace Ftec.WebAPI.Infra.Repository
                         voluntary.Address.City = reader["city"].ToString();
                         voluntary.Address.State = reader["state"].ToString();
                     }
+                    reader.Close();
+                    cmd.Parameters.Clear();
+                    
+                    cmd.CommandText = @"SELECT * FROM voluntary_affinity WHERE voluntary_id=@Id";
+                    cmd.Parameters.AddWithValue("Id", voluntary.VoluntaryId.ToString());
+                    reader = cmd.ExecuteReader();
+                    List<string> relations = new List<string>();
+                    while (reader.Read())
+                    {
+                        relations.Add(reader["voluntary_id"].ToString());
+                    }
+                    reader.Close();
+                    
+                    voluntary.Affinities = new List<Affinity>();
+                    foreach (var id in relations)
+                    {
+                        NpgsqlCommand cmdAffinity = new NpgsqlCommand();
+                        cmdAffinity.Connection = con;
+                        cmdAffinity.CommandText = @"SELECT * FROM affinity WHERE affinity_id=@Id";
+                        cmdAffinity.Parameters.AddWithValue("Id", id);
+                        var readerAffinity = cmdAffinity.ExecuteReader();
+                        while (readerAffinity.Read())
+                        {
+                            voluntary.Affinities.Add(new Affinity()
+                            {
+                                AffinityId = Guid.Parse(reader["voluntary_id"].ToString()),
+                                Name = reader["name"].ToString()
+                            });
+                        }
+                    }
                 }
                 return volunteers;
             }
@@ -245,7 +298,7 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.ExecuteNonQuery();
                         
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"INSERT Into voluntary (voluntary_id,name,phone,affinity,socialnetwork,photoimagename,user_id,address_id) values (@voluntary_id,@name,@phone,@affinity,@socialnetwork,@photoimagename,@user_id,@address_id)";
+                        cmd.CommandText = @"INSERT Into voluntary (voluntary_id,name,phone,socialnetwork,photoimagename,user_id,address_id) values (@voluntary_id,@name,@phone,@socialnetwork,@photoimagename,@user_id,@address_id)";
                         cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId);
                         cmd.Parameters.AddWithValue("name", voluntary.Name);
                         cmd.Parameters.AddWithValue("phone", voluntary.Phone); 

@@ -4,10 +4,10 @@ using System.Net.Http.Headers;
 
 namespace EntitiesManagerSystem.Consumers_API
 {
-    public class APIHttpVoluntary
+    public class APIHttpClient
     {
         private string baseAPI = "http://localhost:5002/api/";
-        public APIHttpVoluntary(string baseAPI)
+        public APIHttpClient(string baseAPI)
         {
             this.baseAPI = baseAPI;
         }

@@ -10,7 +10,6 @@
 <html>
 <head>
     <title>Registro</title>
-
     <meta charset="UTF-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="template language" name="keywords">
@@ -29,8 +28,6 @@
     @Styles.Render("~/Template/css/main.css?version=4.4.1")
     @Styles.Render("~/Content/input_file.css")
     @Styles.Render("~/Content/main.css")
-
-
 </head>
 <body>
 <div class="all-wrapper menu-side with-pattern">
@@ -174,20 +171,15 @@
                     <span>Atuação</span>
                 </legend>
                 <div class="form-group">
-                    <label>@Html.LabelFor(m => m.Affinity)</label>
-                    @Html.DropDownListFor(model => model.Affinity, new SelectList(
-                        new List<Object>
+                    <label for=""> Afinidades</label>
+                    <select id="multiple_select_affinity" class="form-control select2" multiple="true">
+                        @foreach (var affinity in ViewBag.affinities)
                         {
-                            new {value = "10", text = "Infantil"},
-                            new {value = "20", text = "Pets"},
-                            new {value = "30", text = "Idosos"},
-                            new {value = "40", text = "Necessitados"},
-                            new {value = "50", text = "Meio Ambiente"}
-                        },
-                        "value",
-                        "text"), new {@id="multiple_select_affinity" ,@class = "autocomplete-state form-control select2", multiple = "true"})
-                    @Html.ValidationMessageFor(m => m.Affinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <option value="@affinity.AffinityId">@affinity.Name</option>    
+                        }
+                    </select>
                 </div>
+                
                 <div class="form-group">
                     <label for=""> Area de Atuação</label>
                     <select class="form-control select2" multiple="true">
@@ -209,7 +201,7 @@
                         <div class="attachment--error"></div>
                     </div>
                 </div>
-                <input id="affinities_array" type="hidden" value="" name="affinities_array"/>
+                @Html.TextBoxFor(m => m.Affinity, new {@id="affinities_array", @type="hidden", @class = "form-control"})
                 <div class="buttons-w">
                     <button class="btn btn-primary">Cadastrar</button>
                 </div>
@@ -227,10 +219,21 @@
 
 <script>
 
-$("#multiple_select_affinity").on("select2:select select2:unselect", function (e) {
+$(document).ready(function() {
+  if($('#affinities_array').val()){
+      let affinities = JSON.parse($('#affinities_array').val());
+      let values_select = [];
+      affinities.forEach(function(a) {
+          values_select.push(a.value)
+      });
+      $("#multiple_select_affinity").val(values_select).change()
+  }
+})
 
-    let values_selected = $(this).select2('data')
-    let values_input = []
+
+$("#multiple_select_affinity").on("select2:select select2:unselect", function (e) {
+    let values_selected = $(this).select2('data');
+    let values_input = [];
     values_selected.forEach(function(value) {
         values_input.push({
             'value':value.id,

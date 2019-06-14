@@ -11,10 +11,10 @@ namespace EntitiesManagerSystem.Controllers
 {
     public class VoluntaryController : Controller
     {
-        private APIHttpVoluntary voluntaryHttp;   
+        private APIHttpClient clientHttp;   
         public VoluntaryController()
         {
-            voluntaryHttp = new APIHttpVoluntary("http://localhost:5002/api/");
+            clientHttp = new APIHttpClient("http://localhost:5002/api/");
         }
 
         
@@ -43,11 +43,11 @@ namespace EntitiesManagerSystem.Controllers
         
         public ActionResult RegisterVoluntary()
         {
-
-            ViewBag.user = "voluntary";
-            ViewBag.index = "active";
+            var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
             
-            return View("RegisterVoluntary");
+            ViewBag.affinities = affinities;
+            
+            return View();
                 
         }
         
@@ -69,27 +69,28 @@ namespace EntitiesManagerSystem.Controllers
         }
         
         [HttpPost]
-        public ActionResult SaveVoluntary(Voluntary voluntary, string affinities_array)
+        public ActionResult SaveVoluntary(Voluntary voluntary)
         {
             if (ModelState.IsValid)
             {
-                dynamic json_affinity = JsonConvert.DeserializeObject(affinities_array);
+                dynamic json_affinity = JsonConvert.DeserializeObject(voluntary.Affinity);
+                voluntary.Affinities = new List<Affinity>();
                 foreach (var affinity in json_affinity)
                 {
                     voluntary.Affinities.Add(new Affinity()
                     {
-                        Name = affinity.text,
-                        AffinityId = affinity.value
+                        AffinityId = Guid.Parse(affinity["value"].ToString()),
+                        Name = affinity["text"]
                     });
                 }
-                
-                var id = voluntaryHttp.Post<Voluntary>(@"Voluntary/", voluntary);
+
+                var id = clientHttp.Post<Voluntary>(@"Voluntary/", voluntary);
                 
                 return RedirectToAction("Login", "Login");
             }
             
-            ViewBag.user = "voluntary";
-            ViewBag.index = "active";
+            var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
+            ViewBag.affinities = affinities;
             return View("RegisterVoluntary", voluntary);
         }
     }

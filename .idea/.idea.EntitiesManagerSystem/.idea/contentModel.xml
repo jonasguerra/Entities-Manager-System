@@ -22,7 +22,7 @@
           <e p="RouteConfig.cs" t="Include" />
         </e>
         <e p="Consumer_API" t="Include">
-          <e p="APIHttpVoluntary.cs" t="Include" />
+          <e p="APIHttpClient.cs" t="Include" />
         </e>
         <e p="Content" t="Include">
           <e p="input_file.css" t="Include" />
@@ -448,7 +448,7 @@
           <e p="RouteConfig.cs" t="Include" />
         </e>
         <e p="Consumer_API" t="Include">
-          <e p="APIHttpVoluntary.cs" t="Include" />
+          <e p="APIHttpClient.cs" t="Include" />
         </e>
         <e p="Content" t="Include">
           <e p="input_file.css" t="Include" />
@@ -892,6 +892,7 @@
           <e p="EntityAdapter.cs" t="Include" />
           <e p="VoluntaryAdapter.cs" t="Include" />
         </e>
+        <e p="AffinityAplication.cs" t="Include" />
         <e p="DTO" t="Include">
           <e p="AddressDTO.cs" t="Include" />
           <e p="AffinityDTO.cs" t="Include" />
@@ -1032,6 +1033,7 @@
           <e p="bootstrap.min.css.map" t="Include" />
         </e>
         <e p="Controllers" t="Include">
+          <e p="AffinityController.cs" t="Include" />
           <e p="EntityController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />

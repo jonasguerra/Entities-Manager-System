@@ -11,18 +11,6 @@ namespace Manager_Application.Adapter
         {
             Console.WriteLine("ADAPTER TO DTO");
 
-            List<AffinityDTO> affinities = new List<AffinityDTO>();
-            foreach(var affinity in voluntary.Affinities)
-            {
-                AffinityDTO affinityDTO = new AffinityDTO()
-                {
-                    AffinityId = affinity.AffinityId,
-                    Name = affinity.Name
-                };
-                
-                affinities.Add(affinityDTO);
-            }
-            
             return new VoluntaryDTO()
             {
                 VoluntaryId = voluntary.VoluntaryId,
@@ -35,7 +23,7 @@ namespace Manager_Application.Adapter
                 Phone = voluntary.Phone,
                 SocialNetwork = voluntary.SocialNetwork,
                 PhotoImageName = voluntary.PhotoImageName,
-                Affinities = affinities,
+                Affinities = AffinityAdapter.ListToDTO(voluntary.Affinities),
                 Address = new AddressDTO()
                 {
                     AddressId = voluntary.Address.AddressId,
@@ -53,18 +41,6 @@ namespace Manager_Application.Adapter
         {
             Console.WriteLine("ADAPTER TO DOMAIN");
             
-            List<Affinity> affinities = new List<Affinity>();
-            foreach(var affinityDTO in voluntary.Affinities)
-            {
-                AffinityDTO affinity = new AffinityDTO()
-                {
-                    AffinityId = affinityDTO.AffinityId,
-                    Name = affinityDTO.Name
-                };
-                
-                affinities.Add(affinityDTO);
-            }
-            
             return new Voluntary()
             {
                 VoluntaryId = voluntary.VoluntaryId,
@@ -77,6 +53,7 @@ namespace Manager_Application.Adapter
                 Password = voluntary.Password,
                 SocialNetwork = voluntary.SocialNetwork, 
                 PhotoImageName = voluntary.PhotoImageName,
+                Affinities = AffinityAdapter.ListToDomain(voluntary.Affinities),
                 Address = new Address()
                 {
                     AddressId = voluntary.Address.AddressId,

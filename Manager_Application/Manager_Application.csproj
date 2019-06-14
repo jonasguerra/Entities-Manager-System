@@ -41,6 +41,7 @@
     <Compile Include="Adapter\AffinityAdapter.cs" />
     <Compile Include="Adapter\EntityAdapter.cs" />
     <Compile Include="Adapter\VoluntaryAdapter.cs" />
+    <Compile Include="AffinityAplication.cs" />
     <Compile Include="DTO\AddressDTO.cs" />
     <Compile Include="DTO\AffinityDTO.cs" />
     <Compile Include="DTO\EntityDTO.cs" />

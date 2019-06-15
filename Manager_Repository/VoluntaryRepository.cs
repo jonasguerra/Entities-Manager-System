@@ -129,25 +129,17 @@ namespace Ftec.WebAPI.Infra.Repository
                 reader.Close();
                 cmd.Parameters.Clear();
                 
-                cmd.CommandText = @"SELECT * FROM voluntary_affinity WHERE voluntary_id=@Id";
+                cmd.CommandText = @"SELECT * FROM affinity af join voluntary_affinity av on af.affinity_id = av.affinity_id join voluntary vo on vo.voluntary_id = av.voluntary_id WHERE av.voluntary_id = @Id";
                 cmd.Parameters.AddWithValue("Id", voluntary.VoluntaryId.ToString());
                 reader = cmd.ExecuteReader();
                 voluntary.Affinities = new List<Affinity>();
                 while (reader.Read())
                 {
-                    NpgsqlCommand cmdAffinity = new NpgsqlCommand();
-                    cmdAffinity.Connection = con;
-                    cmdAffinity.CommandText = @"SELECT * FROM Endereco WHERE affinity_id=@Id";
-                    cmdAffinity.Parameters.AddWithValue("Id", reader["affinity_id"].ToString());
-                    var readerAffinity = cmdAffinity.ExecuteReader();
-                    while (readerAffinity.Read())
+                    voluntary.Affinities.Add(new Affinity()
                     {
-                        voluntary.Affinities.Add(new Affinity()
-                        {
-                            AffinityId = Guid.Parse(reader["voluntary_id"].ToString()),
-                            Name = reader["name"].ToString()
-                        });
-                    }
+                        AffinityId = Guid.Parse(reader["voluntary_id"].ToString()),
+                        Name = reader["name"].ToString()
+                    });
                 }
 
                 return voluntary;
@@ -224,32 +216,17 @@ namespace Ftec.WebAPI.Infra.Repository
                     reader.Close();
                     cmd.Parameters.Clear();
                     
-                    cmd.CommandText = @"SELECT * FROM voluntary_affinity WHERE voluntary_id=@Id";
+                    cmd.CommandText = @"SELECT * FROM affinity af join voluntary_affinity av on af.affinity_id = av.affinity_id join voluntary vo on vo.voluntary_id = av.voluntary_id WHERE av.voluntary_id = @Id";
                     cmd.Parameters.AddWithValue("Id", voluntary.VoluntaryId.ToString());
                     reader = cmd.ExecuteReader();
-                    List<string> relations = new List<string>();
+                    voluntary.Affinities = new List<Affinity>();
                     while (reader.Read())
                     {
-                        relations.Add(reader["voluntary_id"].ToString());
-                    }
-                    reader.Close();
-                    
-                    voluntary.Affinities = new List<Affinity>();
-                    foreach (var id in relations)
-                    {
-                        NpgsqlCommand cmdAffinity = new NpgsqlCommand();
-                        cmdAffinity.Connection = con;
-                        cmdAffinity.CommandText = @"SELECT * FROM affinity WHERE affinity_id=@Id";
-                        cmdAffinity.Parameters.AddWithValue("Id", id);
-                        var readerAffinity = cmdAffinity.ExecuteReader();
-                        while (readerAffinity.Read())
+                        voluntary.Affinities.Add(new Affinity()
                         {
-                            voluntary.Affinities.Add(new Affinity()
-                            {
-                                AffinityId = Guid.Parse(reader["voluntary_id"].ToString()),
-                                Name = reader["name"].ToString()
-                            });
-                        }
+                            AffinityId = Guid.Parse(reader["voluntary_id"].ToString()),
+                            Name = reader["name"].ToString()
+                        });
                     }
                 }
                 return volunteers;

@@ -12,5 +12,10 @@ namespace Manager_Domain.Entities
         public string SocialNetwork { get; set; }
         public string PhotoImageName { get; set; }
         public List<Affinity> Affinities { get; set; }
+
+        public Voluntary()
+        {
+            IsVoluntary = true;
+        }
     }
 }

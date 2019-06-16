@@ -59,7 +59,7 @@ function update_table_voluntary(){
 
 
 $('#voluntary').on('click', '.approve', function () {
-    let id = $(this).closest('tr').attr('data-voluntary-id')
+    let id = $(this).closest('tr').attr('data-voluntary-id');
     $.ajax({
         url: $('#approve_voluntary_url').val(),
         method: 'POST',

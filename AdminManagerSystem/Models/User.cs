@@ -11,6 +11,9 @@ namespace AdminManagerSystem.Models
         
         public bool IsApproved { get; set; }
         
+        public bool IsVoluntary { get; set; }
+        public bool IsModerator { get; set; }
+        
         [Display(Name = "E-mail")]
         [Required(ErrorMessage = "{0} deve ser informado")]
         [StringLength(30, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]

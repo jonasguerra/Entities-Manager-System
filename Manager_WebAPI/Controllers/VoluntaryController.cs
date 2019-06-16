@@ -171,9 +171,12 @@ namespace Manager_API.Controllers
             VoluntaryDTO voluntaryDTO = new VoluntaryDTO ()
             {
                 VoluntaryId = voluntary.VoluntaryId,
+                UserId = voluntary.UserId,
                 Name = voluntary.Name,
                 Email = voluntary.Email,
                 Phone = voluntary.Phone,
+                IsApproved = voluntary.IsApproved,
+                IsVoluntary = voluntary.IsVoluntary,
                 Password = voluntary.Password,
                 SocialNetwork = voluntary.SocialNetwork, 
                 PhotoImageName = voluntary.PhotoImageName,
@@ -209,6 +212,9 @@ namespace Manager_API.Controllers
             VoluntaryDTO voluntaryDTO = new VoluntaryDTO ()
             {
                 VoluntaryId = voluntary.VoluntaryId,
+                UserId = voluntary.UserId,
+                IsApproved = voluntary.IsApproved,
+                IsVoluntary = voluntary.IsVoluntary,
                 Name = voluntary.Name,
                 Email = voluntary.Email,
                 Phone = voluntary.Phone,

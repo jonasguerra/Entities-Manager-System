@@ -35,6 +35,7 @@ namespace Manager_API.Models.Voluntary
         
         public Voluntary()
         {
+            IsVoluntary = true;
         }
     }
 }

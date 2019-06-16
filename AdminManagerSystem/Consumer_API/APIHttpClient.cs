@@ -1,6 +1,7 @@
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using AdminManagerSystem.Models.Voluntary;
 
 namespace AdminManagerSystem.Consumers_API
 {
@@ -76,7 +77,7 @@ namespace AdminManagerSystem.Consumers_API
                 }
             }
         }
-
+        
         public T Delete<T>(string action, Guid id)
         {
             using (var client = new HttpClient())

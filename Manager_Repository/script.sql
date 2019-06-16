@@ -4,7 +4,9 @@ CREATE TABLE public.user
     email character varying(300) NOT NULL,
     password character varying(300) NOT NULL,
     is_approved BOOLEAN NOT NULL DEFAULT FALSE,
-    is_entity BOOLEAN NOT NULL DEFAULT FALSE
+    is_entity BOOLEAN NOT NULL DEFAULT FALSE,
+    is_voluntary BOOLEAN NOT NULL DEFAULT FALSE,
+    is_moderator BOOLEAN NOT NULL DEFAULT FALSE
 )
 
 

@@ -37,6 +37,7 @@ namespace AdminManagerSystem.Models.Voluntary
         
         public Voluntary()
         {
+            IsVoluntary = true;
         }
     }
 }

@@ -8,6 +8,8 @@ namespace EntitiesManagerSystem.Models
         public Guid UserId { get; set; }
         
         public bool IsEntity { get; set; }
+        public bool IsVoluntary { get; set; }
+        public bool IsModerator { get; set; }
         
         public bool IsApproved { get; set; }
         

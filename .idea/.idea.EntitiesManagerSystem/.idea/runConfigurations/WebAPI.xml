@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Entity" type="DotNetProject" factoryName=".NET Project" singleton="false">
+  <configuration default="false" name="WebAPI" type="DotNetProject" factoryName=".NET Project" singleton="false">
     <option name="EXE_PATH" value="/usr/lib/mono/4.5/xsp4.exe" />
-    <option name="PROGRAM_PARAMETERS" value="--address=127.0.0.1 --port=5000" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EntitiesManagerSystem" />
+    <option name="PROGRAM_PARAMETERS" value="--address=127.0.0.1 --port=5002" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager_WebAPI" />
     <option name="PASS_PARENT_ENVS" value="1" />
     <envs>
       <env name="MONO_MANAGED_WATCHER" value="y" />
@@ -10,13 +10,13 @@
     <option name="USE_EXTERNAL_CONSOLE" value="0" />
     <option name="USE_MONO" value="0" />
     <option name="RUNTIME_ARGUMENTS" value="" />
-    <option name="PROJECT_PATH" value="$PROJECT_DIR$/EntitiesManagerSystem/EntitiesManagerSystem.csproj" />
+    <option name="PROJECT_PATH" value="$PROJECT_DIR$/Manager_WebAPI/Manager_WebAPI.csproj" />
     <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-    <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+    <option name="PROJECT_ARGUMENTS_TRACKING" value="0" />
     <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
     <option name="PROJECT_KIND" value="Web" />
-    <option name="PROJECT_TFM" value=".NETFramework,Version=v4.5" />
-    <browser url="http://127.0.0.1:5000/" start="true" />
+    <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.2" />
+    <browser url="http://127.0.0.1:5000/" />
     <method v="2">
       <option name="Build" enabled="true" />
     </method>

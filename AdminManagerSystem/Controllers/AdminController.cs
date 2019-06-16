@@ -59,23 +59,23 @@ namespace AdminManagerSystem.Controllers
         
         //######### AJAX AFFINITY ##########
         
-        [HttpPost]
-        public ActionResult TrashAffinity()
-        {
-            return Json(new {status="success", message_title="Afinidade excluida com sucesso"});
-        }
-        
-        [HttpPost]
-        public ActionResult EditAffinity()
-        {
-            return Json(new {status="success", message_title="Afinidade editada com sucesso"});
-        }
-        
-        [HttpPost]
-        public ActionResult ApproveAffinity()
-        {
-            return Json(new {status="success", message_title="Afinidade aprovada com sucesso"});
-        }
+//        [HttpPost]
+//        public ActionResult TrashAffinity()
+//        {
+//            return Json(new {status="success", message_title="Afinidade excluida com sucesso"});
+//        }
+//        
+//        [HttpPost]
+//        public ActionResult EditAffinity()
+//        {
+//            return Json(new {status="success", message_title="Afinidade editada com sucesso"});
+//        }
+//        
+//        [HttpPost]
+//        public ActionResult ApproveAffinity()
+//        {
+//            return Json(new {status="success", message_title="Afinidade aprovada com sucesso"});
+//        }
         
         //######### AJAX VOLUNTARY ##########
         
@@ -100,9 +100,21 @@ namespace AdminManagerSystem.Controllers
         }
         
         [HttpPost]
-        public ActionResult ApproveVoluntary()
+        public ActionResult ApproveVoluntary(Guid id)
         {
-            return Json(new {status="success", message_title="Voluntário aprovado com sucesso"});
+            Voluntary voluntary = (Voluntary)clientHttp.Get<Voluntary>(string.Format(@"Voluntary/{0}", id.ToString()));
+
+            if (voluntary != null)
+            {
+                voluntary.IsApproved = true;
+                
+                var voluntary_id = clientHttp.Put<Voluntary>(@"Voluntary/", id, voluntary);
+                
+                return Json(new {status="success", message_title="Voluntário aprovado com sucesso"});
+            }
+
+            return Json(new {status = "error", message_title = "Erro ao aprovar voluntário"});
+            
         }
         
         //######### AJAX ENTITY ##########

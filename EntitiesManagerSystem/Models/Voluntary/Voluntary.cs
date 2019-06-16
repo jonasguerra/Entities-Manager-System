@@ -33,6 +33,7 @@ namespace EntitiesManagerSystem.Models.Voluntary
         
         public Voluntary()
         {
+            IsVoluntary = true;
         }
     }
 }

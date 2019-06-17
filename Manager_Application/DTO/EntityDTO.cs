@@ -1,4 +1,5 @@
 using System;
+using Manager_Domain.Entities;
 
 namespace Manager_Application.DTO
 {
@@ -12,12 +13,7 @@ namespace Manager_Application.DTO
         public string EntityPhone { get; set; }
         public string EntityPassword { get; set; }
         public string EntityConfirmPassword { get; set; }
-        public string EntityCEP { get; set; }
-        public string EntityAvenue { get; set; }
-        public string EntityNumber { get; set; }
-        public string EntityNeighborhood { get; set; }
-        public string EntityCity { get; set; }
-        public string EntityState { get; set; }
+        public AddressDTO EntityAddressDto { get; set; }
         public string EntityReferencePoint { get; set; }
         public string EntityAffinity { get; set; }
         public string EntityInitials { get; set; }

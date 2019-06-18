@@ -16,6 +16,12 @@ namespace Manager_Application.Adapter
                  EntityPhone = entity.EntityPhone,
                  EntityPassword = entity.EntityPassword,
                  EntityConfirmPassword = entity.EntityConfirmPassword,
+                 EntityCEP = entity.EntityCEP, 
+                 EntityAvenue = entity.EntityAvenue,
+                 EntityNumber = entity.EntityNumber,
+                 EntityNeighborhood = entity.EntityNeighborhood,
+                 EntityCity = entity.EntityCity,
+                 EntityState = entity.EntityState,
                  EntityReferencePoint = entity.EntityReferencePoint,
                  EntityAffinity = entity.EntityAffinity,
                  EntityInitials = entity.EntityInitials,
@@ -24,17 +30,7 @@ namespace Manager_Application.Adapter
                  EntityWebSite = entity.EntityWebSite,
                  EntityDescription = entity.EntityDescription,
                  EntityPhotoImageName = entity.EntityPhotoImageName,
-                 
-                 EntityAddressDto = new AddressDTO()
-                 {
-                     AddressId = entity.EntityAddress.AddressId,
-                     CEP = entity.EntityAddress.CEP,
-                     Avenue = entity.EntityAddress.Avenue,
-                     Number = entity.EntityAddress.Number,
-                     Neighborhood = entity.EntityAddress.Neighborhood,
-                     City = entity.EntityAddress.City,
-                     State = entity.EntityAddress.State
-                 }  
+             
             };
         }
 
@@ -50,6 +46,12 @@ namespace Manager_Application.Adapter
                 EntityPhone = entity.EntityPhone,
                 EntityPassword = entity.EntityPassword,
                 EntityConfirmPassword = entity.EntityConfirmPassword,
+                EntityCEP = entity.EntityCEP, 
+                EntityAvenue = entity.EntityAvenue,
+                EntityNumber = entity.EntityNumber,
+                EntityNeighborhood = entity.EntityNeighborhood,
+                EntityCity = entity.EntityCity,
+                EntityState = entity.EntityState,
                 EntityReferencePoint = entity.EntityReferencePoint,
                 EntityAffinity = entity.EntityAffinity,
                 EntityInitials = entity.EntityInitials,
@@ -58,17 +60,6 @@ namespace Manager_Application.Adapter
                 EntityWebSite = entity.EntityWebSite,
                 EntityDescription = entity.EntityDescription,
                 EntityPhotoImageName = entity.EntityPhotoImageName,
-                
-                EntityAddress = new Address()
-                {
-                    AddressId = entity.EntityAddressDto.AddressId,
-                    CEP = entity.EntityAddressDto.CEP,
-                    Avenue = entity.EntityAddressDto.Avenue,
-                    Number = entity.EntityAddressDto.Number,
-                    Neighborhood = entity.EntityAddressDto.Neighborhood,
-                    City = entity.EntityAddressDto.City,
-                    State = entity.EntityAddressDto.State
-                }
             };
         }
     }

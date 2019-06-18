@@ -8,7 +8,7 @@ namespace Manager_Domain.Interfaces
     {
         Guid Insert(Voluntary voluntary);
         Voluntary Find(Guid id);
-        Voluntary FindByAffinityId(Guid id);
+        List<Voluntary> FindByAffinityId(Guid id);
         List<Voluntary> FindAll();
         Guid Update(Voluntary voluntary);
         bool Delete(Guid id);

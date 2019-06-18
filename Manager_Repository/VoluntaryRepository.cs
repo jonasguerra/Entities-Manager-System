@@ -149,9 +149,29 @@ namespace Ftec.WebAPI.Infra.Repository
             }
         }
 
-        public Voluntary FindByAffinityId(Guid id)
+        public List<Voluntary> FindByAffinityId(Guid id)
         {
-            throw new NotImplementedException();
+            List<Voluntary> volunteers = new List<Voluntary>();
+
+            Console.WriteLine("GET ONE REPOSITORY");
+            
+            using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
+            {
+                con.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = @"SELECT * FROM voluntary_affinity WHERE affinity_id=@affinity_id";
+                cmd.Parameters.AddWithValue("affinity_id", id.ToString());
+                var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    
+                }
+            }
+
+            return volunteers;
         }
 
         public List<Voluntary> FindAll()

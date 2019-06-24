@@ -21,6 +21,7 @@
     @Styles.Render("~/Template/bower_components/slick-carousel/slick/slick.css")
     @Styles.Render("~/Template/css/main.css?version=4.4.1")
     @Styles.Render("~/Content/main.css")
+    @Styles.Render("~/Content/table.css")
     @Styles.Render("~/Content/input_file.css")
     @Styles.Render("~/Content/pnotify.custom.min.css")
 
@@ -52,7 +53,7 @@
                             <a href="/Voluntary">Home</a>
                         </li>
                         <li class="@ViewBag.events">
-                            <a href="/Voluntary/Event">Eventos</a>
+                            <a href="/Voluntary/Events">Eventos</a>
                         </li>
                         <li class="@ViewBag.register_donate">
                             <a href="/Voluntary/RegisterDonate">Doar</a>
@@ -166,6 +167,8 @@
 @Scripts.Render("~/Template/bower_components/bootstrap/js/dist/popover.js")
 @Scripts.Render("~/Template/js/demo_customizer.js?version=4.4.1")
 @Scripts.Render("~/Template/js/main.js?version=4.4.1")
+@Scripts.Render("~/Template/js/dataTables.bootstrap4.min.js")
+
 @Scripts.Render("~/Scripts/main.js")
 @Scripts.Render("~/Scripts/jquery.autocomplete-address.min.js")
 @Scripts.Render("~/Scripts/jquery.mask.min.js")

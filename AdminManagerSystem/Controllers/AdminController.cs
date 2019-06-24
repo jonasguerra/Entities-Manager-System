@@ -94,9 +94,10 @@ namespace AdminManagerSystem.Controllers
         }
         
         [HttpPost]
-        public ActionResult ShowMoreVoluntary()
+        public ActionResult ShowMoreVoluntary(Guid id)
         {
-            return Json(new {status="success"});
+            var voluntary = clientHttp.Get<Voluntary>(string.Format(@"Voluntary/{0}", id.ToString()));
+            return Json(new {status="success", voluntary=voluntary});
         }
         
         [HttpPost]

@@ -214,7 +214,3 @@ C:/RiderProjects/Entities-Manager-System/Manager_WebAPI/obj/Debug/Manager_WebAPI
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/bin/AdminManagerSystem.dll
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/bin/AdminManagerSystem.pdb
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_WebAPI/bin/AdminManagerSystem.dll.config
-C:\RiderProjects\Entities-Manager-System\Manager_WebAPI\obj\Debug\Manager_WebAPI.csprojAssemblyReference.cache
-C:\RiderProjects\Entities-Manager-System\Manager_WebAPI\obj\Debug\Manager_WebAPI.csproj.CoreCompileInputs.cache
-C:\RiderProjects\Entities-Manager-System\Manager_WebAPI\obj\Debug\Manager_WebAPI.dll
-C:\RiderProjects\Entities-Manager-System\Manager_WebAPI\obj\Debug\Manager_WebAPI.pdb

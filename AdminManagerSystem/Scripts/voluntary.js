@@ -101,7 +101,7 @@ $('#voluntary').on('click', '.approve', function () {
             console.error('ERROR AJAX:', e)
         },
     })
-})
+});
 
 $('#voluntary').on('click', '.show_more', function () {
     let id = $(this).closest('tr').attr('data-voluntary-id')
@@ -114,6 +114,26 @@ $('#voluntary').on('click', '.show_more', function () {
         success: function (data) {
             if (data.status == 'success') {
                 
+                let voluntary = data.voluntary;
+                
+                $('.show-voluntary-modal .name').text(voluntary.Name);
+                $('.show-voluntary-modal .email').text(voluntary.Email);
+                $('.show-voluntary-modal .phone').text(voluntary.Phone);
+                $('.show-voluntary-modal .socialnetwork').text(voluntary.SocialNetwork);
+                $('.show-voluntary-modal .cep').text(voluntary.Address.CEP);
+                $('.show-voluntary-modal .avenue').text(voluntary.Address.Avenue);
+                $('.show-voluntary-modal .number').text(voluntary.Address.Number);
+                $('.show-voluntary-modal .neighborhood').text(voluntary.Address.Neighborhood);
+                $('.show-voluntary-modal .city').text(voluntary.Address.City + ' - ' + voluntary.Address.State);
+
+                let affinities ='';
+                voluntary.Affinities.forEach(function (e) {
+                    affinities = affinities + e.Name + '; ';
+                })
+                
+                $('.show-voluntary-modal .affinities').text(affinities);
+                
+                $('.show-voluntary-modal').modal('show')
 
             } else if (data.status == 'error') {
                 new PNotify({
@@ -178,7 +198,7 @@ function append_voluntary_approved(id, name) {
                                        <tr data-voluntary-id="'+ id +'">\n' +
                                 '            <td></td>\n' +
                                 '            <td class="name">'+ name +'</td>\n' +
-                                '            <td class="actions">\n' +
+                                '            <td class="actions text-right">\n' +
                                 '                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">\n' +
                                 '                    <i class="os-icon os-icon-search"></i>\n' +
                                 '                </a>\n' +

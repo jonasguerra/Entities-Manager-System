@@ -62,7 +62,6 @@ namespace Ftec.WebAPI.Infra.Repository
                     catch (Exception ex)
                     {
                         trans.Rollback();
-                        Console.WriteLine(ex);
                         throw ex;
                     }
                 }
@@ -164,10 +163,85 @@ namespace Ftec.WebAPI.Infra.Repository
                 cmd.CommandText = @"SELECT * FROM voluntary_affinity WHERE affinity_id=@affinity_id";
                 cmd.Parameters.AddWithValue("affinity_id", id.ToString());
                 var reader = cmd.ExecuteReader();
-
+                
+                List<string> voluntary_id = new List<string>();
+                
                 while (reader.Read())
                 {
+                    voluntary_id.Add(reader["voluntary_id"].ToString());
+                }
+    
+                foreach (string v_id in voluntary_id)
+                {
+                    reader.Close();
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = @"SELECT * FROM voluntary WHERE voluntary_id=@Id";
+                    cmd.Parameters.AddWithValue("Id", v_id);
+
+                    Voluntary voluntary = new Voluntary();
                     
+                    while (reader.Read())
+                    {
+                        voluntary = new Voluntary();
+                        voluntary.VoluntaryId = Guid.Parse(reader["voluntary_id"].ToString());
+                        voluntary.UserId =  Guid.Parse(reader["user_id"].ToString());
+                        voluntary.Name = reader["Name"].ToString();
+                        voluntary.Phone = reader["Phone"].ToString();
+                        voluntary.SocialNetwork = reader["SocialNetwork"].ToString();
+                        voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
+                        voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
+                        voluntary.Address = new Address()
+                        {
+                            AddressId = Guid.Parse(reader["address_id"].ToString())
+                        };
+                    }
+                    reader.Close();
+                    cmd.Parameters.Clear();
+                    
+                    cmd.CommandText = @"SELECT * FROM public.user WHERE user_id=@user_id";
+                    cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        voluntary.UserId = Guid.Parse(reader["user_id"].ToString());
+                        voluntary.IsApproved = (bool)reader["is_approved"];
+                        voluntary.IsEntity = (bool)reader["is_entity"];
+                        voluntary.IsVoluntary = (bool)reader["is_voluntary"];
+                        voluntary.IsModerator = (bool)reader["is_moderator"];
+                        voluntary.Email = reader["email"].ToString();
+                        voluntary.Password = reader["password"].ToString();
+                    }
+                    reader.Close();
+                    cmd.Parameters.Clear();
+                    
+                    cmd.CommandText = @"SELECT * FROM address WHERE address_id=@Id";
+                    cmd.Parameters.AddWithValue("Id", voluntary.Address.AddressId.ToString());
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        voluntary.Address.CEP = reader["cep"].ToString();
+                        voluntary.Address.Avenue = reader["avenue"].ToString();
+                        voluntary.Address.Number = reader["number"].ToString();
+                        voluntary.Address.Neighborhood = reader["neighborhood"].ToString();
+                        voluntary.Address.City = reader["city"].ToString();
+                        voluntary.Address.State = reader["state"].ToString();
+                    }
+                    reader.Close();
+                    cmd.Parameters.Clear();
+                    
+                    cmd.CommandText = @"SELECT * FROM affinity af join voluntary_affinity av on af.affinity_id = av.affinity_id join voluntary vo on vo.voluntary_id = av.voluntary_id WHERE av.voluntary_id = @Id";
+                    cmd.Parameters.AddWithValue("Id", voluntary.VoluntaryId.ToString());
+                    reader = cmd.ExecuteReader();
+                    voluntary.Affinities = new List<Affinity>();
+                    while (reader.Read())
+                    {
+                        voluntary.Affinities.Add(new Affinity()
+                        {
+                            AffinityId = Guid.Parse(reader["voluntary_id"].ToString()),
+                            Name = reader["name"].ToString()
+                        });
+                    }
+                    volunteers.Add(voluntary);
                 }
             }
 

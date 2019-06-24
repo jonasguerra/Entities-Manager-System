@@ -57,7 +57,6 @@ namespace EntitiesManagerSystem.Models
         [Required(ErrorMessage = "{0} deve ser informado")]
         public string ReferencePoint{ get; set; }
         
-        
         public Event()
         {
             

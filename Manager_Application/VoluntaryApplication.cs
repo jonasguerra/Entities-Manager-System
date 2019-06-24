@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using Manager_Application.Adapter;
 using Manager_Application.DTO;
-using Manager_Domain.Entities;
 using Manager_Domain.Interfaces;
+using Manager_Domain.Entities;
 
 namespace Manager_Application
 {
@@ -19,7 +19,7 @@ namespace Manager_Application
         public Guid Insert(VoluntaryDTO voluntaryDto)
         {
             Console.WriteLine("POST APPLICATION");
-            
+
             var voluntary = VoluntaryAdapter.ToDomain(voluntaryDto);
 
             return voluntaryRepository.Insert(voluntary);
@@ -28,7 +28,7 @@ namespace Manager_Application
         public Guid Update(VoluntaryDTO voluntaryDto)
         {
             Console.WriteLine("PUT APPLICATION");
-            
+
             var voluntary = VoluntaryAdapter.ToDomain(voluntaryDto);
 
             return voluntaryRepository.Update(voluntary);
@@ -43,7 +43,7 @@ namespace Manager_Application
         public VoluntaryDTO Get(Guid id)
         {
             Console.WriteLine("GET ONE APPLICATION");
-            
+
             var voluntary = voluntaryRepository.Find(id);
 
             return VoluntaryAdapter.ToDTO(voluntary);
@@ -52,12 +52,12 @@ namespace Manager_Application
         public List<VoluntaryDTO> GetAll()
         {
             Console.WriteLine("GET ALL APPLICATION");
-            
+
             List<VoluntaryDTO> voluntarysDto = new List<VoluntaryDTO>();
             var voluntarys = voluntaryRepository.FindAll();
 
 
-            foreach(Voluntary cli in voluntarys)
+            foreach (Voluntary cli in voluntarys)
             {
                 voluntarysDto.Add(VoluntaryAdapter.ToDTO(cli));
             }

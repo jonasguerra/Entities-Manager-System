@@ -29,45 +29,118 @@ namespace Manager_API.Controllers
             entityApplication = new EntityApplication(entityRepository);
         }
 
+        
+ 
         public HttpResponseMessage Get()
         {
-            List<Entity> entities = new List<Entity>();
+            List<EntityDTO> entitiesDTO = new List<EntityDTO>();
             try
             {
-                Entity entity = new Entity()
-                {
-                    EntityName = "",
-                    EntityCity = "",
-                    EntityEmail = "",
-                    EntityNumber = "",
-                    EntityAvenue = "",
-                    Id = Guid.NewGuid()
-                    //falta algumas propriedades para preencher
-                };
-                entities.Add(entity);
-                return Request.CreateResponse(HttpStatusCode.OK,entities);
+                entitiesDTO = entityApplication.GetAll();
+                //Este metodo retorna uma listagem de entidades
+                return Request.CreateResponse(HttpStatusCode.OK, entitiesDTO);    
+                    
             }
             catch (Exception ex)
             {
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
+
 
         public HttpResponseMessage Get(Guid id)
         {
-
             try
             {
                 EntityDTO entityDto = Find(id);
+                
                 if (entityDto == null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, "Voluntário não encontrado");
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Entidade não encontrada");
+                }else{
+                    return Request.CreateResponse(HttpStatusCode.OK, entityDto);
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+
+            }
+            
+        }
+
+
+
+        public HttpResponseMessage Post([FromBody] Entity entity)
+        {
+            try
+            {
+                //Neste local faria a inclusao da entidade no repositorio
+                //Antes de fazer a inclusão a entidade seria consistido
+                //Se a entidade for inserida é de responsabilidade da API retornar o código da entidade gerada no processo de inclusão
+
+                Guid id = Insert(entity);
+                return Request.CreateResponse(HttpStatusCode.OK, id);
+            }
+            catch (ApplicationException ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+
+
+
+        public HttpResponseMessage Put(Guid id, [FromBody] Entity entity)
+        {
+            try
+            {
+               
+                EntityDTO entityDto= Find(id);
+                if (entityDto == null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Entidade não encontrada");
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, entityDto);
+                    Alter(entity);
+                    return Request.CreateResponse(HttpStatusCode.OK, id);
                 }
+            }
+            catch (ApplicationException ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+        
 
+        public HttpResponseMessage Delete(Guid id)
+        {
+            try
+            {
+               
+               EntityDTO entityDto= Find(id);
+                if (entityDto == null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Entidade não encontrada");
+                }
+                else
+                {
+                    Remove(id);
+                    return Request.CreateResponse(HttpStatusCode.OK, id);
+                }
+            }
+            catch (ApplicationException ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
             catch (Exception ex)
             {
@@ -76,52 +149,81 @@ namespace Manager_API.Controllers
         }
         
         
+        private void Alter(Entity entity)
+        {
+            EntityDTO entityDto = new EntityDTO()
+            {
+                Id = entity.Id,
+                EntityName = entity.EntityName,
+                EntityAffinity = entity.EntityAffinity,
+                EntityAvenue = entity.EntityAvenue,
+                EntityCity = entity.EntityCity,
+                EntityDescription = entity.EntityDescription,
+                EntityEmail = entity.EntityEmail,
+                EntityNeighborhood = entity.EntityNeighborhood,
+                EntityInitials =  entity.EntityInitials,
+                EntityNumber = entity.EntityNumber,
+                EntityPhone = entity.EntityPhone,
+                EntityPassword = entity.EntityPassword,
+                EntityState = entity.EntityState,
+                EntityCreationDate = entity.EntityCreationDate,
+                EntityConfirmPassword = entity.EntityConfirmPassword,
+                EntityReferencePoint = entity.EntityReferencePoint,
+                EntityWebSite = entity.EntityWebSite,
+                EntityResponsableName = entity.EntityResponsableName,
+                EntitySocialNetwork = entity.EntitySocialNetwork,
+                EntityCEP = entity.EntityCEP,
+                EntityPhotoImageName = entity.EntityPhotoImageName
+
+            };
+            entityApplication.Update(entityDto);
+        }
+
+        
+        private Guid Insert(Entity entity)
+        {
+            //return Guid.NewGuid();
+            //executa o mapeamento
+            EntityDTO entityDTO = new EntityDTO()
+            {
+                Id = entity.Id,
+                EntityName = entity.EntityName,
+                EntityAffinity = entity.EntityAffinity,
+                EntityAvenue = entity.EntityAvenue,
+                EntityCity = entity.EntityCity,
+                EntityDescription = entity.EntityDescription,
+                EntityEmail = entity.EntityEmail,
+                EntityNeighborhood = entity.EntityNeighborhood,
+                EntityInitials =  entity.EntityInitials,
+                EntityNumber = entity.EntityNumber,
+                EntityPhone = entity.EntityPhone,
+                EntityPassword = entity.EntityPassword,
+                EntityState = entity.EntityState,
+                EntityCreationDate = entity.EntityCreationDate,
+                EntityConfirmPassword = entity.EntityConfirmPassword,
+                EntityReferencePoint = entity.EntityReferencePoint,
+                EntityWebSite = entity.EntityWebSite,
+                EntityResponsableName = entity.EntityResponsableName,
+                EntitySocialNetwork = entity.EntitySocialNetwork,
+                EntityCEP = entity.EntityCEP,
+                EntityPhotoImageName = entity.EntityPhotoImageName
+            };
+           
+            return entityApplication.Insert(entityDTO);
+        }
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+       
+
         
         private EntityDTO Find(Guid id)
         {
             return entityApplication.Get(id);
         }
+        private void Remove(Guid id)
+        {
+            entityApplication.Delete(id);
+        }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
     }
 }

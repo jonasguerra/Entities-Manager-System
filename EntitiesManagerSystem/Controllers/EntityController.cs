@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using EntitiesManagerSystem.Consumers_API;
 using EntitiesManagerSystem.Models;
+using Newtonsoft.Json;
 
 namespace EntitiesManagerSystem.Controllers
 {
@@ -60,7 +61,6 @@ namespace EntitiesManagerSystem.Controllers
             return View();
         }
         
-        
         //###################
         //### POST METHOD ###
         //###################
@@ -70,11 +70,26 @@ namespace EntitiesManagerSystem.Controllers
         {
             if (ModelState.IsValid)
             {
+                dynamic json_affinity = JsonConvert.DeserializeObject(event_from.Affinity);
+                event_from.Affinities = new List<Affinity>();
+                foreach (var affinity in json_affinity)
+                {
+                    event_from.Affinities.Add(new Affinity()
+                    {
+                        AffinityId = Guid.Parse(affinity["value"].ToString()),
+                        Name = affinity["text"]
+                    });
+                }
+
+                var id = clientHttp.Post<Event>(@"Event/", event_from);
+                
                 return RedirectToAction("Index");
             }
             
             ViewBag.user = "entity";
             ViewBag.register_event = "active";
+            var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
+            ViewBag.affinities = affinities;
             return View("RegisterEvent",event_from);
         }
     }

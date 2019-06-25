@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Entities\Event.cs" />
     <Compile Include="Interfaces\IDonationRepository.cs" />
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Affinity.cs" />
@@ -41,6 +42,7 @@
     <Compile Include="Entities\Voluntary.cs" />
     <Compile Include="Interfaces\IAffinityRepository.cs" />
     <Compile Include="Interfaces\IEntityRepository.cs" />
+    <Compile Include="Interfaces\IEventRepository.cs" />
     <Compile Include="Interfaces\IVoluntaryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

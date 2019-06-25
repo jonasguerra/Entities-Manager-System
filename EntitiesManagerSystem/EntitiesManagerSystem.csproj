@@ -145,10 +145,12 @@
     <Content Include="Content\main.css" />
     <Content Include="Content\pagination.css" />
     <Content Include="Content\pnotify.custom.min.css" />
+    <Content Include="Content\table.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\donations_entity.js" />
+    <Content Include="Scripts\event.js" />
     <Content Include="Scripts\input_file.js" />
     <Content Include="Scripts\jquery.autocomplete-address.min.js" />
     <Content Include="Scripts\jquery.mask.min.js" />
@@ -353,7 +355,7 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Voluntary\RegisterDonate.cshtml" />
-    <Content Include="Views\Voluntary\Event.cshtml" />
+    <Content Include="Views\Voluntary\Events.cshtml" />
     <Content Include="Views\Voluntary\Index.cshtml" />
     <Content Include="Views\Voluntary\RegisterVoluntary.cshtml" />
     <Content Include="Web.config" />

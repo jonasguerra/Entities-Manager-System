@@ -38,6 +38,7 @@
         <e p="Models" t="Include">
           <e p="Address.cs" t="Include" />
           <e p="Affinity.cs" t="Include" />
+          <e p="Entity.cs" t="Include" />
           <e p="LoginForm.cs" t="Include" />
           <e p="Moderator.cs" t="Include" />
           <e p="User.cs" t="Include" />
@@ -454,6 +455,7 @@
           <e p="main.css" t="Include" />
           <e p="pagination.css" t="Include" />
           <e p="pnotify.custom.min.css" t="Include" />
+          <e p="table.css" t="Include" />
         </e>
         <e p="Controllers" t="Include">
           <e p="EntityController.cs" t="Include" />
@@ -487,6 +489,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="donations_entity.js" t="Include" />
+          <e p="event.js" t="Include" />
           <e p="input_file.js" t="Include" />
           <e p="jquery.autocomplete-address.min.js" t="Include" />
           <e p="jquery.mask.min.js" t="Include" />
@@ -862,7 +865,7 @@
             <e p="_Layout.cshtml" t="Include" />
           </e>
           <e p="Voluntary" t="Include">
-            <e p="Event.cshtml" t="Include" />
+            <e p="Events.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="RegisterDonate.cshtml" t="Include" />
             <e p="RegisterVoluntary.cshtml" t="Include" />
@@ -889,6 +892,7 @@
         <e p="Adapter" t="Include">
           <e p="AffinityAdapter.cs" t="Include" />
           <e p="EntityAdapter.cs" t="Include" />
+          <e p="EventAdapter.cs" t="Include" />
           <e p="VoluntaryAdapter.cs" t="Include" />
         </e>
         <e p="AffinityAplication.cs" t="Include" />
@@ -896,10 +900,12 @@
           <e p="AddressDTO.cs" t="Include" />
           <e p="AffinityDTO.cs" t="Include" />
           <e p="EntityDTO.cs" t="Include" />
+          <e p="EventDTO.cs" t="Include" />
           <e p="UserDTO.cs" t="Include" />
           <e p="VoluntaryDTO.cs" t="Include" />
         </e>
         <e p="EntityApplication.cs" t="Include" />
+        <e p="EventApplication.cs" t="Include" />
         <e p="Manager_Application.csproj" t="IncludeRecursive" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
@@ -912,13 +918,17 @@
         <e p="Entities" t="Include">
           <e p="Address.cs" t="Include" />
           <e p="Affinity.cs" t="Include" />
+          <e p="Donation.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
+          <e p="Event.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
           <e p="IAffinityRepository.cs" t="Include" />
+          <e p="IDonationRepository.cs" t="Include" />
           <e p="IEntityRepository.cs" t="Include" />
+          <e p="IEventRepository.cs" t="Include" />
           <e p="IVoluntaryRepository.cs" t="Include" />
         </e>
         <e p="Manager_Domain.csproj" t="IncludeRecursive" />
@@ -930,7 +940,9 @@
       </e>
       <e p="Manager_Repository" t="IncludeRecursive">
         <e p="AffinityRepository.cs" t="Include" />
+        <e p="DonationRepository.cs" t="Include" />
         <e p="EntityRepository.cs" t="Include" />
+        <e p="EventRepository.cs" t="Include" />
         <e p="Manager_Repository.csproj" t="IncludeRecursive" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
@@ -1034,6 +1046,7 @@
         <e p="Controllers" t="Include">
           <e p="AffinityController.cs" t="Include" />
           <e p="EntityController.cs" t="Include" />
+          <e p="EventController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
           <e p="VoluntaryController.cs" t="Include" />

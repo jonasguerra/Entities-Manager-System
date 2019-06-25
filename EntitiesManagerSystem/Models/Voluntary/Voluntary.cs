@@ -21,14 +21,14 @@ namespace EntitiesManagerSystem.Models.Voluntary
         [StringLength(20, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string Phone { get; set; }
 
-        public string Affinity { get; set; }
-
         [Display(Name = "Redes Sociais")] 
         public string SocialNetwork { get; set; }
 
         [Display(Name = "Imagem")] 
         public string PhotoImageName { get; set; }
 
+        public string Affinity { get; set; }
+        
         public List<Affinity> Affinities { get; set; }
         
         public Voluntary()

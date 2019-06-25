@@ -77,6 +77,52 @@ namespace AdminManagerSystem.Controllers
 //            return Json(new {status="success", message_title="Afinidade aprovada com sucesso"});
 //        }
         
+
+
+
+   
+        [HttpPost]
+        public ActionResult TrashEntity(Guid id)
+        {
+         
+            var response = clientHttp.Delete<List<Entity>>(@"Entity/", id);
+
+            if ("200" == response.ToString())
+            {
+                return Json(new {status="success", message_title="Entidade excluida com sucesso"});
+            }
+
+            return Json(new {status = "error", message_title = "Erro ao excluir a entidade"});
+        }
+
+        public ActionResult ShowMoreEntity(Guid id)
+        {
+            var entity = clientHttp.Get<Entity>(string.Format(@"Entity/{0}", id.ToString()));
+            return Json(new {status="success", entity=entity});
+        }
+        [HttpPost]
+        public ActionResult ApproveEntity(Guid id)
+        {
+            Entity entity = (Entity)clientHttp.Get<Entity>(string.Format(@"Entity/{0}", id.ToString()));
+
+            if (entity != null)
+            {
+                entity.IsApproved = true;
+                
+                var entity_id = clientHttp.Put<Entity>(@"Entity/", id, entity);
+                
+                return Json(new {status="success", message_title="Entidade aprovada com sucesso"});
+            }
+
+            return Json(new {status = "error", message_title = "Erro ao aprovar entidade"});
+            
+        }
+        
+        
+        
+        
+        
+
         //######### AJAX VOLUNTARY ##########
         
         [HttpPost]
@@ -94,9 +140,10 @@ namespace AdminManagerSystem.Controllers
         }
         
         [HttpPost]
-        public ActionResult ShowMoreVoluntary()
+        public ActionResult ShowMoreVoluntary(Guid id)
         {
-            return Json(new {status="success"});
+            var voluntary = clientHttp.Get<Voluntary>(string.Format(@"Voluntary/{0}", id.ToString()));
+            return Json(new {status="success", voluntary=voluntary});
         }
         
         [HttpPost]

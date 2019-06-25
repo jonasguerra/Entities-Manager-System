@@ -130,6 +130,7 @@
     </Compile>
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Affinity.cs" />
+    <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\LoginForm.cs" />
     <Compile Include="Models\Moderator.cs" />
     <Compile Include="Models\User.cs" />

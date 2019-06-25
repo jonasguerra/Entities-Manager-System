@@ -39,7 +39,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AffinityRepository.cs" />
+    <Compile Include="DonationRepository.cs" />
     <Compile Include="EntityRepository.cs" />
+    <Compile Include="EventRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VoluntaryRepository.cs" />
   </ItemGroup>

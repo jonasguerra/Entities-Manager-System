@@ -14,7 +14,7 @@ namespace EntitiesManagerSystem.Models
 
         [Display(Name = "Rua")]
         [Required(ErrorMessage = "{0} deve ser informada")]
-        [StringLength(40, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
+        [StringLength(40, MinimumLength = 3, ErrorMessage = "Minimo 8 caracteres")]
         public string Avenue { get; set; }
 
         [Display(Name = "Número")]
@@ -24,7 +24,7 @@ namespace EntitiesManagerSystem.Models
 
         [Display(Name = "Bairro")]
         [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(40, MinimumLength = 6, ErrorMessage = "Minimo {2} caracteres")]
+        [StringLength(40, MinimumLength = 3, ErrorMessage = "Minimo {2} caracteres")]
         public string Neighborhood { get; set; }
 
         [Display(Name = "Cidade")]

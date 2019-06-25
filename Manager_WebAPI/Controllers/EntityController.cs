@@ -213,9 +213,7 @@ namespace Manager_API.Controllers
         }
         
         
-       
 
-        
         private EntityDTO Find(Guid id)
         {
             return entityApplication.Get(id);

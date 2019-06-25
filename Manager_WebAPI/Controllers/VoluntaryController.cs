@@ -137,8 +137,11 @@ namespace Manager_API.Controllers
                 }
                 else
                 {
-                    Remove(id);
-                    return Request.CreateResponse(HttpStatusCode.OK, id);
+                    bool removed = Remove(id);
+                    if (removed)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, id);
+                    }
                 }
             }
             catch (ApplicationException ex)
@@ -149,6 +152,7 @@ namespace Manager_API.Controllers
             {
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Erro ao excluir voluntário");
         }
 
         private Guid Insert(Voluntary voluntary)
@@ -237,10 +241,10 @@ namespace Manager_API.Controllers
             Console.WriteLine("PUT METHOD CONTROLLER");
         }
 
-        private void Remove(Guid id)
+        private bool Remove(Guid id)
         {
             Console.WriteLine("DELETE METHOD CONTROLLER");
-            voluntaryApplication.Delete(id);
+            return voluntaryApplication.Delete(id);
         }
 
         private VoluntaryDTO Find(Guid id)

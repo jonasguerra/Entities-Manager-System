@@ -1,0 +1,126 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "event";
+}
+
+<input id="show_more_event" type="hidden" value="@Url.Action("ShowMoreEvent", "Voluntary")"/>
+
+<div class="element-wrapper col-8 mx-auto">
+    <h6 class="element-header">Eventos</h6>
+    <div class="element-box">
+        <h5 class="form-header">Eventos de acordo com suas afinidades</h5>
+        
+        <table class="table table-striped table-actions event-table" style="width:100%">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Afinidades</th>
+                <th scope="col">Data</th>
+                <th scope="col" class="head-actions text-right">Ações</th>
+            </tr>
+            </thead>
+            <tbody id="tbody_affinity_event">
+            <tr data-event-id="1">
+                <td></td>
+                <td class="name">Nome evento</td>
+                <td class="name">Afinidades</td>
+                <td class="name">25/05/2019</td>
+                <td class="actions text-right">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="participate" data-placement="top" data-toggle="tooltip" data-original-title="Participar">
+                        <i class="os-icon os-icon-tasks-checked"></i>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="element-box">
+        <h5 class="form-header">Últimos eventos</h5>
+        
+        <table class="table table-striped table-actions event-table" style="width:100%">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Afinidades</th>
+                <th scope="col">Data</th>
+                <th scope="col" class="head-actions text-right">Ações</th>
+            </tr>
+            </thead>
+            <tbody id="tbody_all_event">
+            <tr data-event-id="1">
+                <td></td>
+                <td class="name">Nome evento</td>
+                <th scope="col">Afinidades</th>
+                <td class="name">25/05/2019</td>
+                <td class="actions text-right">
+                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                        <i class="os-icon os-icon-search"></i>
+                    </a>
+                    <a href="javascript:;" class="participate" data-placement="top" data-toggle="tooltip" data-original-title="Participar">
+                        <i class="os-icon os-icon-tasks-checked"></i>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    @* Modal show event *@
+    <div aria-hidden="true" aria-labelledby="myLargeModalLabel" class="modal fade show-event-modal" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title title" id="exampleModalLabel"></h5>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">
+                            &times;
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body modal-body-voluntary">
+                    
+                    <input type="hidden" class="event-id" value=""/>
+                    
+                    <div class="bloc-info">
+                        <div>Descrição: <div class="description"></div></div>
+                        <div>Affinidades: <div class="affinities"></div></div>
+                        <div>Data: <div class="date"></div></div>
+                    </div>
+                    
+                    <legend>
+                        <span></span>
+                    </legend>
+                    
+                    <div class="bloc-info">
+                        <div>CEP: <div class="cep"></div></div>
+                        <div>Rua: <div class="avenue"></div></div>
+                        <div>Número: <div class="number"></div></div>
+                        <div>Bairro: <div class="neighborhood"></div></div>
+                        <div>Cidade: <div class="city"></div></div>
+                        <div>Ponto de referência: <div class="reference-point"></div></div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button">
+                        Sair
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* End Modal show event *@
+    
+</div>
+
+@section scripts {
+    @Scripts.Render("~/Scripts/event.js")
+}

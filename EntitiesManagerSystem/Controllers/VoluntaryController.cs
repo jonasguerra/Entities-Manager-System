@@ -26,7 +26,7 @@ namespace EntitiesManagerSystem.Controllers
             
             return View();
         }
-        public ActionResult Event()
+        public ActionResult Events()
         {
             ViewBag.user = "voluntary";
             ViewBag.events = "active";
@@ -92,6 +92,20 @@ namespace EntitiesManagerSystem.Controllers
             var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
             ViewBag.affinities = affinities;
             return View("RegisterVoluntary", voluntary);
+        }
+        
+        
+        [HttpPost]
+        public ActionResult ShowMoreEvent()
+        {
+            Event show_event = new Event()
+            {
+                EventId = new Guid(),
+                Title = "Evento",
+                Description = "Nam sed quam vitae augue viverra convallis. Aliquam at ultricies tortor, eu tempor arcu. Pellentesque tincidunt ante nec mattis sagittis. Donec sollicitudin tortor vel felis consectetur dictum.",
+            };
+
+            return Json(new {status="success", show_event=show_event});
         }
     }
 }

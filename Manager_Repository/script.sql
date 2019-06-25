@@ -28,7 +28,6 @@ CREATE TABLE public.voluntary
     name character varying(300) NOT NULL,
     phone character varying(300) NOT NULL,
     socialnetwork character varying(300),
-    photoimagename character varying(300),
     
 	user_id character varying(36) NOT NULL UNIQUE,
 	address_id character varying(36) NOT NULL UNIQUE,

@@ -100,7 +100,7 @@ namespace EntitiesManagerSystem.Controllers
         {
             Event show_event = new Event()
             {
-                Id = new Guid(),
+                EventId = new Guid(),
                 Title = "Evento",
                 Description = "Nam sed quam vitae augue viverra convallis. Aliquam at ultricies tortor, eu tempor arcu. Pellentesque tincidunt ante nec mattis sagittis. Donec sollicitudin tortor vel felis consectetur dictum.",
             };

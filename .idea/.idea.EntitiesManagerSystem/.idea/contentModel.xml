@@ -915,12 +915,14 @@
         <e p="Entities" t="Include">
           <e p="Address.cs" t="Include" />
           <e p="Affinity.cs" t="Include" />
+          <e p="Donation.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
           <e p="IAffinityRepository.cs" t="Include" />
+          <e p="IDonationRepository.cs" t="Include" />
           <e p="IEntityRepository.cs" t="Include" />
           <e p="IVoluntaryRepository.cs" t="Include" />
         </e>
@@ -933,6 +935,7 @@
       </e>
       <e p="Manager_Repository" t="IncludeRecursive">
         <e p="AffinityRepository.cs" t="Include" />
+        <e p="DonationRepository.cs" t="Include" />
         <e p="EntityRepository.cs" t="Include" />
         <e p="Manager_Repository.csproj" t="IncludeRecursive" />
         <e p="Properties" t="Include">

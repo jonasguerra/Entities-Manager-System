@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Manager_Application.Adapter;
 using Manager_Application.DTO;
+using Manager_Domain.Entities;
 using Manager_Domain.Interfaces;
 
 namespace Manager_Application

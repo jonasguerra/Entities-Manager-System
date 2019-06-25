@@ -5,7 +5,6 @@ namespace Manager_Domain.Entities
     public class User
     {
         public Guid UserId { get; set; }
-        
         public bool IsEntity { get; set; }
         public bool IsVoluntary { get; set; }
         public bool IsModerator { get; set; }

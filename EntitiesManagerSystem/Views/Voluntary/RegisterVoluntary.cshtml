@@ -179,18 +179,6 @@
                         }
                     </select>
                 </div>
-@*                 <div class="form-group"> *@
-@*                     <label path="photo">Foto</label> *@
-@*                     <div class="attachment attachment--image"> *@
-@*                         <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.gif"/> *@
-@*                         <div class="attachment--label"> *@
-@*                             <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span> *@
-@*                             <span class="file-name"></span> *@
-@*                             <span class="attachment--remove">Remover</span> *@
-@*                         </div> *@
-@*                         <div class="attachment--error"></div> *@
-@*                     </div> *@
-@*                 </div> *@
                 @Html.TextBoxFor(m => m.Affinity, new {@id="affinities_array", @type="hidden", @class = "form-control"})
                 <div class="buttons-w">
                     <button class="btn btn-primary">Cadastrar</button>
@@ -210,6 +198,9 @@
 <script>
 
 $(document).ready(function() {
+    
+  //Quando o form retorna com algum erro, este método verifica se existe valor no input affinity, 
+  //e seleciona os valores correspondentes no select2 
   if($('#affinities_array').val()){
       let affinities = JSON.parse($('#affinities_array').val());
       let values_select = [];
@@ -220,7 +211,8 @@ $(document).ready(function() {
   }
 })
 
-
+//Sempre que ocorre um evento no select2, selecionando ou deselecionando uma afinidade,
+//este método captura o evento e salva uma string no input affinity com os valores do select2
 $("#multiple_select_affinity").on("select2:select select2:unselect", function (e) {
     let values_selected = $(this).select2('data');
     let values_input = [];

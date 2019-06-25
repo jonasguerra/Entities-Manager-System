@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using EntitiesManagerSystem.Consumers_API;
 using EntitiesManagerSystem.Models;
 
 namespace EntitiesManagerSystem.Controllers
 {
     public class EntityController : Controller
     {
+        
+        private APIHttpClient clientHttp;   
+        public EntityController()
+        {
+            clientHttp = new APIHttpClient("http://localhost:5002/api/");
+        }
+        
         public ActionResult Index()
         {
 
@@ -21,6 +29,10 @@ namespace EntitiesManagerSystem.Controllers
 
             ViewBag.user = "entity";
             ViewBag.register_event = "active";
+            
+            var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
+
+            ViewBag.affinities = affinities;
             
             return View();
         }
@@ -60,7 +72,6 @@ namespace EntitiesManagerSystem.Controllers
             {
                 return RedirectToAction("Index");
             }
-            
             
             ViewBag.user = "entity";
             ViewBag.register_event = "active";

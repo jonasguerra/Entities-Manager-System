@@ -32,8 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IDonationRepository.cs" />
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Affinity.cs" />
+    <Compile Include="Entities\Donation.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\Voluntary.cs" />

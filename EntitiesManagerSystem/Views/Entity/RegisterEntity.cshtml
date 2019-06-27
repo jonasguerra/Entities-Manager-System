@@ -42,7 +42,7 @@ Layout = null;
                     <img alt="" src="~/Template/img/ong.png">
                 </div>
                 <h4 class="auth-header">Nova Entidade</h4>
-                @using (Html.BeginForm("RegisterEntity", "Entity", FormMethod.Post))
+                @using (Html.BeginForm("SaveEntity", "Entity", FormMethod.Post))
                 {
                 <legend>
                     <span>Dados Cadastrais</span>
@@ -54,9 +54,9 @@ Layout = null;
                         @Html.ValidationMessageFor(m => m.EntityName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
                     <div class="form-group col-sm-6">
-                        <label> @Html.LabelFor(m => m.EntityEmail)</label>
-                        @Html.TextBoxFor(m => m.EntityEmail, new {@class = "form-control"})
-                        @Html.ValidationMessageFor(m => m.EntityEmail, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        <label> @Html.LabelFor(m => m.Email)</label>
+                        @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.Email, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
 
                 </div>
@@ -78,17 +78,17 @@ Layout = null;
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label> @Html.LabelFor(m => m.EntityPassword)</label>
-                            @Html.TextBoxFor(m => m.EntityPassword, new {@class = "form-control", @type="password"})
-                            @Html.ValidationMessageFor(m => m.EntityPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label> @Html.LabelFor(m => m.Password)</label>
+                            @Html.TextBoxFor(m => m.Password, new {@class = "form-control", @type="password"})
+                            @Html.ValidationMessageFor(m => m.Password, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label> @Html.LabelFor(m => m.EntityConfirmPassword)</label>
-                            @Html.TextBoxFor(m => m.EntityConfirmPassword, new {@class = "form-control",
+                            <label> @Html.LabelFor(m => m.ConfirmPassword)</label>
+                            @Html.TextBoxFor(m => m.ConfirmPassword, new {@class = "form-control",
                             @type="password"})
-                            @Html.ValidationMessageFor(m => m.EntityConfirmPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                 </div>
@@ -97,39 +97,39 @@ Layout = null;
                 </legend>
                 <div class="row">
                     <div class="form-group col-sm-2">
-                        <label>@Html.LabelFor(m => m.EntityCEP)</label>
-                        @Html.TextBoxFor(m => m.EntityCEP, new {@id = "cep", @class = "mask_cep form-control"})
-                        @Html.ValidationMessageFor(m => m.EntityCEP, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        <label>@Html.LabelFor(m => m.Address.CEP)</label>
+                        @Html.TextBoxFor(m => m.Address.CEP, new {@id = "cep", @class = "mask_cep form-control"})
+                        @Html.ValidationMessageFor(m => m.Address.CEP, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
                     <div class="form-group col-sm-8">
-                        <label>@Html.LabelFor(m => m.EntityAvenue)</label>
-                        @Html.TextBoxFor(m => m.EntityAvenue, new {name = "address", @class = "autocomplete-address form-control"})
-                        @Html.ValidationMessageFor(m => m.EntityAvenue, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        <label>@Html.LabelFor(m => m.Address.Avenue)</label>
+                        @Html.TextBoxFor(m => m.Address.Avenue, new {name = "address", @class = "autocomplete-address form-control"})
+                        @Html.ValidationMessageFor(m => m.Address.Avenue, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
                     <div class="form-group col-sm-2">
-                        <label>@Html.LabelFor(m => m.EntityNumber)</label>
-                        @Html.TextBoxFor(m => m.EntityNumber, new {name = "street_number", @class = "autocomplete-address form-control"})
-                        @Html.ValidationMessageFor(m => m.EntityNumber, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        <label>@Html.LabelFor(m => m.Address.Number)</label>
+                        @Html.TextBoxFor(m => m.Address.Number, new {name = "street_number", @class = "autocomplete-address form-control"})
+                        @Html.ValidationMessageFor(m => m.Address.Number, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-sm-5">
-                        <label>@Html.LabelFor(m => m.EntityNeighborhood)</label>
-                        @Html.TextBoxFor(m => m.EntityNeighborhood, new {name = "neighborhood", @class =
+                        <label>@Html.LabelFor(m => m.Address.Neighborhood)</label>
+                        @Html.TextBoxFor(m => m.Address.Neighborhood, new {name = "neighborhood", @class =
                         "autocomplete-neighborhood form-control"})
-                        @Html.ValidationMessageFor(m => m.EntityNeighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        @Html.ValidationMessageFor(m => m.Address.Neighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
-                            <label>@Html.LabelFor(m => m.EntityCity)</label>
-                            @Html.TextBoxFor(m => m.EntityCity, new {name = "city", @class = "autocomplete-city form-control"})
-                            @Html.ValidationMessageFor(m => m.EntityCity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                            <label>@Html.LabelFor(m => m.Address.City)</label>
+                            @Html.TextBoxFor(m => m.Address.City, new {name = "city", @class = "autocomplete-city form-control"})
+                            @Html.ValidationMessageFor(m => m.Address.City, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="form-group">
-                            <label>@Html.LabelFor(m => m.EntityState)</label>
-                            @Html.DropDownListFor(model => model.EntityState, new SelectList(
+                            <label>@Html.LabelFor(m => m.Address.State)</label>
+                            @Html.DropDownListFor(model => model.Address.State, new SelectList(
                             new List<Object>
                                 {
                                 new {value = "AC", text = "AC"},
@@ -163,43 +163,23 @@ Layout = null;
                                 "value",
                                 "text",
                                 "RS"), new {@class = "autocomplete-state form-control"})
-                                @Html.ValidationMessageFor(m => m.EntityState, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                                @Html.ValidationMessageFor(m => m.Address.State, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                         </div>
                     </div>
 
                 </div>
-                <div class="form-group">
-                    <label>@Html.LabelFor(m => m.EntityReferencePoint)</label>
-                    @Html.TextBoxFor(m => m.EntityReferencePoint, new {@class = "form-control"})
-                    @Html.ValidationMessageFor(m => m.EntityReferencePoint, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                </div>
-                <legend>
+             <legend>
                     <span>Atuação</span>
                 </legend>
-                <div class="form-group">
-                    <label>@Html.LabelFor(m => m.EntityAffinity)</label>
-                    @Html.DropDownListFor(model => model.EntityAffinity, new SelectList(
-                    new List<Object>
-                        {
-                        new {value = "Infantil", text = "Infantil"},
-                        new {value = "Pets", text = "Pets"},
-                        new {value = "Idosos", text = "Idosos"},
-                        new {value = "Necessitados", text = "Necessitados"},
-                        new {value = "Meio Ambiente", text = "Meio Ambiente"}
-                        },
-                        "value",
-                        "text"), new {@class = "autocomplete-state form-control select2", multiple = "true"})
-                        @Html.ValidationMessageFor(m => m.EntityAffinity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                </div>
-                <div class="form-group">
-                    <label for=""> Area de Atuação</label>
-                    <select class="form-control select2" multiple="true">
-                        <option selected="true">Rio Grande do Sul</option>
-                        <option>Caxias</option>
-                        <option>Farroupilha</option>
-                        <option>Bento Gonçalves</option>
-                    </select>
-                </div>
+                    <div class="form-group">
+                        <label for=""> Afinidades</label>
+                        <select id="multiple_select_affinity" class="form-control select2" multiple="true">
+                            @foreach (var affinity in ViewBag.affinities)
+                            {
+                                <option value="@affinity.AffinityId">@affinity.Name</option>    
+                            }
+                        </select>
+                    </div>
                 <fieldset class="form-group">
                     <div class="row">
                         <div class="col-sm-6">
@@ -209,16 +189,7 @@ Layout = null;
                                 @Html.ValidationMessageFor(m => m.EntityInitials, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="">
-                                    Data de
-                                    Criação
-                                </label>
-                                <input class="single-daterange form-control" placeholder="Data de Criação" type="text" value="04/12/1978">
-                            </div>
-                        </div>
-
+                        
 
                     </div>
                     <div class="row">
@@ -246,20 +217,7 @@ Layout = null;
                         </div>
                     </div>
                 </fieldset>
-
-                <div class="form-group">
-                    <label path="photo">Foto</label>
-                    <div class="attachment attachment--image">
-                        <input onchange="changePhoto(this)" class="file" type="file" id="photo" name="photo"
-                            accept=".jpg,.jpeg,.png,.gif" required="required" />
-                        <div class="attachment--label">
-                            <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
-                            <span class="file-name"></span>
-                            <span class="attachment--remove">Remover</span>
-                        </div>
-                        <div class="attachment--error"></div>
-                    </div>
-                </div>
+                    @Html.TextBoxFor(m => m.EntityAffinity, new {@id="affinities_array", @type="hidden", @class = "form-control"})
                 <div class="buttons-w">
                     <button class="btn btn-primary">Cadastrar</button>
                 </div>
@@ -276,5 +234,36 @@ Layout = null;
     @Scripts.Render("~/Scripts/input_file.js")
     @Scripts.Render("~/Scripts/main.js")
 </body>
+<script>
+ 
+ $(document).ready(function() {
+     
+   //Quando o form retorna com algum erro, este método verifica se existe valor no input affinity, 
+   //e seleciona os valores correspondentes no select2 
+   if($('#affinities_array').val()){
+       let affinities = JSON.parse($('#affinities_array').val());
+       let values_select = [];
+       affinities.forEach(function(a) {
+           values_select.push(a.value)
+       });
+       $("#multiple_select_affinity").val(values_select).change()
+   }
+ })
+ 
+ //Sempre que ocorre um evento no select2, selecionando ou deselecionando uma afinidade,
+ //este método captura o evento e salva uma string no input affinity com os valores do select2
+ $("#multiple_select_affinity").on("select2:select select2:unselect", function (e) {
+     let values_selected = $(this).select2('data');
+     let values_input = [];
+     values_selected.forEach(function(value) {
+         values_input.push({
+             'value':value.id,
+             'text':value.text
+         })
+     });
+     $('#affinities_array').val(JSON.stringify(values_input))
+ })
+ 
+ </script>
 
 </html>

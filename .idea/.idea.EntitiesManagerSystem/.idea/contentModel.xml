@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.1/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.1/system/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_EntitiesManagerSystem.1773474481.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.1/system/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_EntitiesManagerSystem.1349675173.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="0-FrontEnd" t="Include" />
       <e p="1-WebServices" t="Include" />
@@ -39,6 +38,7 @@
         <e p="Models" t="Include">
           <e p="Address.cs" t="Include" />
           <e p="Affinity.cs" t="Include" />
+          <e p="Entity.cs" t="Include" />
           <e p="LoginForm.cs" t="Include" />
           <e p="Moderator.cs" t="Include" />
           <e p="User.cs" t="Include" />
@@ -914,6 +914,7 @@
         <e p="VoluntaryApplication.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="Manager_Domain" t="IncludeRecursive">
         <e p="Entities" t="Include">
@@ -938,6 +939,7 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="Manager_Repository" t="IncludeRecursive">
         <e p="AffinityRepository.cs" t="Include" />

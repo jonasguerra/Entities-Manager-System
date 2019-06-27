@@ -1,12 +1,13 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using Manager_API.Models;
 
 namespace EntitiesManagerSystem.Models
 {
-    public class Entity
+    public class Entity : User
     {
         public Guid Id { get; set; }
-
+        public Address Address { get; set; }
         [Display(Name = "Nome da Entidade")]
         [Required(ErrorMessage = "O {0} deve ser informado.")]
         [StringLength(60, MinimumLength = 5, ErrorMessage = "Minimo {2} caracteres")]
@@ -28,57 +29,7 @@ namespace EntitiesManagerSystem.Models
         [StringLength(11, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityPhone { get; set; }
 
-        [Required]
-        [Display(Name = "Senha")]
-        [StringLength(100, ErrorMessage = "A {0} deve ter pelo menos {2} caracteres.", MinimumLength = 8)]
-        [RegularExpression("^((?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])|(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[^a-zA-Z0-9])|(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[^a-zA-Z0-9])|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^a-zA-Z0-9])).{8,}$", ErrorMessage = "As senhas devem ter pelo menos oito caracteres e conter pelo menos três das seguintes opções: maiúscula (A a Z), minúscula (a-z), número (0 a 9) e caractere especial (por exemplo, @ # $% ^ & *)")]
-        [DataType(DataType.Password)]
-        public string EntityPassword { get; set; }
-        
-        [Display(Name = "Confirme a Senha")]
-        [Compare("EntityPassword", ErrorMessage = "As senhas não coincidem.")]
-        [DataType(DataType.Password)]
-        public string EntityConfirmPassword { get; set; }
-
-        [Display(Name = "CEP")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(8, MinimumLength = 8, ErrorMessage = "CEP deve possuir 8 caracteres")]
-        public string EntityCEP { get; set; }
-        
-        [Display(Name = "Rua")]
-        [Required(ErrorMessage = "{0} deve ser informada")]
-        [StringLength(40, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
-        public string EntityAvenue { get; set; }
-        
-        [Display(Name = "Numero")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(40, MinimumLength = 1, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityNumber { get; set; }
-
-        [Display(Name = "Bairro")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(40, MinimumLength = 6, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityNeighborhood { get; set; }
-        
-        [Display(Name = "Cidade")]
-        [Required(ErrorMessage = "{0} deve ser informada")]
-        [StringLength(40, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityCity { get; set; }
-
-        [Display(Name = "Estado")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(30, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityState { get; set; }
-        
-        [Display(Name = "Ponto de Referencia")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(40, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityReferencePoint { get; set; }
-        
-        [Display(Name = "Afinidade")]
-        [Required(ErrorMessage = "{0} deve ser informada")]
-        public string EntityAffinity { get; set; }
-        
+      
         [Display(Name = "Sigla")]
         [Required(ErrorMessage = "{0} deve ser informada")]
         public string EntityInitials { get; set; }
@@ -96,12 +47,10 @@ namespace EntitiesManagerSystem.Models
         [Display(Name = "Descrição")]
         [Required(ErrorMessage = "{0} deve ser informada")]
         public string EntityDescription { get; set; }
-        
-        [Display(Name = "Imagem da Entidade")]
-        public string EntityPhotoImageName { get; set; }
-
+       
         public Entity()
         {
+          IsEntity = true;
         }
     }
 }

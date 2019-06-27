@@ -3,7 +3,7 @@ using Manager_Domain.Entities;
 
 namespace Manager_Application.DTO
 {
-    public class EntityDTO
+    public class EntityDTO : UserDTO
     {
         public Guid Id { get; set; }
 
@@ -22,6 +22,9 @@ namespace Manager_Application.DTO
         public string EntityWebSite { get; set; }
         public string EntityDescription { get; set; }
         public string EntityPhotoImageName { get; set; }
-
+        public EntityDTO()
+        {
+            // IsEntity= true; 
+        }
     }
 }

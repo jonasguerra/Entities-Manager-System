@@ -30,9 +30,6 @@ namespace AdminManagerSystem.Models.Voluntary
         [Display(Name = "Redes Sociais")] 
         public string SocialNetwork { get; set; }
 
-        [Display(Name = "Imagem da Entidade")] 
-        public string PhotoImageName { get; set; }
-
         public List<Affinity> Affinities { get; set; }
         
         public Voluntary()

@@ -11,7 +11,6 @@ namespace Manager_Application.DTO
         public string Phone { get; set; }
         public string Affinity { get; set; }
         public string SocialNetwork { get; set; }
-        public string PhotoImageName { get; set; }
         public List<AffinityDTO> Affinities { get; set; }
 
         public VoluntaryDTO()

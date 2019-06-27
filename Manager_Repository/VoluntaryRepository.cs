@@ -90,8 +90,6 @@ namespace Ftec.WebAPI.Infra.Repository
                     voluntary.Name = reader["Name"].ToString();
                     voluntary.Phone = reader["Phone"].ToString();
                     voluntary.SocialNetwork = reader["SocialNetwork"].ToString();
-                    voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
-                    voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
                     voluntary.Address = new Address()
                     {
                         AddressId = Guid.Parse(reader["address_id"].ToString())
@@ -188,8 +186,6 @@ namespace Ftec.WebAPI.Infra.Repository
                         voluntary.Name = reader["Name"].ToString();
                         voluntary.Phone = reader["Phone"].ToString();
                         voluntary.SocialNetwork = reader["SocialNetwork"].ToString();
-                        voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
-                        voluntary.PhotoImageName = reader["PhotoImageName"].ToString();
                         voluntary.Address = new Address()
                         {
                             AddressId = Guid.Parse(reader["address_id"].ToString())
@@ -271,7 +267,6 @@ namespace Ftec.WebAPI.Infra.Repository
                     voluntary.Name = reader["name"].ToString();
                     voluntary.Phone = reader["phone"].ToString();
                     voluntary.SocialNetwork = reader["socialnetwork"].ToString();
-                    voluntary.PhotoImageName = reader["photoImageName"].ToString();
                     voluntary.Address = new Address()
                     {
                         AddressId = Guid.Parse(reader["address_id"].ToString())
@@ -345,7 +340,6 @@ namespace Ftec.WebAPI.Infra.Repository
                 {
                     try
                     {
-                        voluntary.PhotoImageName = "/photo";
                         voluntary.VoluntaryId = Guid.NewGuid();
                         voluntary.UserId = Guid.NewGuid();
                         voluntary.Address.AddressId = Guid.NewGuid();
@@ -375,12 +369,11 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.ExecuteNonQuery();
                         
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"INSERT Into voluntary (voluntary_id,name,phone,socialnetwork,photoimagename,user_id,address_id) values (@voluntary_id,@name,@phone,@socialnetwork,@photoimagename,@user_id,@address_id)";
+                        cmd.CommandText = @"INSERT Into voluntary (voluntary_id,name,phone,socialnetwork,user_id,address_id) values (@voluntary_id,@name,@phone,@socialnetwork,@user_id,@address_id)";
                         cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId);
                         cmd.Parameters.AddWithValue("name", voluntary.Name);
                         cmd.Parameters.AddWithValue("phone", voluntary.Phone); 
                         cmd.Parameters.AddWithValue("socialnetwork", voluntary.SocialNetwork);
-                        cmd.Parameters.AddWithValue("photoimagename", voluntary.PhotoImageName);
                         cmd.Parameters.AddWithValue("user_id", voluntary.UserId);
                         cmd.Parameters.AddWithValue("address_id", voluntary.Address.AddressId);
                         cmd.ExecuteNonQuery();
@@ -425,12 +418,11 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Connection = con;
                         cmd.Transaction = trans;
                          
-                        cmd.CommandText = @"UPDATE voluntary SET name = @name, socialnetwork = @socialnetwork, photoimagename = @photoimagename WHERE voluntary_id = @voluntary_id";
+                        cmd.CommandText = @"UPDATE voluntary SET name = @name, socialnetwork = @socialnetwork WHERE voluntary_id = @voluntary_id";
                         cmd.Parameters.AddWithValue("voluntary_id", voluntary.VoluntaryId.ToString());
                         cmd.Parameters.AddWithValue("name", voluntary.Name);
                         cmd.Parameters.AddWithValue("phone", voluntary.Phone); 
                         cmd.Parameters.AddWithValue("socialnetwork", voluntary.SocialNetwork);
-                        cmd.Parameters.AddWithValue("photoimagename", voluntary.PhotoImageName);
                         cmd.ExecuteNonQuery();
 
                         cmd.Parameters.Clear();

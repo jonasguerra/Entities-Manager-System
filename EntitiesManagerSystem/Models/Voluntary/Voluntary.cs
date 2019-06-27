@@ -24,9 +24,6 @@ namespace EntitiesManagerSystem.Models.Voluntary
         [Display(Name = "Redes Sociais")] 
         public string SocialNetwork { get; set; }
 
-        [Display(Name = "Imagem")] 
-        public string PhotoImageName { get; set; }
-
         public string Affinity { get; set; }
         
         public List<Affinity> Affinities { get; set; }

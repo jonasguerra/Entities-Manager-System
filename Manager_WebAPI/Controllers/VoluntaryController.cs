@@ -183,7 +183,6 @@ namespace Manager_API.Controllers
                 IsVoluntary = voluntary.IsVoluntary,
                 Password = voluntary.Password,
                 SocialNetwork = voluntary.SocialNetwork, 
-                PhotoImageName = voluntary.PhotoImageName,
                 Affinities = affinities,
                 Address = new AddressDTO()
                 {
@@ -224,7 +223,6 @@ namespace Manager_API.Controllers
                 Phone = voluntary.Phone,
                 Password = voluntary.Password,
                 SocialNetwork = voluntary.SocialNetwork, 
-                PhotoImageName = voluntary.PhotoImageName,
                 Affinities = affinities,
                 Address = new AddressDTO()
                 {

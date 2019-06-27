@@ -244,3 +244,16 @@ C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManag
 /home/guilherme/Documentos/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.csproj.CopyComplete
 /home/guilherme/Documentos/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.dll
 /home/guilherme/Documentos/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Npgsql.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Buffers.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Memory.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Runtime.CompilerServices.Unsafe.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Threading.Tasks.Extensions.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.ValueTuple.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Npgsql.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Npgsql.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Buffers.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Memory.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Runtime.CompilerServices.Unsafe.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Threading.Tasks.Extensions.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.ValueTuple.xml

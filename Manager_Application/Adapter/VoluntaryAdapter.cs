@@ -20,7 +20,6 @@ namespace Manager_Application.Adapter
                 Password = voluntary.Password,
                 Phone = voluntary.Phone,
                 SocialNetwork = voluntary.SocialNetwork,
-                PhotoImageName = voluntary.PhotoImageName,
                 Affinities = AffinityAdapter.ListToDTO(voluntary.Affinities),
                 Address = new AddressDTO()
                 {
@@ -49,7 +48,6 @@ namespace Manager_Application.Adapter
                 Phone = voluntary.Phone,
                 Password = voluntary.Password,
                 SocialNetwork = voluntary.SocialNetwork, 
-                PhotoImageName = voluntary.PhotoImageName,
                 Affinities = AffinityAdapter.ListToDomain(voluntary.Affinities),
                 Address = new Address()
                 {

@@ -72,40 +72,40 @@ namespace EntitiesManagerSystem.Controllers
         public ActionResult SaveVoluntary(Voluntary voluntary)
         {
             
-            Guid voluntaryId = Guid.Parse("4d293167-6358-4d91-b480-2d4ac80b162b");
-            Guid eventId = Guid.Parse("f650b4ac-6cbe-4c3b-9ccb-736c70153694");
-                
-            EventVoluntary event_voluntary = new EventVoluntary()
-            {
-                EventId = eventId,
-                VoluntaryId = voluntaryId
-            };
-            
-            var event_id = clientHttp.Post<EventVoluntary>(@"Event/SetVoluntaryToEvent/", event_voluntary);
-            
-            return RedirectToAction("RegisterVoluntary");
-            
-//            if (ModelState.IsValid)
-//            {
-//                dynamic json_affinity = JsonConvert.DeserializeObject(voluntary.Affinity);
-//                voluntary.Affinities = new List<Affinity>();
-//                foreach (var affinity in json_affinity)
-//                {
-//                    voluntary.Affinities.Add(new Affinity()
-//                    {
-//                        AffinityId = Guid.Parse(affinity["value"].ToString()),
-//                        Name = affinity["text"]
-//                    });
-//                }
-//
-//                var id = clientHttp.Post<Voluntary>(@"Voluntary/", voluntary);
+//            Guid voluntaryId = Guid.Parse("c26535e3-0cb5-4975-8be8-7b6a3e14f191");
+//            Guid eventId = Guid.Parse("24440295-fc8d-4f74-bda9-5e86d9edc41f");
 //                
-//                return RedirectToAction("Login", "Login");
-//            }
+//            EventVoluntary event_voluntary = new EventVoluntary()
+//            {
+//                EventId = eventId,
+//                VoluntaryId = voluntaryId
+//            };
 //            
-//            var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
-//            ViewBag.affinities = affinities;
-//            return View("RegisterVoluntary", voluntary);
+//            var event_id = clientHttp.Post<EventVoluntary>(@"Event/SetVoluntaryToEvent/", event_voluntary);
+//            
+//            return RedirectToAction("RegisterVoluntary");
+            
+            if (ModelState.IsValid)
+            {
+                dynamic json_affinity = JsonConvert.DeserializeObject(voluntary.Affinity);
+                voluntary.Affinities = new List<Affinity>();
+                foreach (var affinity in json_affinity)
+                {
+                    voluntary.Affinities.Add(new Affinity()
+                    {
+                        AffinityId = Guid.Parse(affinity["value"].ToString()),
+                        Name = affinity["text"]
+                    });
+                }
+
+                var id = clientHttp.Post<Voluntary>(@"Voluntary/", voluntary);
+                
+                return RedirectToAction("Login", "Login");
+            }
+            
+            var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
+            ViewBag.affinities = affinities;
+            return View("RegisterVoluntary", voluntary);
         }
         
         

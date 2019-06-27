@@ -1,12 +1,13 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using Manager_API.Models;
 
 namespace EntitiesManagerSystem.Models
 {
-    public class Entity
+    public class Entity : User
     {
         public Guid Id { get; set; }
-
+        public Address Address { get; set; }
         [Display(Name = "Nome da Entidade")]
         [Required(ErrorMessage = "O {0} deve ser informado.")]
         [StringLength(60, MinimumLength = 5, ErrorMessage = "Minimo {2} caracteres")]
@@ -40,36 +41,7 @@ namespace EntitiesManagerSystem.Models
         [DataType(DataType.Password)]
         public string EntityConfirmPassword { get; set; }
 
-        [Display(Name = "CEP")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(8, MinimumLength = 8, ErrorMessage = "CEP deve possuir 8 caracteres")]
-        public string EntityCEP { get; set; }
-        
-        [Display(Name = "Rua")]
-        [Required(ErrorMessage = "{0} deve ser informada")]
-        [StringLength(40, MinimumLength = 8, ErrorMessage = "Minimo 8 caracteres")]
-        public string EntityAvenue { get; set; }
-        
-        [Display(Name = "Numero")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(40, MinimumLength = 1, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityNumber { get; set; }
-
-        [Display(Name = "Bairro")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(40, MinimumLength = 6, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityNeighborhood { get; set; }
-        
-        [Display(Name = "Cidade")]
-        [Required(ErrorMessage = "{0} deve ser informada")]
-        [StringLength(40, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityCity { get; set; }
-
-        [Display(Name = "Estado")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(30, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityState { get; set; }
-        
+       
         [Display(Name = "Ponto de Referencia")]
         [Required(ErrorMessage = "{0} deve ser informado")]
         [StringLength(40, MinimumLength = 4, ErrorMessage = "Minimo {2} caracteres")]
@@ -102,6 +74,7 @@ namespace EntitiesManagerSystem.Models
 
         public Entity()
         {
+          //  IsEntity = true;
         }
     }
 }

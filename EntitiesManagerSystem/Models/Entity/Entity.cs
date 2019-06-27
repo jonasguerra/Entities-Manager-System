@@ -11,11 +11,6 @@ namespace EntitiesManagerSystem.Models
         
         
         
-        
-        
-        
-        
-        
         [Display(Name = "Nome da Entidade")]
         [Required(ErrorMessage = "O {0} deve ser informado.")]
         [StringLength(60, MinimumLength = 5, ErrorMessage = "Minimo {2} caracteres")]

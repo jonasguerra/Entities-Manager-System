@@ -128,5 +128,19 @@ namespace EntitiesManagerSystem.Controllers
             ViewBag.affinities = affinities;
             return View("RegisterEvent",event_from);
         }
+        
+        
+        [HttpPost]
+        public ActionResult ShowMoreEvent()
+        {
+            Event show_event = new Event()
+            {
+                EventId = new Guid(),
+                Title = "Evento",
+                Description = "Nam sed quam vitae augue viverra convallis. Aliquam at ultricies tortor, eu tempor arcu. Pellentesque tincidunt ante nec mattis sagittis. Donec sollicitudin tortor vel felis consectetur dictum.",
+            };
+
+            return Json(new {status="success", show_event=show_event});
+        }
     }
 }

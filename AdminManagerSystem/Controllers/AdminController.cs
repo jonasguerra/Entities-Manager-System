@@ -79,7 +79,7 @@ namespace AdminManagerSystem.Controllers
         
 
 
-
+//######### AJAX ENTITY ##########
    
         [HttpPost]
         public ActionResult TrashEntity(Guid id)
@@ -164,24 +164,6 @@ namespace AdminManagerSystem.Controllers
             
         }
         
-        //######### AJAX ENTITY ##########
         
-        [HttpPost]
-        public ActionResult TrashEntity()
-        {
-            return Json(new {status="success", message_title="Entidade excluida com sucesso"});
-        }
-        
-        [HttpPost]
-        public ActionResult ShowMoreEntity()
-        {
-            return Json(new {status="success"});
-        }
-        
-        [HttpPost]
-        public ActionResult ApproveEntity()
-        {
-            return Json(new {status="success", message_title="Entidade aprovada com sucesso"});
-        }
     }
 }

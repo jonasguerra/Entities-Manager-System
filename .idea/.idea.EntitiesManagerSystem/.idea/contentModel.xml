@@ -913,6 +913,7 @@
         <e p="VoluntaryApplication.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="Manager_Domain" t="IncludeRecursive">
         <e p="Entities" t="Include">
@@ -937,6 +938,7 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="Manager_Repository" t="IncludeRecursive">
         <e p="AffinityRepository.cs" t="Include" />

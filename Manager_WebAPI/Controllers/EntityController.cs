@@ -29,8 +29,8 @@ namespace Manager_API.Controllers
             entityApplication = new EntityApplication(entityRepository);
         }
 
-        
- 
+
+
         public HttpResponseMessage Get()
         {
             List<EntityDTO> entitiesDTO = new List<EntityDTO>();
@@ -38,8 +38,8 @@ namespace Manager_API.Controllers
             {
                 entitiesDTO = entityApplication.GetAll();
                 //Este metodo retorna uma listagem de entidades
-                return Request.CreateResponse(HttpStatusCode.OK, entitiesDTO);    
-                    
+                return Request.CreateResponse(HttpStatusCode.OK, entitiesDTO);
+
             }
             catch (Exception ex)
             {
@@ -53,11 +53,13 @@ namespace Manager_API.Controllers
             try
             {
                 EntityDTO entityDto = Find(id);
-                
+
                 if (entityDto == null)
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Entidade não encontrada");
-                }else{
+                }
+                else
+                {
                     return Request.CreateResponse(HttpStatusCode.OK, entityDto);
                 }
             }
@@ -66,7 +68,7 @@ namespace Manager_API.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
 
             }
-            
+
         }
 
 
@@ -99,8 +101,8 @@ namespace Manager_API.Controllers
         {
             try
             {
-               
-                EntityDTO entityDto= Find(id);
+
+                EntityDTO entityDto = Find(id);
                 if (entityDto == null)
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Entidade não encontrada");
@@ -120,22 +122,26 @@ namespace Manager_API.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
-        
+
 
         public HttpResponseMessage Delete(Guid id)
         {
             try
             {
-               
-               EntityDTO entityDto= Find(id);
+
+                EntityDTO entityDto = Find(id);
                 if (entityDto == null)
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Entidade não encontrada");
                 }
                 else
                 {
-                    Remove(id);
-                    return Request.CreateResponse(HttpStatusCode.OK, id);
+
+                    bool removed = Remove(id);
+                    if (removed)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, id);
+                    }
                 }
             }
             catch (ApplicationException ex)
@@ -146,34 +152,50 @@ namespace Manager_API.Controllers
             {
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Erro ao excluir entidade");
         }
-        
-        
-        private void Alter(Entity entity)
+    
+
+    private void Alter(Entity entity)
         {
+            //FAZER UMA LISTA DE EVENTOS??????
+            //List<AffinityDTO> affinities = new List<AffinityDTO>();
+            //foreach(var affinity in voluntary.Affinities)
+            //{
+            //AffinityDTO affinityDTO = new AffinityDTO()
+            // {
+            //AffinityId = affinity.AffinityId,
+            //  Name = affinity.Name
+            //};
+            //  affinities.Add(affinityDTO);
+            //}
+            //event dto
             EntityDTO entityDto = new EntityDTO()
             {
                 Id = entity.Id,
                 EntityName = entity.EntityName,
                 EntityAffinity = entity.EntityAffinity,
-                EntityAvenue = entity.EntityAvenue,
-                EntityCity = entity.EntityCity,
                 EntityDescription = entity.EntityDescription,
                 EntityEmail = entity.EntityEmail,
-                EntityNeighborhood = entity.EntityNeighborhood,
                 EntityInitials =  entity.EntityInitials,
-                EntityNumber = entity.EntityNumber,
                 EntityPhone = entity.EntityPhone,
                 EntityPassword = entity.EntityPassword,
-                EntityState = entity.EntityState,
                 EntityCreationDate = entity.EntityCreationDate,
                 EntityConfirmPassword = entity.EntityConfirmPassword,
                 EntityReferencePoint = entity.EntityReferencePoint,
                 EntityWebSite = entity.EntityWebSite,
                 EntityResponsableName = entity.EntityResponsableName,
                 EntitySocialNetwork = entity.EntitySocialNetwork,
-                EntityCEP = entity.EntityCEP,
-                EntityPhotoImageName = entity.EntityPhotoImageName
+                EntityPhotoImageName = entity.EntityPhotoImageName,
+                EntityAddressDto = new AddressDTO()
+                {
+                    CEP = entity.Address.CEP,
+                    Avenue = entity.Address.Avenue,
+                    Number = entity.Address.Number,
+                    Neighborhood = entity.Address.Neighborhood,
+                    City = entity.Address.City,
+                    State = entity.Address.State
+                }
 
             };
             entityApplication.Update(entityDto);
@@ -184,29 +206,44 @@ namespace Manager_API.Controllers
         {
             //return Guid.NewGuid();
             //executa o mapeamento
+            //FAZER UMA LISTA DE EVENTOS??????
+            //List<AffinityDTO> affinities = new List<AffinityDTO>();
+            //foreach(var affinity in voluntary.Affinities)
+            //{
+                //AffinityDTO affinityDTO = new AffinityDTO()
+               // {
+                    //AffinityId = affinity.AffinityId,
+                  //  Name = affinity.Name
+                //};
+              //  affinities.Add(affinityDTO);
+            //}
+            
             EntityDTO entityDTO = new EntityDTO()
             {
                 Id = entity.Id,
                 EntityName = entity.EntityName,
                 EntityAffinity = entity.EntityAffinity,
-                EntityAvenue = entity.EntityAvenue,
-                EntityCity = entity.EntityCity,
                 EntityDescription = entity.EntityDescription,
                 EntityEmail = entity.EntityEmail,
-                EntityNeighborhood = entity.EntityNeighborhood,
                 EntityInitials =  entity.EntityInitials,
-                EntityNumber = entity.EntityNumber,
                 EntityPhone = entity.EntityPhone,
                 EntityPassword = entity.EntityPassword,
-                EntityState = entity.EntityState,
                 EntityCreationDate = entity.EntityCreationDate,
                 EntityConfirmPassword = entity.EntityConfirmPassword,
                 EntityReferencePoint = entity.EntityReferencePoint,
                 EntityWebSite = entity.EntityWebSite,
                 EntityResponsableName = entity.EntityResponsableName,
                 EntitySocialNetwork = entity.EntitySocialNetwork,
-                EntityCEP = entity.EntityCEP,
-                EntityPhotoImageName = entity.EntityPhotoImageName
+                EntityPhotoImageName = entity.EntityPhotoImageName,
+                EntityAddressDto = new AddressDTO()
+                {
+                    CEP = entity.Address.CEP,
+                    Avenue = entity.Address.Avenue,
+                    Number = entity.Address.Number,
+                    Neighborhood = entity.Address.Neighborhood,
+                    City = entity.Address.City,
+                    State = entity.Address.State
+            }
             };
            
             return entityApplication.Insert(entityDTO);
@@ -218,9 +255,9 @@ namespace Manager_API.Controllers
         {
             return entityApplication.Get(id);
         }
-        private void Remove(Guid id)
+        private bool Remove(Guid id)
         {
-            entityApplication.Delete(id);
+         return   entityApplication.Delete(id);
         }
         
     }

@@ -21,5 +21,9 @@ namespace Manager_Domain.Entities
         public string EntityDescription { get; set; }
         public string EntityPhotoImageName { get; set; }
 
+        public Entity()
+        {
+            //IsEntity = true;
+        }
     }
 }

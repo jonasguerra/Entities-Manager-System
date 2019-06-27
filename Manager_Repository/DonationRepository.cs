@@ -193,12 +193,6 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.CommandText =
                             @"INSERT Into public.donation (donation_id,title,description,quantity,takeDonation)values(@donation_id,@title,@description,@quantity,@takeDonation)";
                         cmd.Parameters.AddWithValue("donation_id", donation.DonationId);
-                        cmd.Parameters.AddWithValue("name", donation.Name);
-                        cmd.Parameters.AddWithValue("phone", donation.Phone); 
-                        cmd.Parameters.AddWithValue("socialnetwork", donation.SocialNetwork);
-                        cmd.Parameters.AddWithValue("photoimagename", donation.PhotoImageName);
-                        cmd.Parameters.AddWithValue("user_id", donation.UserId);
-                        cmd.Parameters.AddWithValue("address_id", donation.Address.AddressId);
                         cmd.Parameters.AddWithValue("title", donation.Title);
                         cmd.Parameters.AddWithValue("description", donation.Description);
                         cmd.Parameters.AddWithValue("quantity", donation.Quantity);
@@ -232,16 +226,9 @@ namespace Ftec.WebAPI.Infra.Repository
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
-                        cmd.CommandText = @"UPDATE donation SET name = @name, socialnetwork = @socialnetwork, photoimagename = @photoimagename WHERE donation_id = @donation_id";
-                        cmd.Parameters.AddWithValue("donation_id", donation.DonationId.ToString());
-                        cmd.Parameters.AddWithValue("name", donation.Name);
-                        cmd.Parameters.AddWithValue("phone", donation.Phone); 
-                        cmd.Parameters.AddWithValue("socialnetwork", donation.SocialNetwork);
-                        cmd.Parameters.AddWithValue("photoimagename", donation.PhotoImageName);
-                        cmd.ExecuteNonQuery();
 
-
-                        cmd.CommandText =  @"UPDATE donation SET title = @title, description = @description, quantity = @quantity, takeDonation = @takeDonation  WHERE donation_id = @donation_id";
+                        cmd.CommandText =
+                            @"UPDATE donation SET title = @title, description = @description, quantity = @quantity, takeDonation = @takeDonation  WHERE donation_id = @donation_id";
                         cmd.Parameters.AddWithValue("donation_id", donation.DonationId);
                         cmd.Parameters.AddWithValue("title", donation.Title);
                         cmd.Parameters.AddWithValue("description", donation.Description);

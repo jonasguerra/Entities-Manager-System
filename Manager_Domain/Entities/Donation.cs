@@ -10,7 +10,7 @@ namespace Manager_Domain.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         public string Quantity { get; set; }
-        public bool takeDonation { get; set; }
+        public bool TakeDonation { get; set; }
         public Address Address { get; set; }
         public List<Affinity> Affinities { get; set; }
         

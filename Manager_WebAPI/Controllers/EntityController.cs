@@ -174,19 +174,14 @@ namespace Manager_API.Controllers
             {
                 Id = entity.Id,
                 EntityName = entity.EntityName,
-                EntityAffinity = entity.EntityAffinity,
                 EntityDescription = entity.EntityDescription,
                 EntityEmail = entity.EntityEmail,
                 EntityInitials =  entity.EntityInitials,
                 EntityPhone = entity.EntityPhone,
-                EntityPassword = entity.EntityPassword,
                 EntityCreationDate = entity.EntityCreationDate,
-                EntityConfirmPassword = entity.EntityConfirmPassword,
-                EntityReferencePoint = entity.EntityReferencePoint,
                 EntityWebSite = entity.EntityWebSite,
                 EntityResponsableName = entity.EntityResponsableName,
                 EntitySocialNetwork = entity.EntitySocialNetwork,
-                EntityPhotoImageName = entity.EntityPhotoImageName,
                 EntityAddressDto = new AddressDTO()
                 {
                     CEP = entity.Address.CEP,
@@ -222,19 +217,14 @@ namespace Manager_API.Controllers
             {
                 Id = entity.Id,
                 EntityName = entity.EntityName,
-                EntityAffinity = entity.EntityAffinity,
                 EntityDescription = entity.EntityDescription,
                 EntityEmail = entity.EntityEmail,
                 EntityInitials =  entity.EntityInitials,
                 EntityPhone = entity.EntityPhone,
-                EntityPassword = entity.EntityPassword,
                 EntityCreationDate = entity.EntityCreationDate,
-                EntityConfirmPassword = entity.EntityConfirmPassword,
-                EntityReferencePoint = entity.EntityReferencePoint,
                 EntityWebSite = entity.EntityWebSite,
                 EntityResponsableName = entity.EntityResponsableName,
                 EntitySocialNetwork = entity.EntitySocialNetwork,
-                EntityPhotoImageName = entity.EntityPhotoImageName,
                 EntityAddressDto = new AddressDTO()
                 {
                     CEP = entity.Address.CEP,

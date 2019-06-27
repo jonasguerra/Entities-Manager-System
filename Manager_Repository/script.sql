@@ -67,7 +67,7 @@ CREATE TABLE public.event
     event_id character varying(36) NOT NULL PRIMARY KEY,
     title character varying(300) NOT NULL,
     Description character varying(1000) NOT NULL,
-    Date TIMESTAMP NOT NULL
+    Date TIMESTAMP NOT NULL,
     
 	address_id character varying(36) NOT NULL UNIQUE,
 	
@@ -81,5 +81,14 @@ CREATE TABLE public.event_affinity
 	event_id character varying(36) NOT NULL,
 	PRIMARY KEY(affinity_id, event_id),
     FOREIGN KEY ("affinity_id") REFERENCES "affinity"("affinity_id"),
+    FOREIGN KEY ("event_id") REFERENCES "event"("event_id")
+)
+
+CREATE TABLE public.event_voluntary
+(
+    voluntary_id character varying(36) NOT NULL,
+	event_id character varying(36) NOT NULL,
+	PRIMARY KEY(voluntary_id, event_id),
+    FOREIGN KEY ("voluntary_id") REFERENCES "voluntary"("voluntary_id"),
     FOREIGN KEY ("event_id") REFERENCES "event"("event_id")
 )

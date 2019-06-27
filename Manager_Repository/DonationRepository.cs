@@ -215,10 +215,10 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Parameters.Clear();
                         cmd.CommandText = @"INSERT Into donation (donation_id,name,phone,socialnetwork,photoimagename,user_id,address_id) values (@donation_id,@name,@phone,@socialnetwork,@photoimagename,@user_id,@address_id)";
                         cmd.Parameters.AddWithValue("donation_id", donation.DonationId);
-                        cmd.Parameters.AddWithValue("name", donation.Name);
-                        cmd.Parameters.AddWithValue("phone", donation.Phone); 
-                        cmd.Parameters.AddWithValue("socialnetwork", donation.SocialNetwork);
-                        cmd.Parameters.AddWithValue("photoimagename", donation.PhotoImageName);
+//                        cmd.Parameters.AddWithValue("name", donation.Name);
+//                        cmd.Parameters.AddWithValue("phone", donation.Phone); 
+//                        cmd.Parameters.AddWithValue("socialnetwork", donation.SocialNetwork);
+//                        cmd.Parameters.AddWithValue("photoimagename", donation.PhotoImageName);
                         cmd.Parameters.AddWithValue("user_id", donation.UserId);
                         cmd.Parameters.AddWithValue("address_id", donation.Address.AddressId);
                         cmd.ExecuteNonQuery();
@@ -265,10 +265,10 @@ namespace Ftec.WebAPI.Infra.Repository
                          
                         cmd.CommandText = @"UPDATE donation SET name = @name, socialnetwork = @socialnetwork, photoimagename = @photoimagename WHERE donation_id = @donation_id";
                         cmd.Parameters.AddWithValue("donation_id", donation.DonationId.ToString());
-                        cmd.Parameters.AddWithValue("name", donation.Name);
-                        cmd.Parameters.AddWithValue("phone", donation.Phone); 
-                        cmd.Parameters.AddWithValue("socialnetwork", donation.SocialNetwork);
-                        cmd.Parameters.AddWithValue("photoimagename", donation.PhotoImageName);
+//                        cmd.Parameters.AddWithValue("name", donation.Name);
+//                        cmd.Parameters.AddWithValue("phone", donation.Phone); 
+//                        cmd.Parameters.AddWithValue("socialnetwork", donation.SocialNetwork);
+//                        cmd.Parameters.AddWithValue("photoimagename", donation.PhotoImageName);
                         cmd.ExecuteNonQuery();
 
                         cmd.Parameters.Clear();

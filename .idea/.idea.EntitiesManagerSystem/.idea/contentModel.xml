@@ -475,6 +475,7 @@
             <e p="Entity.cs" t="Include" />
             <e p="Event.cs" t="Include" />
           </e>
+          <e p="EventVoluntary.cs" t="Include" />
           <e p="Login" t="Include">
             <e p="LoginForm.cs" t="Include" />
           </e>
@@ -1058,6 +1059,8 @@
           <e p="Address.cs" t="Include" />
           <e p="Affinity.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
+          <e p="Event.cs" t="Include" />
+          <e p="EventVoluntary.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />
         </e>

@@ -18,16 +18,16 @@ namespace Manager_Application
         
         public Guid Insert(EventDTO eventDto)
         {
-            var sevent = EventAdapter.ToDomain(eventDto);
+            var sEvent = EventAdapter.ToDomain(eventDto);
 
-            return eventRepository.Insert(sevent);
+            return eventRepository.Insert(sEvent);
         }
 
         public Guid Update(EventDTO eventDto)
         {
-            var sevent = EventAdapter.ToDomain(eventDto);
+            var sEvent = EventAdapter.ToDomain(eventDto);
 
-            return eventRepository.Update(sevent);
+            return eventRepository.Update(sEvent);
         }
 
         public bool Delete(Guid id)
@@ -35,11 +35,16 @@ namespace Manager_Application
             return eventRepository.Delete(id);
         }
 
+        public bool SetVoluntaryToEvent(Guid voluntarayId, Guid eventId)
+        {
+            return eventRepository.SetVoluntaryToEvent(voluntarayId, eventId);
+        }
+        
         public EventDTO Get(Guid id)
         {
-            var sevent = eventRepository.Find(id);
+            var sEvent = eventRepository.Find(id);
 
-            return EventAdapter.ToDTO(sevent);
+            return EventAdapter.ToDTO(sEvent);
         }
 
         public List<EventDTO> GetAll()

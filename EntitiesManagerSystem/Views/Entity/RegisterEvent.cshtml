@@ -39,11 +39,11 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label>@Html.LabelFor(m => m.Date)</label>
-                @Html.TextBoxFor(m => m.Date, "", new {@name = "date", @id = "date_range", @class = "form-control"})
-                @Html.ValidationMessageFor(m => m.Date, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-            </div>
+@*             <div class="form-group"> *@
+@*                 <label>@Html.LabelFor(m => m.Date)</label> *@
+@*                 @Html.TextBoxFor(m => m.Date, "", new {@name = "date", @id = "date_range", @class = "form-control"}) *@
+@*                 @Html.ValidationMessageFor(m => m.Date, "", new {@class = "help-block form-text with-errors form-control-feedback"}) *@
+@*             </div> *@
             
             <div class="row">
                 <div class="form-group col-sm-2">
@@ -53,9 +53,9 @@
                 </div>
                 <div class="form-group col-sm-8">
                     <div class="form-group">
-                        <label>@Html.LabelFor(m => m.Address)</label>
-                        @Html.TextBoxFor(m => m.Address, new {@class = "autocomplete-address form-control"})
-                        @Html.ValidationMessageFor(m => m.Address, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        <label>@Html.LabelFor(m => m.Address.Avenue)</label>
+                        @Html.TextBoxFor(m => m.Address.Avenue, new {@class = "autocomplete-address form-control"})
+                        @Html.ValidationMessageFor(m => m.Address.Avenue, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
                 </div>
                 <div class="form-group col-sm-2">

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace EntitiesManagerSystem.Models
+namespace Manager_API.Models
 {
     public class Event
     {

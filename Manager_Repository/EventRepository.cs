@@ -16,7 +16,7 @@ namespace Ftec.WebAPI.Infra.Repository
             this.connectionString = connectionString;
         }
         
-        public Guid Insert(Event sevent)
+        public Guid Insert(Event sEvent)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
@@ -26,49 +26,80 @@ namespace Ftec.WebAPI.Infra.Repository
                 {
                     try
                     {
-                        sevent.EventId = Guid.NewGuid();
-                        sevent.Address.AddressId = Guid.NewGuid();
+                        sEvent.EventId = Guid.NewGuid();
+                        sEvent.Address.AddressId = Guid.NewGuid();
                         
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
                         
                         cmd.CommandText = @"INSERT Into address (address_id,cep,avenue,number,neighborhood,city,state)values(@address_id,@cep,@avenue,@number,@neighborhood,@city,@state)";
-                        cmd.Parameters.AddWithValue("address_id", sevent.Address.AddressId); 
-                        cmd.Parameters.AddWithValue("cep", sevent.Address.CEP); 
-                        cmd.Parameters.AddWithValue("avenue", sevent.Address.Avenue); 
-                        cmd.Parameters.AddWithValue("number", sevent.Address.Number); 
-                        cmd.Parameters.AddWithValue("neighborhood", sevent.Address.Neighborhood); 
-                        cmd.Parameters.AddWithValue("city", sevent.Address.City); 
-                        cmd.Parameters.AddWithValue("state", sevent.Address.State); 
+                        cmd.Parameters.AddWithValue("address_id", sEvent.Address.AddressId); 
+                        cmd.Parameters.AddWithValue("cep", sEvent.Address.CEP); 
+                        cmd.Parameters.AddWithValue("avenue", sEvent.Address.Avenue); 
+                        cmd.Parameters.AddWithValue("number", sEvent.Address.Number); 
+                        cmd.Parameters.AddWithValue("neighborhood", sEvent.Address.Neighborhood); 
+                        cmd.Parameters.AddWithValue("city", sEvent.Address.City); 
+                        cmd.Parameters.AddWithValue("state", sEvent.Address.State); 
                         cmd.ExecuteNonQuery();
                         
                         cmd.Parameters.Clear();
                         cmd.CommandText = @"INSERT Into event (event_id,title,description,date,address_id) values (@event_id,@title,@description,@date,@address_id)";
-                        cmd.Parameters.AddWithValue("event_id", sevent.EventId);
-                        cmd.Parameters.AddWithValue("title", sevent.Title);
-                        cmd.Parameters.AddWithValue("description", sevent.Description); 
-                        cmd.Parameters.AddWithValue("date", sevent.Date);
-                        cmd.Parameters.AddWithValue("address_id", sevent.Address.AddressId);
+                        cmd.Parameters.AddWithValue("event_id", sEvent.EventId);
+                        cmd.Parameters.AddWithValue("title", sEvent.Title);
+                        cmd.Parameters.AddWithValue("description", sEvent.Description); 
+                        cmd.Parameters.AddWithValue("date", sEvent.Date);
+                        cmd.Parameters.AddWithValue("address_id", sEvent.Address.AddressId);
                         cmd.ExecuteNonQuery();
 
-                        foreach (var affinity in sevent.Affinities)
+                        foreach (var affinity in sEvent.Affinities)
                         {
                             cmd.Parameters.Clear();
                             cmd.CommandText = @"INSERT Into event_affinity (event_id, affinity_id) VALUES (@event_id, @affinity_id)";
-                            cmd.Parameters.AddWithValue("event_id", sevent.EventId);
+                            cmd.Parameters.AddWithValue("event_id", sEvent.EventId);
                             cmd.Parameters.AddWithValue("affinity_id", affinity.AffinityId);
                             cmd.ExecuteNonQuery(); 
                         }
                         
                         //commit na transação
                         trans.Commit();
-                        return sevent.EventId;
+                        return sEvent.EventId;
 
                     }
                     catch (Exception ex)
                     {
                         //rollback da transação
+                        trans.Rollback();
+                        throw ex;
+                    }
+                }
+            }
+        }
+
+        public bool SetVoluntaryToEvent(Guid voluntarayId, Guid eventId)
+        {
+            using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
+            {
+                con.Open();
+                using (var trans = con.BeginTransaction())
+                {
+                    try
+                    {
+                        NpgsqlCommand cmd = new NpgsqlCommand();
+                        cmd.Connection = con;
+                        cmd.Transaction = trans;
+
+                        cmd.CommandText = @"INSERT Into event_voluntary (event_id, voluntaray_id) VALUES (@event_id, @voluntaray_id)";
+                        cmd.Parameters.AddWithValue("event_id", eventId);
+                        cmd.Parameters.AddWithValue("voluntaray_id", voluntarayId);
+                        cmd.ExecuteNonQuery(); 
+                        
+                        trans.Commit();
+                        return true;
+
+                    }
+                    catch (Exception ex)
+                    {
                         trans.Rollback();
                         throw ex;
                     }
@@ -91,7 +122,7 @@ namespace Ftec.WebAPI.Infra.Repository
             throw new NotImplementedException();
         }
 
-        public Guid Update(Event ssevent)
+        public Guid Update(Event sEvent)
         {
             throw new NotImplementedException();
         }

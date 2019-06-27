@@ -171,6 +171,8 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Affinity.cs" />
     <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventVoluntary.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Voluntary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

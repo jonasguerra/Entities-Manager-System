@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Dynamic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using AdminManagerSystem.Models.Voluntary;
 using Ftec.WebAPI.Infra.Repository;
+using Manager_API.Models;
 using Manager_Application;
 using Manager_Application.DTO;
-using Manager_Domain.Entities;
 using Manager_Domain.Interfaces;
 
 namespace Manager_API.Controllers 
@@ -59,12 +61,41 @@ namespace Manager_API.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
-        
-        public HttpResponseMessage Post([FromBody]Event sevent)
+
+        [Route("api/Event/SetVoluntaryToEvent/")]
+        [HttpPost]
+        public HttpResponseMessage SetVoluntaryToEvent([FromBody]EventVoluntary eventVoluntary)
         {
             try
             {
-                Guid id = Insert(sevent);
+                //######## THIS IS THE MASTER GAMBIARRA ########
+                //http://www.macoratti.net/17/10/c_odynamic1.htm
+                
+                Console.WriteLine(eventVoluntary.EventId);
+                Console.WriteLine(eventVoluntary.VoluntaryId);
+                
+                bool save = eventApplication.SetVoluntaryToEvent(eventVoluntary.VoluntaryId, eventVoluntary.EventId);
+                if (save)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, eventVoluntary.EventId);
+                }
+                return Request.CreateResponse(HttpStatusCode.OK, eventVoluntary.EventId);
+            }
+            catch (ApplicationException ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+        
+        public HttpResponseMessage Post([FromBody]Event sEvent)
+        {
+            try
+            {
+                Guid id = Insert(sEvent);
                 return Request.CreateResponse(HttpStatusCode.OK, id);
             }
             catch (ApplicationException ex)
@@ -77,7 +108,7 @@ namespace Manager_API.Controllers
             }
         }
         
-        public HttpResponseMessage Put(Guid id, [FromBody]Event sevent)
+        public HttpResponseMessage Put(Guid id, [FromBody]Event sEvent)
         {
             try
             {
@@ -88,7 +119,7 @@ namespace Manager_API.Controllers
                 }
                 else
                 {
-                    Alter(sevent);
+                    Alter(sEvent);
                     return Request.CreateResponse(HttpStatusCode.OK, id);
                 }
             }
@@ -131,11 +162,11 @@ namespace Manager_API.Controllers
             return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Erro ao excluir evento");
         }
         
-        private void Alter(Event sevent)
+        private void Alter(Event sEvent)
         {
             
             List<AffinityDTO> affinities = new List<AffinityDTO>();
-            foreach(var affinity in sevent.Affinities)
+            foreach(var affinity in sEvent.Affinities)
             {
                 AffinityDTO affinityDTO = new AffinityDTO()
                 {
@@ -147,29 +178,29 @@ namespace Manager_API.Controllers
             
             EventDTO eventDTO = new EventDTO ()
             {
-                EventId = sevent.EventId,
-                Title = sevent.Title,
-                Description = sevent.Description,
-                Date = sevent.Date,
+                EventId = sEvent.EventId,
+                Title = sEvent.Title,
+                Description = sEvent.Description,
+                Date = sEvent.Date,
                 Affinities = affinities,
                 Address = new AddressDTO()
                 {
-                    CEP = sevent.Address.CEP,
-                    Avenue = sevent.Address.Avenue,
-                    Number = sevent.Address.Number,
-                    Neighborhood = sevent.Address.Neighborhood,
-                    City = sevent.Address.City,
-                    State = sevent.Address.State
+                    CEP = sEvent.Address.CEP,
+                    Avenue = sEvent.Address.Avenue,
+                    Number = sEvent.Address.Number,
+                    Neighborhood = sEvent.Address.Neighborhood,
+                    City = sEvent.Address.City,
+                    State = sEvent.Address.State
                 }
             };
             
             eventApplication.Update(eventDTO);
         }
         
-        private Guid Insert(Event sevent)
+        private Guid Insert(Event sEvent)
         {
             List<AffinityDTO> affinities = new List<AffinityDTO>();
-            foreach(var affinity in sevent.Affinities)
+            foreach(var affinity in sEvent.Affinities)
             {
                 AffinityDTO affinityDTO = new AffinityDTO()
                 {
@@ -181,19 +212,19 @@ namespace Manager_API.Controllers
             
             EventDTO eventDto = new EventDTO ()
             {
-                EventId = sevent.EventId,
-                Title = sevent.Title,
-                Description = sevent.Description,
-                Date = sevent.Date,
+                EventId = sEvent.EventId,
+                Title = sEvent.Title,
+                Description = sEvent.Description,
+                Date = sEvent.Date,
                 Affinities = affinities,
                 Address = new AddressDTO()
                 {
-                    CEP = sevent.Address.CEP,
-                    Avenue = sevent.Address.Avenue,
-                    Number = sevent.Address.Number,
-                    Neighborhood = sevent.Address.Neighborhood,
-                    City = sevent.Address.City,
-                    State = sevent.Address.State
+                    CEP = sEvent.Address.CEP,
+                    Avenue = sEvent.Address.Avenue,
+                    Number = sEvent.Address.Number,
+                    Neighborhood = sEvent.Address.Neighborhood,
+                    City = sEvent.Address.City,
+                    State = sEvent.Address.State
                 }
             };
            

@@ -6,11 +6,12 @@ namespace Manager_Domain.Interfaces
 {
     public interface IEventRepository
     {
-        Guid Insert(Event sevent);
+        Guid Insert(Event sEvent);
+        bool SetVoluntaryToEvent(Guid voluntarayId, Guid eventId);
         Event Find(Guid id);
         List<Event> FindByAffinityId(Guid id);
         List<Event> FindAll();
-        Guid Update(Event sevent);
+        Guid Update(Event sEvent);
         bool Delete(Guid id);
     }
 }

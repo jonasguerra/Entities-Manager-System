@@ -30,9 +30,7 @@ namespace EntitiesManagerSystem.Controllers
 
             ViewBag.user = "entity";
             ViewBag.register_event = "active";
-            
             var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
-
             ViewBag.affinities = affinities;
             
             return View();
@@ -68,6 +66,7 @@ namespace EntitiesManagerSystem.Controllers
         [HttpPost]
         public ActionResult SaveEvent(Event event_from)
         {
+            
             if (ModelState.IsValid)
             {
                 dynamic json_affinity = JsonConvert.DeserializeObject(event_from.Affinity);

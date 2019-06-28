@@ -15,8 +15,8 @@
     <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
     <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
     <option name="PROJECT_KIND" value="Web" />
-    <option name="PROJECT_TFM" value="" />
-    <browser url="http://127.0.0.1:5000/" name="53e2f627-b1a7-4dfa-bfa7-5b83cc034776" start="true" />
+    <option name="PROJECT_TFM" value=".NETFramework,Version=v4.5" />
+    <browser url="http://127.0.0.1:5000/" name="53e2f627-b1a7-4dfa-bfa7-5b83cc034776" />
     <method v="2">
       <option name="Build" enabled="true" />
     </method>

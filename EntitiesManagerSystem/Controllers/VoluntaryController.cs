@@ -71,20 +71,6 @@ namespace EntitiesManagerSystem.Controllers
         [HttpPost]
         public ActionResult SaveVoluntary(Voluntary voluntary)
         {
-            
-//            Guid voluntaryId = Guid.Parse("c26535e3-0cb5-4975-8be8-7b6a3e14f191");
-//            Guid eventId = Guid.Parse("24440295-fc8d-4f74-bda9-5e86d9edc41f");
-//                
-//            EventVoluntary event_voluntary = new EventVoluntary()
-//            {
-//                EventId = eventId,
-//                VoluntaryId = voluntaryId
-//            };
-//            
-//            var event_id = clientHttp.Post<EventVoluntary>(@"Event/SetVoluntaryToEvent/", event_voluntary);
-//            
-//            return RedirectToAction("RegisterVoluntary");
-            
             if (ModelState.IsValid)
             {
                 dynamic json_affinity = JsonConvert.DeserializeObject(voluntary.Affinity);
@@ -124,14 +110,16 @@ namespace EntitiesManagerSystem.Controllers
 
 
         [HttpPost]
-        public ActionResult SetVoluntaryToEvent(Guid voluntarayId, Guid eventId)
+        public ActionResult SetVoluntaryToEvent(Guid voluntaryId, Guid eventId)
         {
             
-            dynamic data = new ExpandoObject();
-            data.voluntarayId = voluntarayId;
-            data.eventId = eventId;
-
-            var id = clientHttp.Post<Voluntary>(@"Voluntary/SetVoluntaryToEvent/", data);
+            EventVoluntary event_voluntary = new EventVoluntary()
+            {
+                EventId = eventId,
+                VoluntaryId = voluntaryId
+            };
+            
+            var id = clientHttp.Post<EventVoluntary>(@"Voluntary/SetVoluntaryToEvent/", event_voluntary);
             return Json(new {status="success"});
         }
     }

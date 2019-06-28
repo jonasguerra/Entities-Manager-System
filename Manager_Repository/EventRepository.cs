@@ -76,7 +76,7 @@ namespace Ftec.WebAPI.Infra.Repository
             }
         }
 
-        public bool SetVoluntaryToEvent(Guid voluntarayId, Guid eventId)
+        public bool SetVoluntaryToEvent(Guid voluntaryId, Guid eventId)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
@@ -89,9 +89,9 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Connection = con;
                         cmd.Transaction = trans;
 
-                        cmd.CommandText = @"INSERT Into event_voluntary (event_id, voluntaray_id) VALUES (@event_id, @voluntaray_id)";
+                        cmd.CommandText = @"INSERT Into event_voluntary (event_id, voluntary_id) VALUES (@event_id, @voluntary_id)";
                         cmd.Parameters.AddWithValue("event_id", eventId);
-                        cmd.Parameters.AddWithValue("voluntaray_id", voluntarayId);
+                        cmd.Parameters.AddWithValue("voluntary_id", voluntaryId);
                         cmd.ExecuteNonQuery(); 
                         
                         trans.Commit();

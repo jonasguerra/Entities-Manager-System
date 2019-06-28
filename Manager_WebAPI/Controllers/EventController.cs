@@ -68,12 +68,6 @@ namespace Manager_API.Controllers
         {
             try
             {
-                //######## THIS IS THE MASTER GAMBIARRA ########
-                //http://www.macoratti.net/17/10/c_odynamic1.htm
-                
-                Console.WriteLine(eventVoluntary.EventId);
-                Console.WriteLine(eventVoluntary.VoluntaryId);
-                
                 bool save = eventApplication.SetVoluntaryToEvent(eventVoluntary.VoluntaryId, eventVoluntary.EventId);
                 if (save)
                 {

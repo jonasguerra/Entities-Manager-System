@@ -156,19 +156,18 @@ namespace Manager_API.Controllers
         }
     
 
-    private void Alter(Entity entity)
+        private void Alter(Entity entity)
         {
-            //FAZER UMA LISTA DE EVENTOS??????
-            //List<AffinityDTO> affinities = new List<AffinityDTO>();
-            //foreach(var affinity in voluntary.Affinities)
-            //{
-            //AffinityDTO affinityDTO = new AffinityDTO()
-            // {
-            //AffinityId = affinity.AffinityId,
-            //  Name = affinity.Name
-            //};
-            //  affinities.Add(affinityDTO);
-            //}
+            
+            List<AffinityDTO> affinities = new List<AffinityDTO>();
+            foreach(var affinity in entity.Affinities)
+            {
+                AffinityDTO affinityDTO = new AffinityDTO(){
+                    AffinityId = affinity.AffinityId,
+                    Name = affinity.Name
+                };
+                affinities.Add(affinityDTO);
+            }
             //event dto
             EntityDTO entityDto = new EntityDTO()
             {
@@ -195,49 +194,49 @@ namespace Manager_API.Controllers
             };
             entityApplication.Update(entityDto);
         }
-
         
-        private Guid Insert(Entity entity)
-        {
-            //return Guid.NewGuid();
-            //executa o mapeamento
-            //FAZER UMA LISTA DE EVENTOS??????
-            //List<AffinityDTO> affinities = new List<AffinityDTO>();
-            //foreach(var affinity in voluntary.Affinities)
-            //{
-                //AffinityDTO affinityDTO = new AffinityDTO()
-               // {
-                    //AffinityId = affinity.AffinityId,
-                  //  Name = affinity.Name
-                //};
-              //  affinities.Add(affinityDTO);
-            //}
-            
-            EntityDTO entityDTO = new EntityDTO()
-            {
-                Id = entity.Id,
-                EntityName = entity.EntityName,
-                EntityDescription = entity.EntityDescription,
-                EntityEmail = entity.EntityEmail,
-                EntityInitials =  entity.EntityInitials,
-                EntityPhone = entity.EntityPhone,
-                EntityCreationDate = entity.EntityCreationDate,
-                EntityWebSite = entity.EntityWebSite,
-                EntityResponsableName = entity.EntityResponsableName,
-                EntitySocialNetwork = entity.EntitySocialNetwork,
-                EntityAddressDto = new AddressDTO()
-                {
-                    CEP = entity.Address.CEP,
-                    Avenue = entity.Address.Avenue,
-                    Number = entity.Address.Number,
-                    Neighborhood = entity.Address.Neighborhood,
-                    City = entity.Address.City,
-                    State = entity.Address.State
-            }
-            };
+    private Guid Insert(Entity entity)
+    {
+        //return Guid.NewGuid();
+        //executa o mapeamento
            
-            return entityApplication.Insert(entityDTO);
+        List<AffinityDTO> affinities = new List<AffinityDTO>();
+        foreach(var affinity in entity.Affinities)
+        {
+            AffinityDTO affinityDTO = new AffinityDTO()
+            {
+                AffinityId = affinity.AffinityId,
+                Name = affinity.Name
+            };
+            affinities.Add(affinityDTO);
         }
+            
+        EntityDTO entityDTO = new EntityDTO()
+        {
+            Id = entity.Id,
+            EntityName = entity.EntityName,
+            EntityDescription = entity.EntityDescription,
+            EntityEmail = entity.EntityEmail,
+            EntityInitials =  entity.EntityInitials,
+            EntityPhone = entity.EntityPhone,
+            EntityCreationDate = entity.EntityCreationDate,
+            EntityWebSite = entity.EntityWebSite,
+            EntityResponsableName = entity.EntityResponsableName,
+            EntitySocialNetwork = entity.EntitySocialNetwork,
+            EntityAddressDto = new AddressDTO()
+            {
+                CEP = entity.Address.CEP,
+                Avenue = entity.Address.Avenue,
+                Number = entity.Address.Number,
+                Neighborhood = entity.Address.Neighborhood,
+                City = entity.Address.City,
+                State = entity.Address.State
+            }
+        };
+           
+        return entityApplication.Insert(entityDTO);
+    }
+
         
         
 

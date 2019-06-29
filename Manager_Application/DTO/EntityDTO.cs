@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Manager_Domain.Entities;
 
 namespace Manager_Application.DTO
@@ -15,7 +16,8 @@ namespace Manager_Application.DTO
         public string EntityConfirmPassword { get; set; }
         public AddressDTO EntityAddressDto { get; set; }
         public string EntityReferencePoint { get; set; }
-        public string EntityAffinity { get; set; }
+        //public string EntityAffinity { get; set; }
+        public List<AffinityDTO> EntityAffinity { get; set; }
         public string EntityInitials { get; set; }
         public DateTime EntityCreationDate { get; set; }
         public string EntitySocialNetwork { get; set; }

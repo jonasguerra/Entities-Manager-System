@@ -92,3 +92,58 @@ CREATE TABLE public.event_voluntary
     FOREIGN KEY ("voluntary_id") REFERENCES "voluntary"("voluntary_id"),
     FOREIGN KEY ("event_id") REFERENCES "event"("event_id")
 )
+--##########################ENTIDADE########################
+CREATE TABLE public.entity
+(
+    entity_id character varying(36) NOT NULL PRIMARY KEY,
+    name character varying(300) NOT NULL,
+    responsable_name character varying(300) NOT NULL,
+    email character varying(300) NOT NULL,
+    phone character varying(300) NOT NULL,
+    sigla character varying(300) NOT NULL,
+    social_network character varying(300),
+    date_creation character varying(300) NOT NULL,
+    site character varying(300) NOT NULL,
+    description character varying(5000) NOT NULL,
+	
+	user_id character varying(36) NOT NULL UNIQUE,
+	address_id character varying(36) NOT NULL UNIQUE,
+	
+    FOREIGN KEY ("user_id") REFERENCES "user"("user_id"),
+    FOREIGN KEY ("address_id") REFERENCES "address"("address_id")
+)
+
+
+CREATE TABLE public.entity_affinity
+(
+    entity_id character varying(36) NOT NULL,
+	affinity_id character varying(36) NOT NULL,
+	PRIMARY KEY(affinity_id, entity_id),
+    FOREIGN KEY ("affinity_id") REFERENCES "affinity"("affinity_id"),
+    FOREIGN KEY ("entity_id") REFERENCES "entity"("entity_id")
+) 
+
+CREATE TABLE public.donation
+(
+    donation_id character varying(36) NOT NULL PRIMARY KEY,
+    title character varying(300) NOT NULL,
+    description character varying(300) NOT NULL,
+    quantity character varying(300), NOT NULL,
+    takedonation character varying(300),
+        
+	  user_id character varying(36) NOT NULL UNIQUE,
+	  address_id character varying(36) NOT NULL UNIQUE,
+	  	
+    FOREIGN KEY ("user_id") REFERENCES "user"("user_id"),
+    FOREIGN KEY ("address_id") REFERENCES "address"("address_id")
+)
+
+CREATE TABLE public.donation_affinity
+(
+    donation_id character varying(36) NOT NULL,
+	  affinity_id character varying(36) NOT NULL,
+	
+	PRIMARY KEY(donation_id, affinity_id),
+    FOREIGN KEY ("donation_id") REFERENCES "donation"("donation_id"),
+    FOREIGN KEY ("affinity_id") REFERENCES "affinity"("affinity_id")
+)

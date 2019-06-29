@@ -1,13 +1,18 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Manager_API.Models;
 
 namespace EntitiesManagerSystem.Models
 {
-    public class Entity : User
+   public class Entity : User
     {
         public Guid Id { get; set; }
+        public List<Affinity> Affinities { get; set; }
+
         public Address Address { get; set; }
+        
+        
         [Display(Name = "Nome da Entidade")]
         [Required(ErrorMessage = "O {0} deve ser informado.")]
         [StringLength(60, MinimumLength = 5, ErrorMessage = "Minimo {2} caracteres")]

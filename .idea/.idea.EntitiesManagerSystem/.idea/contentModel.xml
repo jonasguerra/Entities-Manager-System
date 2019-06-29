@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_EntitiesManagerSystem.-1922241673.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.1/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.1/system/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_EntitiesManagerSystem.1773474481.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="0-FrontEnd" t="Include" />
       <e p="1-WebServices" t="Include" />
@@ -892,6 +893,7 @@
       <e p="Manager_Application" t="IncludeRecursive">
         <e p="Adapter" t="Include">
           <e p="AffinityAdapter.cs" t="Include" />
+          <e p="DonationAdapter.cs" t="Include" />
           <e p="EntityAdapter.cs" t="Include" />
           <e p="EventAdapter.cs" t="Include" />
           <e p="VoluntaryAdapter.cs" t="Include" />
@@ -900,11 +902,13 @@
         <e p="DTO" t="Include">
           <e p="AddressDTO.cs" t="Include" />
           <e p="AffinityDTO.cs" t="Include" />
+          <e p="DonationDTO.cs" t="Include" />
           <e p="EntityDTO.cs" t="Include" />
           <e p="EventDTO.cs" t="Include" />
           <e p="UserDTO.cs" t="Include" />
           <e p="VoluntaryDTO.cs" t="Include" />
         </e>
+        <e p="DonationApplication.cs" t="Include" />
         <e p="EntityApplication.cs" t="Include" />
         <e p="EventApplication.cs" t="Include" />
         <e p="Manager_Application.csproj" t="IncludeRecursive" />
@@ -1048,6 +1052,7 @@
         </e>
         <e p="Controllers" t="Include">
           <e p="AffinityController.cs" t="Include" />
+          <e p="DonationController.cs" t="Include" />
           <e p="EntityController.cs" t="Include" />
           <e p="EventController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />

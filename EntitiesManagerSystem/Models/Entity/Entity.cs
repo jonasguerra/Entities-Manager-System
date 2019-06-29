@@ -38,7 +38,7 @@ namespace EntitiesManagerSystem.Models
         [Required(ErrorMessage = "{0} deve ser informada")]
         public string EntityInitials { get; set; }
         
-       [Display(Name = "Redes Sociais")]
+        [Display(Name = "Redes Sociais")]
         public string EntitySocialNetwork { get; set; }
         
         [Display(Name = "Site")]

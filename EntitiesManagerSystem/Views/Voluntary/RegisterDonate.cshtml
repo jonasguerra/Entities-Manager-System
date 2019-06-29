@@ -39,7 +39,7 @@
                     }
                 </select>
             </div>
-            
+            @Html.TextBoxFor(m => m.Affinity, new {@id = "affinities_array", @type = "hidden", @class = "form-control"})
             <div class="form-group">
                 <label>@Html.LabelFor(m => m.Quantity)</label>
                 @Html.TextBoxFor(m => m.Quantity, new {@class = "form-control"})
@@ -144,6 +144,45 @@
         }
     </div>
 </div>
+@Scripts.Render("~/Template/bower_components/jquery/dist/jquery.min.js")
+@Scripts.Render("~/Template/bower_components/select2/dist/js/select2.full.min.js")
+@Scripts.Render("~/Scripts/jquery.autocomplete-address.min.js")
+@Scripts.Render("~/Scripts/jquery.mask.min.js")
+@Scripts.Render("~/Scripts/input_file.js")
+@Scripts.Render("~/Scripts/main.js")
+
+<script>
+
+    $(document).ready(function() {
+
+        //Quando o form retorna com algum erro, este método verifica se existe valor no input affinity, 
+        //e seleciona os valores correspondentes no select2 
+        if ($('#affinities_array').val()) {
+            let affinities = JSON.parse($('#affinities_array').val());
+            let values_select = [];
+            affinities.forEach(function(a) {
+                values_select.push(a.value)
+            });
+            $("#multiple_select_affinity").val(values_select).change()
+        }
+    })
+
+//Sempre que ocorre um evento no select2, selecionando ou deselecionando uma afinidade,
+//este método captura o evento e salva uma string no input affinity com os valores do select2
+    $("#multiple_select_affinity").on("select2:select select2:unselect",
+        function(e) {
+            let values_selected = $(this).select2('data');
+            let values_input = [];
+            values_selected.forEach(function(value) {
+                values_input.push({
+                    'value': value.id,
+                    'text': value.text
+                })
+            });
+            $('#affinities_array').val(JSON.stringify(values_input))
+        })
+
+</script>
 
 @section scripts {
     <script>
@@ -190,7 +229,6 @@
             });
             $('#affinities_array').val(JSON.stringify(values_input))
         })
-
 
     </script>
 }

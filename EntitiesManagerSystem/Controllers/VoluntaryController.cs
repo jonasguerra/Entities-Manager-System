@@ -41,10 +41,10 @@ namespace EntitiesManagerSystem.Controllers
         public ActionResult RegisterDonate()
         {
             ViewBag.user = "voluntary";
-            var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
-            ViewBag.affinities = affinities;
             ViewBag.register_donate = "active";
 
+            var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
+            ViewBag.affinities = affinities;
             return View();
         }
 

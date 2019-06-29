@@ -1,0 +1,17 @@
+​
+
+Famílias carentes;​
+
+Idosos;​
+
+Animais desabrigados; ​
+
+Pessoas com necessidades especiais;​
+
+Orfãos;
+
+/config:C:/RiderProjects/Entities-Manager-System/.idea/config/applicationhost.config /site:EntitiesManagerSystem /apppool:Clr4IntegratedAppPool
+
+--address=127.0.0.1 --port=5001
+
+/config:C:/RiderProjects/Entities-Manager-System/.idea/config/applicationhost.config /site:EntitiesManagerSystem /apppool:Clr4IntegratedAppPool

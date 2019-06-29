@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using EntitiesManagerSystem.Custom_Atribute;
 
@@ -27,10 +28,11 @@ namespace EntitiesManagerSystem.Models.Voluntary
         [Range(1, int.MaxValue, ErrorMessage = "Insira uma inteiro válido")]
         public string Quantity { get; set; }
         
-        
         public bool takeDonation { get; set; }
         
-        public Address Address { get; set; }        
+        public Address Address { get; set; }    
+        
+        public List<Affinity> Affinities { get; set; }
 
         public Donations()
         {

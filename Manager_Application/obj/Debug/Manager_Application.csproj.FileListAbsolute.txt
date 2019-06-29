@@ -7,15 +7,6 @@
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.csproj.CopyComplete
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.dll
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.pdb
-C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Manager_Application.dll
-C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Manager_Application.pdb
-C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Manager_Domain.dll
-C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Manager_Domain.pdb
-C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.csprojAssemblyReference.cache
-C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.csproj.CoreCompileInputs.cache
-C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.csproj.CopyComplete
-C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.dll
-C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.pdb
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Npgsql.dll
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Buffers.dll
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Memory.dll
@@ -31,3 +22,27 @@ C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_A
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Threading.Tasks.Extensions.xml
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.ValueTuple.xml
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Application.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Application.pdb
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Domain.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Npgsql.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Buffers.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Memory.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Numerics.Vectors.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.ValueTuple.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Domain.pdb
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Npgsql.pdb
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Npgsql.xml
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Buffers.xml
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Memory.xml
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Numerics.Vectors.xml
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.ValueTuple.xml
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.csprojAssemblyReference.cache
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.csproj.CoreCompileInputs.cache
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.csproj.CopyComplete
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.dll
+C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.pdb

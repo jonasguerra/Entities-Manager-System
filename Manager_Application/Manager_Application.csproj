@@ -39,12 +39,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapter\AffinityAdapter.cs" />
+    <Compile Include="Adapter\DonationAdapter.cs" />
     <Compile Include="Adapter\EntityAdapter.cs" />
     <Compile Include="Adapter\EventAdapter.cs" />
     <Compile Include="Adapter\VoluntaryAdapter.cs" />
     <Compile Include="AffinityAplication.cs" />
+    <Compile Include="DonationApplication.cs" />
     <Compile Include="DTO\AddressDTO.cs" />
     <Compile Include="DTO\AffinityDTO.cs" />
+    <Compile Include="DTO\DonationDTO.cs" />
     <Compile Include="DTO\EntityDTO.cs" />
     <Compile Include="DTO\EventDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />

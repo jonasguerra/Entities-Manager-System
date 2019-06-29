@@ -96,16 +96,10 @@ namespace EntitiesManagerSystem.Controllers
         
         
         [HttpPost]
-        public ActionResult ShowMoreEvent()
+        public ActionResult ShowMoreEvent(Guid id)
         {
-            Event show_event = new Event()
-            {
-                EventId = new Guid(),
-                Title = "Evento",
-                Description = "Nam sed quam vitae augue viverra convallis. Aliquam at ultricies tortor, eu tempor arcu. Pellentesque tincidunt ante nec mattis sagittis. Donec sollicitudin tortor vel felis consectetur dictum.",
-            };
-
-            return Json(new {status="success", show_event=show_event});
+            var sEvent = clientHttp.Get<Event>(string.Format(@"Event/{0}", id.ToString()));
+            return Json(new {status="success", sEvent=sEvent});
         }
 
 

@@ -18,15 +18,15 @@ namespace Manager_Application
         
         public Guid Insert(EventDTO eventDto)
         {
+            eventDto.EventId = Guid.NewGuid();
+            eventDto.Address.AddressId = Guid.NewGuid();
             var sEvent = EventAdapter.ToDomain(eventDto);
-
             return eventRepository.Insert(sEvent);
         }
 
         public Guid Update(EventDTO eventDto)
         {
             var sEvent = EventAdapter.ToDomain(eventDto);
-
             return eventRepository.Update(sEvent);
         }
 
@@ -43,7 +43,6 @@ namespace Manager_Application
         public EventDTO Get(Guid id)
         {
             var sEvent = eventRepository.Find(id);
-
             return EventAdapter.ToDTO(sEvent);
         }
 
@@ -51,12 +50,10 @@ namespace Manager_Application
         {
             List<EventDTO> eventsDto = new List<EventDTO>();
             var events = eventRepository.FindAll();
-
             foreach (Event cli in events)
             {
                 eventsDto.Add(EventAdapter.ToDTO(cli));
             }
-
             return eventsDto;
         }
         

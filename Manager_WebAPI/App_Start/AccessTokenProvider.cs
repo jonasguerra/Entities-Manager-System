@@ -5,6 +5,7 @@ using Microsoft.Owin.Security.OAuth;
 using Manager_Application;
 using Manager_Domain.Interfaces;
 using System.Threading.Tasks;
+using Manager_Application.DTO;
 
 namespace Manager_API
 {
@@ -27,7 +28,9 @@ namespace Manager_API
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-            if (userApplication.Autenticar(context.UserName, context.Password))
+            UserDTO user = userApplication.Autenticar(context.UserName, context.Password);
+            
+            if (user != null)
             {
                 var identity = new ClaimsIdentity(context.Options.AuthenticationType);
                 identity.AddClaim(new Claim("sub", context.UserName));

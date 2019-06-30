@@ -24,6 +24,11 @@ namespace EntitiesManagerSystem.Controllers
         // GET
         public ActionResult Index()
         {
+            if (isAuthenticated())
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            
             ViewBag.user = "voluntary";
             ViewBag.index = "active";
 
@@ -32,6 +37,11 @@ namespace EntitiesManagerSystem.Controllers
 
         public ActionResult Events()
         {
+            if (isAuthenticated())
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            
             ViewBag.user = "voluntary";
             ViewBag.events = "active";
             
@@ -44,6 +54,11 @@ namespace EntitiesManagerSystem.Controllers
 
         public ActionResult RegisterDonate()
         {
+            if (isAuthenticated())
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            
             ViewBag.user = "voluntary";
             ViewBag.register_donate = "active";
 
@@ -66,6 +81,11 @@ namespace EntitiesManagerSystem.Controllers
         [HttpPost]
         public ActionResult SaveDonation(Donations donation)
         {
+            if (isAuthenticated())
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            
             if (ModelState.IsValid)
             {
                 dynamic json_affinity = JsonConvert.DeserializeObject(donation.Affinity);
@@ -121,6 +141,11 @@ namespace EntitiesManagerSystem.Controllers
         [HttpPost]
         public ActionResult ShowMoreEvent(Guid id)
         {
+            if (isAuthenticated())
+            {
+                return Json(new {status = "error"});
+            }
+            
             var sEvent = clientHttp.Get<Event>(string.Format(@"Event/{0}", id.ToString()));
             return Json(new {status="success", sEvent=sEvent});
         }
@@ -129,6 +154,11 @@ namespace EntitiesManagerSystem.Controllers
         [HttpPost]
         public ActionResult SetVoluntaryToEvent(Guid voluntaryId, Guid eventId)
         {
+            if (isAuthenticated())
+            {
+                return Json(new {status = "error"});
+            }
+            
             EventVoluntary event_voluntary = new EventVoluntary()
             {
                 EventId = eventId,
@@ -137,6 +167,16 @@ namespace EntitiesManagerSystem.Controllers
 
             var id = clientHttp.Post<EventVoluntary>(@"Voluntary/SetVoluntaryToEvent/", event_voluntary);
             return Json(new {status = "success"});
+        }
+
+        private bool isAuthenticated()
+        {
+            User user = (User) Session["user"];
+            
+            if (!user.IsApproved || !user.IsVoluntary)
+                return false;
+            
+            return true;
         }
     }
 }

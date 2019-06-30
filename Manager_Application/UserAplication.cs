@@ -1,4 +1,6 @@
 using System;
+using Manager_Application.Adapter;
+using Manager_Application.DTO;
 using Manager_Domain.Interfaces;
 
 namespace Manager_Application
@@ -11,7 +13,7 @@ namespace Manager_Application
         {
             this.userRepository = userRepository;
         }
-        public bool Autenticar(string email, string password)
+        public UserDTO Autenticar(string email, string password)
         {
             var user = this.userRepository.Find(email.ToLower());
             if (user == null)
@@ -21,11 +23,11 @@ namespace Manager_Application
 
             if (!user.PassswordIsValid(password))
             {
-                return false;
+                return null;
             }
             else
             {
-                return true;
+                return UserAdapter.ToDTO(user);
             }
         }
 
@@ -45,6 +47,12 @@ namespace Manager_Application
             user.Password = newPassword;
 
             this.userRepository.Update(user);
+        }
+        
+        public UserDTO GetByEmail(string email)
+        {
+            var user = userRepository.Find(email);
+            return UserAdapter.ToDTO(user);
         }
     }
 }

@@ -26,9 +26,6 @@ namespace Ftec.WebAPI.Infra.Repository
                 {
                     try
                     {
-                        sEvent.EventId = Guid.NewGuid();
-                        sEvent.Address.AddressId = Guid.NewGuid();
-                        
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;

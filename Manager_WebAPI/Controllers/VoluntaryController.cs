@@ -31,7 +31,6 @@ namespace Manager_API.Controllers
         // GET api/values
         public HttpResponseMessage Get()
         {
-            Console.WriteLine("GET ALL CONTROLLER");
             List<VoluntaryDTO> voluntariesDTO = new List<VoluntaryDTO>();
             try
             {
@@ -49,7 +48,6 @@ namespace Manager_API.Controllers
         // GET api/values/5
         public HttpResponseMessage Get(Guid id)
         {
-            Console.WriteLine("GET ONE CONTROLLER");
             try
             {
                 VoluntaryDTO voluntariesDTO = Find(id);
@@ -236,18 +234,15 @@ namespace Manager_API.Controllers
             };
             
             voluntaryApplication.Update(voluntaryDTO);
-            Console.WriteLine("PUT METHOD CONTROLLER");
         }
 
         private bool Remove(Guid id)
         {
-            Console.WriteLine("DELETE METHOD CONTROLLER");
             return voluntaryApplication.Delete(id);
         }
 
         private VoluntaryDTO Find(Guid id)
         {
-            Console.WriteLine("GET ONE METHOD CONTROLLER");
             return voluntaryApplication.Get(id);
         }
     }

@@ -66,7 +66,6 @@ namespace Ftec.WebAPI.Infra.Repository
 
         public Voluntary Find(Guid id)
         {
-            Console.WriteLine("GET ONE REPOSITORY");
             Voluntary voluntary = null;
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
@@ -309,10 +308,6 @@ namespace Ftec.WebAPI.Infra.Repository
                 {
                     try
                     {
-                        voluntary.VoluntaryId = Guid.NewGuid();
-                        voluntary.UserId = Guid.NewGuid();
-                        voluntary.Address.AddressId = Guid.NewGuid();
-                        
                         Guid userId = userRepository.Insert(new User()
                         {
                             UserId = voluntary.UserId,

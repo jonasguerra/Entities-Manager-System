@@ -42,6 +42,7 @@
     <Compile Include="Adapter\DonationAdapter.cs" />
     <Compile Include="Adapter\EntityAdapter.cs" />
     <Compile Include="Adapter\EventAdapter.cs" />
+    <Compile Include="Adapter\UserAdapter.cs" />
     <Compile Include="Adapter\VoluntaryAdapter.cs" />
     <Compile Include="AffinityAplication.cs" />
     <Compile Include="DonationApplication.cs" />

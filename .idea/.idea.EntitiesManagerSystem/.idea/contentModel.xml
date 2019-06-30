@@ -896,6 +896,7 @@
           <e p="DonationAdapter.cs" t="Include" />
           <e p="EntityAdapter.cs" t="Include" />
           <e p="EventAdapter.cs" t="Include" />
+          <e p="UserAdapter.cs" t="Include" />
           <e p="VoluntaryAdapter.cs" t="Include" />
         </e>
         <e p="AffinityAplication.cs" t="Include" />
@@ -1061,6 +1062,7 @@
           <e p="EntityController.cs" t="Include" />
           <e p="EventController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
           <e p="VoluntaryController.cs" t="Include" />
         </e>

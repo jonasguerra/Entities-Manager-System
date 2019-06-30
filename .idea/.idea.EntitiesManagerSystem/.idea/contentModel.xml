@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\RiderProjects\Entities-Manager-System" t="IncludeFlat">
+    <e p="$USER_HOME$/.Rider2019.1/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.1/system/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_EntitiesManagerSystem.459376401.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="0-FrontEnd" t="Include" />
       <e p="1-WebServices" t="Include" />
       <e p="2-Application" t="Include" />
@@ -18,7 +20,6 @@
           <e p="FilterConfig.cs" t="Include" />
           <e p="RouteConfig.cs" t="Include" />
         </e>
-        <e p="bin" t="ExcludeRecursive" />
         <e p="Consumer_API" t="Include">
           <e p="APIHttpClient.cs" t="Include" />
         </e>
@@ -32,13 +33,6 @@
           <e p="AdminController.cs" t="Include" />
           <e p="LoginController.cs" t="Include" />
         </e>
-        <e p="favicon.ico" t="Include" />
-        <e p="fonts" t="Include">
-          <e p="glyphicons-halflings-regular.eot" t="Include" />
-          <e p="glyphicons-halflings-regular.svg" t="Include" />
-          <e p="glyphicons-halflings-regular.ttf" t="Include" />
-          <e p="glyphicons-halflings-regular.woff" t="Include" />
-        </e>
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
         <e p="Models" t="Include">
@@ -50,8 +44,6 @@
           <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />
         </e>
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
@@ -420,7 +412,6 @@
           </e>
         </e>
         <e p="Views" t="Include">
-          <e p="_ViewStart.cshtml" t="Include" />
           <e p="Admin" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
@@ -429,14 +420,25 @@
             <e p="Login.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
-            <e p="_Layout.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
+            <e p="_Layout.cshtml" t="Include" />
           </e>
           <e p="Web.config" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
         </e>
-        <e p="Web.config" t="Include" />
         <e p="Web.Debug.config" t="Include" />
         <e p="Web.Release.config" t="Include" />
+        <e p="Web.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="favicon.ico" t="Include" />
+        <e p="fonts" t="Include">
+          <e p="glyphicons-halflings-regular.eot" t="Include" />
+          <e p="glyphicons-halflings-regular.svg" t="Include" />
+          <e p="glyphicons-halflings-regular.ttf" t="Include" />
+          <e p="glyphicons-halflings-regular.woff" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="EntitiesManagerSystem" t="IncludeRecursive">
         <e p="App_Data" t="Include" />
@@ -445,7 +447,6 @@
           <e p="FilterConfig.cs" t="Include" />
           <e p="RouteConfig.cs" t="Include" />
         </e>
-        <e p="bin" t="ExcludeRecursive" />
         <e p="Consumer_API" t="Include">
           <e p="APIHttpClient.cs" t="Include" />
         </e>
@@ -465,13 +466,6 @@
           <e p="RequiredIf.cs" t="Include" />
         </e>
         <e p="EntitiesManagerSystem.csproj" t="IncludeRecursive" />
-        <e p="favicon.ico" t="Include" />
-        <e p="fonts" t="Include">
-          <e p="glyphicons-halflings-regular.eot" t="Include" />
-          <e p="glyphicons-halflings-regular.svg" t="Include" />
-          <e p="glyphicons-halflings-regular.ttf" t="Include" />
-          <e p="glyphicons-halflings-regular.woff" t="Include" />
-        </e>
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
         <e p="Models" t="Include">
@@ -491,8 +485,6 @@
             <e p="Voluntary.cs" t="Include" />
           </e>
         </e>
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
@@ -860,7 +852,6 @@
           </e>
         </e>
         <e p="Views" t="Include">
-          <e p="_ViewStart.cshtml" t="Include" />
           <e p="Entity" t="Include">
             <e p="Donations.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
@@ -871,8 +862,8 @@
             <e p="Login.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
-            <e p="_Layout.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
+            <e p="_Layout.cshtml" t="Include" />
           </e>
           <e p="Voluntary" t="Include">
             <e p="Events.cshtml" t="Include" />
@@ -881,10 +872,21 @@
             <e p="RegisterVoluntary.cshtml" t="Include" />
           </e>
           <e p="Web.config" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
         </e>
-        <e p="Web.config" t="Include" />
         <e p="Web.Debug.config" t="Include" />
         <e p="Web.Release.config" t="Include" />
+        <e p="Web.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="favicon.ico" t="Include" />
+        <e p="fonts" t="Include">
+          <e p="glyphicons-halflings-regular.eot" t="Include" />
+          <e p="glyphicons-halflings-regular.svg" t="Include" />
+          <e p="glyphicons-halflings-regular.ttf" t="Include" />
+          <e p="glyphicons-halflings-regular.woff" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="EntitiesManagerSystem.sln" t="IncludeFlat" />
       <e p="Manager_Application" t="IncludeRecursive">
@@ -897,8 +899,6 @@
           <e p="VoluntaryAdapter.cs" t="Include" />
         </e>
         <e p="AffinityAplication.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="DonationApplication.cs" t="Include" />
         <e p="DTO" t="Include">
           <e p="AddressDTO.cs" t="Include" />
           <e p="AffinityDTO.cs" t="Include" />
@@ -908,19 +908,20 @@
           <e p="UserDTO.cs" t="Include" />
           <e p="VoluntaryDTO.cs" t="Include" />
         </e>
+        <e p="DonationApplication.cs" t="Include" />
         <e p="EntityApplication.cs" t="Include" />
         <e p="EventApplication.cs" t="Include" />
         <e p="Manager_Application.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
         <e p="UserAplication.cs" t="Include" />
         <e p="VoluntaryApplication.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="Manager_Domain" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
         <e p="Entities" t="Include">
           <e p="Address.cs" t="Include" />
           <e p="Affinity.cs" t="Include" />
@@ -939,27 +940,28 @@
           <e p="IVoluntaryRepository.cs" t="Include" />
         </e>
         <e p="Manager_Domain.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="Manager_Repository" t="IncludeRecursive">
         <e p="AffinityRepository.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
         <e p="DonationRepository.cs" t="Include" />
         <e p="EntityRepository.cs" t="Include" />
         <e p="EventRepository.cs" t="Include" />
         <e p="Manager_Repository.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
-        <e p="script.sql" t="Include" />
         <e p="UserRepository.cs" t="Include" />
         <e p="VoluntaryRepository.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="script.sql" t="Include" />
       </e>
       <e p="Manager_WebAPI" t="IncludeRecursive">
         <e p="App_Data" t="Include" />
@@ -1012,7 +1014,6 @@
               <e p="TextSample.cs" t="Include" />
             </e>
             <e p="Views" t="Include">
-              <e p="_ViewStart.cshtml" t="Include" />
               <e p="Help" t="Include">
                 <e p="Api.cshtml" t="Include" />
                 <e p="DisplayTemplates" t="Include">
@@ -1038,12 +1039,13 @@
                 <e p="_Layout.cshtml" t="Include" />
               </e>
               <e p="Web.config" t="Include" />
+              <e p="_ViewStart.cshtml" t="Include" />
             </e>
             <e p="XmlDocumentationProvider.cs" t="Include" />
           </e>
         </e>
-        <e p="bin" t="ExcludeRecursive" />
         <e p="Content" t="Include">
+          <e p="Site.css" t="Include" />
           <e p="bootstrap-theme.css" t="Include" />
           <e p="bootstrap-theme.css.map" t="Include" />
           <e p="bootstrap-theme.min.css" t="Include" />
@@ -1052,7 +1054,6 @@
           <e p="bootstrap.css.map" t="Include" />
           <e p="bootstrap.min.css" t="Include" />
           <e p="bootstrap.min.css.map" t="Include" />
-          <e p="Site.css" t="Include" />
         </e>
         <e p="Controllers" t="Include">
           <e p="AffinityController.cs" t="Include" />
@@ -1063,14 +1064,6 @@
           <e p="UserController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
           <e p="VoluntaryController.cs" t="Include" />
-        </e>
-        <e p="favicon.ico" t="Include" />
-        <e p="fonts" t="Include">
-          <e p="glyphicons-halflings-regular.eot" t="Include" />
-          <e p="glyphicons-halflings-regular.svg" t="Include" />
-          <e p="glyphicons-halflings-regular.ttf" t="Include" />
-          <e p="glyphicons-halflings-regular.woff" t="Include" />
-          <e p="glyphicons-halflings-regular.woff2" t="Include" />
         </e>
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
@@ -1084,8 +1077,6 @@
           <e p="User.cs" t="Include" />
           <e p="Voluntary.cs" t="Include" />
         </e>
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
@@ -1102,23 +1093,32 @@
           <e p="modernizr-2.8.3.js" t="Include" />
         </e>
         <e p="Views" t="Include">
-          <e p="_ViewStart.cshtml" t="Include" />
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
-            <e p="_Layout.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
+            <e p="_Layout.cshtml" t="Include" />
           </e>
           <e p="Web.config" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
         </e>
-        <e p="Web.config" t="Include" />
         <e p="Web.Debug.config" t="Include" />
         <e p="Web.Release.config" t="Include" />
+        <e p="Web.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="favicon.ico" t="Include" />
+        <e p="fonts" t="Include">
+          <e p="glyphicons-halflings-regular.eot" t="Include" />
+          <e p="glyphicons-halflings-regular.svg" t="Include" />
+          <e p="glyphicons-halflings-regular.ttf" t="Include" />
+          <e p="glyphicons-halflings-regular.woff" t="Include" />
+          <e p="glyphicons-halflings-regular.woff2" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Masterhorus\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Masterhorus\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_EntitiesManagerSystem.-415285049.00" t="ExcludeRecursive" />
   </component>
 </project>

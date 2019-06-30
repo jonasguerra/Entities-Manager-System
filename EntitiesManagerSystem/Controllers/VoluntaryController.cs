@@ -34,6 +34,10 @@ namespace EntitiesManagerSystem.Controllers
         {
             ViewBag.user = "voluntary";
             ViewBag.events = "active";
+            
+            var events = clientHttp.Get<List<Event>>(@"Event");
+
+            ViewBag.allEvents = events;
 
             return View();
         }
@@ -111,6 +115,8 @@ namespace EntitiesManagerSystem.Controllers
             return View("RegisterVoluntary", voluntary);
         }
 
+        
+        //######### AJAX EVENT ##########
 
         [HttpPost]
         public ActionResult ShowMoreEvent(Guid id)

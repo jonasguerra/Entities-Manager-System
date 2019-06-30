@@ -58,3 +58,13 @@ body .daterangepicker th.next{
     padding: 25px 80px;
 }
 /*END CSS REGISTER*/
+
+/*CSS MODAL*/
+.bloc-info > div{
+    display:flex;
+}
+
+.bloc-info > div > div{
+    margin-left: 10px;
+}
+/*END CSS MODAL*/

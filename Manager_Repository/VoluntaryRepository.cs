@@ -311,7 +311,7 @@ namespace Ftec.WebAPI.Infra.Repository
                     reader.Close();
                     cmd.Parameters.Clear();
                     
-                    cmd.CommandText = @"SELECT * FROM affinity af join voluntary_affinity av on af.affinity_id = av.affinity_id join voluntary vo on vo.voluntary_id = av.voluntary_id WHERE av.voluntary_id = @Id";
+                    cmd.CommandText = @"SELECT af.name, af.affinity_id FROM affinity af join voluntary_affinity av on af.affinity_id = av.affinity_id join voluntary vo on vo.voluntary_id = av.voluntary_id WHERE av.voluntary_id = @Id";
                     cmd.Parameters.AddWithValue("Id", voluntary.VoluntaryId.ToString());
                     reader = cmd.ExecuteReader();
                     voluntary.Affinities = new List<Affinity>();
@@ -319,7 +319,7 @@ namespace Ftec.WebAPI.Infra.Repository
                     {
                         voluntary.Affinities.Add(new Affinity()
                         {
-                            AffinityId = Guid.Parse(reader["voluntary_id"].ToString()),
+                            AffinityId = Guid.Parse(reader["affinity_id"].ToString()),
                             Name = reader["name"].ToString()
                         });
                     }

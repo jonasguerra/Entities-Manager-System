@@ -49,25 +49,38 @@
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Afinidades</th>
-                <th scope="col">Data</th>
+                <th scope="col">Horário</th>
                 <th scope="col" class="head-actions text-right">Ações</th>
             </tr>
             </thead>
             <tbody id="tbody_all_event">
-            <tr data-event-id="1">
-                <td></td>
-                <td class="name">Nome evento</td>
-                <th scope="col">Afinidades</th>
-                <td class="name">25/05/2019</td>
-                <td class="actions text-right">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="participate" data-placement="top" data-toggle="tooltip" data-original-title="Participar">
-                        <i class="os-icon os-icon-tasks-checked"></i>
-                    </a>
-                </td>
-            </tr>
+            
+            @foreach (var sEvent in ViewBag.allEvents)
+            {
+                <tr data-event-id="@sEvent.EventId">
+                    <td></td>
+                    <td class="name">@sEvent.Title</td>
+                    <th scope="col">
+                        <div class="post-tags">
+                        @foreach (var affinity in sEvent.Affinities)
+                        {
+                            <div class="badge badge-primary">
+                               @affinity.Name
+                            </div>
+                        }
+                        </div>
+                    </th>
+                    <td class="name">@sEvent.Date</td>
+                    <td class="actions text-right">
+                        <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                            <i class="os-icon os-icon-search"></i>
+                        </a>
+                        <a href="javascript:;" class="participate" data-placement="top" data-toggle="tooltip" data-original-title="Participar">
+                            <i class="os-icon os-icon-tasks-checked"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
             </tbody>
         </table>
     </div>
@@ -90,7 +103,6 @@
                     
                     <div class="bloc-info">
                         <div>Descrição: <div class="description"></div></div>
-                        <div>Affinidades: <div class="affinities"></div></div>
                         <div>Data: <div class="date"></div></div>
                     </div>
                     
@@ -107,6 +119,13 @@
                         <div>Ponto de referência: <div class="reference-point"></div></div>
                     </div>
                     
+                    <legend>
+                        <span></span>
+                    </legend>
+                    
+                    <div class="bloc-info">
+                        <div>Afinidades: <div class="affinities"></div></div>
+                    </div>
                     
                 </div>
                 <div class="modal-footer">

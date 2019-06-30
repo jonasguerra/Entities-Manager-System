@@ -112,24 +112,24 @@ $('.event-table').on('click', '.show_more', function () {
         success: function (data) {
             if (data.status == 'success') {
                 
-                let event = data.show_event;
+                let event = data.sEvent;
 
-                $('.show-event-modal .event-id').text(event.Id);
+                $('.show-event-modal .event-id').text(event.EventId);
                 $('.show-event-modal .title').text(event.Title);
                 $('.show-event-modal .description').text(event.Description);
-                // $('.show-event-modal .date').text(event.Date);
-                // $('.show-event-modal .cep').text(event.Address.CEP);
-                // $('.show-event-modal .avenue').text(event.Address.Avenue);
-                // $('.show-event-modal .number').text(event.Address.Number);
-                // $('.show-event-modal .neighborhood').text(event.Address.Neighborhood);
-                // $('.show-event-modal .city').text(event.Address.City + ' - ' + event.Address.State);
-                //
-                // let affinities ='';
-                // event.Affinities.forEach(function (e) {
-                //     affinities = affinities + e.Name + '; ';
-                // })
-                //
-                // $('.show-event-modal .affinities').text(affinities);
+                $('.show-event-modal .date').text(new Date(parseInt(event.Date.substr(6))));
+                $('.show-event-modal .cep').text(event.Address.CEP);
+                $('.show-event-modal .avenue').text(event.Address.Avenue);
+                $('.show-event-modal .number').text(event.Address.Number);
+                $('.show-event-modal .neighborhood').text(event.Address.Neighborhood);
+                $('.show-event-modal .city').text(event.Address.City + ' - ' + event.Address.State);
+
+                let affinities ='';
+                event.Affinities.forEach(function (e) {
+                    affinities = affinities + e.Name + '; ';
+                })
+
+                $('.show-event-modal .affinities').text(affinities);
 
                 $('.show-event-modal').modal('show')
 

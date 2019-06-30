@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="WebAPI" type="DotNetProject" factoryName=".NET Project" singleton="false">
     <option name="EXE_PATH" value="C:/Program Files (x86)/IIS Express/iisexpress.exe" />
-    <option name="PROGRAM_PARAMETERS" value="--address=127.0.0.1 --port=5002" />
+    <option name="PROGRAM_PARAMETERS" value="/config:$PROJECT_DIR$/.idea/config/applicationhost.config /site:EntitiesManagerSystem /apppool:Clr4IntegratedAppPool" />
     <option name="WORKING_DIRECTORY" value="C:/Program Files (x86)/IIS Express" />
     <option name="PASS_PARENT_ENVS" value="1" />
     <envs>
@@ -16,7 +16,7 @@
     <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
     <option name="PROJECT_KIND" value="Web" />
     <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.2" />
-    <browser url="http://localhost:5002/" />
+    <browser url="http://127.0.0.1:5002/" />
     <method v="2">
       <option name="Build" enabled="true" />
     </method>

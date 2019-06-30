@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Manager_Domain.Entities
 {
@@ -13,7 +14,7 @@ namespace Manager_Domain.Entities
         public string EntityConfirmPassword { get; set; }
         public Address EntityAddress { get; set; }
         public string EntityReferencePoint { get; set; }
-        public string EntityAffinity { get; set; }
+        public List<Affinity> EntityAffinity { get; set; }
         public string EntityInitials { get; set; }
         public DateTime EntityCreationDate { get; set; }
         public string EntitySocialNetwork { get; set; }
@@ -23,7 +24,7 @@ namespace Manager_Domain.Entities
 
         public Entity()
         {
-            //IsEntity = true;
+            IsEntity = true;
         }
     }
 }

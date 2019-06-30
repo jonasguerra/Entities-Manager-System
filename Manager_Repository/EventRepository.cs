@@ -109,7 +109,63 @@ namespace Ftec.WebAPI.Infra.Repository
 
         public Event Find(Guid id)
         {
-            throw new NotImplementedException();
+            Event sEvent = null; 
+            
+            using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
+            {
+                con.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = @"SELECT * FROM event WHERE event_id=@event_id";
+                cmd.Parameters.AddWithValue("event_id", id.ToString());
+                var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    sEvent = new Event();
+                    sEvent.EventId = Guid.Parse(reader["event_id"].ToString());
+                    sEvent.Title =  reader["title"].ToString();
+                    sEvent.Description = reader["Description"].ToString();
+                    sEvent.Date = DateTime.Parse(reader["Date"].ToString());
+                    sEvent.Address = new Address()
+                    {
+                        AddressId = Guid.Parse(reader["address_id"].ToString())
+                    };
+                }
+                reader.Close();
+                cmd.Parameters.Clear();
+                
+                cmd.CommandText = @"SELECT * FROM address WHERE address_id=@Id";
+                cmd.Parameters.AddWithValue("Id", sEvent.Address.AddressId.ToString());
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    sEvent.Address.CEP = reader["cep"].ToString();
+                    sEvent.Address.Avenue = reader["avenue"].ToString();
+                    sEvent.Address.Number = reader["number"].ToString();
+                    sEvent.Address.Neighborhood = reader["neighborhood"].ToString();
+                    sEvent.Address.City = reader["city"].ToString();
+                    sEvent.Address.State = reader["state"].ToString();
+                }
+                reader.Close();
+                cmd.Parameters.Clear();
+                
+                cmd.CommandText = @"SELECT * FROM affinity af join event_affinity av on af.affinity_id = av.affinity_id join event vo on vo.event_id = av.event_id WHERE av.event_id = @Id";
+                cmd.Parameters.AddWithValue("Id", sEvent.EventId.ToString());
+                reader = cmd.ExecuteReader();
+                sEvent.Affinities = new List<Affinity>();
+                while (reader.Read())
+                {
+                    sEvent.Affinities.Add(new Affinity()
+                    {
+                        AffinityId = Guid.Parse(reader["event_id"].ToString()),
+                        Name = reader["name"].ToString()
+                    });
+                }
+
+                return sEvent;
+            }
         }
 
         public List<Event> FindByAffinityId(Guid id)

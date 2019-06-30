@@ -51,19 +51,19 @@ namespace EntitiesManagerSystem.Controllers
 
             ViewBag.affinities = affinities;
 
-            ViewBag.user = "entity";
-            ViewBag.category_event = new List<String>
-            {
-                "Pets", 
-                "Infantil", 
-                "Idosos",
-                "Necessitados",
-                "Meio Ambiente",
-            };
+            //  ViewBag.user = "entity";
+            //  ViewBag.category_event = new List<String>
+            //  {
+            //      "Pets", 
+            //      "Infantil", 
+            //      "Idosos",
+            //      "Necessitados",
+            //      "Meio Ambiente",
+            //  };
             
             return View();
         }
-        
+
         //###################
         //### POST METHOD ###
         //###################

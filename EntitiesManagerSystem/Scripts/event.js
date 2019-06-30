@@ -56,52 +56,51 @@ function update_table_event(){
 }
 
 
-//
-// $('.event-table').on('click', '.approve', function () {
-//     let id = $(this).closest('tr').attr('data-voluntary-id');
-//     $.ajax({
-//         url: $('#approve_voluntary_url').val(),
-//         method: 'POST',
-//         data: {
-//             'id': id,
-//         },
-//         success: function (data) {
-//             if (data.status == 'success') {
-//                 new PNotify({
-//                     title: data.message_title,
-//                     text: '',
-//                     delay: 1000,
-//                     type: 'success',
-//                 });
-//
-//
-//                 //Este if deve ser executado antes de alterar a tabela
-//                 if ($.fn.dataTable.isDataTable("#voluntary table")){
-//                     $('#voluntary table').DataTable().destroy()
-//                 }
-//
-//                 let name = $('tr[data-voluntary-id="' + id + '"] .name').text();
-//                 $('tr[data-voluntary-id="' + id + '"]').remove();
-//                 append_voluntary_approved(id, name);
-//
-//                 update_table_voluntary()
-//
-//
-//             } else if (data.status == 'error') {
-//                 new PNotify({
-//                     title: data.message_title,
-//                     text: '',
-//                     delay: 1000,
-//                     type: 'error',
-//                 });
-//             }
-//         },
-//         error: function (e) {
-//             console.error('ERROR AJAX:', e)
-//         },
-//     })
-// });
-//
+$('.event-table').on('click', '.participate', function () {
+    let id = $(this).closest('tr').attr('data-event-id');
+    $.ajax({
+        url: $('#approve_voluntary_url').val(),
+        method: 'POST',
+        data: {
+            'id': id,
+        },
+        success: function (data) {
+            if (data.status == 'success') {
+                new PNotify({
+                    title: data.message_title,
+                    text: '',
+                    delay: 1000,
+                    type: 'success',
+                });
+
+
+                //Este if deve ser executado antes de alterar a tabela
+                if ($.fn.dataTable.isDataTable("#voluntary table")){
+                    $('#voluntary table').DataTable().destroy()
+                }
+
+                let name = $('tr[data-voluntary-id="' + id + '"] .name').text();
+                $('tr[data-voluntary-id="' + id + '"]').remove();
+                append_voluntary_approved(id, name);
+
+                update_table_voluntary()
+
+
+            } else if (data.status == 'error') {
+                new PNotify({
+                    title: data.message_title,
+                    text: '',
+                    delay: 1000,
+                    type: 'error',
+                });
+            }
+        },
+        error: function (e) {
+            console.error('ERROR AJAX:', e)
+        },
+    })
+});
+
 $('.event-table').on('click', '.show_more', function () {
     let id = $(this).closest('tr').attr('data-event-id');
     $.ajax({
@@ -147,7 +146,7 @@ $('.event-table').on('click', '.show_more', function () {
             console.error('ERROR AJAX:', e)
         },
     })
-})
+});
 //
 // $('#voluntary').on('click', '.trash', function () {
 //     let id = $(this).closest('tr').attr('data-voluntary-id');

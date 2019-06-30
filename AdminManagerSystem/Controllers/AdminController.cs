@@ -100,6 +100,7 @@ namespace AdminManagerSystem.Controllers
             var entity = clientHttp.Get<Entity>(string.Format(@"Entity/{0}", id.ToString()));
             return Json(new {status="success", entity=entity});
         }
+        
         [HttpPost]
         public ActionResult ApproveEntity(Guid id)
         {

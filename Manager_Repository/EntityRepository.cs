@@ -61,7 +61,10 @@ namespace Ftec.WebAPI.Infra.Repository
             }
         }
 
-        public Entity Find(Guid id)
+        
+        
+        
+                public Entity Find(Guid id)
         {
             Console.WriteLine("GET ONE ENTITY - Repository");
             Entity entity = null;
@@ -80,7 +83,7 @@ namespace Ftec.WebAPI.Infra.Repository
                 while (reader.Read())
                 {
                     entity = new Entity();
-                    entity.EntityId = Guid.Parse(reader["voluntary_id"].ToString());
+                    entity.EntityId = Guid.Parse(reader["entity_id"].ToString());
                     entity.UserId = Guid.Parse(reader["user_id"].ToString());
                     entity.EntityName = reader["Name"].ToString();
                     entity.EntityEmail = reader["Email"].ToString();
@@ -99,26 +102,28 @@ namespace Ftec.WebAPI.Infra.Repository
                     
                     
                 }
-                
-                //TODO aqui tem que colocar a leitura das afinidades, que pode ser mais de 1
-                
+              
                 reader.Close();
                 cmd.Parameters.Clear();
-                
+                //aqui
                 cmd.CommandText = @"SELECT * FROM public.user WHERE user_id=@user_id";
                 cmd.Parameters.AddWithValue("user_id", entity.UserId.ToString());
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    entity.IsApproved = (bool) reader["is_approved"];
-                    entity.IsEntity = (bool) reader["is_entity"];
+                    entity.UserId = Guid.Parse(reader["user_id"].ToString());
+                    entity.IsApproved = (bool)reader["is_approved"];
+                    entity.IsEntity = (bool)reader["is_entity"];
+                    entity.IsVoluntary = (bool)reader["is_voluntary"];
+                    entity.IsModerator = (bool)reader["is_moderator"];
                     entity.Email = reader["email"].ToString();
                     entity.Password = reader["password"].ToString();
                 }
-
                 reader.Close();
                 cmd.Parameters.Clear();
 
+                
+                //aqui
                 cmd.CommandText = @"SELECT * FROM address WHERE address_id=@Id";
                 cmd.Parameters.AddWithValue("Id", entity.EntityAddress.AddressId.ToString());
                 reader = cmd.ExecuteReader();
@@ -131,11 +136,28 @@ namespace Ftec.WebAPI.Infra.Repository
                     entity.EntityAddress.City = reader["city"].ToString();
                     entity.EntityAddress.State = reader["state"].ToString();
                 }
+                reader.Close();
+                cmd.Parameters.Clear();
+                
+                cmd.CommandText = @"SELECT * FROM affinity af join entity_affinity av on af.affinity_id = av.affinity_id join entity vo on vo.entity_id = av.entity_id WHERE av.entity_id = @Id";
+                cmd.Parameters.AddWithValue("Id", entity.EntityId.ToString());
+                reader = cmd.ExecuteReader();
+                entity.EntityAffinity= new List<Affinity>();
+                while (reader.Read())
+                {
+                    entity.EntityAffinity.Add(new Affinity()
+                    {
+                        AffinityId = Guid.Parse(reader["entity_id"].ToString()),
+                        Name = reader["name"].ToString()
+                    });
+                }
 
+              
                 return entity;
             }
         }
 
+                
 
 
         public List<Entity> FindAll()

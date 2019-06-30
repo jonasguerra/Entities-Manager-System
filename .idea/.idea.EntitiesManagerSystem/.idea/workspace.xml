@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c64d172-2726-40ce-960f-23b407ddc5d8" name="Default Changelist" comment="">
-<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Content/input_file.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Scripts/input_file.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/RegisterEntity.cshtml" afterDir="false" />
@@ -10,10 +9,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Controllers/EntityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Controllers/EntityController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/EntitiesManagerSystem.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/EntitiesManagerSystem.csproj" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EntitiesManagerSystem/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml" afterDir="false" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
       <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/bin/EntitiesManagerSystem.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csproj.CoreCompileInputs.cache" afterDir="false" />
@@ -30,19 +27,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
               <caret line="166" selection-start-line="166" selection-end-line="166" selection-end-column="36" />
-=======
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
               <folding>
                 <marker date="1554845325777" expanded="true" signature="16:9474" ph="&lt;html.../&gt;" />
                 <marker date="1554845325777" expanded="true" signature="24:1239" ph="&lt;head.../&gt;" />
@@ -113,10 +107,8 @@
                 <marker date="1554729972975" expanded="true" signature="2035:2340" ph="&lt;div.../&gt;" />
                 <marker date="1554729972975" expanded="true" signature="2357:2450" ph="&lt;div.../&gt;" />
               </folding>
-=======
             <state relative-caret-position="13605">
               <caret line="907" column="8" selection-start-line="888" selection-end-line="907" selection-end-column="8" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
             </state>
           </provider>
         </entry>
@@ -124,7 +116,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Controllers/EntityController.cs">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="176">
               <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding>
@@ -162,10 +153,8 @@
                 <marker date="1554848417723" expanded="true" signature="2993:3265" ph="&lt;div.../&gt;" />
                 <marker date="1554848417723" expanded="true" signature="3379:3488" ph="&lt;div.../&gt;" />
               </folding>
-=======
             <state relative-caret-position="1245">
               <caret line="83" selection-start-line="83" selection-end-line="83" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
             </state>
           </provider>
         </entry>
@@ -222,12 +211,9 @@
     <setting file="file://$PROJECT_DIR$/AdminManagerSystem/Views/Admin/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/App_Start/RouteConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AdminManagerSystem/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
-<<<<<<< HEAD
     <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Login/Login.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Entity/RegisterEntity.cshtml" root0="FORCE_HIGHLIGHTING" />
-=======
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -299,7 +285,6 @@
               <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
               <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
             </path>
-<<<<<<< HEAD
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="EntitiesManagerSystem" type="24d0babc:SolutionExplorerModelNode" />
@@ -352,8 +337,6 @@
               <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Voluntary" type="24d0babc:SolutionExplorerModelNode" />
             </path>
-=======
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
           </expand>
           <select />
         </subPane>
@@ -388,7 +371,7 @@
   <component name="RunManager" selected=".NET Project.Default">
     <configuration name="AdminManagerSystem" type="DotNetProject" factoryName=".NET Project" temporary="true">
       <option name="EXE_PATH" value="/usr/lib/mono/4.5/xsp4.exe" />
-      <option name="PROGRAM_PARAMETERS" value="--address=127.0.0.1 --port=5000" />
+      <option name="PROGRAM_PARAMETERS" value="--address=127.0.0.1 --port=5001" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AdminManagerSystem" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -444,23 +427,17 @@
       <updated>1554469827862</updated>
       <workItem from="1554469835440" duration="2194000" />
       <workItem from="1554565478998" duration="26166000" />
-<<<<<<< HEAD
       <workItem from="1554668108980" duration="8792000" />
       <workItem from="1554760160546" duration="2199000" />
       <workItem from="1554843925502" duration="3132000" />
-=======
       <workItem from="1554668108980" duration="8484000" />
       <workItem from="1554845106885" duration="213000" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
     <option name="totallyTimeSpent" value="42483000" />
-=======
     <option name="totallyTimeSpent" value="37057000" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,28 +449,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
     <frame x="0" y="0" width="1366" height="736" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26742426" />
-=======
     <frame x="0" y="0" width="1366" height="734" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26287878" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.14144737" />
-=======
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18646865" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -506,11 +477,8 @@
       <window_info anchor="bottom" id="REST Client" order="12" weight="0.32894737" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Build" order="15" weight="0.32730263" />
-=======
       <window_info anchor="bottom" id="Build" order="15" weight="0.32673267" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
       <window_info anchor="bottom" id="Inspection Results" order="16" weight="0.32894737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -874,7 +842,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Content/input_file.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -922,7 +889,6 @@
             <marker date="1554729972975" expanded="true" signature="2035:2340" ph="&lt;div.../&gt;" />
             <marker date="1554729972975" expanded="true" signature="2357:2450" ph="&lt;div.../&gt;" />
           </folding>
-=======
     <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Views/Shared/_Layout.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -982,13 +948,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13605">
           <caret line="907" column="8" selection-start-line="888" selection-end-line="907" selection-end-column="8" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EntitiesManagerSystem/Scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="196">
           <caret line="166" selection-start-line="166" selection-end-line="166" selection-end-column="36" />
           <folding>
@@ -1039,10 +1003,8 @@
             <marker date="1554732477973" expanded="true" signature="5922:6286" ph="@*...*@" />
             <marker date="1554732477973" expanded="true" signature="8938:9443" ph="@*...*@" />
           </folding>
-=======
         <state relative-caret-position="1245">
           <caret line="83" selection-start-line="83" selection-end-line="83" />
->>>>>>> e1bd578600893c67b194865728af3d20b2b3e228
         </state>
       </provider>
     </entry>

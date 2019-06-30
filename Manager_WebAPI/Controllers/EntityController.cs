@@ -181,6 +181,7 @@ namespace Manager_API.Controllers
                 EntityWebSite = entity.EntityWebSite,
                 EntityResponsableName = entity.EntityResponsableName,
                 EntitySocialNetwork = entity.EntitySocialNetwork,
+                EntityAffinity = affinities,
                 EntityAddressDto = new AddressDTO()
                 {
                     CEP = entity.Address.CEP,
@@ -223,6 +224,7 @@ namespace Manager_API.Controllers
             EntityWebSite = entity.EntityWebSite,
             EntityResponsableName = entity.EntityResponsableName,
             EntitySocialNetwork = entity.EntitySocialNetwork,
+            EntityAffinity = affinities,
             EntityAddressDto = new AddressDTO()
             {
                 CEP = entity.Address.CEP,

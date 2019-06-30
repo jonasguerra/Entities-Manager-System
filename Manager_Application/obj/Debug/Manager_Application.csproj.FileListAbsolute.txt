@@ -22,27 +22,49 @@
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Threading.Tasks.Extensions.xml
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.ValueTuple.xml
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Application.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Application.pdb
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Domain.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Npgsql.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Buffers.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Memory.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Numerics.Vectors.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.ValueTuple.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Manager_Domain.pdb
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Npgsql.pdb
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\Npgsql.xml
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Buffers.xml
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Memory.xml
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Numerics.Vectors.xml
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\RiderProjects\Entities-Manager-System\Manager_Application\bin\Debug\System.ValueTuple.xml
-C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.csprojAssemblyReference.cache
-C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.csproj.CoreCompileInputs.cache
-C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.csproj.CopyComplete
-C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.dll
-C:\RiderProjects\Entities-Manager-System\Manager_Application\obj\Debug\Manager_Application.pdb
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Manager_Application.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Manager_Application.pdb
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Manager_Domain.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Npgsql.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Buffers.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Memory.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Numerics.Vectors.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Threading.Tasks.Extensions.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.ValueTuple.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Manager_Domain.pdb
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Npgsql.pdb
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/Npgsql.xml
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Buffers.xml
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Memory.xml
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Numerics.Vectors.xml
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.Threading.Tasks.Extensions.xml
+C:/RiderProjects/Entities-Manager-System/Manager_Application/bin/Debug/System.ValueTuple.xml
+C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.csprojAssemblyReference.cache
+C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.csproj.CoreCompileInputs.cache
+C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.csproj.CopyComplete
+C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.dll
+C:/RiderProjects/Entities-Manager-System/Manager_Application/obj/Debug/Manager_Application.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.Security.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.Security.OAuth.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Newtonsoft.Json.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Owin.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Newtonsoft.Json.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.Cors.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.Diagnostics.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.Host.HttpListener.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.Host.SystemWeb.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.Hosting.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Net.Http.Formatting.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Web.Cors.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Web.Http.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Web.Http.Owin.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.Host.HttpListener.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/Microsoft.Owin.Host.SystemWeb.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Net.Http.Formatting.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Web.Http.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/System.Web.Http.Owin.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/pt-br/System.Net.Http.Formatting.resources.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/Manager_Application/bin/Debug/pt-br/System.Web.Http.resources.dll

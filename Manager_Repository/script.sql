@@ -123,6 +123,9 @@ CREATE TABLE public.entity_affinity
     FOREIGN KEY ("entity_id") REFERENCES "entity"("entity_id")
 ) 
 
+
+--########################## DONATIONS ########################
+
 CREATE TABLE public.donation
 (
     donation_id character varying(36) NOT NULL PRIMARY KEY,

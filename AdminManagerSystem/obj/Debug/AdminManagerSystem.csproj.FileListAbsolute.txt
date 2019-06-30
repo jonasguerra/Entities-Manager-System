@@ -196,77 +196,95 @@
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Runtime.CompilerServices.Unsafe.xml
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Threading.Tasks.Extensions.xml
 /home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.ValueTuple.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\AdminManagerSystem.dll.config
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\AdminManagerSystem.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\AdminManagerSystem.pdb
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\csc.exe
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\csc.exe.config
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\csc.rsp
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\csi.exe
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\csi.rsp
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\System.AppContext.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\System.Collections.Immutable.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\System.IO.FileSystem.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\System.Reflection.Metadata.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\vbc.exe
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\vbc.exe.config
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\vbc.rsp
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\VBCSCompiler.exe
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\roslyn\VBCSCompiler.exe.config
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Antlr3.Runtime.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Microsoft.Web.Infrastructure.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Newtonsoft.Json.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Npgsql.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Buffers.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Memory.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Net.Http.Formatting.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Threading.Tasks.Extensions.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.ValueTuple.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.Helpers.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.Mvc.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.Optimization.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.Razor.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.WebPages.Deployment.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.WebPages.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.WebPages.Razor.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\WebApiRestService.WebApiClient.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\WebGrease.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Npgsql.pdb
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Npgsql.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Buffers.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Memory.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Net.Http.Formatting.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Threading.Tasks.Extensions.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.ValueTuple.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.Helpers.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.Mvc.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.Optimization.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.Razor.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.WebPages.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.WebPages.Deployment.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\System.Web.WebPages.Razor.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\WebApiRestService.WebApiClient.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Antlr3.Runtime.pdb
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\Newtonsoft.Json.xml
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\bin\pt-br\System.Web.Optimization.resources.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\obj\Debug\AdminManagerSystem.csprojAssemblyReference.cache
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\obj\Debug\AdminManagerSystem.csproj.CoreCompileInputs.cache
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\obj\Debug\AdminManagerSystem.csproj.CopyComplete
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\obj\Debug\AdminManagerSystem.dll
-C:\RiderProjects\Entities-Manager-System\AdminManagerSystem\obj\Debug\AdminManagerSystem.pdb
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/AdminManagerSystem.dll.config
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/AdminManagerSystem.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/AdminManagerSystem.pdb
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/csc.exe
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/csc.exe.config
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/csc.rsp
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/csi.exe
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/csi.rsp
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.CSharp.Core.targets
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/Microsoft.VisualBasic.Core.targets
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/System.AppContext.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/System.Collections.Immutable.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/System.Diagnostics.StackTrace.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/System.IO.FileSystem.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/System.IO.FileSystem.Primitives.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/System.Reflection.Metadata.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/vbc.exe
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/vbc.exe.config
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/vbc.rsp
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/VBCSCompiler.exe
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/roslyn/VBCSCompiler.exe.config
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Antlr3.Runtime.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Web.Infrastructure.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Newtonsoft.Json.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Npgsql.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Buffers.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Memory.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Net.Http.Formatting.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Runtime.CompilerServices.Unsafe.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Threading.Tasks.Extensions.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.ValueTuple.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Helpers.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Mvc.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Optimization.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Razor.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.WebPages.Deployment.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.WebPages.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.WebPages.Razor.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/WebApiRestService.WebApiClient.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/WebGrease.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Npgsql.pdb
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Npgsql.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Buffers.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Memory.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Net.Http.Formatting.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Runtime.CompilerServices.Unsafe.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Threading.Tasks.Extensions.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.ValueTuple.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Helpers.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Mvc.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Optimization.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Razor.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.WebPages.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.WebPages.Deployment.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/System.Web.WebPages.Razor.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/WebApiRestService.WebApiClient.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Antlr3.Runtime.pdb
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/Newtonsoft.Json.xml
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/bin/pt-br/System.Web.Optimization.resources.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.csprojAssemblyReference.cache
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.csproj.CoreCompileInputs.cache
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.csproj.CopyComplete
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.dll
+C:/RiderProjects/Entities-Manager-System/AdminManagerSystem/obj/Debug/AdminManagerSystem.pdb
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.Security.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.Security.OAuth.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Owin.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.Cors.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.Diagnostics.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.Host.HttpListener.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.Host.SystemWeb.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.Hosting.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Cors.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Http.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Http.Owin.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.Host.HttpListener.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/Microsoft.Owin.Host.SystemWeb.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Http.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/System.Web.Http.Owin.xml
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/pt-br/System.Net.Http.Formatting.resources.dll
+/home/kaspary/Dropbox/Faculdade/Projeto de Sistema Web/Projetos Rider/Entities-Manager-System/AdminManagerSystem/bin/pt-br/System.Web.Http.resources.dll

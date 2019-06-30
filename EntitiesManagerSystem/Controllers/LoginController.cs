@@ -1,11 +1,20 @@
 using System;
 using System.Web.Mvc;
+using EntitiesManagerSystem.Consumers_API;
 using EntitiesManagerSystem.Models;
 
 namespace EntitiesManagerSystem.Controllers
 {
     public class LoginController : Controller
     {
+        
+        private APIHttpClient clientHttp;
+
+        public LoginController()
+        {
+            clientHttp = new APIHttpClient("http://localhost:5002/api/");
+        }
+        
         // GET
         public ActionResult Login()
         {
@@ -23,19 +32,29 @@ namespace EntitiesManagerSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (login.Username.Equals("entity") && login.Password.Equals("123456"))
-                {
+                try { 
+                    clientHttp.AuthenticationPost(login.Email, login.Password); 
+                    
+//                    TODO: retornar usuario e adicionar na session
+//                    Session["user"]
+                    
                     return RedirectToAction("Index", "Entity");
                 }
-                if (login.Username.Equals("voluntary") && login.Password.Equals("123456"))
+                catch(Exception ex)
                 {
-                    return RedirectToAction("Index", "Voluntary");
+                    return View("Login",login);
                 }
-                TempData["message"] = "Usuário ou senha não correspondem!";
-                return RedirectToAction("Login");
             }
             
             return View("Login",login);
         }
+        
+        
+        public ActionResult Logout()
+        {
+            Session["user"] = null;
+            return RedirectToAction("Login");
+        }
+        
     }
 }

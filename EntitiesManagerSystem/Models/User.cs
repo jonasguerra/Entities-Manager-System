@@ -32,5 +32,7 @@ namespace EntitiesManagerSystem.Models
         [Compare("Password", ErrorMessage = "As senhas não coincidem.")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
+        
+        public string Token { get; set; }
     }
 }

@@ -9,15 +9,17 @@ namespace Ftec.WebAPI.Infra.Repository
     public class VoluntaryRepository : IVoluntaryRepository
     {
         private string connectionString;
-
+        private UserRepository userRepository;
+        
+        
         public VoluntaryRepository(string connectionString)
         {
             this.connectionString = connectionString;
+            userRepository = new UserRepository(connectionString);
         }
 
         public bool Delete(Guid id)
         {
-            Console.WriteLine("DELETE REPOSITORY");
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
                 con.Open();
@@ -26,8 +28,6 @@ namespace Ftec.WebAPI.Infra.Repository
                     try
                     {
                         Voluntary voluntary = this.Find(id);
-                        
-                        Console.WriteLine(voluntary.VoluntaryId);
                         
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
@@ -44,12 +44,8 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.ExecuteNonQuery();
                         
                         cmd.Parameters.Clear();
-                        
-                        cmd.CommandText = @"DELETE FROM public.user WHERE user_id=@user_id";
-                        cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
-                        cmd.ExecuteNonQuery();
-                        
-                        cmd.Parameters.Clear();
+
+                        userRepository.Delete(voluntary.UserId);
                         
                         cmd.CommandText = @"DELETE FROM address WHERE address_id=@address_id";
                         cmd.Parameters.AddWithValue("address_id", voluntary.Address.ToString());
@@ -97,22 +93,15 @@ namespace Ftec.WebAPI.Infra.Repository
                 }
                 reader.Close();
                 cmd.Parameters.Clear();
-                
-                cmd.CommandText = @"SELECT * FROM public.user WHERE user_id=@user_id";
-                cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    voluntary.UserId = Guid.Parse(reader["user_id"].ToString());
-                    voluntary.IsApproved = (bool)reader["is_approved"];
-                    voluntary.IsEntity = (bool)reader["is_entity"];
-                    voluntary.IsVoluntary = (bool)reader["is_voluntary"];
-                    voluntary.IsModerator = (bool)reader["is_moderator"];
-                    voluntary.Email = reader["email"].ToString();
-                    voluntary.Password = reader["password"].ToString();
-                }
-                reader.Close();
-                cmd.Parameters.Clear();
+
+                User user = userRepository.Find(voluntary.UserId);
+                voluntary.UserId = user.UserId;
+                voluntary.IsApproved = user.IsApproved;
+                voluntary.IsEntity = user.IsEntity;
+                voluntary.IsVoluntary = user.IsVoluntary;
+                voluntary.IsModerator = user.IsModerator;
+                voluntary.Email = user.Email;
+                voluntary.Password = user.Password;
                 
                 cmd.CommandText = @"SELECT * FROM address WHERE address_id=@Id";
                 cmd.Parameters.AddWithValue("Id", voluntary.Address.AddressId.ToString());
@@ -150,8 +139,6 @@ namespace Ftec.WebAPI.Infra.Repository
         {
             List<Voluntary> volunteers = new List<Voluntary>();
 
-            Console.WriteLine("GET ONE REPOSITORY");
-            
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
                 con.Open();
@@ -194,21 +181,14 @@ namespace Ftec.WebAPI.Infra.Repository
                     reader.Close();
                     cmd.Parameters.Clear();
                     
-                    cmd.CommandText = @"SELECT * FROM public.user WHERE user_id=@user_id";
-                    cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
-                    reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        voluntary.UserId = Guid.Parse(reader["user_id"].ToString());
-                        voluntary.IsApproved = (bool)reader["is_approved"];
-                        voluntary.IsEntity = (bool)reader["is_entity"];
-                        voluntary.IsVoluntary = (bool)reader["is_voluntary"];
-                        voluntary.IsModerator = (bool)reader["is_moderator"];
-                        voluntary.Email = reader["email"].ToString();
-                        voluntary.Password = reader["password"].ToString();
-                    }
-                    reader.Close();
-                    cmd.Parameters.Clear();
+                    User user = userRepository.Find(voluntary.UserId);
+                    voluntary.UserId = user.UserId;
+                    voluntary.IsApproved = user.IsApproved;
+                    voluntary.IsEntity = user.IsEntity;
+                    voluntary.IsVoluntary = user.IsVoluntary;
+                    voluntary.IsModerator = user.IsModerator;
+                    voluntary.Email = user.Email;
+                    voluntary.Password = user.Password;
                     
                     cmd.CommandText = @"SELECT * FROM address WHERE address_id=@Id";
                     cmd.Parameters.AddWithValue("Id", voluntary.Address.AddressId.ToString());
@@ -246,8 +226,6 @@ namespace Ftec.WebAPI.Infra.Repository
 
         public List<Voluntary> FindAll()
         {
-            Console.WriteLine("GET ALL REPOSITORY");
-            
             List<Voluntary> volunteers = new List<Voluntary>();
 
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
@@ -280,21 +258,14 @@ namespace Ftec.WebAPI.Infra.Repository
                     reader.Close();
                     cmd.Parameters.Clear();
                     
-                    cmd.CommandText = @"SELECT * FROM public.user WHERE user_id=@user_id";
-                    cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
-                    reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        voluntary.UserId = Guid.Parse(reader["user_id"].ToString());
-                        voluntary.IsApproved = (bool)reader["is_approved"];
-                        voluntary.IsEntity = (bool)reader["is_entity"];
-                        voluntary.IsVoluntary = (bool)reader["is_voluntary"];
-                        voluntary.IsModerator = (bool)reader["is_moderator"];
-                        voluntary.Email = reader["email"].ToString();
-                        voluntary.Password = reader["password"].ToString();
-                    }
-                    reader.Close();
-                    cmd.Parameters.Clear();
+                    User user = userRepository.Find(voluntary.UserId);
+                    voluntary.UserId = user.UserId;
+                    voluntary.IsApproved = user.IsApproved;
+                    voluntary.IsEntity = user.IsEntity;
+                    voluntary.IsVoluntary = user.IsVoluntary;
+                    voluntary.IsModerator = user.IsModerator;
+                    voluntary.Email = user.Email;
+                    voluntary.Password = user.Password;
                 
                     cmd.CommandText = @"SELECT * FROM address WHERE address_id=@address_id";
                     cmd.Parameters.AddWithValue("address_id", voluntary.Address.AddressId.ToString());
@@ -330,8 +301,6 @@ namespace Ftec.WebAPI.Infra.Repository
 
         public Guid Insert(Voluntary voluntary)
         {
-            Console.WriteLine("POST REPOSITORY");
-            
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
                 con.Open();
@@ -344,19 +313,20 @@ namespace Ftec.WebAPI.Infra.Repository
                         voluntary.UserId = Guid.NewGuid();
                         voluntary.Address.AddressId = Guid.NewGuid();
                         
+                        Guid userId = userRepository.Insert(new User()
+                        {
+                            UserId = voluntary.UserId,
+                            IsApproved = voluntary.IsApproved,
+                            IsEntity = voluntary.IsEntity,
+                            IsVoluntary = voluntary.IsVoluntary,
+                            IsModerator = voluntary.IsModerator,
+                            Email = voluntary.Email,
+                            Password = voluntary.Password
+                        });
+                        
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
-                        
-                        
-                        cmd.CommandText = @"INSERT Into public.user (user_id,email,password,is_approved,is_voluntary)values(@user_id,@email,@password,@is_approved,@is_voluntary)";
-                        cmd.Parameters.AddWithValue("user_id", voluntary.UserId);
-                        cmd.Parameters.AddWithValue("email", voluntary.Email);
-                        cmd.Parameters.AddWithValue("password", voluntary.Password); 
-                        cmd.Parameters.AddWithValue("is_approved", voluntary.IsApproved);
-                        cmd.Parameters.AddWithValue("is_voluntary", voluntary.IsVoluntary);
-                        cmd.ExecuteNonQuery();
-
                         cmd.Parameters.Clear();
                         cmd.CommandText = @"INSERT Into address (address_id,cep,avenue,number,neighborhood,city,state)values(@address_id,@cep,@avenue,@number,@neighborhood,@city,@state)";
                         cmd.Parameters.AddWithValue("address_id", voluntary.Address.AddressId); 
@@ -406,7 +376,6 @@ namespace Ftec.WebAPI.Infra.Repository
 
         public Guid Update(Voluntary voluntary)
         {
-            Console.WriteLine("PUT REPOSITORY");
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
                 con.Open();
@@ -436,17 +405,19 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Parameters.AddWithValue("state", voluntary.Address.State); 
                         cmd.ExecuteNonQuery();
                         
-                        cmd.Parameters.Clear();
-                        cmd.CommandText = @"UPDATE public.user SET email=@email,password=@password,is_approved=@is_approved WHERE user_id=@user_id";
-                        cmd.Parameters.AddWithValue("user_id", voluntary.UserId.ToString());
-                        cmd.Parameters.AddWithValue("email", voluntary.Email);
-                        cmd.Parameters.AddWithValue("password", voluntary.Password); 
-                        cmd.Parameters.AddWithValue("is_approved", voluntary.IsApproved);
-                        cmd.ExecuteNonQuery();
+                        Guid userId = userRepository.Update(new User()
+                        {
+                            UserId = voluntary.UserId,
+                            IsApproved = voluntary.IsApproved,
+                            IsEntity = voluntary.IsEntity,
+                            IsVoluntary = voluntary.IsVoluntary,
+                            IsModerator = voluntary.IsModerator,
+                            Email = voluntary.Email,
+                            Password = voluntary.Password
+                        });
                         
                         trans.Commit();
                         return voluntary.VoluntaryId;
-
                     }
                     catch (Exception ex)
                     {

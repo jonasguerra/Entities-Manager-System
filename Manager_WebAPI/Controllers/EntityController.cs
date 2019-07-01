@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -23,7 +24,7 @@ namespace Manager_API.Controllers
 
         public EntityController()
         {
-            string connectionString = string.Empty;
+            string connectionString = ConfigurationManager.ConnectionStrings["conexao"].ToString();
             //injetando a dependencia do repositorio na aplicação
             entityRepository = new EntityRepository(connectionString);
             entityApplication = new EntityApplication(entityRepository);
@@ -37,7 +38,8 @@ namespace Manager_API.Controllers
             try
             {
                 entitiesDTO = entityApplication.GetAll();
-                //Este metodo retorna uma listagem de entidades
+                //Este metodo retorna uma listagem de entidades19:34	Debug symbols for assembly Antlr3.Runtime could not be loaded correctly. Mono runtime doesn't  support full pdb
+
                 return Request.CreateResponse(HttpStatusCode.OK, entitiesDTO);
 
             }
@@ -75,6 +77,7 @@ namespace Manager_API.Controllers
 
         public HttpResponseMessage Post([FromBody] Entity entity)
         {
+            Console.WriteLine("POST CONTROLLER");
             try
             {
                 //Neste local faria a inclusao da entidade no repositorio
@@ -99,6 +102,7 @@ namespace Manager_API.Controllers
 
         public HttpResponseMessage Put(Guid id, [FromBody] Entity entity)
         {
+            Console.WriteLine("PUT CONTROLLER");
             try
             {
 
@@ -200,10 +204,11 @@ namespace Manager_API.Controllers
     {
         //return Guid.NewGuid();
         //executa o mapeamento
-           
+           Console.WriteLine("POST METHOD CONTROLLER");
         List<AffinityDTO> affinities = new List<AffinityDTO>();
         foreach(var affinity in entity.Affinities)
         {
+           
             AffinityDTO affinityDTO = new AffinityDTO()
             {
                 AffinityId = affinity.AffinityId,

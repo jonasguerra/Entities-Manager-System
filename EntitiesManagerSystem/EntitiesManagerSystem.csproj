@@ -210,7 +210,7 @@
     <Compile Include="Models\EventVoluntary.cs" />
     <Compile Include="Models\Login\LoginForm.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\Voluntary\Donations.cs" />
+    <Compile Include="Models\Voluntary\Donation.cs" />
     <Compile Include="Models\Voluntary\Voluntary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -79,7 +79,7 @@ namespace EntitiesManagerSystem.Controllers
         //###################
 
         [HttpPost]
-        public ActionResult SaveDonation(Donations donation)
+        public ActionResult SaveDonation(Donation donation)
         {
             if (!isAuthenticated())
             {
@@ -99,13 +99,16 @@ namespace EntitiesManagerSystem.Controllers
                     });
                 }
 
-                var id = clientHttp.Post<Donations>("@Donation/", donation);
+                var id = clientHttp.Post<Donation>(@"Donation/", donation);
 
                 return RedirectToAction("RegisterDonate","Voluntary");
             }
 
             ViewBag.user = "voluntary";
             ViewBag.register_donate = "active";
+            var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
+            ViewBag.affinities = affinities;
+            
             return View("RegisterDonate", donation);
         }
 

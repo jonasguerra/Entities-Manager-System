@@ -5,7 +5,7 @@ using EntitiesManagerSystem.Custom_Atribute;
 
 namespace EntitiesManagerSystem.Models.Voluntary
 {
-    public class Donations
+    public class Donation
     {
         public Guid Id { get; set; }
 
@@ -34,7 +34,7 @@ namespace EntitiesManagerSystem.Models.Voluntary
         
         public List<Affinity> Affinities { get; set; }
 
-        public Donations()
+        public Donation()
         {
             
         }

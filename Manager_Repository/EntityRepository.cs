@@ -9,7 +9,7 @@ namespace Ftec.WebAPI.Infra.Repository
     public class EntityRepository : IEntityRepository
     {
         private string connectionString;
-
+        private UserRepository userRepository;
         public EntityRepository(string connectionString)
         {
             this.connectionString = connectionString;
@@ -261,7 +261,7 @@ namespace Ftec.WebAPI.Infra.Repository
         }
 
 
-       public Guid Insert(Entity entity)
+         public Guid Insert(Entity entity)
         {
           
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
@@ -277,20 +277,20 @@ namespace Ftec.WebAPI.Infra.Repository
                         entity.UserId = Guid.NewGuid();
                         entity.EntityAddress.AddressId = Guid.NewGuid();
                         
+                        Guid userId = userRepository.Update(new User()
+                        {
+                            UserId = entity.UserId,
+                            Email = entity.Email,
+                            Password = entity.Password,
+                            IsApproved = entity.IsApproved,
+                            IsEntity = entity.IsEntity
+                            
+                        });
                         
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
                         
-                        //verificar se essta correto o =insert into(nomes dos campos)
-                        cmd.CommandText = @"INSERT Into public.user (user_id, email, password,is_approved, is_entity)values(@user_id, @email, @password, @is_approved, @is_entity)";
-                        cmd.Parameters.AddWithValue("user_id", entity.UserId);
-                        cmd.Parameters.AddWithValue("email", entity.EntityEmail);
-                        cmd.Parameters.AddWithValue("password", entity.EntityPassword); 
-                        cmd.Parameters.AddWithValue("is_approved", entity.IsApproved);
-                        cmd.Parameters.AddWithValue("is_entity", entity.IsEntity);
-                        cmd.ExecuteNonQuery();
-
                         cmd.Parameters.Clear();
                         cmd.CommandText = @"INSERT Into address (address_id, cep, avenue, number, neighborhood, city, state)values(@address_id, @cep, @avenue, @number, @neighborhood, @city, @state)";
                         cmd.Parameters.AddWithValue("address_id", entity.EntityAddress.AddressId); 
@@ -355,18 +355,19 @@ namespace Ftec.WebAPI.Infra.Repository
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
-                         
-                        //verificar se o update esta correto
-                        cmd.CommandText = @"UPDATE public.user SET email=@email, password=@password, is_approved = @is_approved, is_entity = @is_entity  WHERE user_id=@user_id";
-                        cmd.Parameters.AddWithValue("user_id", entity.UserId);
-                        cmd.Parameters.AddWithValue("email", entity.EntityEmail);
-                        cmd.Parameters.AddWithValue("password", entity.EntityPassword); 
-                        cmd.Parameters.AddWithValue("is_approved", entity.IsApproved);
-                        cmd.Parameters.AddWithValue("is_entity", entity.IsEntity);
-                        cmd.ExecuteNonQuery();
+                      
+                        Guid userId = userRepository.Update(new User()
+                        {
+                            UserId = entity.UserId,
+                            Email = entity.Email,
+                            Password = entity.Password,
+                            IsApproved = entity.IsApproved,
+                            IsEntity = entity.IsEntity
+                            
+                        });
                         
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"UPDATE address SET cep=@cep, avenue=@avenue, number=@number, neighborhood=@neighborhood, city=@city, state=@state WHERE address_id=@address_id";
+                        cmd.CommandText = @"UPDATE address SET cep = @cep, avenue = @avenue, number = @number, neighborhood = @neighborhood, city = @city, state = @state WHERE address_id = @address_id";
                         cmd.Parameters.AddWithValue("address_id", entity.EntityAddress.AddressId.ToString()); 
                         cmd.Parameters.AddWithValue("cep", entity.EntityAddress.CEP); 
                         cmd.Parameters.AddWithValue("avenue", entity.EntityAddress.Avenue); 
@@ -378,7 +379,7 @@ namespace Ftec.WebAPI.Infra.Repository
                         
                         
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"UPDATE entity SET name=@name, responsable_name=@responsable_name, email=@email, phone=@phone, sigla=@sigla  social_network=@social_network, date_creation = @date_creation, site=@site WHERE entity_id=@entity_id";
+                        cmd.CommandText = @"UPDATE entity SET name = @name, responsable_name = @responsable_name, email = @email, phone = @phone, sigla = @sigla  social_network = @social_network, date_creation = @date_creation, site = @site WHERE entity_id = @entity_id";
                         cmd.Parameters.AddWithValue("entity_id", entity.EntityId);
                         cmd.Parameters.AddWithValue("name", entity.EntityName);
                         cmd.Parameters.AddWithValue("responsable_name", entity.EntityResponsableName); 

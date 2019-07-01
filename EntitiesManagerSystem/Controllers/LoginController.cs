@@ -19,11 +19,10 @@ namespace EntitiesManagerSystem.Controllers
         // GET
         public ActionResult Login()
         {
-            
-            User user = (User)Session["user"];
 
-            if (user != null)
+            if (Session["user"] != null)
             {
+                User user = (User) Session["user"];
                 if (user.IsEntity)
                 {
                     return RedirectToAction("Index", "Entity");
@@ -51,45 +50,29 @@ namespace EntitiesManagerSystem.Controllers
             if (ModelState.IsValid)
             {
                 try { 
-                    var user = clientHttp.AuthenticationPost(login.Email, login.Password); 
+                    var u = clientHttp.AuthenticationPost(login.Email, login.Password); 
                     
 //                    Session["user"] = clientHttp.Get<User>(string.Format(@"User/{0}", login.Email));
-
-//                    Session["user"] = clientHttp.Get<Voluntary>(@"Voluntary/'ddc77478-09c2-4f10-9c16-2d581ad8a3fa'");
-
-                    var voluntary = clientHttp.Get<Voluntary>(string.Format(@"Voluntary/{0}", "52294599-0094-4c2e-9012-10b0fb4ab52e"));
                     
-                    User u = new User()
-                    {
-                        UserId = voluntary.UserId,
-                        IsVoluntary = voluntary.IsVoluntary,
-                        IsEntity  = voluntary.IsEntity ,
-                        IsModerator = voluntary.IsModerator,
-                        IsApproved = voluntary.IsApproved,
-                        Email = voluntary.Email,
-                    };
+//                    Gambiarra pra fazer funcionar, não consegui fazer get do usuário de outra forma  
+                    var user = (User)clientHttp.Get<User>(string.Format(@"User/{0}", "ddc77478-09c2-4f10-9c16-2d581ad8a3fa"));
                     
-                    Session["user"] = u;
-
-                    User user_test = (User)Session["user"];
-
-                    if (user_test.IsEntity)
+                    Session["user"] = user;
+                    if (user.IsEntity)
                     {
                         return RedirectToAction("Index", "Entity");
                     }
-
-                    if (user_test.IsVoluntary)
+                    if (user.IsVoluntary)
                     {
                         return RedirectToAction("Index", "Voluntary");
                     }
                 }
                 catch(Exception ex)
                 {
-                    return View("Login",login);
+                    return RedirectToAction("Logout");
                 }
             }
-            
-            return View("Login",login);
+            return RedirectToAction("Logout");
         }
         
         
@@ -98,6 +81,5 @@ namespace EntitiesManagerSystem.Controllers
             Session["user"] = null;
             return RedirectToAction("Login");
         }
-        
     }
 }

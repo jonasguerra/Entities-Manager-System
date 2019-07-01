@@ -24,7 +24,7 @@ namespace EntitiesManagerSystem.Controllers
         // GET
         public ActionResult Index()
         {
-            if (isAuthenticated())
+            if (!isAuthenticated())
             {
                 return RedirectToAction("Login", "Login");
             }
@@ -37,7 +37,7 @@ namespace EntitiesManagerSystem.Controllers
 
         public ActionResult Events()
         {
-            if (isAuthenticated())
+            if (!isAuthenticated())
             {
                 return RedirectToAction("Login", "Login");
             }
@@ -54,7 +54,7 @@ namespace EntitiesManagerSystem.Controllers
 
         public ActionResult RegisterDonate()
         {
-            if (isAuthenticated())
+            if (!isAuthenticated())
             {
                 return RedirectToAction("Login", "Login");
             }
@@ -81,7 +81,7 @@ namespace EntitiesManagerSystem.Controllers
         [HttpPost]
         public ActionResult SaveDonation(Donations donation)
         {
-            if (isAuthenticated())
+            if (!isAuthenticated())
             {
                 return RedirectToAction("Login", "Login");
             }
@@ -141,7 +141,7 @@ namespace EntitiesManagerSystem.Controllers
         [HttpPost]
         public ActionResult ShowMoreEvent(Guid id)
         {
-            if (isAuthenticated())
+            if (!isAuthenticated())
             {
                 return Json(new {status = "error"});
             }
@@ -154,7 +154,7 @@ namespace EntitiesManagerSystem.Controllers
         [HttpPost]
         public ActionResult SetVoluntaryToEvent(Guid voluntaryId, Guid eventId)
         {
-            if (isAuthenticated())
+            if (!isAuthenticated())
             {
                 return Json(new {status = "error"});
             }
@@ -171,12 +171,13 @@ namespace EntitiesManagerSystem.Controllers
 
         private bool isAuthenticated()
         {
-            User user = (User) Session["user"];
-            
-            if (!user.IsApproved || !user.IsVoluntary)
-                return false;
-            
-            return true;
+            if (Session["user"]!=null)
+            {
+                User user = (User) Session["user"];
+                if (user.IsApproved && user.IsVoluntary)
+                    return true;
+            }
+            return false;
         }
     }
 }

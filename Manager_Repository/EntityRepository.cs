@@ -64,7 +64,7 @@ namespace Ftec.WebAPI.Infra.Repository
         
         
         
-                public Entity Find(Guid id)
+        public Entity Find(Guid id)
         {
             Console.WriteLine("GET ONE ENTITY - Repository");
             Entity entity = null;
@@ -252,9 +252,6 @@ namespace Ftec.WebAPI.Infra.Repository
                     }
                     
                 }
-
-
-
 
                 return entities;
             }  

@@ -41,8 +41,6 @@ namespace Manager_Application.Adapter
 
         public static Entity ToDomain(EntityDTO entity)
         {
-            Console.WriteLine("POST METHOD 4");
-            
             return new Entity()
             {
                 EntityName = entity.EntityName,

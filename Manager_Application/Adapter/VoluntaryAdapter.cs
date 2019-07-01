@@ -8,8 +8,6 @@ namespace Manager_Application.Adapter
     {
         public static VoluntaryDTO ToDTO(Voluntary voluntary)
         {
-            Console.WriteLine("ADAPTER TO DTO");
-
             return new VoluntaryDTO()
             {
                 VoluntaryId = voluntary.VoluntaryId,
@@ -36,8 +34,6 @@ namespace Manager_Application.Adapter
 
         public static Voluntary ToDomain(VoluntaryDTO voluntary)
         {
-            Console.WriteLine("ADAPTER TO DOMAIN");
-            
             return new Voluntary()
             {
                 VoluntaryId = voluntary.VoluntaryId,

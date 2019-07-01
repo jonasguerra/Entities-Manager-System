@@ -4,7 +4,7 @@ $(document).ready( function () {
 
 function update_table_moderator(){
 
-    $('[data-toggle="tooltip"]').tooltip('update')
+    $('[data-toggle="tooltip"]').tooltip('update');
 
     if ($.fn.dataTable.isDataTable("#moderator table")){
         $('#moderator table').DataTable().destroy()
@@ -17,7 +17,7 @@ function update_table_moderator(){
         aaSorting: [[1, 'asc']],
         "pageLength": 5,
         "columnDefs": [
-            { "targets": [0,3], "orderable": false }
+            { "targets": [0,2], "orderable": false }
         ],
         language: {
             emptyTable: "Registro vazio",
@@ -49,3 +49,45 @@ function update_table_moderator(){
         } );
     } ).draw();
 }
+
+
+$('#moderator').on('click', '.trash', function () {
+    let id = $(this).closest('tr').attr('data-moderator-id');
+    $.ajax({
+        url: $('#trash_moderator_url').val(),
+        method: 'POST',
+        data: {
+            'id': id,
+        },
+        success: function (data) {
+            if (data.status == 'success') {
+                new PNotify({
+                    title: data.message_title,
+                    text: '',
+                    delay: 1000,
+                    type: 'success',
+                });
+
+                //Este if deve ser executado antes de alterar a tabela
+                if ($.fn.dataTable.isDataTable("#moderator table")){
+                    $('#moderator table').DataTable().destroy()
+                }
+
+                $('tr[data-moderator-id="' + id + '"]').remove();
+
+                update_table_moderator();
+
+            } else if (data.status == 'error') {
+                new PNotify({
+                    title: data.message_title,
+                    text: '',
+                    delay: 1000,
+                    type: 'error',
+                });
+            }
+        },
+        error: function (e) {
+            console.error('ERROR AJAX:', e)
+        },
+    })
+})

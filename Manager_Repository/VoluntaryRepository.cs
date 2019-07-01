@@ -45,13 +45,14 @@ namespace Ftec.WebAPI.Infra.Repository
                         
                         cmd.Parameters.Clear();
 
-                        userRepository.Delete(voluntary.UserId);
-                        
                         cmd.CommandText = @"DELETE FROM address WHERE address_id=@address_id";
                         cmd.Parameters.AddWithValue("address_id", voluntary.Address.ToString());
                         cmd.ExecuteNonQuery();
                         
                         trans.Commit();
+                        
+                        userRepository.Delete(voluntary.UserId);
+                        
                         return true;
 
                     }
@@ -378,6 +379,18 @@ namespace Ftec.WebAPI.Infra.Repository
                 {
                     try
                     {
+                        
+                        Guid userId = userRepository.Update(new User()
+                        {
+                            UserId = voluntary.UserId,
+                            IsApproved = voluntary.IsApproved,
+                            IsEntity = voluntary.IsEntity,
+                            IsVoluntary = voluntary.IsVoluntary,
+                            IsModerator = voluntary.IsModerator,
+                            Email = voluntary.Email,
+                            Password = voluntary.Password
+                        });
+                        
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
@@ -399,17 +412,6 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Parameters.AddWithValue("city", voluntary.Address.City); 
                         cmd.Parameters.AddWithValue("state", voluntary.Address.State); 
                         cmd.ExecuteNonQuery();
-                        
-                        Guid userId = userRepository.Update(new User()
-                        {
-                            UserId = voluntary.UserId,
-                            IsApproved = voluntary.IsApproved,
-                            IsEntity = voluntary.IsEntity,
-                            IsVoluntary = voluntary.IsVoluntary,
-                            IsModerator = voluntary.IsModerator,
-                            Email = voluntary.Email,
-                            Password = voluntary.Password
-                        });
                         
                         trans.Commit();
                         return voluntary.VoluntaryId;

@@ -48,18 +48,7 @@ namespace EntitiesManagerSystem.Controllers
         public ActionResult RegisterEntity()
         {
             var affinities = clientHttp.Get<List<Affinity>>(@"Affinity");
-
             ViewBag.affinities = affinities;
-
-            //  ViewBag.user = "entity";
-            //  ViewBag.category_event = new List<String>
-            //  {
-            //      "Pets", 
-            //      "Infantil", 
-            //      "Idosos",
-            //      "Necessitados",
-            //      "Meio Ambiente",
-            //  };
             
             return View();
         }
@@ -67,9 +56,6 @@ namespace EntitiesManagerSystem.Controllers
         //###################
         //### POST METHOD ###
         //###################
-        
-        
-        
         
         
         [HttpPost]

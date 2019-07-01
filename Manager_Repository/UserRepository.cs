@@ -28,12 +28,15 @@ namespace Ftec.WebAPI.Infra.Repository
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
-                        cmd.CommandText = @"INSERT Into public.user (user_id,email,password,is_approved,is_voluntary)values(@user_id,@email,@password,@is_approved,@is_voluntary)";
+                        cmd.CommandText = @"INSERT Into public.user (user_id,email,password,is_approved,is_voluntary, is_entity, is_moderator)
+                                            values(@user_id,@email,@password,@is_approved,@is_voluntary,@is_entity,@is_moderator)";
                         cmd.Parameters.AddWithValue("user_id", user.UserId);
                         cmd.Parameters.AddWithValue("email", user.Email);
                         cmd.Parameters.AddWithValue("password", user.Password); 
                         cmd.Parameters.AddWithValue("is_approved", user.IsApproved);
                         cmd.Parameters.AddWithValue("is_voluntary", user.IsVoluntary);
+                        cmd.Parameters.AddWithValue("is_entity", user.IsEntity);
+                        cmd.Parameters.AddWithValue("is_moderator", user.IsModerator);
                         cmd.ExecuteNonQuery();
                         trans.Commit();
                         return user.UserId;
@@ -123,7 +126,33 @@ namespace Ftec.WebAPI.Infra.Repository
 
         public List<User> FindAll()
         {
-            throw new NotImplementedException();
+            List<User> users = new List<User>();
+
+            using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
+            {
+                con.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = @"SELECT * FROM public.user";
+                var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    User user = new User();
+                    user.UserId = Guid.Parse(reader["user_id"].ToString());
+                    user.IsApproved = (bool)reader["is_approved"];
+                    user.IsEntity = (bool)reader["is_entity"];
+                    user.IsVoluntary = (bool)reader["is_voluntary"];
+                    user.IsModerator = (bool)reader["is_moderator"];
+                    user.Email = reader["email"].ToString();
+                    user.Password = reader["password"].ToString();
+
+                    users.Add(user);
+                }
+                
+                return users;
+            }
         }
 
         public Guid Update(User user)

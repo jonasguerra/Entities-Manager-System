@@ -20,7 +20,7 @@ namespace Manager_Application
         {
             entityDto.UserId = Guid.NewGuid();
             entityDto.Id= Guid.NewGuid();
-            entityDto.EntityAddressDto.AddressId= Guid.NewGuid();
+            entityDto.EntityAddress.AddressId= Guid.NewGuid();
             var entity = EntityAdapter.ToDomain(entityDto);
             return entityRepository.Insert(entity);
         }

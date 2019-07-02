@@ -174,6 +174,9 @@ namespace EntitiesManagerSystem.Controllers
             return Json(new {status = "success"});
         }
 
+        
+        
+        //######### AUTENTICATION ##########
         private bool isAuthenticated()
         {
             if (Session["user"]!=null)

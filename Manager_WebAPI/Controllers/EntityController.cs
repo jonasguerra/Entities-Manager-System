@@ -97,7 +97,6 @@ namespace Manager_API.Controllers
         {
             try
             {
-
                 EntityDTO entityDto = Find(id);
                 if (entityDto == null)
                 {
@@ -124,7 +123,6 @@ namespace Manager_API.Controllers
         {
             try
             {
-
                 EntityDTO entityDto = Find(id);
                 if (entityDto == null)
                 {
@@ -156,7 +154,7 @@ namespace Manager_API.Controllers
         {
             
             List<AffinityDTO> affinities = new List<AffinityDTO>();
-            foreach(var affinity in entity.Affinities)
+            foreach(var affinity in entity.EntityAffinity)
             {
                 AffinityDTO affinityDTO = new AffinityDTO(){
                     AffinityId = affinity.AffinityId,
@@ -168,6 +166,9 @@ namespace Manager_API.Controllers
             EntityDTO entityDto = new EntityDTO()
             {
                 Id = entity.Id,
+                UserId = entity.UserId,
+                IsApproved = entity.IsApproved,
+                IsVoluntary = entity.IsVoluntary,
                 EntityName = entity.EntityName,
                 EntityDescription = entity.EntityDescription,
                 Email = entity.Email,
@@ -179,14 +180,14 @@ namespace Manager_API.Controllers
                 EntityResponsableName = entity.EntityResponsableName,
                 EntitySocialNetwork = entity.EntitySocialNetwork,
                 EntityAffinity = affinities,
-                EntityAddressDto = new AddressDTO()
+                EntityAddress = new AddressDTO()
                 {
-                    CEP = entity.Address.CEP,
-                    Avenue = entity.Address.Avenue,
-                    Number = entity.Address.Number,
-                    Neighborhood = entity.Address.Neighborhood,
-                    City = entity.Address.City,
-                    State = entity.Address.State
+                    CEP = entity.EntityAddress.CEP,
+                    Avenue = entity.EntityAddress.Avenue,
+                    Number = entity.EntityAddress.Number,
+                    Neighborhood = entity.EntityAddress.Neighborhood,
+                    City = entity.EntityAddress.City,
+                    State = entity.EntityAddress.State
                 }
 
             };
@@ -196,7 +197,7 @@ namespace Manager_API.Controllers
     private Guid Insert(Entity entity)
     {
         List<AffinityDTO> affinities = new List<AffinityDTO>();
-        foreach(var affinity in entity.Affinities)
+        foreach(var affinity in entity.EntityAffinity)
         {
            
             AffinityDTO affinityDTO = new AffinityDTO()
@@ -209,8 +210,10 @@ namespace Manager_API.Controllers
             
         EntityDTO entityDTO = new EntityDTO()
         {
-           UserId = entity.UserId,
             Id = entity.Id,
+            UserId = entity.UserId,
+            IsApproved = entity.IsApproved,
+            IsVoluntary = entity.IsVoluntary,
             EntityName = entity.EntityName,
             EntityDescription = entity.EntityDescription,
             Email = entity.Email,
@@ -222,31 +225,29 @@ namespace Manager_API.Controllers
             EntityResponsableName = entity.EntityResponsableName,
             EntitySocialNetwork = entity.EntitySocialNetwork,
             EntityAffinity = affinities,
-            EntityAddressDto = new AddressDTO()
+            EntityAddress = new AddressDTO()
             {
-                CEP = entity.Address.CEP,
-                Avenue = entity.Address.Avenue,
-                Number = entity.Address.Number,
-                Neighborhood = entity.Address.Neighborhood,
-                City = entity.Address.City,
-                State = entity.Address.State
+                CEP = entity.EntityAddress.CEP,
+                Avenue = entity.EntityAddress.Avenue,
+                Number = entity.EntityAddress.Number,
+                Neighborhood = entity.EntityAddress.Neighborhood,
+                City = entity.EntityAddress.City,
+                State = entity.EntityAddress.State
             }
         };
            
         return entityApplication.Insert(entityDTO);
     }
 
-        
-        
 
-        private EntityDTO Find(Guid id)
-        {
-            return entityApplication.Get(id);
-        }
-        private bool Remove(Guid id)
-        {
-         return   entityApplication.Delete(id);
-        }
+    private EntityDTO Find(Guid id)
+    {
+        return entityApplication.Get(id);
+    }
+    private bool Remove(Guid id)
+    {
+     return   entityApplication.Delete(id);
+    }
         
     }
 }

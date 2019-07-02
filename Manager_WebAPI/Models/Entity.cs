@@ -8,9 +8,9 @@ namespace EntitiesManagerSystem.Models
    public class Entity : User
     {
         public Guid Id { get; set; }
-        public List<Affinity> Affinities { get; set; }
+        public List<Affinity> EntityAffinity { get; set; }
 
-        public Address Address { get; set; }
+        public Address EntityAddress { get; set; }
         
         
         [Display(Name = "Nome da Entidade")]

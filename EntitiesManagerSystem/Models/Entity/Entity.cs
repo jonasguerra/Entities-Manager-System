@@ -6,8 +6,8 @@ namespace EntitiesManagerSystem.Models
 {
     public class Entity : User
     {
-        public Guid EntityId { get; set; }
-        public Address Address { get; set; }
+        public Guid Id { get; set; }
+        public Address EntityAddress { get; set; }
         
         
         
@@ -28,11 +28,10 @@ namespace EntitiesManagerSystem.Models
         [StringLength(11, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityPhone { get; set; }
 
-       
-        public List<Affinity> Affinities { get; set; }
+        public string Affinities { get; set; }
+        
         [Display(Name = "Afinidade")]
-        [Required(ErrorMessage = "{0} deve ser informada")]
-        public string EntityAffinity { get; set; }
+        public List<Affinity> EntityAffinity { get; set; }
         
         [Display(Name = "Sigla")]
         [Required(ErrorMessage = "{0} deve ser informada")]
@@ -48,8 +47,6 @@ namespace EntitiesManagerSystem.Models
         [Required(ErrorMessage = "{0} deve ser informada")]
         public string EntityDescription { get; set; }
         
-        
-
         public Entity()
         {
             IsEntity = true;

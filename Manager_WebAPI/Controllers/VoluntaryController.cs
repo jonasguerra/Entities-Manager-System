@@ -172,11 +172,11 @@ namespace Manager_API.Controllers
             {
                 VoluntaryId = voluntary.VoluntaryId,
                 UserId = voluntary.UserId,
+                IsApproved = voluntary.IsApproved,
+                IsVoluntary = voluntary.IsVoluntary,
                 Name = voluntary.Name,
                 Email = voluntary.Email,
                 Phone = voluntary.Phone,
-                IsApproved = voluntary.IsApproved,
-                IsVoluntary = voluntary.IsVoluntary,
                 Password = voluntary.Password,
                 SocialNetwork = voluntary.SocialNetwork, 
                 Affinities = affinities,

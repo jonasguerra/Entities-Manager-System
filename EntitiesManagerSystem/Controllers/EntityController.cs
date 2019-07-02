@@ -63,11 +63,11 @@ namespace EntitiesManagerSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                dynamic json_affinity = JsonConvert.DeserializeObject(entity.EntityAffinity);
-                entity.Affinities= new List<Affinity>();
+                dynamic json_affinity = JsonConvert.DeserializeObject(entity.Affinities);
+                entity.EntityAffinity= new List<Affinity>();
                 foreach (var affinity in json_affinity)
                 {
-                    entity.Affinities.Add(new Affinity()
+                    entity.EntityAffinity.Add(new Affinity()
                     {
                         AffinityId = Guid.Parse(affinity["value"].ToString()),
                         Name = affinity["text"]

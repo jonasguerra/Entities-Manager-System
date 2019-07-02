@@ -6,8 +6,8 @@ namespace AdminManagerSystem.Models
 {
     public class Entity : User
     {
-        public Guid EntityId { get; set; }
-        public Address Address { get; set; }
+        public Guid Id { get; set; }
+        public Address EntityAddress { get; set; }
         
         [Display(Name = "Nome da Entidade")]
         [Required(ErrorMessage = "O {0} deve ser informado.")]
@@ -27,10 +27,9 @@ namespace AdminManagerSystem.Models
         public string EntityPhone { get; set; }
 
        
-        public List<Affinity> Affinities { get; set; }
         [Display(Name = "Afinidade")]
         [Required(ErrorMessage = "{0} deve ser informada")]
-        public string EntityAffinity { get; set; }
+        public List<Affinity> EntityAffinity { get; set; }
         
         [Display(Name = "Sigla")]
         [Required(ErrorMessage = "{0} deve ser informada")]

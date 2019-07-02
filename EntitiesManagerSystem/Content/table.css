@@ -39,4 +39,9 @@
 .table-actions .actions .approve:focus{
     color: #00ff00;
 }
+
+.table-actions .actions .participate:hover,
+.table-actions .actions .participate:focus{
+    color: #00ff00;
+}
 /*END ACTIONS*/

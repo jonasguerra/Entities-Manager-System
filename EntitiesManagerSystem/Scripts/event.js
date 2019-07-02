@@ -16,7 +16,7 @@ function update_table_event(){
         aaSorting: [[1, 'asc']],
         "pageLength": 5,
         "columnDefs": [
-            { "targets": [0,4], "orderable": false }
+            { "targets": [0,3], "orderable": false }
         ],
         language: {
             emptyTable: "Registro vazio",
@@ -59,7 +59,7 @@ function update_table_event(){
 $('.event-table').on('click', '.participate', function () {
     let id = $(this).closest('tr').attr('data-event-id');
     $.ajax({
-        url: $('#approve_voluntary_url').val(),
+        url: $('#participate_event').val(),
         method: 'POST',
         data: {
             'id': id,
@@ -75,8 +75,8 @@ $('.event-table').on('click', '.participate', function () {
 
 
                 //Este if deve ser executado antes de alterar a tabela
-                if ($.fn.dataTable.isDataTable("#voluntary table")){
-                    $('#voluntary table').DataTable().destroy()
+                if ($.fn.dataTable.isDataTable(".event-table table")){
+                    $('.event-table table').DataTable().destroy()
                 }
 
                 let name = $('tr[data-voluntary-id="' + id + '"] .name').text();

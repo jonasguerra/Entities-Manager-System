@@ -39,16 +39,38 @@ namespace AdminManagerSystem.Controllers
             
             ViewBag.user = "admin";
             ViewBag.register = "active";
-            
-            var volunteers = clientHttp.Get<List<Voluntary>>(@"Voluntary");
-            ViewBag.volunteers = volunteers;
-            
-            var entities= clientHttp.Get<List<Entity>>(@"Entity");
-            ViewBag.entities = entities;
-            
-            var users = clientHttp.Get<List<User>>(@"User");
-            ViewBag.users = users;
-            
+
+            try
+            {
+                var volunteers = clientHttp.Get<List<Voluntary>>(@"Voluntary");
+                ViewBag.volunteers = volunteers;
+            }
+            catch (Exception e)
+            {
+                ViewBag.volunteers = new List<Voluntary>();
+            }
+
+
+            try
+            {
+                var entities = clientHttp.Get<List<Entity>>(@"Entity");
+                ViewBag.entities = entities;
+            }
+            catch (Exception e)
+            {
+                ViewBag.entities = new List<Entity>();
+            }
+
+            try
+            {
+                var users = clientHttp.Get<List<User>>(@"User");
+                ViewBag.users = users;
+            }
+            catch (Exception e)
+            {
+                ViewBag.users = new List<User>();
+            }
+
             return View();
         }
         

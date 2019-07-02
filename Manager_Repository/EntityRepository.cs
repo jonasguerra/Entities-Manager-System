@@ -18,7 +18,6 @@ namespace Ftec.WebAPI.Infra.Repository
 
         public bool Delete(Guid id)
         {
-            Console.WriteLine("DELETE Repository - Entity");
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
@@ -27,11 +26,16 @@ namespace Ftec.WebAPI.Infra.Repository
                     try
                     {
                         Entity entity = this.Find(id);
-                        Console.WriteLine(entity.EntityId);
-
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = connection;
                         cmd.Transaction = transaction;
+                        
+                        cmd.CommandText = @"DELETE FROM entity_affinity WHERE entity_id=@entity_id";
+                        cmd.Parameters.AddWithValue("entity_id", entity.EntityId.ToString());
+                        cmd.ExecuteNonQuery();
+                        
+                        cmd.Parameters.Clear();
+                        
                         cmd.CommandText = @"DELETE FROM entity WHERE entity_id=@entity_id";
                         cmd.Parameters.AddWithValue("entity_id", entity.EntityId.ToString());
                         cmd.ExecuteNonQuery();
@@ -45,7 +49,7 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Parameters.Clear();
 
                         cmd.CommandText = @"DELETE FROM address WHERE address_id=@address_id";
-                        cmd.Parameters.AddWithValue("address_id", entity.EntityAddress.AddressId);
+                        cmd.Parameters.AddWithValue("address_id", entity.EntityAddress.AddressId.ToString());
                         cmd.ExecuteNonQuery();
 
                         transaction.Commit();
@@ -63,11 +67,8 @@ namespace Ftec.WebAPI.Infra.Repository
         }
 
         
-        
-        
         public Entity Find(Guid id)
         {
-            Console.WriteLine("GET ONE ENTITY - Repository");
             Entity entity = null;
 
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
@@ -88,42 +89,31 @@ namespace Ftec.WebAPI.Infra.Repository
                     entity.UserId = Guid.Parse(reader["user_id"].ToString());
                     entity.EntityName = reader["name"].ToString();
                     entity.EntityPhone = reader["phone"].ToString();
-                    entity.EntityInitials = reader["initials"].ToString();
+                    entity.EntityInitials = reader["sigla"].ToString();
                     entity.EntityDescription = reader["description"].ToString();
                     entity.EntityWebSite = reader["site"].ToString();
                     entity.EntityCreationDate = DateTime.Parse(reader["date_creation"].ToString());
                     entity.EntitySocialNetwork = reader["social_network"].ToString();
-                    entity.EntityResponsableName = reader["resposable_name"].ToString();
+                    entity.EntityResponsableName = reader["responsable_name"].ToString();
                     entity.EntityAddress = new Address()
                     {
                         AddressId = Guid.Parse(reader["address_id"].ToString())
                     };
-                    
-                    
-                    
                 }
               
                 reader.Close();
                 cmd.Parameters.Clear();
-                //aqui
-                cmd.CommandText = @"SELECT * FROM public.user WHERE user_id=@user_id";
-                cmd.Parameters.AddWithValue("user_id", entity.UserId.ToString());
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    entity.UserId = Guid.Parse(reader["user_id"].ToString());
-                    entity.IsApproved = (bool)reader["is_approved"];
-                    entity.IsEntity = (bool)reader["is_entity"];
-                    entity.IsVoluntary = (bool)reader["is_voluntary"];
-                    entity.IsModerator = (bool)reader["is_moderator"];
-                    entity.Email = reader["email"].ToString();
-                    entity.Password = reader["password"].ToString();
-                }
-                reader.Close();
-                cmd.Parameters.Clear();
+                
+                User user = userRepository.Find(entity.UserId);
+                entity.UserId = user.UserId;
+                entity.IsApproved = user.IsApproved;
+                entity.IsEntity = user.IsEntity;
+                entity.IsVoluntary = user.IsVoluntary;
+                entity.IsModerator = user.IsModerator;
+                entity.Email = user.Email;
+                entity.Password = user.Password;
 
                 
-                //aqui
                 cmd.CommandText = @"SELECT * FROM address WHERE address_id=@Id";
                 cmd.Parameters.AddWithValue("Id", entity.EntityAddress.AddressId.ToString());
                 reader = cmd.ExecuteReader();
@@ -151,13 +141,9 @@ namespace Ftec.WebAPI.Infra.Repository
                         Name = reader["name"].ToString()
                     });
                 }
-
-              
                 return entity;
             }
         }
-
-                
 
 
         public List<Entity> FindAll()
@@ -177,6 +163,7 @@ namespace Ftec.WebAPI.Infra.Repository
                 {
                     Entity entity= new Entity();
                     entity.EntityId = Guid.Parse(reader["entity_id"].ToString());
+                    entity.UserId = Guid.Parse(reader["user_id"].ToString());
                     entity.EntityName = reader["name"].ToString();
                     entity.EntityResponsableName= reader["responsable_name"].ToString();
                     entity.EntityPhone= reader["phone"].ToString();
@@ -200,24 +187,14 @@ namespace Ftec.WebAPI.Infra.Repository
                     reader.Close();
                     cmd.Parameters.Clear();
                     
-                    
-                    cmd.CommandText = @"SELECT * FROM public.user WHERE user_id=@user_id";
-                    cmd.Parameters.AddWithValue("user_id", entity.UserId.ToString());
-                    reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        entity.UserId = Guid.Parse(reader["user_id"].ToString());
-                        entity.IsApproved = (bool)reader["is_approved"];
-                        entity.IsEntity = (bool)reader["is_entity"];
-                        entity.IsVoluntary = (bool)reader["is_voluntary"];
-                        entity.IsModerator = (bool)reader["is_moderator"];
-                        entity.Email = reader["email"].ToString();
-                        entity.Password = reader["password"].ToString();
-                    }
-                    reader.Close();
-                    cmd.Parameters.Clear();
-                    
-                    
+                    User user = userRepository.Find(entity.UserId);
+                    entity.UserId = user.UserId;
+                    entity.IsApproved = user.IsApproved;
+                    entity.IsEntity = user.IsEntity;
+                    entity.IsVoluntary = user.IsVoluntary;
+                    entity.IsModerator = user.IsModerator;
+                    entity.Email = user.Email;
+                    entity.Password = user.Password;
                     
                     cmd.CommandText = @"SELECT * FROM address WHERE address_id=@address_id";
                     cmd.Parameters.AddWithValue("address_id", entity.EntityAddress.AddressId.ToString());
@@ -235,9 +212,11 @@ namespace Ftec.WebAPI.Infra.Repository
                     cmd.Parameters.Clear();
 
                     
-                 
-                    
-                    cmd.CommandText = @"SELECT af.name, af.affinity_id FROM affinity af join voluntary_affinity av on af.affinity_id = av.affinity_id join voluntary vo on vo.voluntary_id = av.voluntary_id WHERE av.voluntary_id = @Id";
+                    cmd.CommandText = @"SELECT af.name, af.affinity_id 
+                                        FROM affinity af 
+                                        join entity_affinity av on af.affinity_id = av.affinity_id 
+                                        join entity vo on vo.entity_id = av.entity_id 
+                                        WHERE av.entity_id = @Id";
                     cmd.Parameters.AddWithValue("Id", entity.EntityId.ToString());
                     reader = cmd.ExecuteReader();
                     entity.EntityAffinity= new List<Affinity>();
@@ -245,21 +224,18 @@ namespace Ftec.WebAPI.Infra.Repository
                     {
                         entity.EntityAffinity.Add(new Affinity()
                         {
-                            AffinityId = Guid.Parse(reader["entity_id"].ToString()),
+                            AffinityId = Guid.Parse(reader["affinity_id"].ToString()),
                             Name = reader["name"].ToString()
                         });
                     }
-                    
                 }
-
                 return entities;
             }  
         }
 
 
-         public Guid Insert(Entity entity)
+        public Guid Insert(Entity entity)
         {
-          
             using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
                 con.Open();
@@ -268,7 +244,6 @@ namespace Ftec.WebAPI.Infra.Repository
                 {
                     try
                     {
-
                         Guid userId = userRepository.Insert(new User()
                         {
                             UserId = entity.UserId,
@@ -336,7 +311,8 @@ namespace Ftec.WebAPI.Infra.Repository
             
         }
 
-       public Guid Update(Entity entity)
+         
+        public Guid Update(Entity entity)
         {
              using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
             {
@@ -372,8 +348,8 @@ namespace Ftec.WebAPI.Infra.Repository
                         
                         
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"UPDATE entity SET name = @name, responsable_name = @responsable_name, phone = @phone, sigla = @sigla  social_network = @social_network, date_creation = @date_creation, site = @site WHERE entity_id = @entity_id";
-                        cmd.Parameters.AddWithValue("entity_id", entity.EntityId);
+                        cmd.CommandText = @"UPDATE entity SET name = @name, responsable_name = @responsable_name, phone = @phone, sigla = @sigla,  social_network = @social_network, date_creation = @date_creation, site = @site WHERE entity_id = @entity_id";
+                        cmd.Parameters.AddWithValue("entity_id", entity.EntityId.ToString());
                         cmd.Parameters.AddWithValue("name", entity.EntityName);
                         cmd.Parameters.AddWithValue("responsable_name", entity.EntityResponsableName); 
                         cmd.Parameters.AddWithValue("phone", entity.EntityPhone);
@@ -381,11 +357,7 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Parameters.AddWithValue("social_network", entity.EntitySocialNetwork);
                         cmd.Parameters.AddWithValue("date_creation", entity.EntityCreationDate);
                         cmd.Parameters.AddWithValue("site", entity.EntityWebSite);
-                        cmd.Parameters.AddWithValue("user_id", entity.UserId); //nao esta no update
-                        cmd.Parameters.AddWithValue("address_id", entity.EntityAddress.AddressId);//nao esta no update
                         cmd.ExecuteNonQuery();
-                        
-                        
                         
                         trans.Commit();
                         return entity.EntityId;

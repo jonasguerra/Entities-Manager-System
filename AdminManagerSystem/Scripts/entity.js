@@ -58,7 +58,7 @@ function update_table_entity(){
 
 
 $('#entity').on('click', '.approve', function () {
-    let id = $(this).closest('tr').attr('data-entity-id')
+    let id = $(this).closest('tr').attr('data-entity-id');
     $.ajax({
         url: $('#approve_entity_url').val(),
         method: 'POST',
@@ -111,6 +111,32 @@ $('#entity').on('click', '.show_more', function () {
         success: function (data) {
             if (data.status == 'success') {
 
+                let entity = data.entity;
+
+                $('.show-entity-modal .name').text(entity.EntityName);
+                $('.show-entity-modal .initials').text(entity.EntityInitials);
+                $('.show-entity-modal .email').text(entity.Email);
+                $('.show-entity-modal .phone').text(entity.EntityPhone);
+                $('.show-entity-modal .socialnetwork').text(entity.EntitySocialNetwork);
+                $('.show-entity-modal .responsable').text(entity.EntityResponsableName);
+                $('.show-entity-modal .site').text(entity.EntityWebSite).attr({'href':entity.EntityWebSite, "target":"_blank"});
+                $('.show-entity-modal .description').text(entity.EntityDescription);
+                
+                $('.show-entity-modal .cep').text(entity.EntityAddress.CEP);
+                $('.show-entity-modal .avenue').text(entity.EntityAddress.Avenue);
+                $('.show-entity-modal .number').text(entity.EntityAddress.Number);
+                $('.show-entity-modal .neighborhood').text(entity.EntityAddress.Neighborhood);
+                $('.show-entity-modal .city').text(entity.EntityAddress.City + ' - ' + entity.EntityAddress.State);
+
+                let affinities ='';
+                entity.EntityAffinity.forEach(function (e) {
+                    affinities = affinities + e.Name + '; ';
+                })
+
+                $('.show-entity-modal .affinities').text(affinities);
+
+                $('.show-entity-modal').modal('show')
+                
                 
             } else if (data.status == 'error') {
                 new PNotify({
@@ -174,7 +200,7 @@ function append_entity_approved(id, name) {
     $('#tbody_entity_approved').append('<tr data-entity-id="'+ id +'">\n' +
                             '            <td></td>\n' +
                             '            <td class="name">'+ name +'</td>\n' +
-                            '            <td class="actions">\n' +
+                            '            <td class="actions text-right">\n' +
                             '                <a href="javascript:;" class="show_more" data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">\n' +
                             '                    <i class="os-icon os-icon-search"></i>\n' +
                             '                </a>\n' +

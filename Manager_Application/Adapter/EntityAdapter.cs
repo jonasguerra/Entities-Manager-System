@@ -10,15 +10,15 @@ namespace Manager_Application.Adapter
         {
             return new EntityDTO()
             {
-                UserId = entity.UserId,
-                Id = entity.EntityId,
-                EntityName = entity.EntityName,
+                 Id = entity.EntityId,
+                 UserId = entity.UserId,
+                 IsApproved = entity.IsApproved,
+                 EntityName = entity.EntityName,
                  EntityResponsableName = entity.EntityResponsableName,
                  Email = entity.Email,
                  EntityPhone = entity.EntityPhone,
                  Password = entity.Password,
                  EntityReferencePoint = entity.EntityReferencePoint,
-                // EntityAffinity = entity.EntityAffinity,
                  EntityAffinity = AffinityAdapter.ListToDTO(entity.EntityAffinity),
                  EntityInitials = entity.EntityInitials,
                  EntityCreationDate = entity.EntityCreationDate ,
@@ -27,7 +27,7 @@ namespace Manager_Application.Adapter
                  EntityDescription = entity.EntityDescription,
                
                  
-                 EntityAddressDto = new AddressDTO()
+                 EntityAddress = new AddressDTO()
                  {
                      AddressId = entity.EntityAddress.AddressId,
                      CEP = entity.EntityAddress.CEP,
@@ -46,6 +46,7 @@ namespace Manager_Application.Adapter
             {
                 UserId = entity.UserId,
                 EntityId =  entity.Id,
+                IsApproved = entity.IsApproved,
                 EntityName = entity.EntityName,
                 EntityResponsableName = entity.EntityResponsableName,
                 Email = entity.Email,
@@ -59,16 +60,15 @@ namespace Manager_Application.Adapter
                 EntityWebSite = entity.EntityWebSite,
                 EntityDescription = entity.EntityDescription,
             
-                
                 EntityAddress = new Address()
                 {
-                    AddressId = entity.EntityAddressDto.AddressId,
-                    CEP = entity.EntityAddressDto.CEP,
-                    Avenue = entity.EntityAddressDto.Avenue,
-                    Number = entity.EntityAddressDto.Number,
-                    Neighborhood = entity.EntityAddressDto.Neighborhood,
-                    City = entity.EntityAddressDto.City,
-                    State = entity.EntityAddressDto.State
+                    AddressId = entity.EntityAddress.AddressId,
+                    CEP = entity.EntityAddress.CEP,
+                    Avenue = entity.EntityAddress.Avenue,
+                    Number = entity.EntityAddress.Number,
+                    Neighborhood = entity.EntityAddress.Neighborhood,
+                    City = entity.EntityAddress.City,
+                    State = entity.EntityAddress.State
                 }
             };
         }

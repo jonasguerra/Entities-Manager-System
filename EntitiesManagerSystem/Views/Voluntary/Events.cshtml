@@ -5,40 +5,39 @@
 }
 
 <input id="show_more_event" type="hidden" value="@Url.Action("ShowMoreEvent", "Voluntary")"/>
+<input id="participate_event" type="hidden" value="@Url.Action("SetVoluntaryToEvent", "Voluntary")"/>
 
 <div class="element-wrapper col-8 mx-auto">
     <h6 class="element-header">Eventos</h6>
-    <div class="element-box">
-        <h5 class="form-header">Eventos de acordo com suas afinidades</h5>
-        
-        <table class="table table-striped table-actions event-table" style="width:100%">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Afinidades</th>
-                <th scope="col">Data</th>
-                <th scope="col" class="head-actions text-right">Ações</th>
-            </tr>
-            </thead>
-            <tbody id="tbody_affinity_event">
-            <tr data-event-id="1">
-                <td></td>
-                <td class="name">Nome evento</td>
-                <td class="name">Afinidades</td>
-                <td class="name">25/05/2019</td>
-                <td class="actions text-right">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="participate" data-placement="top" data-toggle="tooltip" data-original-title="Participar">
-                        <i class="os-icon os-icon-tasks-checked"></i>
-                    </a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    @* <div class="element-box"> *@
+    @*     <h5 class="form-header">Eventos de acordo com suas afinidades</h5> *@
+    @*      *@
+    @*     <table class="table table-striped table-actions event-table" style="width:100%"> *@
+    @*         <thead> *@
+    @*         <tr> *@
+    @*             <th scope="col">#</th> *@
+    @*             <th scope="col">Nome</th> *@
+    @*             <th scope="col">Afinidades</th> *@
+    @*             <th scope="col" class="head-actions text-right">Ações</th> *@
+    @*         </tr> *@
+    @*         </thead> *@
+    @*         <tbody id="tbody_affinity_event"> *@
+    @*         <tr data-event-id="1"> *@
+    @*             <td></td> *@
+    @*             <td class="name">Nome evento</td> *@
+    @*             <td class="name">Afinidades</td> *@
+    @*             <td class="actions text-right"> *@
+    @*                 <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais"> *@
+    @*                     <i class="os-icon os-icon-search"></i> *@
+    @*                 </a> *@
+    @*                 <a href="javascript:;" class="participate" data-placement="top" data-toggle="tooltip" data-original-title="Participar"> *@
+    @*                     <i class="os-icon os-icon-tasks-checked"></i> *@
+    @*                 </a> *@
+    @*             </td> *@
+    @*         </tr> *@
+    @*         </tbody> *@
+    @*     </table> *@
+    @* </div> *@
     
     <div class="element-box">
         <h5 class="form-header">Últimos eventos</h5>
@@ -49,7 +48,6 @@
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Afinidades</th>
-                <th scope="col">Horário</th>
                 <th scope="col" class="head-actions text-right">Ações</th>
             </tr>
             </thead>
@@ -70,7 +68,6 @@
                         }
                         </div>
                     </th>
-                    <td class="name">@sEvent.Date</td>
                     <td class="actions text-right">
                         <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
                             <i class="os-icon os-icon-search"></i>

@@ -13,7 +13,7 @@ namespace Manager_Application.DTO
         
         public string EntityPhone { get; set; }
         
-        public AddressDTO EntityAddressDto { get; set; }
+        public AddressDTO EntityAddress { get; set; }
         public string EntityReferencePoint { get; set; }
         //public string EntityAffinity { get; set; }
         public List<AffinityDTO> EntityAffinity { get; set; }

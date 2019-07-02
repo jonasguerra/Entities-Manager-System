@@ -76,6 +76,17 @@ namespace Ftec.WebAPI.Infra.Repository
                             user.Email = reader["email"].ToString();
                             user.Password = reader["password"].ToString();
                         }
+
+                        if (user.IsEntity)
+                        {
+                            return user;
+                        }
+                        
+                        if (user.IsVoluntary)
+                        {
+                            return user;
+                        }
+                        
                         return user;
                     }
                     catch (Exception ex)

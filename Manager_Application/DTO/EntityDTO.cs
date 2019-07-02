@@ -10,10 +10,9 @@ namespace Manager_Application.DTO
 
         public string EntityName { get; set; }
         public string EntityResponsableName { get; set; }
-        public string EntityEmail { get; set; }
+        
         public string EntityPhone { get; set; }
-        public string EntityPassword { get; set; }
-        public string EntityConfirmPassword { get; set; }
+        
         public AddressDTO EntityAddressDto { get; set; }
         public string EntityReferencePoint { get; set; }
         //public string EntityAffinity { get; set; }
@@ -23,7 +22,7 @@ namespace Manager_Application.DTO
         public string EntitySocialNetwork { get; set; }
         public string EntityWebSite { get; set; }
         public string EntityDescription { get; set; }
-        public string EntityPhotoImageName { get; set; }
+       
         public EntityDTO()
         {
             // IsEntity= true; 

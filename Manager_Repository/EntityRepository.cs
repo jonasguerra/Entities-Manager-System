@@ -13,6 +13,7 @@ namespace Ftec.WebAPI.Infra.Repository
         public EntityRepository(string connectionString)
         {
             this.connectionString = connectionString;
+            userRepository = new UserRepository(connectionString);
         }
 
         public bool Delete(Guid id)
@@ -85,15 +86,14 @@ namespace Ftec.WebAPI.Infra.Repository
                     entity = new Entity();
                     entity.EntityId = Guid.Parse(reader["entity_id"].ToString());
                     entity.UserId = Guid.Parse(reader["user_id"].ToString());
-                    entity.EntityName = reader["Name"].ToString();
-                    entity.EntityEmail = reader["Email"].ToString();
-                    entity.EntityPhone = reader["Phone"].ToString();
-                    entity.EntityInitials = reader["Initials"].ToString();
-                    entity.EntityDescription = reader["Description"].ToString();
-                    entity.EntityWebSite = reader["Website"].ToString();
-                    entity.EntityCreationDate = DateTime.Parse(reader["CreationDate"].ToString());
-                    entity.EntitySocialNetwork = reader["SocialNetwork"].ToString();
-                    entity.EntityResponsableName = reader["ResposableName"].ToString();
+                    entity.EntityName = reader["name"].ToString();
+                    entity.EntityPhone = reader["phone"].ToString();
+                    entity.EntityInitials = reader["initials"].ToString();
+                    entity.EntityDescription = reader["description"].ToString();
+                    entity.EntityWebSite = reader["site"].ToString();
+                    entity.EntityCreationDate = DateTime.Parse(reader["date_creation"].ToString());
+                    entity.EntitySocialNetwork = reader["social_network"].ToString();
+                    entity.EntityResponsableName = reader["resposable_name"].ToString();
                     entity.EntityAddress = new Address()
                     {
                         AddressId = Guid.Parse(reader["address_id"].ToString())
@@ -179,7 +179,6 @@ namespace Ftec.WebAPI.Infra.Repository
                     entity.EntityId = Guid.Parse(reader["entity_id"].ToString());
                     entity.EntityName = reader["name"].ToString();
                     entity.EntityResponsableName= reader["responsable_name"].ToString();
-                    entity.EntityEmail= reader["responsable_name"].ToString();
                     entity.EntityPhone= reader["phone"].ToString();
                     entity.EntityInitials= reader["sigla"].ToString();
                     entity.EntitySocialNetwork= reader["social_network"].ToString();
@@ -238,7 +237,7 @@ namespace Ftec.WebAPI.Infra.Repository
                     
                  
                     
-                    cmd.CommandText = @"SELECT * FROM entity af join entity_affinity av on af.affinity_id = av.affinity_id join entity vo on vo.entity_id  = av.entity_id  WHERE av.entity_id  = @Id";
+                    cmd.CommandText = @"SELECT af.name, af.affinity_id FROM affinity af join voluntary_affinity av on af.affinity_id = av.affinity_id join voluntary vo on vo.voluntary_id = av.voluntary_id WHERE av.voluntary_id = @Id";
                     cmd.Parameters.AddWithValue("Id", entity.EntityId.ToString());
                     reader = cmd.ExecuteReader();
                     entity.EntityAffinity= new List<Affinity>();
@@ -270,18 +269,15 @@ namespace Ftec.WebAPI.Infra.Repository
                     try
                     {
 
-                        entity.EntityId = Guid.NewGuid();
-                        entity.UserId = Guid.NewGuid();
-                        entity.EntityAddress.AddressId = Guid.NewGuid();
-                        
-                        Guid userId = userRepository.Update(new User()
+                        Guid userId = userRepository.Insert(new User()
                         {
                             UserId = entity.UserId,
-                            Email = entity.Email,
-                            Password = entity.Password,
                             IsApproved = entity.IsApproved,
-                            IsEntity = entity.IsEntity
-                            
+                            IsEntity = entity.IsEntity,
+                            IsVoluntary = entity.IsVoluntary,
+                            IsModerator = entity.IsModerator,
+                            Email = entity.Email,
+                            Password = entity.Password
                         });
                         
                         NpgsqlCommand cmd = new NpgsqlCommand();
@@ -300,15 +296,15 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.ExecuteNonQuery();
                         
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"INSERT Into entity (entity_id, name, responsablename, email, phone, sigla, social_network, date_creation, site, description, user_id, address_id) values (@entity_id, @name, @responsable_name, @email, @phone, @sigla, @social_network, @date_creation, @site, @description, @user_id, @address_id)";
+                        cmd.CommandText = @"INSERT Into entity (entity_id, name, responsable_name, phone, sigla, social_network, date_creation, site, description, user_id, address_id) values (@entity_id, @name, @responsable_name, @phone, @sigla, @social_network, @date_creation, @site, @description, @user_id, @address_id)";
                         cmd.Parameters.AddWithValue("entity_id", entity.EntityId);
                         cmd.Parameters.AddWithValue("name", entity.EntityName);
                         cmd.Parameters.AddWithValue("responsable_name", entity.EntityResponsableName); 
-                        cmd.Parameters.AddWithValue("email", entity.EntityEmail);
                         cmd.Parameters.AddWithValue("phone", entity.EntityPhone);
                         cmd.Parameters.AddWithValue("sigla", entity.EntityInitials);
                         cmd.Parameters.AddWithValue("social_network", entity.EntitySocialNetwork);
                         cmd.Parameters.AddWithValue("date_creation", entity.EntityCreationDate);
+                        cmd.Parameters.AddWithValue("description", entity.EntityDescription);
                         cmd.Parameters.AddWithValue("site", entity.EntityWebSite);
                         cmd.Parameters.AddWithValue("user_id", entity.UserId);
                         cmd.Parameters.AddWithValue("address_id", entity.EntityAddress.AddressId);
@@ -376,11 +372,10 @@ namespace Ftec.WebAPI.Infra.Repository
                         
                         
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"UPDATE entity SET name = @name, responsable_name = @responsable_name, email = @email, phone = @phone, sigla = @sigla  social_network = @social_network, date_creation = @date_creation, site = @site WHERE entity_id = @entity_id";
+                        cmd.CommandText = @"UPDATE entity SET name = @name, responsable_name = @responsable_name, phone = @phone, sigla = @sigla  social_network = @social_network, date_creation = @date_creation, site = @site WHERE entity_id = @entity_id";
                         cmd.Parameters.AddWithValue("entity_id", entity.EntityId);
                         cmd.Parameters.AddWithValue("name", entity.EntityName);
                         cmd.Parameters.AddWithValue("responsable_name", entity.EntityResponsableName); 
-                        cmd.Parameters.AddWithValue("email", entity.EntityEmail);
                         cmd.Parameters.AddWithValue("phone", entity.EntityPhone);
                         cmd.Parameters.AddWithValue("sigla", entity.EntityInitials);
                         cmd.Parameters.AddWithValue("social_network", entity.EntitySocialNetwork);

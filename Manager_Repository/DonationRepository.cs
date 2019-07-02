@@ -346,33 +346,12 @@ namespace Ftec.WebAPI.Infra.Repository
                     try
                     {
                         donation.DonationId = Guid.NewGuid();
-                        donation.UserId = Guid.NewGuid();
                         donation.Address.AddressId = Guid.NewGuid();
 
                         NpgsqlCommand cmd = new NpgsqlCommand();
                         cmd.Connection = con;
                         cmd.Transaction = trans;
 
-                        cmd.CommandText =
-                            @"INSERT Into public.donation (donation_id,title,description,quantity,takeDonation)values(@donation_id,@title,@description,@quantity,@takeDonation)";
-                        cmd.Parameters.AddWithValue("donation_id", donation.DonationId);
-                        cmd.Parameters.AddWithValue("user_id", donation.UserId);
-                        cmd.Parameters.AddWithValue("title", donation.Title);
-                        cmd.Parameters.AddWithValue("description", donation.Description);
-                        cmd.Parameters.AddWithValue("quantity", donation.Quantity);
-                        cmd.Parameters.AddWithValue("takeDonation", donation.TakeDonation);
-                        cmd.ExecuteNonQuery();
-
-                        cmd.CommandText =
-                            @"INSERT Into public.user (user_id,email,password,is_approved,is_voluntary)values(@user_id,@email,@password,@is_approved,@is_voluntary)";
-                        cmd.Parameters.AddWithValue("user_id", donation.UserId);
-                        cmd.Parameters.AddWithValue("email", donation.Email);
-                        cmd.Parameters.AddWithValue("password", donation.Password);
-                        cmd.Parameters.AddWithValue("is_approved", donation.IsApproved);
-                        cmd.Parameters.AddWithValue("is_voluntary", donation.IsVoluntary);
-                        cmd.ExecuteNonQuery();
-
-                        cmd.Parameters.Clear();
                         cmd.CommandText =
                             @"INSERT Into address (address_id,cep,avenue,number,neighborhood,city,state)values(@address_id,@cep,@avenue,@number,@neighborhood,@city,@state)";
                         cmd.Parameters.AddWithValue("address_id", donation.Address.AddressId);
@@ -383,16 +362,29 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.Parameters.AddWithValue("city", donation.Address.City);
                         cmd.Parameters.AddWithValue("state", donation.Address.State);
                         cmd.ExecuteNonQuery();
+                        cmd.Parameters.Clear();
+
+                        cmd.CommandText =
+                            @"INSERT Into public.donation (donation_id,user_id,title,description,quantity,takeDonation,address_id)values(@donation_id,@user_id,@title,@description,@quantity,@takeDonation,@address_id)";
+                        cmd.Parameters.AddWithValue("donation_id", donation.DonationId);
+                        cmd.Parameters.AddWithValue("user_id", donation.UserId);
+                        cmd.Parameters.AddWithValue("title", donation.Title);
+                        cmd.Parameters.AddWithValue("description", donation.Description);
+                        cmd.Parameters.AddWithValue("quantity", donation.Quantity);
+                        cmd.Parameters.AddWithValue("takeDonation", donation.TakeDonation);
+                        cmd.Parameters.AddWithValue("address_id", donation.Address.AddressId);
+                        cmd.ExecuteNonQuery();
 
                         foreach (var affinity in donation.Affinities)
                         {
                             cmd.Parameters.Clear();
-                            cmd.CommandText = @"INSERT Into donation_affinity (donation_id, affinity_id) VALUES (@donation_id, @affinity_id)";
-                            cmd.Parameters.AddWithValue("voluntary_id", donation.DonationId);
+                            cmd.CommandText =
+                                @"INSERT Into donation_affinity (donation_id, affinity_id) VALUES (@donation_id, @affinity_id)";
+                            cmd.Parameters.AddWithValue("donation_id", donation.DonationId);
                             cmd.Parameters.AddWithValue("affinity_id", affinity.AffinityId);
-                            cmd.ExecuteNonQuery(); 
+                            cmd.ExecuteNonQuery();
                         }
-                        
+
                         //commit na transação
                         trans.Commit();
                         return donation.DonationId;
@@ -431,25 +423,27 @@ namespace Ftec.WebAPI.Infra.Repository
                         cmd.ExecuteNonQuery();
 
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"UPDATE address SET cep=@cep,avenue=@avenue,number=@number,neighborhood=@neighborhood,city=@city,state=@state WHERE address_id=@address_id";
+                        cmd.CommandText =
+                            @"UPDATE address SET cep=@cep,avenue=@avenue,number=@number,neighborhood=@neighborhood,city=@city,state=@state WHERE address_id=@address_id";
                         cmd.Parameters.AddWithValue("address_id", donation.Address.AddressId.ToString());
-                        cmd.Parameters.AddWithValue("cep", donation.Address.CEP); 
-                        cmd.Parameters.AddWithValue("avenue", donation.Address.Avenue); 
-                        cmd.Parameters.AddWithValue("number", donation.Address.Number); 
-                        cmd.Parameters.AddWithValue("neighborhood", donation.Address.Neighborhood); 
-                        cmd.Parameters.AddWithValue("city", donation.Address.City); 
-                        cmd.Parameters.AddWithValue("state", donation.Address.State); 
+                        cmd.Parameters.AddWithValue("cep", donation.Address.CEP);
+                        cmd.Parameters.AddWithValue("avenue", donation.Address.Avenue);
+                        cmd.Parameters.AddWithValue("number", donation.Address.Number);
+                        cmd.Parameters.AddWithValue("neighborhood", donation.Address.Neighborhood);
+                        cmd.Parameters.AddWithValue("city", donation.Address.City);
+                        cmd.Parameters.AddWithValue("state", donation.Address.State);
                         cmd.ExecuteNonQuery();
-                        
+
                         cmd.Parameters.Clear();
-                        cmd.CommandText = @"UPDATE public.user SET email=@email,password=@password,is_approved=@is_approved WHERE user_id=@user_id";
+                        cmd.CommandText =
+                            @"UPDATE public.user SET email=@email,password=@password,is_approved=@is_approved WHERE user_id=@user_id";
                         cmd.Parameters.AddWithValue("user_id", donation.UserId.ToString());
                         cmd.Parameters.AddWithValue("email", donation.Email);
-                        cmd.Parameters.AddWithValue("password", donation.Password); 
+                        cmd.Parameters.AddWithValue("password", donation.Password);
                         cmd.Parameters.AddWithValue("is_approved", donation.IsApproved);
                         cmd.ExecuteNonQuery();
-                        
-                        
+
+
                         trans.Commit();
                         return donation.DonationId;
                     }

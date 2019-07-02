@@ -475,40 +475,31 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
-                <th scope="col" class="head-actions">Ações</th>
+                <th scope="col" class="head-actions text-right">Ações</th>
             </tr>
             </thead>
             <tbody id="tbody_entity_not_approved">
-            <tr data-entity-id="1">
-                <td></td>
-                <td class="name">Associação Estação da Luz</td>
-                <td class="actions">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
-                        <i class="os-icon os-icon-tasks-checked"></i>
-                    </a>
-                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                        <i class="os-icon os-icon-ui-15"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr data-entity-id="2">
-                <td></td>
-                <td class="name">Brazil Foundation</td>
-                <td class="actions">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
-                        <i class="os-icon os-icon-tasks-checked"></i>
-                    </a>
-                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                        <i class="os-icon os-icon-ui-15"></i>
-                    </a>
-                </td>
-            </tr>
+            @foreach (var entity in ViewBag.entities)
+            {
+                if (!entity.IsApproved)
+                {
+                    <tr data-entity-id="@entity.Id">
+                        <td></td>
+                        <td class="name">@entity.name</td>
+                        <td class="actions text-right">
+                            <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                                <i class="os-icon os-icon-search"></i>
+                            </a>
+                            <a href="javascript:;" class="approve" data-placement="top" data-toggle="tooltip" data-original-title="Adicionar">
+                                <i class="os-icon os-icon-tasks-checked"></i>
+                            </a>
+                            <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                                <i class="os-icon os-icon-ui-15"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            }
             </tbody>
         </table>
     </div>
@@ -523,70 +514,28 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
-                <th scope="col" class="head-actions">Ações</th>
+                <th scope="col" class="head-actions text-right">Ações</th>
             </tr>
             </thead>
             <tbody id="tbody_entity_approved">
-            <tr data-entity-id="3">
-                <td></td>
-                <td class="name">Fundação Estudar</td>
-                <td class="actions">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                        <i class="os-icon os-icon-ui-15"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr data-entity-id="4">
-                <td></td>
-                <td class="name">Fundação Gol de Letra</td>
-                <td class="actions">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                        <i class="os-icon os-icon-ui-15"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr data-entity-id="5">
-                <td></td>
-                <td class="name">Idesam</td>
-                <td class="actions">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                        <i class="os-icon os-icon-ui-15"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr data-entity-id="6">
-                <td></td>
-                <td class="name">Instituição Beneficente Lar de Maria</td>
-                <td class="actions">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                        <i class="os-icon os-icon-ui-15"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr data-entity-id="7">
-                <td></td>
-                <td class="name">Habitat Brasil</td>
-                <td class="actions">
-                    <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
-                        <i class="os-icon os-icon-search"></i>
-                    </a>
-                    <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                        <i class="os-icon os-icon-ui-15"></i>
-                    </a>
-                </td>
-            </tr>
+            @foreach (var entity in ViewBag.entities)
+            {
+                if (entity.IsApproved)
+                {
+                    <tr data-entity-id="@entity.Id">
+                        <td></td>
+                        <td class="name">@entity.name</td>
+                        <td class="actions text-right">
+                            <a href="javascript:;" class="show_more"data-placement="top" data-toggle="tooltip" data-original-title="Ver mais">
+                                <i class="os-icon os-icon-search"></i>
+                            </a>
+                            <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                                <i class="os-icon os-icon-ui-15"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            }
             </tbody>
         </table>
     </div>

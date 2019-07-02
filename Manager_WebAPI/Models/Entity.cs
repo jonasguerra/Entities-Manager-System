@@ -23,11 +23,6 @@ namespace EntitiesManagerSystem.Models
         [StringLength(60, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
         public string EntityResponsableName { get; set; }
 
-        [Display(Name = "E-mail")]
-        [Required(ErrorMessage = "{0} deve ser informado")]
-        [StringLength(30, MinimumLength = 8, ErrorMessage = "Minimo {2} caracteres")]
-        public string EntityEmail { get; set; }
-
         [Display(Name = "Telefone")]
         [Required(ErrorMessage = "{0} deve ser informado")]
         [DataType(DataType.PhoneNumber, ErrorMessage = "Apenas numeros devem ser informados")]

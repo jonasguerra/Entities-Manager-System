@@ -16,6 +16,7 @@ namespace Manager_Application.Adapter
                 Description = donation.Description,
                 Quantity = donation.Quantity,
                 TakeDonation = donation.TakeDonation,
+                Affinities = AffinityAdapter.ListToDTO(donation.Affinities),
 
                 Address = new AddressDTO()
                 {
@@ -40,6 +41,7 @@ namespace Manager_Application.Adapter
                 Description = donationDTO.Description,
                 Quantity = donationDTO.Quantity,
                 TakeDonation = donationDTO.TakeDonation,
+                Affinities = AffinityAdapter.ListToDomain(donationDTO.Affinities),
 
                 Address = new Address()
                 {

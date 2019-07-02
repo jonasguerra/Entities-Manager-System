@@ -9,6 +9,8 @@ namespace EntitiesManagerSystem.Models.Voluntary
     {
         public Guid Id { get; set; }
 
+        public Guid UserId { get; set; }
+
         [Display(Name = "Titulo")]
         [Required(ErrorMessage = "{0} deve ser informado")]
         [StringLength(20, MinimumLength = 4, ErrorMessage = "{0} deve ter entre {1} e {2} caractéres")]
@@ -27,16 +29,15 @@ namespace EntitiesManagerSystem.Models.Voluntary
         [Required(ErrorMessage = "{0} deve ser informada")]
         [Range(1, int.MaxValue, ErrorMessage = "Insira uma inteiro válido")]
         public string Quantity { get; set; }
-        
+
         public bool takeDonation { get; set; }
-        
-        public Address Address { get; set; }    
-        
+
+        public Address Address { get; set; }
+
         public List<Affinity> Affinities { get; set; }
 
         public Donation()
         {
-            
         }
     }
 }

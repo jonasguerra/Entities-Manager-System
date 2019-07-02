@@ -85,6 +85,8 @@ namespace EntitiesManagerSystem.Controllers
             {
                 return RedirectToAction("Login", "Login");
             }
+
+            donation.UserId = getUserSession().UserId;
             
             if (ModelState.IsValid)
             {
@@ -94,7 +96,7 @@ namespace EntitiesManagerSystem.Controllers
                 {
                     donation.Affinities.Add(new Affinity()
                     {
-                        AffinityId = Guid.Parse((affinity["value"].ToString())),
+                        AffinityId = Guid.Parse(affinity["value"].ToString()),
                         Name = affinity["text"]
                     });
                 }
@@ -181,6 +183,12 @@ namespace EntitiesManagerSystem.Controllers
                     return true;
             }
             return false;
+        }
+
+        private User getUserSession()
+        {
+            User user = (User) Session["user"];
+            return user;
         }
     }
 }

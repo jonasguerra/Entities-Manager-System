@@ -514,3 +514,39 @@ C:/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/Entitie
 /home/guilherme/Documentos/Trabalho Final/dominog2/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.csproj.CopyComplete
 /home/guilherme/Documentos/Trabalho Final/dominog2/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.dll
 /home/guilherme/Documentos/Trabalho Final/dominog2/Entities-Manager-System/EntitiesManagerSystem/obj/Debug/EntitiesManagerSystem.pdb
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.Cors.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.Diagnostics.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.Host.HttpListener.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.Host.SystemWeb.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.Hosting.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.Security.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.Security.OAuth.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Npgsql.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Owin.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Buffers.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Memory.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Net.Http.Formatting.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Runtime.CompilerServices.Unsafe.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Threading.Tasks.Extensions.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.ValueTuple.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Cors.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Http.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Http.Owin.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/WebApiRestService.WebApiClient.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.Host.HttpListener.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Microsoft.Owin.Host.SystemWeb.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Npgsql.pdb
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/Npgsql.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Buffers.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Memory.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Net.Http.Formatting.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Runtime.CompilerServices.Unsafe.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Threading.Tasks.Extensions.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.ValueTuple.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Http.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/System.Web.Http.Owin.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/WebApiRestService.WebApiClient.xml
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/pt-br/System.Net.Http.Formatting.resources.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/pt-br/System.Web.Http.resources.dll
+/home/masterhorus/RiderProjects/Entities-Manager-System/EntitiesManagerSystem/bin/pt-br/System.Web.Optimization.resources.dll

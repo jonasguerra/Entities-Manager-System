@@ -44,8 +44,8 @@ CREATE TABLE public.voluntary
     phone character varying(300) NOT NULL,
     socialnetwork character varying(300),
     
-	user_id character varying(36) NOT NULL UNIQUE,
-	address_id character varying(36) NOT NULL UNIQUE,
+	user_id character varying(36) NOT NULL,
+	address_id character varying(36) NOT NULL,
 	
     FOREIGN KEY ("user_id") REFERENCES "user"("user_id"),
     FOREIGN KEY ("address_id") REFERENCES "address"("address_id")
@@ -69,7 +69,7 @@ CREATE TABLE public.event
     Description character varying(1000) NOT NULL,
     Date TIMESTAMP NOT NULL,
     
-	address_id character varying(36) NOT NULL UNIQUE,
+	address_id character varying(36) NOT NULL,
 	
     FOREIGN KEY ("address_id") REFERENCES "address"("address_id")
 )
@@ -106,8 +106,8 @@ CREATE TABLE public.entity
     site character varying(300) NOT NULL,
     description character varying(5000) NOT NULL,
 	
-	user_id character varying(36) NOT NULL UNIQUE,
-	address_id character varying(36) NOT NULL UNIQUE,
+	user_id character varying(36) NOT NULL,
+	address_id character varying(36) NOT NULL,
 	
     FOREIGN KEY ("user_id") REFERENCES "user"("user_id"),
     FOREIGN KEY ("address_id") REFERENCES "address"("address_id")
@@ -131,11 +131,11 @@ CREATE TABLE public.donation
     donation_id character varying(36) NOT NULL PRIMARY KEY,
     title character varying(300) NOT NULL,
     description character varying(300) NOT NULL,
-    quantity character varying(300), NOT NULL,
+    quantity character varying(300) NOT NULL,
     takedonation character varying(300),
         
-	  user_id character varying(36) NOT NULL UNIQUE,
-	  address_id character varying(36) NOT NULL UNIQUE,
+	  user_id character varying(36) NOT NULL,
+	  address_id character varying(36) NOT NULL,
 	  	
     FOREIGN KEY ("user_id") REFERENCES "user"("user_id"),
     FOREIGN KEY ("address_id") REFERENCES "address"("address_id")

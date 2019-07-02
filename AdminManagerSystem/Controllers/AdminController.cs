@@ -43,6 +43,9 @@ namespace AdminManagerSystem.Controllers
             var volunteers = clientHttp.Get<List<Voluntary>>(@"Voluntary");
             ViewBag.volunteers = volunteers;
             
+            var entities= clientHttp.Get<List<Entity>>(@"Entity");
+            ViewBag.entities = entities;
+            
             var users = clientHttp.Get<List<User>>(@"User");
             ViewBag.users = users;
             

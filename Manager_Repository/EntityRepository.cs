@@ -237,7 +237,7 @@ namespace Ftec.WebAPI.Infra.Repository
                     
                  
                     
-                    cmd.CommandText = @"SELECT * FROM entity af join entity_affinity av on af.affinity_id = av.affinity_id join entity vo on vo.entity_id  = av.entity_id  WHERE av.entity_id  = @Id";
+                    cmd.CommandText = @"SELECT af.name, af.affinity_id FROM affinity af join voluntary_affinity av on af.affinity_id = av.affinity_id join voluntary vo on vo.voluntary_id = av.voluntary_id WHERE av.voluntary_id = @Id";
                     cmd.Parameters.AddWithValue("Id", entity.EntityId.ToString());
                     reader = cmd.ExecuteReader();
                     entity.EntityAffinity= new List<Affinity>();

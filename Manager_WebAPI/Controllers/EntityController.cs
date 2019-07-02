@@ -38,8 +38,6 @@ namespace Manager_API.Controllers
             try
             {
                 entitiesDTO = entityApplication.GetAll();
-                //Este metodo retorna uma listagem de entidades19:34	Debug symbols for assembly Antlr3.Runtime could not be loaded correctly. Mono runtime doesn't  support full pdb
-
                 return Request.CreateResponse(HttpStatusCode.OK, entitiesDTO);
 
             }

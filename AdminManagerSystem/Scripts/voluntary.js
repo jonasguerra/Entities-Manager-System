@@ -159,6 +159,9 @@ $('#voluntary').on('click', '.trash', function () {
             'id': id,
         },
         success: function (data) {
+            
+            // TODO: Este metodo exclui o voluntário do banco, mas não está retornando a confirmação do banco
+            
             if (data.status == 'success') {
                 new PNotify({
                     title: data.message_title,

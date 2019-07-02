@@ -18,11 +18,15 @@ namespace Manager_Application
 
         public Guid Insert(EntityDTO entityDto)
         {
+<<<<<<< HEAD
 
 
             entityDto.UserId = Guid.NewGuid();
             entityDto.Id= Guid.NewGuid();
             entityDto.EntityAddressDto.AddressId= Guid.NewGuid();
+=======
+            
+>>>>>>> 14299ed0e612a6e1723d0467de7b221475dc5e72
             var entity = EntityAdapter.ToDomain(entityDto);
 
             return entityRepository.Insert(entity);

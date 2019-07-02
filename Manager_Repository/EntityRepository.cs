@@ -252,9 +252,6 @@ namespace Ftec.WebAPI.Infra.Repository
                     
                 }
 
-
-
-
                 return entities;
             }  
         }

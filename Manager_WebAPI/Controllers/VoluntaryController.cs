@@ -124,10 +124,8 @@ namespace Manager_API.Controllers
         // DELETE api/values/5
         public HttpResponseMessage Delete(Guid id)
         {
-            Console.WriteLine("DELETE CONTROLLER");
             try
             {
-                //Neste local faria a exclusão do voluntario no repositorio
                 VoluntaryDTO voluntaryDto = Find(id);
                 if (voluntaryDto == null)
                 {

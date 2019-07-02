@@ -77,13 +77,8 @@ namespace Manager_API.Controllers
 
         public HttpResponseMessage Post([FromBody] Entity entity)
         {
-            Console.WriteLine("POST CONTROLLER");
             try
             {
-                //Neste local faria a inclusao da entidade no repositorio
-                //Antes de fazer a inclusão a entidade seria consistido
-                //Se a entidade for inserida é de responsabilidade da API retornar o código da entidade gerada no processo de inclusão
-
                 Guid id = Insert(entity);
                 return Request.CreateResponse(HttpStatusCode.OK, id);
             }
@@ -102,7 +97,6 @@ namespace Manager_API.Controllers
 
         public HttpResponseMessage Put(Guid id, [FromBody] Entity entity)
         {
-            Console.WriteLine("PUT CONTROLLER");
             try
             {
 
@@ -203,9 +197,6 @@ namespace Manager_API.Controllers
         
     private Guid Insert(Entity entity)
     {
-        //return Guid.NewGuid();
-        //executa o mapeamento
-           Console.WriteLine("POST METHOD CONTROLLER");
         List<AffinityDTO> affinities = new List<AffinityDTO>();
         foreach(var affinity in entity.Affinities)
         {

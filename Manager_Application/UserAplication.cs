@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using Manager_Application.Adapter;
 using Manager_Application.DTO;
+using Manager_Domain.Entities;
 using Manager_Domain.Interfaces;
 
 namespace Manager_Application
@@ -13,6 +15,21 @@ namespace Manager_Application
         {
             this.userRepository = userRepository;
         }
+        
+        public bool Delete(Guid id)
+        {
+            return userRepository.Delete(id);
+        }
+        
+        public Guid Insert(UserDTO userDto)
+        {
+            userDto.UserId = Guid.NewGuid();
+            userDto.IsApproved = true;
+            userDto.IsModerator = true;
+            var user = UserAdapter.ToDomain(userDto);
+            return userRepository.Insert(user);
+        }
+        
         public UserDTO Autenticar(string email, string password)
         {
             var user = this.userRepository.Find(email.ToLower());
@@ -53,6 +70,23 @@ namespace Manager_Application
         {
             var user = userRepository.Find(email);
             return UserAdapter.ToDTO(user);
+        }
+        
+        public UserDTO Get(Guid id)
+        {
+            var user = userRepository.Find(id);
+            return UserAdapter.ToDTO(user);
+        }
+        
+        public List<UserDTO> GetAll()
+        {
+            List<UserDTO> usersDto = new List<UserDTO>();
+            var users = userRepository.FindAll();
+            foreach (User user in users)
+            {
+                usersDto.Add(UserAdapter.ToDTO(user));
+            }
+            return usersDto;
         }
     }
 }

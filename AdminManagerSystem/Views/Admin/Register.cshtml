@@ -3,7 +3,7 @@
 }
 
 @using System.Web.Mvc.Html
-@model AdminManagerSystem.Models.Moderator
+@model AdminManagerSystem.Models.User
 
 @* AFFINITY URLS *@
 @* <input id="trash_affinity_url" type="hidden" value="@Url.Action("TrashAffinity", "Admin")"/> *@
@@ -19,6 +19,9 @@
 <input id="trash_entity_url" type="hidden" value="@Url.Action("TrashEntity", "Admin")"/>
 <input id="show_more_entity_url" type="hidden" value="@Url.Action("ShowMoreEntity", "Admin")"/>
 <input id="approve_entity_url" type="hidden" value="@Url.Action("ApproveEntity", "Admin")"/>
+
+@* MODERATOR URLS *@
+<input id="trash_moderator_url" type="hidden" value="@Url.Action("TrashModerator", "Admin")"/>
 
 
 <input id="save_moderator_error" type="hidden" value="@ViewBag.save_moderator_error"/>
@@ -88,120 +91,11 @@
                     <legend>
                         <span></span>
                     </legend>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>@Html.LabelFor(m => m.FirstName)</label>
-                                @Html.TextBoxFor(m => m.FirstName, new {@class = "form-control"})
-                                @Html.ValidationMessageFor(m => m.FirstName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>@Html.LabelFor(m => m.LastName)</label>
-                                @Html.TextBoxFor(m => m.LastName, new {@class = "form-control"})
-                                @Html.ValidationMessageFor(m => m.LastName, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>@Html.LabelFor(m => m.Email)</label>
-                                @Html.TextBoxFor(m => m.Email, new {@class = "mask_phone form-control"})
-                                @Html.ValidationMessageFor(m => m.Email, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>@Html.LabelFor(m => m.Phone)</label>
-                                @Html.TextBoxFor(m => m.Phone, new {@class = "mask_phone form-control"})
-                                @Html.ValidationMessageFor(m => m.Phone, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="form-group col-sm-2">
-                            <label>@Html.LabelFor(m => m.Cep)</label>
-                            @Html.TextBoxFor(m => m.Cep, new {@id = "cep", @class = "mask_cep form-control"})
-                            @Html.ValidationMessageFor(m => m.Cep, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                        </div>
-                        <div class="form-group col-sm-8">
-                            <div class="form-group">
-                                <label>@Html.LabelFor(m => m.Address)</label>
-                                @Html.TextBoxFor(m => m.Address, new {@class = "autocomplete-address form-control"})
-                                @Html.ValidationMessageFor(m => m.Address, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-2">
-                            <div class="form-group">
-                                <label>@Html.LabelFor(m => m.Number)</label>
-                                @Html.TextBoxFor(m => m.Number, new {@class = "form-control"})
-                                @Html.ValidationMessageFor(m => m.Number, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>@Html.LabelFor(m => m.Neighborhood)</label>
-                        @Html.TextBoxFor(m => m.Neighborhood, new {@class = "autocomplete-neighborhood form-control"})
-                        @Html.ValidationMessageFor(m => m.Neighborhood, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <div class="form-group">
-                                <label>@Html.LabelFor(m => m.City)</label>
-                                @Html.TextBoxFor(m => m.City, new {@class = "autocomplete-city form-control"})
-                                @Html.ValidationMessageFor(m => m.City, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label>@Html.LabelFor(m => m.State)</label>
-                                @Html.DropDownListFor(model => model.State, new SelectList(
-                                    new List<Object>
-                                    {
-                                        new {value = "AC", text = "AC"},
-                                        new {value = "AL", text = "AL"},
-                                        new {value = "AM", text = "AM"},
-                                        new {value = "AP", text = "AP"},
-                                        new {value = "BA", text = "BA"},
-                                        new {value = "CE", text = "CE"},
-                                        new {value = "DF", text = "DF"},
-                                        new {value = "ES", text = "ES"},
-                                        new {value = "GO", text = "GO"},
-                                        new {value = "MA", text = "MA"},
-                                        new {value = "MG", text = "MG"},
-                                        new {value = "MS", text = "MS"},
-                                        new {value = "MT", text = "MT"},
-                                        new {value = "PA", text = "PA"},
-                                        new {value = "PB", text = "PB"},
-                                        new {value = "PE", text = "PE"},
-                                        new {value = "PI", text = "PI"},
-                                        new {value = "PR", text = "PR"},
-                                        new {value = "RJ", text = "RJ"},
-                                        new {value = "RN", text = "RN"},
-                                        new {value = "RO", text = "RO"},
-                                        new {value = "RR", text = "RR"},
-                                        new {value = "RS", text = "RS"},
-                                        new {value = "SC", text = "SC"},
-                                        new {value = "SE", text = "SE"},
-                                        new {value = "SP", text = "SP"},
-                                        new {value = "TO", text = "TO"}
-                                    },
-                                    "value",
-                                    "text",
-                                    "RS"), new {@class = "autocomplete-state form-control"})
-                                @Html.ValidationMessageFor(m => m.State, "", new {@class = "help-block form-text with-errors form-control-feedback"})
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="form-group">
-                        <label>@Html.LabelFor(m => m.Username)</label>
-                        @Html.TextBoxFor(m => m.Username, new {@class = "form-control"})
-                        @Html.ValidationMessageFor(m => m.Username, "", new {@class = "help-block form-text with-errors form-control-feedback"})
+                        <label>@Html.LabelFor(m => m.Email)</label>
+                        @Html.TextBoxFor(m => m.Email, new {@class = "form-control", @type = "email"})
+                        @Html.ValidationMessageFor(m => m.Email, "", new {@class = "help-block form-text with-errors form-control-feedback"})
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
@@ -219,23 +113,6 @@
                             </div>
                         </div>
                     </div>
-                    <fieldset class="form-group">
-                        <div class="row">
-                        </div>
-                        <div class="form-group">
-                            <label path="photo">Foto</label>
-                            <div class="attachment attachment--image">
-                                <input onchange="changePhoto(this)" class="file" type="file" id="photo"
-                                       name="photo" accept=".jpg,.jpeg,.png,.gif" required="required"/>
-                                <div class="attachment--label">
-                                    <span class="placeholder">Imagem (jpg, jpeg, png, gif)</span>
-                                    <span class="file-name"></span>
-                                    <span class="attachment--remove">Remover</span>
-                                </div>
-                                <div class="attachment--error"></div>
-                            </div>
-                        </div>
-                    </fieldset>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" data-dismiss="modal" type="button">
@@ -259,55 +136,29 @@
     <thead>
     <tr>
         <th scope="col">#</th>
-        <th scope="col">Nome</th>
         <th scope="col">E-Mail</th>
-        <th scope="col" class="head-actions">Ações</th>
+        <th scope="col" class="head-actions text-right">Ações</th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td></td>
-        <td>Guilherme</td>
-        <td>guilherme@hotmail.com</td>
-        <td class="actions">
-            <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                <i class="os-icon os-icon-pencil-1"></i>
-            </a>
-            <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                <i class="os-icon os-icon-ui-15"></i>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>João Pedro</td>
-        <td>joaopedro@hotmail.com</td>
-        <td class="actions">
-            <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                <i class="os-icon os-icon-pencil-1"></i>
-            </a>
-            <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                <i class="os-icon os-icon-ui-15"></i>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Jonas</td>
-        <td>joans@hotmail.com</td>
-        <td class="actions">
-            <a href="javascript:;" class="edit"data-placement="top" data-toggle="tooltip" data-original-title="Editar">
-                <i class="os-icon os-icon-pencil-1"></i>
-            </a>
-            <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
-                <i class="os-icon os-icon-ui-15"></i>
-            </a>
-        </td>
-    </tr>
+    @foreach (var user in ViewBag.users)
+    {
+        if (user.IsApproved && user.IsModerator)
+        {
+        <tr data-moderator-id="@user.UserId">
+            <td></td>
+            <td>@user.Email</td>
+            <td class="actions text-right">
+                <a href="javascript:;" class="trash" data-placement="top" data-toggle="tooltip" data-original-title="Excluir">
+                    <i class="os-icon os-icon-ui-15"></i>
+                </a>
+            </td>
+        </tr>
+        }
+    }
     </tbody>
 </table>
 </div>
-
 @* ######################################################### *@
 @* ##################### ##AFFINITY ######################## *@
 @* ######################################################### *@

@@ -46,14 +46,15 @@
                 @Html.ValidationMessageFor(m => m.Quantity, "", new {@class = "help-block form-text with-errors form-control-feedback"})
             </div>
             
-            <div class="form-check">
-                <label class="form-check-label">
-                    @Html.CheckBoxFor(m => m.takeDonation, new {@class = "form-check-input take_donation"})
-                    Preciso que a doação seja retirada no local.
-                </label>
-            </div>
+@*             <div class="form-check"> *@
+@*                 <label class="form-check-label"> *@
+@*                     @Html.CheckBoxFor(m => m.takeDonation, new {@class = "form-check-input take_donation"}) *@
+@*                     Preciso que a doação seja retirada no local. *@
+@*                 </label> *@
+@*             </div> *@
 
-            <fieldset id="collect_donation_address" class="form-group" style="display: none">
+            <fieldset id="collect_donation_address" class="form-group" style="display: block">
+            @* <fieldset id="collect_donation_address" class="form-group" style="display: none"> *@
                 <legend>
                     <span>Endereço de retirada da doação</span>
                 </legend>

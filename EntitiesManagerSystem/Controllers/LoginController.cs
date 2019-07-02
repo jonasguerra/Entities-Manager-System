@@ -56,6 +56,8 @@ namespace EntitiesManagerSystem.Controllers
                     
 //                    Gambiarra pra fazer funcionar, não consegui fazer get do usuário de outra forma  
                     var user = (User)clientHttp.Get<User>(string.Format(@"User/{0}", "ddc77478-09c2-4f10-9c16-2d581ad8a3fa"));
+
+                    user.IsEntity = true;
                     
                     Session["user"] = user;
                     if (user.IsEntity)

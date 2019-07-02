@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net.Mail;
 using Manager_Application.Adapter;
 using Manager_Application.DTO;
 using Manager_Domain.Entities;
@@ -21,7 +22,11 @@ namespace Manager_Application
             eventDto.EventId = Guid.NewGuid();
             eventDto.Address.AddressId = Guid.NewGuid();
             var sEvent = EventAdapter.ToDomain(eventDto);
-            return eventRepository.Insert(sEvent);
+            Guid id = eventRepository.Insert(sEvent);
+
+            SendMessage();
+            
+            return id;
         }
 
         public Guid Update(EventDTO eventDto)
@@ -55,6 +60,35 @@ namespace Manager_Application
                 eventsDto.Add(EventAdapter.ToDTO(cli));
             }
             return eventsDto;
+        }
+        
+        
+        public static void SendMessage()
+        {
+
+            try {
+                //http://www.macoratti.net/10/12/c_email2.htm
+                //cria uma mensagem
+                MailMessage mail = new MailMessage();
+                
+                //define os endereços
+                mail.From = new MailAddress("managersystemvoluntary@gmail.com");
+                mail.To.Add("joaopedrokaspary@hotmail.com");
+
+                //define o conteúdo
+                mail.Subject = "Este é um simples ,muito simples email";
+                mail.Body = "Este é o corpo do email";
+
+                //envia a mensagem
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                
+//                smtp.UseDefaultCredentials = true;
+            
+                smtp.Send(mail);
+            }  
+            catch (Exception ex) {
+                Console.WriteLine("Except send message: {0}", ex.ToString() );			  
+            }              
         }
         
     }

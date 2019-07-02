@@ -98,7 +98,6 @@ CREATE TABLE public.entity
     entity_id character varying(36) NOT NULL PRIMARY KEY,
     name character varying(300) NOT NULL,
     responsable_name character varying(300) NOT NULL,
-    email character varying(300) NOT NULL,
     phone character varying(300) NOT NULL,
     sigla character varying(300) NOT NULL,
     social_network character varying(300),
@@ -121,7 +120,7 @@ CREATE TABLE public.entity_affinity
 	PRIMARY KEY(affinity_id, entity_id),
     FOREIGN KEY ("affinity_id") REFERENCES "affinity"("affinity_id"),
     FOREIGN KEY ("entity_id") REFERENCES "entity"("entity_id")
-) 
+)
 
 
 --########################## DONATIONS ########################

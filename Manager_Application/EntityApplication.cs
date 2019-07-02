@@ -18,9 +18,11 @@ namespace Manager_Application
 
         public Guid Insert(EntityDTO entityDto)
         {
-            
-            Console.WriteLine("POST METHOD 3");
-            
+
+
+            entityDto.UserId = Guid.NewGuid();
+            entityDto.Id= Guid.NewGuid();
+            entityDto.EntityAddressDto.AddressId= Guid.NewGuid();
             var entity = EntityAdapter.ToDomain(entityDto);
 
             return entityRepository.Insert(entity);

@@ -178,7 +178,8 @@ namespace Manager_API.Controllers
                 Id = entity.Id,
                 EntityName = entity.EntityName,
                 EntityDescription = entity.EntityDescription,
-                EntityEmail = entity.EntityEmail,
+                Email = entity.Email,
+                Password = entity.Password,
                 EntityInitials =  entity.EntityInitials,
                 EntityPhone = entity.EntityPhone,
                 EntityCreationDate = entity.EntityCreationDate,
@@ -219,10 +220,12 @@ namespace Manager_API.Controllers
             
         EntityDTO entityDTO = new EntityDTO()
         {
+           UserId = entity.UserId,
             Id = entity.Id,
             EntityName = entity.EntityName,
             EntityDescription = entity.EntityDescription,
-            EntityEmail = entity.EntityEmail,
+            Email = entity.Email,
+            Password = entity.Password,
             EntityInitials =  entity.EntityInitials,
             EntityPhone = entity.EntityPhone,
             EntityCreationDate = entity.EntityCreationDate,

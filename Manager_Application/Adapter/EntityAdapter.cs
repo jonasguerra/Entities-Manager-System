@@ -10,12 +10,13 @@ namespace Manager_Application.Adapter
         {
             return new EntityDTO()
             {
-                 EntityName = entity.EntityName,
+                UserId = entity.UserId,
+                Id = entity.EntityId,
+                EntityName = entity.EntityName,
                  EntityResponsableName = entity.EntityResponsableName,
-                 EntityEmail = entity.EntityEmail,
+                 Email = entity.Email,
                  EntityPhone = entity.EntityPhone,
-                 EntityPassword = entity.EntityPassword,
-                 EntityConfirmPassword = entity.EntityConfirmPassword,
+                 Password = entity.Password,
                  EntityReferencePoint = entity.EntityReferencePoint,
                 // EntityAffinity = entity.EntityAffinity,
                  EntityAffinity = AffinityAdapter.ListToDTO(entity.EntityAffinity),
@@ -24,7 +25,7 @@ namespace Manager_Application.Adapter
                  EntitySocialNetwork = entity.EntitySocialNetwork,
                  EntityWebSite = entity.EntityWebSite,
                  EntityDescription = entity.EntityDescription,
-                 EntityPhotoImageName = entity.EntityPhotoImageName,
+               
                  
                  EntityAddressDto = new AddressDTO()
                  {
@@ -45,12 +46,13 @@ namespace Manager_Application.Adapter
             
             return new Entity()
             {
+                UserId = entity.UserId,
+                EntityId =  entity.Id,
                 EntityName = entity.EntityName,
                 EntityResponsableName = entity.EntityResponsableName,
-                EntityEmail = entity.EntityEmail,
+                Email = entity.Email,
                 EntityPhone = entity.EntityPhone,
-                EntityPassword = entity.EntityPassword,
-                EntityConfirmPassword = entity.EntityConfirmPassword,
+                Password = entity.Password,
                 EntityReferencePoint = entity.EntityReferencePoint,
                 EntityAffinity = AffinityAdapter.ListToDomain(entity.EntityAffinity),
                 EntityInitials = entity.EntityInitials,
@@ -58,7 +60,7 @@ namespace Manager_Application.Adapter
                 EntitySocialNetwork = entity.EntitySocialNetwork,
                 EntityWebSite = entity.EntityWebSite,
                 EntityDescription = entity.EntityDescription,
-                EntityPhotoImageName = entity.EntityPhotoImageName,
+            
                 
                 EntityAddress = new Address()
                 {
